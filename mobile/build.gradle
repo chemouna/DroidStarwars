@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId "com.mounacheikhna.ctc"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    debug {
+      applicationIdSuffix '.debug'
+    }
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+  lintOptions {
+    textReport true
+    textOutput 'stdout'
+  }
+
+}
+
+dependencies {
+  wearApp project(':wear')
+
+  compile rootProject.ext.supportAppCompat
+
+  compile rootProject.ext.retrofit
+  compile rootProject.ext.converterMoshi
+
+  compile rootProject.ext.timber
+
+  compile rootProject.ext.dagger
+  apt rootProject.ext.daggerCompiler
+  provided rootProject.ext.javaxAnnotation
+
+  compile rootProject.ext.stetho
+  compile rootProject.ext.stethoOkhttp
+
+  testCompile rootProject.ext.junit
+
+}
+
+

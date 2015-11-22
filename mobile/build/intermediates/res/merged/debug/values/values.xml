@@ -190,10 +190,16 @@
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
+    <dimen name="list_tb_padding">8dp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
     <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="two_lines_wicon_item_icon_left_padding">72dp</dimen>
+    <dimen name="two_lines_wicon_item_text_lr_padding">72dp</dimen>
+    <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
+    <dimen name="two_lines_wicon_item_tile_height">72dp</dimen>
     <drawable name="notification_template_icon_bg">#3333B5E5</drawable>
     <item name="action_bar_activity_content" type="id"/>
     <item name="action_bar_spinner" type="id"/>
@@ -236,6 +242,7 @@
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
+    <style name="Base"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -527,6 +534,20 @@
         <!-- Used by MediaRouter -->
         <item name="isLightTheme">true</item>
     </style>
+    <style name="Base.TwoLinesIconItem">
+    <item name="android:layout_height">@dimen/two_lines_wicon_item_tile_height</item>
+    <item name="android:background">?attr/selectableItemBackground</item>
+  </style>
+    <style name="Base.TwoLinesIconItem.TextContainer">
+    <item name="android:paddingTop">@dimen/two_lines_wicon_item_text_tb_padding</item>
+    <item name="android:paddingBottom">@dimen/two_lines_wicon_item_text_tb_padding</item>
+    <item name="android:paddingLeft">@dimen/two_lines_wicon_item_text_lr_padding</item>
+    <item name="android:paddingRight">@dimen/two_lines_wicon_item_text_lr_padding</item>
+  </style>
+    <style name="Base.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
+  </style>
+    <style name="Base.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
+  </style>
     <style name="Base.V7.Theme.AppCompat" parent="Platform.AppCompat">
         <item name="windowNoTitle">false</item>
         <item name="windowActionBar">true</item>
@@ -1516,6 +1537,8 @@
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <style name="Widget.StarWars" parent="android:Widget"/>
+    <style name="Widget.StarWars.PersonItem" parent="Base.TwoLinesIconItem">
+  </style>
     <style name="Widget.StarWars.ProgressBar">
 
   </style>

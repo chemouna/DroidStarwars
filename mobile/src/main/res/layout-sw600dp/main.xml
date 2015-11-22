@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <fragment
-        android:id="@+id/list_fragment"
+        android:id="@+id/main_fragment"
         android:name="com.mounacheikhna.ctc.ui.people.ListFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -18,7 +18,6 @@
 
     <FrameLayout
         android:id="@+id/item_fragment"
-        android:name="com.mounacheikhna.ctc.fragments.ItemFragment"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="3" />

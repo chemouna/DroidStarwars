@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class ListFragment$$ViewBinder<T extends com.mounacheikhna.ctc.ui.people.ListFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492963, "field 'mRecyclerView'");
-    target.mRecyclerView = finder.castView(view, 2131492963, "field 'mRecyclerView'");
+    view = finder.findRequiredView(source, 2131492966, "field 'mRecyclerView'");
+    target.mRecyclerView = finder.castView(view, 2131492966, "field 'mRecyclerView'");
   }
 
   @Override public void unbind(T target) {

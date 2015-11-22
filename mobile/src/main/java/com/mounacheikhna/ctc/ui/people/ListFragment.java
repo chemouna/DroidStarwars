@@ -1,6 +1,7 @@
 package com.mounacheikhna.ctc.ui.people;
 
 import android.app.Fragment;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -36,6 +37,7 @@ public class ListFragment extends Fragment {
 
   private StarWarsPersonAdapter mStarWarsPersonAdapter;
   private final CompositeSubscription subscriptions = new CompositeSubscription();
+  private OnPersonSelectedListener mListener;
 
   @Override public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
@@ -51,11 +53,20 @@ public class ListFragment extends Fragment {
     ButterKnife.bind(this, view);
 
     SwApp.get(getActivity()).getComponent().injectListFragment(this);
-    mStarWarsPersonAdapter = new StarWarsPersonAdapter();
+    mStarWarsPersonAdapter = new StarWarsPersonAdapter(mListener);
     mRecyclerView.setAdapter(mStarWarsPersonAdapter);
     fetchData();
   }
 
+  @Override public void onAttach(Context context) {
+    super.onAttach(context);
+    if (getActivity() instanceof OnPersonSelectedListener) {
+      mListener = (OnPersonSelectedListener) getActivity();
+    } else {
+      throw new ClassCastException(getActivity().toString()
+          + " must implement "+ OnPersonSelectedListener.class.getName());
+    }
+  }
 
   //TODO: improve readability of this
   private void fetchData() {
@@ -98,4 +109,10 @@ public class ListFragment extends Fragment {
     super.onDestroy();
     subscriptions.unsubscribe();
   }
+
+  public interface OnPersonSelectedListener {
+    void onItemSelected(StarWarsPerson person);
+  }
+
+
 }

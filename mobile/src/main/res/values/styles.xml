@@ -18,5 +18,8 @@
 
   </style>
 
+  <style name="Widget.StarWars.PersonItem" parent="Base.TwoLinesIconItem">
+  </style>
+
 
 </resources>

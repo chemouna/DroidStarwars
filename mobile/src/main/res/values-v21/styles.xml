@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style>
-    <item name="navigationBarColor">@color/primary_super_dark</item>
-    <item name="statusBarColor">?android:colorPrimaryDark</item>
-
-    <item name="windowAllowEnterTransitionOverlap">true</item>
-    <item name="windowAllowReturnTransitionOverlap">true</item>
-    <item name="windowSharedElementsUseOverlay">false</item>
+  <style name="Widget.StarWars.ProgressBar">
+    <item name="android:indeterminateTint">?android:colorAccent</item>
+    <item name="android:indeterminateTintMode">src_in</item>
   </style>
 
 </resources>

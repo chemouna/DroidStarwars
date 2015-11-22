@@ -1,0 +1,51 @@
+package com.mounacheikhna.ctc.ui.people;
+
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.ViewGroup;
+import com.mounacheikhna.ctc.R;
+import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
+import java.util.Collections;
+import java.util.List;
+import rx.functions.Action1;
+
+public class StarWarsPersonAdapter extends RecyclerView.Adapter<StarWarsPersonAdapter.ViewHolder>
+        implements Action1<List<StarWarsPerson>> {
+
+  private List<StarWarsPerson> mStarWarsPersons = Collections.emptyList();
+
+  @Override
+  public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    StarWarsPersonItemView view = (StarWarsPersonItemView) LayoutInflater.from(parent.getContext())
+        .inflate(R.layout.starwars_parson_item, parent, false);
+    return new ViewHolder(view);
+  }
+
+  @Override public void onBindViewHolder(ViewHolder holder, int position) {
+    holder.bindTo(mStarWarsPersons.get(position));
+  }
+
+  @Override
+  public int getItemCount() {
+    return mStarWarsPersons.size();
+  }
+
+  public final class ViewHolder extends RecyclerView.ViewHolder {
+    public final StarWarsPersonItemView itemView;
+
+    public ViewHolder(StarWarsPersonItemView itemView) {
+      super(itemView);
+      this.itemView = itemView;
+    }
+
+    public void bindTo(StarWarsPerson starWarsPerson) {
+      itemView.bindTo(starWarsPerson);
+    }
+  }
+
+  @Override public void call(List<StarWarsPerson> items) {
+    mStarWarsPersons = items;
+    notifyDataSetChanged();
+  }
+
+}

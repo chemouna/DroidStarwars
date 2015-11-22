@@ -25,11 +25,6 @@ android {
     }
   }
 
-  lintOptions {
-    textReport true
-    textOutput 'stdout'
-  }
-
 }
 
 dependencies {
@@ -37,6 +32,7 @@ dependencies {
   wearApp project(':wear')
 
   compile rootProject.ext.supportAppCompat
+  compile rootProject.ext.supportRecyclerView
 
   compile rootProject.ext.timber
 
@@ -47,6 +43,8 @@ dependencies {
   compile rootProject.ext.stetho
   compile rootProject.ext.stethoOkhttp
   compile rootProject.ext.butterknife
+
+  debugCompile rootProject.ext.rxJavaDebug
 
   testCompile rootProject.ext.junit
 

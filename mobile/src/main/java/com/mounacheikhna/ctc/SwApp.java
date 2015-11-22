@@ -1,7 +1,7 @@
 package com.mounacheikhna.ctc;
 
 import android.app.Application;
-import timber.log.Timber;
+import android.content.Context;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
@@ -12,9 +12,18 @@ public class SwApp extends Application {
 
   @Override public void onCreate() {
     super.onCreate();
-    if (BuildConfig.DEBUG) {
-      Timber.plant(new Timber.DebugTree());
-    }
+
+    mComponent = AppComponent.Initializer.init(this);
+    mComponent.injectApplication(this);
+  }
+
+
+  public static SwApp get(Context context) {
+    return (SwApp) context.getApplicationContext();
+  }
+
+  public AppComponent getComponent() {
+    return mComponent;
   }
 
 }

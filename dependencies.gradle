@@ -13,6 +13,7 @@ ext {
 
   supportVersion = '23.1.1'
   supportAppCompat = "com.android.support:appcompat-v7:$supportVersion"
+  supportRecyclerView = "com.android.support:recyclerview-v7:$supportVersion"
 
   playServicesVersion = '8.3.0'
 
@@ -20,6 +21,11 @@ ext {
   retrofit = "com.squareup.retrofit:retrofit:$retrofitVersion"
   converterMoshi = "com.squareup.retrofit:converter-moshi:$retrofitVersion"
   retrofitMock = "com.squareup.retrofit:retrofit-mock:$retrofitVersion"
+  adapterRxjava = "com.squareup.retrofit:adapter-rxjava:$retrofitVersion"
+
+  rxJava = "io.reactivex:rxjava:1.0.16"
+  rxAndroid = "io.reactivex:rxandroid:1.0.1"
+  rxJavaDebug = "io.reactivex:rxjava-debug:1.0.3"
 
   daggerVersion = "2.0.2"
   dagger = "com.google.dagger:dagger:$daggerVersion"

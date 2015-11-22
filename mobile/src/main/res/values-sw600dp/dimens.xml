@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- standard metrics -->
+  <dimen name="spacing_normal">16dp</dimen>
+
+</resources>

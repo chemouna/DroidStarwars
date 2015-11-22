@@ -5,6 +5,7 @@
   <style name="Widget.StarWars.Toolbar">
     <item name="android:background">?android:colorPrimary</item>
     <item name="android:theme">@style/StarWarsDarkOverlay</item>
+    <item name="android:minHeight">?attr/actionBarSize</item>
   </style>
 
   <!-- to theme toolbar with dark color in our app's light theme. we extend
@@ -12,5 +13,10 @@
   <style name="StarWarsDarkOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
 
   </style>
+
+  <style name="Widget.StarWars.ProgressBar">
+
+  </style>
+
 
 </resources>

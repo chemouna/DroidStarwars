@@ -33,12 +33,10 @@ android {
 }
 
 dependencies {
+  compile project(':lib')
   wearApp project(':wear')
 
   compile rootProject.ext.supportAppCompat
-
-  compile rootProject.ext.retrofit
-  compile rootProject.ext.converterMoshi
 
   compile rootProject.ext.timber
 
@@ -48,6 +46,7 @@ dependencies {
 
   compile rootProject.ext.stetho
   compile rootProject.ext.stethoOkhttp
+  compile rootProject.ext.butterknife
 
   testCompile rootProject.ext.junit
 

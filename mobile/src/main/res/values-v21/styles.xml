@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style>
+    <item name="navigationBarColor">@color/primary_super_dark</item>
+    <item name="statusBarColor">?android:colorPrimaryDark</item>
+
+    <item name="windowAllowEnterTransitionOverlap">true</item>
+    <item name="windowAllowReturnTransitionOverlap">true</item>
+    <item name="windowSharedElementsUseOverlay">false</item>
+  </style>
+
+</resources>

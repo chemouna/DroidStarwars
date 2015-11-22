@@ -4,7 +4,6 @@
   <!-- app main colors -->
   <color name="primary">#1976D2</color>
   <color name="primary_dark">#1976D2</color>
-
   <color name="accent">#2196F3</color>
   <color name="primary_super_dark">#11261c</color>
   <color name="accent_dark">#1565C0</color>

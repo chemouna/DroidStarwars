@@ -1,5 +1,6 @@
 package com.mounacheikhna.ctc.ui.people;
 
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +16,10 @@ public class StarWarsPersonAdapter extends RecyclerView.Adapter<StarWarsPersonAd
         implements Action1<List<StarWarsPerson>> {
 
   private List<StarWarsPerson> mStarWarsPersons = Collections.emptyList();
-  private OnPersonSelectedListener mItemSelectedListener;
+  @Nullable private OnPersonSelectedListener mItemSelectedListener;
 
-  public StarWarsPersonAdapter(OnPersonSelectedListener listener) {
-    mItemSelectedListener = listener;
+  public void setItemListener(OnPersonSelectedListener itemListener) {
+    mItemSelectedListener = itemListener;
   }
 
   @Override
@@ -49,7 +50,9 @@ public class StarWarsPersonAdapter extends RecyclerView.Adapter<StarWarsPersonAd
       itemView.bindTo(starWarsPerson);
       itemView.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
-          mItemSelectedListener.onItemSelected(starWarsPerson);
+          if (mItemSelectedListener != null) {
+            mItemSelectedListener.onItemSelected(starWarsPerson);
+          }
         }
       });
     }

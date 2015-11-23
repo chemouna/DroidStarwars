@@ -1,27 +1,27 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-28:12
+ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-30:12
 	package
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:2:5-36
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml
-		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-28:12
+		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-30:12
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:11-69
 	android:versionCode
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml
-		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-28:12
+		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:1:1-30:12
 		INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:4:3-64
 	android:name
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:4:20-62
 application
-ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:6:3-26:17
-MERGED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:6:3-26:17
+ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:6:3-28:17
+MERGED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:6:3-28:17
 MERGED from [CaptainTrainChallenge:lib:unspecified] /Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/CaptainTrainChallenge/lib/unspecified/AndroidManifest.xml:10:5-20
 MERGED from [com.android.support:appcompat-v7:23.1.1] /Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.1.1] /Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/support-v4/23.1.1/AndroidManifest.xml:22:5-20
@@ -60,6 +60,10 @@ category#android.intent.category.DEFAULT
 ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:21:9-67
 	android:name
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:21:19-65
+activity#com.mounacheikhna.ctc.PeopleActivity
+ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:25:5-47
+	android:name
+		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:25:15-45
 uses-sdk
 INJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [CaptainTrainChallenge:lib:unspecified] /Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/CaptainTrainChallenge/lib/unspecified/AndroidManifest.xml:6:5-8:41

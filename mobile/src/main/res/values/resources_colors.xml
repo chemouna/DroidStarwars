@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="style_cyan_primary"/>
+  <color name="style_cyan_accent"/>
+  <color name="style_cyan_primary_dark"/>
+
+  <color name="theme_blue_background"/>
+  <color name="theme_blue_text"/>
+
+  <color name="style_blue_primary"/>
+  <color name="style_blue_primary_dark"/>
+  <color name="theme_blue_accent"/>
+
+  <color name="theme_light_blue_primary"/>
+  <color name="theme_light_blue_primary_dark"/>
+  <color name="theme_light_blue_background"/>
+  <color name="theme_light_blue_text"/>
+  <color name="theme_light_blue_accent"/>
+
+  <color name="style_yellow_primary"/>
+  <color name="style_cyan_background"/>
+  <color name="style_cyan_text"/>
+  <color name="style_yellow_primary_dark"/>
+  <color name="style_yellow_background"/>
+  <color name="style_yellow_text"/>
+  <color name="style_yellow_accent"/>
+  <color name="style_amber_primary"/>
+  <color name="style_amber_background"/>
+  <color name="style_amber_accent"/>
+
+</resources>

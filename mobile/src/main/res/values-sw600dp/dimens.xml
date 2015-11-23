@@ -3,6 +3,7 @@
 
   <!-- standard metrics -->
   <dimen name="spacing_normal">16dp</dimen>
+  <dimen name="spacing_double">24dp</dimen>
   <dimen name="padding_normal">24dp</dimen>
 
 

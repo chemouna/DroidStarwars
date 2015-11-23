@@ -1,9 +1,9 @@
 package com.mounacheikhna.ctc.ui.people;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -53,7 +53,7 @@ public class ListFragment extends Fragment {
     ButterKnife.bind(this, view);
 
     SwApp.get(getActivity()).getComponent().injectListFragment(this);
-    mStarWarsPersonAdapter = new StarWarsPersonAdapter(mListener);
+    mStarWarsPersonAdapter = new StarWarsPersonAdapter();
     mRecyclerView.setAdapter(mStarWarsPersonAdapter);
     fetchData();
   }
@@ -62,6 +62,7 @@ public class ListFragment extends Fragment {
     super.onAttach(context);
     if (getActivity() instanceof OnPersonSelectedListener) {
       mListener = (OnPersonSelectedListener) getActivity();
+      mStarWarsPersonAdapter.setItemListener(mListener);
     } else {
       throw new ClassCastException(getActivity().toString()
           + " must implement "+ OnPersonSelectedListener.class.getName());

@@ -195,7 +195,9 @@
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>
     <dimen name="padding_normal">16dp</dimen>
+    <dimen name="spacing_double">16dp</dimen>
     <dimen name="spacing_normal">8dp</dimen>
+    <dimen name="spacing_very_mall">2dp</dimen>
     <dimen name="two_lines_wicon_item_icon_left_padding">72dp</dimen>
     <dimen name="two_lines_wicon_item_text_lr_padding">72dp</dimen>
     <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
@@ -237,6 +239,7 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Sw</string>
     <string name="no_network">No network</string>
+    <string name="resource">Resource</string>
     <string name="status_bar_notification_info_overflow">999+</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
@@ -1541,6 +1544,9 @@
   </style>
     <style name="Widget.StarWars.ProgressBar">
 
+  </style>
+    <style name="Widget.StarWars.ResourceTitle" parent="TextAppearance.AppCompat.Small">
+    <item name="android:textSize">14sp</item>
   </style>
     <style name="Widget.StarWars.Toolbar">
     <item name="android:background">?android:colorPrimary</item>

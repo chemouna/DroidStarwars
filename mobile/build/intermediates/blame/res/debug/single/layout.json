@@ -12,12 +12,12 @@
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/sw_person_fragment.xml"
     },
     {
-        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
-        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
-    },
-    {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_screen_toolbar.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_search_dropdown_item_icons_2line.xml",
@@ -32,8 +32,16 @@
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_layout.xml"
     },
     {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/resources_fragment.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/resources_fragment.xml"
+    },
+    {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/activity_people.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/activity_people.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",
@@ -42,6 +50,10 @@
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_action_menu_item_layout.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/include_toolbar.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/include_toolbar.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_alert_dialog_button_bar_material.xml",
@@ -122,6 +134,10 @@
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/no_network.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/no_network.xml"
+    },
+    {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/resource_item.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/resource_item.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/notification_template_big_media.xml",

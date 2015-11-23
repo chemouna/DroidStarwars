@@ -9,7 +9,9 @@
 
 
   <!-- Main dimensions -->
+  <dimen name="spacing_very_mall">2dp</dimen>
   <dimen name="spacing_normal">8dp</dimen>
+  <dimen name="spacing_double">16dp</dimen>
   <dimen name="padding_normal">16dp</dimen>
 
   <!-- lists metrics (@see https://www.google.fr/design/spec/components/lists.html#lists-specs) -->

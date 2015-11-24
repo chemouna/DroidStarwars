@@ -7,11 +7,11 @@ import com.mounacheikhna.ctc.R;
 
 public enum Resource {
   PEOPLE(R.string.people, R.drawable.people, ResourceStyle.STYLE_PEOPLE),
-  //FILMS("Films", R.drawable.films),
-  STARSHIPS(R.string.starships, R.drawable.starships, ResourceStyle.STYLE_STARSHIPS),
   VEHICLES(R.string.vehicles, R.drawable.vehicles, ResourceStyle.STYLE_VEHICLES),
-  SPECIES(R.string.species, R.drawable.species, ResourceStyle.STYLE_SPECIES),
-  PLANETS(R.string.planets, R.drawable.planets, ResourceStyle.STYLE_PLANETS);
+  PLANETS(R.string.planets, R.drawable.planets, ResourceStyle.STYLE_PLANETS),
+  STARSHIPS(R.string.starships, R.drawable.starships, ResourceStyle.STYLE_STARSHIPS),
+  //FILMS("Films", R.drawable.films),
+  SPECIES(R.string.species, R.drawable.species, ResourceStyle.STYLE_SPECIES);
 
   private final @StringRes int textRes;
   private final @DrawableRes int drawableRes;

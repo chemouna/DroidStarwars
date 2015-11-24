@@ -1711,7 +1711,6 @@ containing a value of this type.
         public static final int beginning=0x7f0c0019;
         public static final int buttonPanel=0x7f0c002c;
         public static final int cancel_action=0x7f0c0057;
-        public static final int category_item=0x7f0c0063;
         public static final int checkbox=0x7f0c003a;
         public static final int chronometer=0x7f0c005d;
         public static final int collapseActionView=0x7f0c001d;
@@ -1753,6 +1752,7 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0c0007;
         public static final int radio=0x7f0c003c;
         public static final int resource_icon=0x7f0c0064;
+        public static final int resource_item=0x7f0c0063;
         public static final int resource_title=0x7f0c0065;
         public static final int resources=0x7f0c0066;
         public static final int root_container=0x7f0c0054;
@@ -2062,6 +2062,8 @@ containing a value of this type.
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f09002d;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f09002e;
         public static final int Specs=0x7f0900af;
+        /** <item name="android:padding">4dp</item>
+         */
         public static final int Specs_SingleLineGrid=0x7f0900b0;
         public static final int Specs_SingleLineGrid_Text=0x7f0900b1;
         public static final int Specs_TwoLinesIconItem=0x7f0900b2;

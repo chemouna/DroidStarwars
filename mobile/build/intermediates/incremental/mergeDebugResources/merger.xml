@@ -1412,11 +1412,11 @@
     <item name="android:windowEnterTransition">@transition/main_enter</item>-->
 
   </style></file><file path="/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values/styles_specs.xml" qualifiers=""><style name="Specs"/><style name="Specs.SingleLineGrid.Text">
-    <item name="android:height">48dp</item>
+    <!--<item name="android:height">48dp</item>-->
     <item name="android:padding">16dp</item>
-    <item name="android:textSize">16sp</item>
+    <item name="android:textSize">14sp</item>
   </style><style name="Specs.SingleLineGrid">
-    <item name="android:padding">4dp</item>
+    <!--<item name="android:padding">4dp</item>-->
   </style><style name="Specs.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
   </style><style name="Specs.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
   </style><style name="Specs.TwoLinesIconItem">

@@ -529,7 +529,6 @@ int id avatar 0x7f0c0067
 int id beginning 0x7f0c0019
 int id buttonPanel 0x7f0c002c
 int id cancel_action 0x7f0c0057
-int id category_item 0x7f0c0063
 int id checkbox 0x7f0c003a
 int id chronometer 0x7f0c005d
 int id collapseActionView 0x7f0c001d
@@ -571,6 +570,7 @@ int id progress_circular 0x7f0c0006
 int id progress_horizontal 0x7f0c0007
 int id radio 0x7f0c003c
 int id resource_icon 0x7f0c0064
+int id resource_item 0x7f0c0063
 int id resource_title 0x7f0c0065
 int id resources 0x7f0c0066
 int id root_container 0x7f0c0054

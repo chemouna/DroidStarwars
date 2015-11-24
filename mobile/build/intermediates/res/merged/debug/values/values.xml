@@ -1359,12 +1359,12 @@
     </style>
     <style name="Specs"/>
     <style name="Specs.SingleLineGrid">
-    <item name="android:padding">4dp</item>
+    <!--<item name="android:padding">4dp</item>-->
   </style>
     <style name="Specs.SingleLineGrid.Text">
-    <item name="android:height">48dp</item>
+    <!--<item name="android:height">48dp</item>-->
     <item name="android:padding">16dp</item>
-    <item name="android:textSize">16sp</item>
+    <item name="android:textSize">14sp</item>
   </style>
     <style name="Specs.TwoLinesIconItem">
     <item name="android:layout_height">@dimen/two_lines_wicon_item_tile_height</item>

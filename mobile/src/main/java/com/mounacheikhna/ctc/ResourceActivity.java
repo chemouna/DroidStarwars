@@ -1,13 +1,17 @@
 package com.mounacheikhna.ctc;
 
+import android.animation.AnimatorSet;
+import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.SharedElementCallback;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPropertyAnimatorListenerAdapter;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -19,8 +23,10 @@ import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
 import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment;
 import com.mounacheikhna.ctc.ui.people.ResourceFragment;
 import com.mounacheikhna.ctc.ui.resources.Resource;
+import com.mounacheikhna.ctc.util.ApiLevels;
 import java.util.List;
 
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeast;
 import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
 /**
@@ -63,19 +69,8 @@ public class ResourceActivity extends AppCompatActivity
     setEnterSharedElementCallback(mToolbarSharedElementCallback);
     setContentView(R.layout.resource_activity);
     ButterKnife.bind(this);
-    initMainFragment();
     mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
     displayResource();
-  }
-
-  private void initMainFragment() {
-    ResourceDetailsFragment resourceDetailsFragment = new ResourceDetailsFragment();
-    displayFragment(resourceDetailsFragment, false);
-    FrameLayout itemDetail = (FrameLayout) findViewById(R.id.item_fragment);
-    if (itemDetail != null) {
-      mResourceFragment =
-          (ResourceFragment) getSupportFragmentManager().findFragmentById(R.id.item_fragment);
-    }
   }
 
   @SuppressWarnings("NewApi") private void displayResource() {
@@ -87,9 +82,30 @@ public class ResourceActivity extends AppCompatActivity
     mResourceTitle.setText(mResource.getTextRes());
     mResourceTitle.setTextColor(
         ContextCompat.getColor(this, mResource.getStyle().getTextColorPrimary()));
-
+    mResourceTitle.setBackgroundColor(mResource);
     if (isAtLeastLollipop()) {
       mBackButton.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
+    }
+
+    final FrameLayout container = (FrameLayout) findViewById(R.id.main_fragment);
+    container.setBackgroundColor(ContextCompat.
+        getColor(this, mResource.getStyle().getBackgroundColor()));
+
+    /*
+    if (isAtLeast(Build.VERSION_CODES.LOLLIPOP)) {
+      revealMainFragment(clickedView, fragmentContainer);
+    } else {*/
+      initMainFragment();
+    //}
+  }
+
+  private void initMainFragment() {
+    ResourceDetailsFragment resourceDetailsFragment = new ResourceDetailsFragment();
+    displayFragment(resourceDetailsFragment, false);
+    FrameLayout container = (FrameLayout) findViewById(R.id.item_fragment);
+    if (container != null) {
+      mResourceFragment =
+          (ResourceFragment) getSupportFragmentManager().findFragmentById(R.id.item_fragment);
     }
   }
 

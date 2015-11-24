@@ -21,4 +21,8 @@
   <style name="Widget.StarWars.PersonItem" parent="Specs.TwoLinesIconItem">
   </style>
 
+  <style name="StarWars.TextAppearance.Title" parent="TextAppearance.AppCompat.Title">
+    <item name="android:textColor">@color/primary</item>
+  </style>
+
 </resources>

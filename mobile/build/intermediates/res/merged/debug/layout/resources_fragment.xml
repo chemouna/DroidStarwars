@@ -5,7 +5,7 @@
     android:id="@+id/resources"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="@dimen/spacing_very_mall"
+    android:padding="@dimen/spacing_very_small"
     android:clipToPadding="false"
     android:scrollbarStyle="outsideOverlay"
     app:layoutManager="android.support.v7.widget.GridLayoutManager"

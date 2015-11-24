@@ -8,6 +8,10 @@
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_item_background_holo_light.xml"
     },
     {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/drawable/ic_arrow_back.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/drawable/ic_arrow_back.xml"
+    },
+    {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/drawable/light_selector.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/drawable/light_selector.xml"
     },

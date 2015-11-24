@@ -37,7 +37,6 @@ public class PeopleActivity extends AppCompatActivity
     if (mStarWarsPersonFragment != null) {
       mStarWarsPersonFragment.show(person);
     } else {
-      // one pane layout -> swap frags...
       StarWarsPersonFragment newFragment = StarWarsPersonFragment.newInstance(person);
       FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
       transaction.replace(R.id.main_fragment, newFragment);

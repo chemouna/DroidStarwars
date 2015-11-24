@@ -7,4 +7,5 @@
   <string name="vehicles">Vehicles</string>
   <string name="species">Species</string>
   <string name="planets">Planets</string>
+  <string name="back_button">Back button</string>
 </resources>

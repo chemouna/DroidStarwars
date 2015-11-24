@@ -1,15 +1,15 @@
 [
     {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/sw_person_fragment.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/sw_person_fragment.xml"
+    },
+    {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/notification_template_lines.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_lines.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_view_list_nav_layout.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
-    },
-    {
-        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/sw_person_fragment.xml",
-        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/sw_person_fragment.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",

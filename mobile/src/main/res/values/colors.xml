@@ -22,8 +22,6 @@
   <color name="mid_grey">#40808080</color>
   <color name="divider">#1f000000</color>
   <color name="hint_disabled_dark">#43000000</color>
-  <color name="style_amber_primary_dark"/>
-  <color name="style_amber_text"/>
 
 
 </resources>

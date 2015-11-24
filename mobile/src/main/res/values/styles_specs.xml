@@ -2,24 +2,35 @@
 <resources>
 
   <!-- Base styles to help follow material design and use names of specific component from it-->
-  <style name="Base"/>
+  <style name="Specs"/>
 
-  <style name="Base.TwoLinesIconItem">
+  <style name="Specs.TwoLinesIconItem">
     <item name="android:layout_height">@dimen/two_lines_wicon_item_tile_height</item>
     <item name="android:background">?attr/selectableItemBackground</item>
   </style>
 
-  <style name="Base.TwoLinesIconItem.TextContainer">
+  <style name="Specs.TwoLinesIconItem.TextContainer">
     <item name="android:paddingTop">@dimen/two_lines_wicon_item_text_tb_padding</item>
     <item name="android:paddingBottom">@dimen/two_lines_wicon_item_text_tb_padding</item>
     <item name="android:paddingLeft">@dimen/two_lines_wicon_item_text_lr_padding</item>
     <item name="android:paddingRight">@dimen/two_lines_wicon_item_text_lr_padding</item>
   </style>
 
-  <style name="Base.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
+  <style name="Specs.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
   </style>
 
-  <style name="Base.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
+  <style name="Specs.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
+  </style>
+
+  <!-- Single-line grid spec -->
+  <style name="Specs.SingleLineGrid">
+    <item name="android:padding">4dp</item>
+  </style>
+
+  <style name="Specs.SingleLineGrid.Text">
+    <item name="android:height">48dp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:textSize">16sp</item>
   </style>
 
 </resources>

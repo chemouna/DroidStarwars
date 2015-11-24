@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc;
+package com.mounacheikhna.ctc.tv;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

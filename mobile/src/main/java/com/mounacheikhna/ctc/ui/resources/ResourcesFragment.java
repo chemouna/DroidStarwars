@@ -33,8 +33,8 @@ public class ResourcesFragment extends Fragment {
         .getDimensionPixelSize(R.dimen.spacing_very_mall);
     mResourcesView.addItemDecoration(new OffsetDecoration(spacing));
     mAdapter = new ResourcesAdapter();
-    mAdapter.setOnItemClickListener(new ResourcesAdapter.OnItemClickListener() {
-      @Override public void onClick(View v, int position) {
+   /* mAdapter.setOnItemClickListener(new ResourcesAdapter.OnItemClickListener() {
+      @Override public void onClick(View v, int position) {*/
         /*
         Activity activity = getActivity();
                 */
@@ -53,9 +53,8 @@ public class ResourcesFragment extends Fragment {
         ActivityCompat.startActivityForResult(activity, startIntent, REQUEST_CATEGORY,
             transitionBundle);
         */
-
-      }
-    });
+      /*}
+    });*/
     mResourcesView.setAdapter(mAdapter);
   }
 

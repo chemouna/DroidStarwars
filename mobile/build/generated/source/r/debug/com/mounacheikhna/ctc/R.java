@@ -1402,20 +1402,20 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f070007;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b004c;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0b004d;
-        public static final int abc_color_highlight_material=0x7f0b004e;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0b0066;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0b0067;
+        public static final int abc_color_highlight_material=0x7f0b0068;
         public static final int abc_input_method_navigation_guard=0x7f0b0000;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0b004f;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0b0050;
-        public static final int abc_primary_text_material_dark=0x7f0b0051;
-        public static final int abc_primary_text_material_light=0x7f0b0052;
-        public static final int abc_search_url_text=0x7f0b0053;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0b0069;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0b006a;
+        public static final int abc_primary_text_material_dark=0x7f0b006b;
+        public static final int abc_primary_text_material_light=0x7f0b006c;
+        public static final int abc_search_url_text=0x7f0b006d;
         public static final int abc_search_url_text_normal=0x7f0b0001;
         public static final int abc_search_url_text_pressed=0x7f0b0002;
         public static final int abc_search_url_text_selected=0x7f0b0003;
-        public static final int abc_secondary_text_material_dark=0x7f0b0054;
-        public static final int abc_secondary_text_material_light=0x7f0b0055;
+        public static final int abc_secondary_text_material_dark=0x7f0b006e;
+        public static final int abc_secondary_text_material_light=0x7f0b006f;
         public static final int accent=0x7f0b0004;
         public static final int accent_dark=0x7f0b0005;
         public static final int accent_material_dark=0x7f0b0006;
@@ -1479,17 +1479,43 @@ containing a value of this type.
         public static final int secondary_text_default_material_light=0x7f0b0040;
         public static final int secondary_text_disabled_material_dark=0x7f0b0041;
         public static final int secondary_text_disabled_material_light=0x7f0b0042;
-        public static final int switch_thumb_disabled_material_dark=0x7f0b0043;
-        public static final int switch_thumb_disabled_material_light=0x7f0b0044;
-        public static final int switch_thumb_material_dark=0x7f0b0056;
-        public static final int switch_thumb_material_light=0x7f0b0057;
-        public static final int switch_thumb_normal_material_dark=0x7f0b0045;
-        public static final int switch_thumb_normal_material_light=0x7f0b0046;
-        public static final int text_disabled_light=0x7f0b0047;
-        public static final int text_primary_dark=0x7f0b0048;
-        public static final int text_primary_light=0x7f0b0049;
-        public static final int text_secondary_dark=0x7f0b004a;
-        public static final int text_secondary_light=0x7f0b004b;
+        public static final int style_people_accent=0x7f0b0043;
+        public static final int style_people_background=0x7f0b0044;
+        public static final int style_people_primary=0x7f0b0045;
+        public static final int style_people_primary_dark=0x7f0b0046;
+        public static final int style_people_text=0x7f0b0047;
+        public static final int style_planets_accent=0x7f0b0048;
+        public static final int style_planets_background=0x7f0b0049;
+        public static final int style_planets_primary=0x7f0b004a;
+        public static final int style_planets_primary_dark=0x7f0b004b;
+        public static final int style_planets_text=0x7f0b004c;
+        public static final int style_species_accent=0x7f0b004d;
+        public static final int style_species_background=0x7f0b004e;
+        public static final int style_species_primary=0x7f0b004f;
+        public static final int style_species_primary_dark=0x7f0b0050;
+        public static final int style_species_text=0x7f0b0051;
+        public static final int style_starships_accent=0x7f0b0052;
+        public static final int style_starships_background=0x7f0b0053;
+        public static final int style_starships_primary=0x7f0b0054;
+        public static final int style_starships_primary_dark=0x7f0b0055;
+        public static final int style_starships_text=0x7f0b0056;
+        public static final int style_vehicles_accent=0x7f0b0057;
+        public static final int style_vehicles_background=0x7f0b0058;
+        public static final int style_vehicles_primary=0x7f0b0059;
+        public static final int style_vehicles_primary_dark=0x7f0b005a;
+        public static final int style_vehicles_text=0x7f0b005b;
+        public static final int switch_thumb_disabled_material_dark=0x7f0b005c;
+        public static final int switch_thumb_disabled_material_light=0x7f0b005d;
+        public static final int switch_thumb_material_dark=0x7f0b0070;
+        public static final int switch_thumb_material_light=0x7f0b0071;
+        public static final int switch_thumb_normal_material_dark=0x7f0b005e;
+        public static final int switch_thumb_normal_material_light=0x7f0b005f;
+        public static final int text_disabled_light=0x7f0b0060;
+        public static final int text_light=0x7f0b0061;
+        public static final int text_primary_dark=0x7f0b0062;
+        public static final int text_primary_light=0x7f0b0063;
+        public static final int text_secondary_dark=0x7f0b0064;
+        public static final int text_secondary_light=0x7f0b0065;
     }
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material=0x7f08000d;
@@ -1853,21 +1879,25 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f060012;
         public static final int app_name=0x7f060014;
         public static final int no_network=0x7f060015;
-        public static final int resource=0x7f060016;
+        public static final int people=0x7f060016;
+        public static final int planets=0x7f060017;
+        public static final int resource=0x7f060018;
+        public static final int species=0x7f060019;
+        public static final int starships=0x7f06001a;
         public static final int status_bar_notification_info_overflow=0x7f060013;
+        public static final int vehicles=0x7f06001b;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f09007f;
         public static final int AlertDialog_AppCompat_Light=0x7f090080;
         public static final int Animation_AppCompat_Dialog=0x7f090081;
         public static final int Animation_AppCompat_DropDownUp=0x7f090082;
-        public static final int Base=0x7f090083;
-        public static final int Base_AlertDialog_AppCompat=0x7f090084;
-        public static final int Base_AlertDialog_AppCompat_Light=0x7f090085;
-        public static final int Base_Animation_AppCompat_Dialog=0x7f090086;
-        public static final int Base_Animation_AppCompat_DropDownUp=0x7f090087;
-        public static final int Base_DialogWindowTitle_AppCompat=0x7f090088;
-        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f090089;
+        public static final int Base_AlertDialog_AppCompat=0x7f090083;
+        public static final int Base_AlertDialog_AppCompat_Light=0x7f090084;
+        public static final int Base_Animation_AppCompat_Dialog=0x7f090085;
+        public static final int Base_Animation_AppCompat_DropDownUp=0x7f090086;
+        public static final int Base_DialogWindowTitle_AppCompat=0x7f090087;
+        public static final int Base_DialogWindowTitleBackground_AppCompat=0x7f090088;
         public static final int Base_TextAppearance_AppCompat=0x7f09002f;
         public static final int Base_TextAppearance_AppCompat_Body1=0x7f090030;
         public static final int Base_TextAppearance_AppCompat_Body2=0x7f090031;
@@ -1886,7 +1916,7 @@ containing a value of this type.
         public static final int Base_TextAppearance_AppCompat_Medium=0x7f09003b;
         public static final int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f090006;
         public static final int Base_TextAppearance_AppCompat_Menu=0x7f09003c;
-        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f09008a;
+        public static final int Base_TextAppearance_AppCompat_SearchResult=0x7f090089;
         public static final int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f09003d;
         public static final int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f09003e;
         public static final int Base_TextAppearance_AppCompat_Small=0x7f09003f;
@@ -1904,37 +1934,33 @@ containing a value of this type.
         public static final int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f090048;
         public static final int Base_TextAppearance_AppCompat_Widget_Button=0x7f090049;
         public static final int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f09007b;
-        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f09008b;
+        public static final int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f09008a;
         public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f09004a;
         public static final int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f09004b;
         public static final int Base_TextAppearance_AppCompat_Widget_Switch=0x7f09004c;
         public static final int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f09004d;
-        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f09008c;
+        public static final int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f09008b;
         public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f09004e;
         public static final int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f09004f;
         public static final int Base_Theme_AppCompat=0x7f090050;
-        public static final int Base_Theme_AppCompat_CompactMenu=0x7f09008d;
+        public static final int Base_Theme_AppCompat_CompactMenu=0x7f09008c;
         public static final int Base_Theme_AppCompat_Dialog=0x7f09000a;
-        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f09008e;
-        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f09008f;
-        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f090090;
+        public static final int Base_Theme_AppCompat_Dialog_Alert=0x7f09008d;
+        public static final int Base_Theme_AppCompat_Dialog_FixedSize=0x7f09008e;
+        public static final int Base_Theme_AppCompat_Dialog_MinWidth=0x7f09008f;
         public static final int Base_Theme_AppCompat_DialogWhenLarge=0x7f090001;
         public static final int Base_Theme_AppCompat_Light=0x7f090051;
-        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f090091;
+        public static final int Base_Theme_AppCompat_Light_DarkActionBar=0x7f090090;
         public static final int Base_Theme_AppCompat_Light_Dialog=0x7f09000b;
-        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f090092;
-        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f090093;
-        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f090094;
+        public static final int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f090091;
+        public static final int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f090092;
+        public static final int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f090093;
         public static final int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f090002;
-        public static final int Base_ThemeOverlay_AppCompat=0x7f090095;
-        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f090096;
-        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f090097;
-        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f090098;
-        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f090099;
-        public static final int Base_TwoLinesIconItem=0x7f09009a;
-        public static final int Base_TwoLinesIconItem_TextContainer=0x7f09009b;
-        public static final int Base_TwoLinesIconItem_TextPrimary=0x7f09009c;
-        public static final int Base_TwoLinesIconItem_TextSecondary=0x7f09009d;
+        public static final int Base_ThemeOverlay_AppCompat=0x7f090094;
+        public static final int Base_ThemeOverlay_AppCompat_ActionBar=0x7f090095;
+        public static final int Base_ThemeOverlay_AppCompat_Dark=0x7f090096;
+        public static final int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f090097;
+        public static final int Base_ThemeOverlay_AppCompat_Light=0x7f090098;
         public static final int Base_V11_Theme_AppCompat_Dialog=0x7f09000c;
         public static final int Base_V11_Theme_AppCompat_Light_Dialog=0x7f09000d;
         public static final int Base_V12_Widget_AppCompat_AutoCompleteTextView=0x7f090015;
@@ -1947,42 +1973,42 @@ containing a value of this type.
         public static final int Base_V22_Theme_AppCompat_Light=0x7f09007a;
         public static final int Base_V23_Theme_AppCompat=0x7f09007c;
         public static final int Base_V23_Theme_AppCompat_Light=0x7f09007d;
-        public static final int Base_V7_Theme_AppCompat=0x7f09009e;
-        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f09009f;
-        public static final int Base_V7_Theme_AppCompat_Light=0x7f0900a0;
-        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0900a1;
-        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0900a2;
-        public static final int Base_V7_Widget_AppCompat_EditText=0x7f0900a3;
-        public static final int Base_Widget_AppCompat_ActionBar=0x7f0900a4;
-        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0900a5;
-        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0900a6;
+        public static final int Base_V7_Theme_AppCompat=0x7f090099;
+        public static final int Base_V7_Theme_AppCompat_Dialog=0x7f09009a;
+        public static final int Base_V7_Theme_AppCompat_Light=0x7f09009b;
+        public static final int Base_V7_Theme_AppCompat_Light_Dialog=0x7f09009c;
+        public static final int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f09009d;
+        public static final int Base_V7_Widget_AppCompat_EditText=0x7f09009e;
+        public static final int Base_Widget_AppCompat_ActionBar=0x7f09009f;
+        public static final int Base_Widget_AppCompat_ActionBar_Solid=0x7f0900a0;
+        public static final int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0900a1;
         public static final int Base_Widget_AppCompat_ActionBar_TabText=0x7f090056;
         public static final int Base_Widget_AppCompat_ActionBar_TabView=0x7f090057;
         public static final int Base_Widget_AppCompat_ActionButton=0x7f090058;
         public static final int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f090059;
         public static final int Base_Widget_AppCompat_ActionButton_Overflow=0x7f09005a;
-        public static final int Base_Widget_AppCompat_ActionMode=0x7f0900a7;
-        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0900a8;
+        public static final int Base_Widget_AppCompat_ActionMode=0x7f0900a2;
+        public static final int Base_Widget_AppCompat_ActivityChooserView=0x7f0900a3;
         public static final int Base_Widget_AppCompat_AutoCompleteTextView=0x7f090017;
         public static final int Base_Widget_AppCompat_Button=0x7f09005b;
         public static final int Base_Widget_AppCompat_Button_Borderless=0x7f09005c;
         public static final int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f09005d;
-        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0900a9;
+        public static final int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0900a4;
         public static final int Base_Widget_AppCompat_Button_Colored=0x7f09007e;
         public static final int Base_Widget_AppCompat_Button_Small=0x7f09005e;
         public static final int Base_Widget_AppCompat_ButtonBar=0x7f09005f;
-        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0900aa;
+        public static final int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0900a5;
         public static final int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f090060;
         public static final int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f090061;
-        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0900ab;
+        public static final int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0900a6;
         public static final int Base_Widget_AppCompat_DrawerArrowToggle=0x7f090000;
-        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0900ac;
+        public static final int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0900a7;
         public static final int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f090062;
         public static final int Base_Widget_AppCompat_EditText=0x7f090018;
         public static final int Base_Widget_AppCompat_ImageButton=0x7f090063;
-        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0900ad;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0900ae;
-        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0900af;
+        public static final int Base_Widget_AppCompat_Light_ActionBar=0x7f0900a8;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0900a9;
+        public static final int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0900aa;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f090064;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f090065;
         public static final int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f090066;
@@ -1994,17 +2020,17 @@ containing a value of this type.
         public static final int Base_Widget_AppCompat_ListView_Menu=0x7f09006c;
         public static final int Base_Widget_AppCompat_PopupMenu=0x7f09006d;
         public static final int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f09006e;
-        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0900b0;
+        public static final int Base_Widget_AppCompat_PopupWindow=0x7f0900ab;
         public static final int Base_Widget_AppCompat_ProgressBar=0x7f09000e;
         public static final int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f09000f;
         public static final int Base_Widget_AppCompat_RatingBar=0x7f09006f;
-        public static final int Base_Widget_AppCompat_SearchView=0x7f0900b1;
-        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0900b2;
+        public static final int Base_Widget_AppCompat_SearchView=0x7f0900ac;
+        public static final int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0900ad;
         public static final int Base_Widget_AppCompat_SeekBar=0x7f090070;
         public static final int Base_Widget_AppCompat_Spinner=0x7f090071;
         public static final int Base_Widget_AppCompat_Spinner_Underlined=0x7f090003;
         public static final int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f090072;
-        public static final int Base_Widget_AppCompat_Toolbar=0x7f0900b3;
+        public static final int Base_Widget_AppCompat_Toolbar=0x7f0900ae;
         public static final int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f090073;
         public static final int Platform_AppCompat=0x7f090010;
         public static final int Platform_AppCompat_Light=0x7f090011;
@@ -2035,152 +2061,163 @@ containing a value of this type.
         public static final int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f09002c;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f09002d;
         public static final int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f09002e;
-        public static final int StarWarsDarkOverlay=0x7f0900b4;
-        public static final int StarWars =0x7f0900b5;
-        public static final int TextAppearance_AppCompat=0x7f0900b6;
-        public static final int TextAppearance_AppCompat_Body1=0x7f0900b7;
-        public static final int TextAppearance_AppCompat_Body2=0x7f0900b8;
-        public static final int TextAppearance_AppCompat_Button=0x7f0900b9;
-        public static final int TextAppearance_AppCompat_Caption=0x7f0900ba;
-        public static final int TextAppearance_AppCompat_Display1=0x7f0900bb;
-        public static final int TextAppearance_AppCompat_Display2=0x7f0900bc;
-        public static final int TextAppearance_AppCompat_Display3=0x7f0900bd;
-        public static final int TextAppearance_AppCompat_Display4=0x7f0900be;
-        public static final int TextAppearance_AppCompat_Headline=0x7f0900bf;
-        public static final int TextAppearance_AppCompat_Inverse=0x7f0900c0;
-        public static final int TextAppearance_AppCompat_Large=0x7f0900c1;
-        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0900c2;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0900c3;
-        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0900c4;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0900c5;
-        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0900c6;
-        public static final int TextAppearance_AppCompat_Medium=0x7f0900c7;
-        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0900c8;
-        public static final int TextAppearance_AppCompat_Menu=0x7f0900c9;
-        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0900ca;
-        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0900cb;
-        public static final int TextAppearance_AppCompat_Small=0x7f0900cc;
-        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0900cd;
-        public static final int TextAppearance_AppCompat_Subhead=0x7f0900ce;
-        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0900cf;
-        public static final int TextAppearance_AppCompat_Title=0x7f0900d0;
-        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0900d1;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0900d2;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0900d3;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0900d4;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0900d5;
-        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0900d6;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0900d7;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0900d8;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0900d9;
-        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0900da;
-        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0900db;
-        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0900dc;
-        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0900dd;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0900de;
-        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0900df;
-        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0900e0;
-        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0900e1;
+        public static final int Specs=0x7f0900af;
+        public static final int Specs_SingleLineGrid=0x7f0900b0;
+        public static final int Specs_SingleLineGrid_Text=0x7f0900b1;
+        public static final int Specs_TwoLinesIconItem=0x7f0900b2;
+        public static final int Specs_TwoLinesIconItem_TextContainer=0x7f0900b3;
+        public static final int Specs_TwoLinesIconItem_TextPrimary=0x7f0900b4;
+        public static final int Specs_TwoLinesIconItem_TextSecondary=0x7f0900b5;
+        public static final int StarWars=0x7f0900b6;
+        public static final int StarWars_LightBlue=0x7f0900b7;
+        public static final int StarWars_People=0x7f0900b8;
+        public static final int StarWars_Planets=0x7f0900b9;
+        public static final int StarWars_Species=0x7f0900ba;
+        public static final int StarWars_Vehicles=0x7f0900bb;
+        public static final int StarWarsDarkOverlay=0x7f0900bc;
+        public static final int TextAppearance_AppCompat=0x7f0900bd;
+        public static final int TextAppearance_AppCompat_Body1=0x7f0900be;
+        public static final int TextAppearance_AppCompat_Body2=0x7f0900bf;
+        public static final int TextAppearance_AppCompat_Button=0x7f0900c0;
+        public static final int TextAppearance_AppCompat_Caption=0x7f0900c1;
+        public static final int TextAppearance_AppCompat_Display1=0x7f0900c2;
+        public static final int TextAppearance_AppCompat_Display2=0x7f0900c3;
+        public static final int TextAppearance_AppCompat_Display3=0x7f0900c4;
+        public static final int TextAppearance_AppCompat_Display4=0x7f0900c5;
+        public static final int TextAppearance_AppCompat_Headline=0x7f0900c6;
+        public static final int TextAppearance_AppCompat_Inverse=0x7f0900c7;
+        public static final int TextAppearance_AppCompat_Large=0x7f0900c8;
+        public static final int TextAppearance_AppCompat_Large_Inverse=0x7f0900c9;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0900ca;
+        public static final int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0900cb;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0900cc;
+        public static final int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0900cd;
+        public static final int TextAppearance_AppCompat_Medium=0x7f0900ce;
+        public static final int TextAppearance_AppCompat_Medium_Inverse=0x7f0900cf;
+        public static final int TextAppearance_AppCompat_Menu=0x7f0900d0;
+        public static final int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0900d1;
+        public static final int TextAppearance_AppCompat_SearchResult_Title=0x7f0900d2;
+        public static final int TextAppearance_AppCompat_Small=0x7f0900d3;
+        public static final int TextAppearance_AppCompat_Small_Inverse=0x7f0900d4;
+        public static final int TextAppearance_AppCompat_Subhead=0x7f0900d5;
+        public static final int TextAppearance_AppCompat_Subhead_Inverse=0x7f0900d6;
+        public static final int TextAppearance_AppCompat_Title=0x7f0900d7;
+        public static final int TextAppearance_AppCompat_Title_Inverse=0x7f0900d8;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0900d9;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0900da;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0900db;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0900dc;
+        public static final int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0900dd;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0900de;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0900df;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0900e0;
+        public static final int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0900e1;
+        public static final int TextAppearance_AppCompat_Widget_Button=0x7f0900e2;
+        public static final int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0900e3;
+        public static final int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0900e4;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0900e5;
+        public static final int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0900e6;
+        public static final int TextAppearance_AppCompat_Widget_Switch=0x7f0900e7;
+        public static final int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0900e8;
         public static final int TextAppearance_StatusBar_EventContent=0x7f09001c;
         public static final int TextAppearance_StatusBar_EventContent_Info=0x7f09001d;
         public static final int TextAppearance_StatusBar_EventContent_Line2=0x7f09001e;
         public static final int TextAppearance_StatusBar_EventContent_Time=0x7f09001f;
         public static final int TextAppearance_StatusBar_EventContent_Title=0x7f090020;
-        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0900e2;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0900e3;
-        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0900e4;
-        public static final int Theme_AppCompat=0x7f0900e5;
-        public static final int Theme_AppCompat_CompactMenu=0x7f0900e6;
-        public static final int Theme_AppCompat_Dialog=0x7f0900e7;
-        public static final int Theme_AppCompat_Dialog_Alert=0x7f0900e8;
-        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0900e9;
-        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0900ea;
-        public static final int Theme_AppCompat_Light=0x7f0900eb;
-        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0900ec;
-        public static final int Theme_AppCompat_Light_Dialog=0x7f0900ed;
-        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0900ee;
-        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0900ef;
-        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0900f0;
-        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0900f1;
-        public static final int Theme_AppCompat_NoActionBar=0x7f0900f2;
-        public static final int ThemeOverlay_AppCompat=0x7f0900f3;
-        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0900f4;
-        public static final int ThemeOverlay_AppCompat_Dark=0x7f0900f5;
-        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0900f6;
-        public static final int ThemeOverlay_AppCompat_Light=0x7f0900f7;
-        public static final int Widget_AppCompat_ActionBar=0x7f0900f8;
-        public static final int Widget_AppCompat_ActionBar_Solid=0x7f0900f9;
-        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f0900fa;
-        public static final int Widget_AppCompat_ActionBar_TabText=0x7f0900fb;
-        public static final int Widget_AppCompat_ActionBar_TabView=0x7f0900fc;
-        public static final int Widget_AppCompat_ActionButton=0x7f0900fd;
-        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f0900fe;
-        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f0900ff;
-        public static final int Widget_AppCompat_ActionMode=0x7f090100;
-        public static final int Widget_AppCompat_ActivityChooserView=0x7f090101;
-        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f090102;
-        public static final int Widget_AppCompat_Button=0x7f090103;
-        public static final int Widget_AppCompat_Button_Borderless=0x7f090104;
-        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f090105;
-        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f090106;
-        public static final int Widget_AppCompat_Button_Colored=0x7f090107;
-        public static final int Widget_AppCompat_Button_Small=0x7f090108;
-        public static final int Widget_AppCompat_ButtonBar=0x7f090109;
-        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f09010a;
-        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f09010b;
-        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f09010c;
-        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f09010d;
-        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f09010e;
-        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f09010f;
-        public static final int Widget_AppCompat_EditText=0x7f090110;
-        public static final int Widget_AppCompat_ImageButton=0x7f090111;
-        public static final int Widget_AppCompat_Light_ActionBar=0x7f090112;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f090113;
-        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f090114;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f090115;
-        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f090116;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f090117;
-        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f090118;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f090119;
-        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f09011a;
-        public static final int Widget_AppCompat_Light_ActionButton=0x7f09011b;
-        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f09011c;
-        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f09011d;
-        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f09011e;
-        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f09011f;
-        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f090120;
-        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f090121;
-        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f090122;
-        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f090123;
-        public static final int Widget_AppCompat_Light_PopupMenu=0x7f090124;
-        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f090125;
-        public static final int Widget_AppCompat_Light_SearchView=0x7f090126;
-        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f090127;
-        public static final int Widget_AppCompat_ListPopupWindow=0x7f090128;
-        public static final int Widget_AppCompat_ListView=0x7f090129;
-        public static final int Widget_AppCompat_ListView_DropDown=0x7f09012a;
-        public static final int Widget_AppCompat_ListView_Menu=0x7f09012b;
-        public static final int Widget_AppCompat_PopupMenu=0x7f09012c;
-        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f09012d;
-        public static final int Widget_AppCompat_PopupWindow=0x7f09012e;
-        public static final int Widget_AppCompat_ProgressBar=0x7f09012f;
-        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f090130;
-        public static final int Widget_AppCompat_RatingBar=0x7f090131;
-        public static final int Widget_AppCompat_SearchView=0x7f090132;
-        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f090133;
-        public static final int Widget_AppCompat_SeekBar=0x7f090134;
-        public static final int Widget_AppCompat_Spinner=0x7f090135;
-        public static final int Widget_AppCompat_Spinner_DropDown=0x7f090136;
-        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f090137;
-        public static final int Widget_AppCompat_Spinner_Underlined=0x7f090138;
-        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f090139;
-        public static final int Widget_AppCompat_Toolbar=0x7f09013a;
-        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f09013b;
-        public static final int Widget_StarWars=0x7f09013c;
-        public static final int Widget_StarWars_PersonItem=0x7f09013d;
+        public static final int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0900e9;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0900ea;
+        public static final int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0900eb;
+        public static final int Theme_AppCompat=0x7f0900ec;
+        public static final int Theme_AppCompat_CompactMenu=0x7f0900ed;
+        public static final int Theme_AppCompat_Dialog=0x7f0900ee;
+        public static final int Theme_AppCompat_Dialog_Alert=0x7f0900ef;
+        public static final int Theme_AppCompat_Dialog_MinWidth=0x7f0900f0;
+        public static final int Theme_AppCompat_DialogWhenLarge=0x7f0900f1;
+        public static final int Theme_AppCompat_Light=0x7f0900f2;
+        public static final int Theme_AppCompat_Light_DarkActionBar=0x7f0900f3;
+        public static final int Theme_AppCompat_Light_Dialog=0x7f0900f4;
+        public static final int Theme_AppCompat_Light_Dialog_Alert=0x7f0900f5;
+        public static final int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0900f6;
+        public static final int Theme_AppCompat_Light_DialogWhenLarge=0x7f0900f7;
+        public static final int Theme_AppCompat_Light_NoActionBar=0x7f0900f8;
+        public static final int Theme_AppCompat_NoActionBar=0x7f0900f9;
+        public static final int ThemeOverlay_AppCompat=0x7f0900fa;
+        public static final int ThemeOverlay_AppCompat_ActionBar=0x7f0900fb;
+        public static final int ThemeOverlay_AppCompat_Dark=0x7f0900fc;
+        public static final int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0900fd;
+        public static final int ThemeOverlay_AppCompat_Light=0x7f0900fe;
+        public static final int Widget_AppCompat_ActionBar=0x7f0900ff;
+        public static final int Widget_AppCompat_ActionBar_Solid=0x7f090100;
+        public static final int Widget_AppCompat_ActionBar_TabBar=0x7f090101;
+        public static final int Widget_AppCompat_ActionBar_TabText=0x7f090102;
+        public static final int Widget_AppCompat_ActionBar_TabView=0x7f090103;
+        public static final int Widget_AppCompat_ActionButton=0x7f090104;
+        public static final int Widget_AppCompat_ActionButton_CloseMode=0x7f090105;
+        public static final int Widget_AppCompat_ActionButton_Overflow=0x7f090106;
+        public static final int Widget_AppCompat_ActionMode=0x7f090107;
+        public static final int Widget_AppCompat_ActivityChooserView=0x7f090108;
+        public static final int Widget_AppCompat_AutoCompleteTextView=0x7f090109;
+        public static final int Widget_AppCompat_Button=0x7f09010a;
+        public static final int Widget_AppCompat_Button_Borderless=0x7f09010b;
+        public static final int Widget_AppCompat_Button_Borderless_Colored=0x7f09010c;
+        public static final int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f09010d;
+        public static final int Widget_AppCompat_Button_Colored=0x7f09010e;
+        public static final int Widget_AppCompat_Button_Small=0x7f09010f;
+        public static final int Widget_AppCompat_ButtonBar=0x7f090110;
+        public static final int Widget_AppCompat_ButtonBar_AlertDialog=0x7f090111;
+        public static final int Widget_AppCompat_CompoundButton_CheckBox=0x7f090112;
+        public static final int Widget_AppCompat_CompoundButton_RadioButton=0x7f090113;
+        public static final int Widget_AppCompat_CompoundButton_Switch=0x7f090114;
+        public static final int Widget_AppCompat_DrawerArrowToggle=0x7f090115;
+        public static final int Widget_AppCompat_DropDownItem_Spinner=0x7f090116;
+        public static final int Widget_AppCompat_EditText=0x7f090117;
+        public static final int Widget_AppCompat_ImageButton=0x7f090118;
+        public static final int Widget_AppCompat_Light_ActionBar=0x7f090119;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid=0x7f09011a;
+        public static final int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f09011b;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar=0x7f09011c;
+        public static final int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f09011d;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText=0x7f09011e;
+        public static final int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f09011f;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView=0x7f090120;
+        public static final int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f090121;
+        public static final int Widget_AppCompat_Light_ActionButton=0x7f090122;
+        public static final int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f090123;
+        public static final int Widget_AppCompat_Light_ActionButton_Overflow=0x7f090124;
+        public static final int Widget_AppCompat_Light_ActionMode_Inverse=0x7f090125;
+        public static final int Widget_AppCompat_Light_ActivityChooserView=0x7f090126;
+        public static final int Widget_AppCompat_Light_AutoCompleteTextView=0x7f090127;
+        public static final int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f090128;
+        public static final int Widget_AppCompat_Light_ListPopupWindow=0x7f090129;
+        public static final int Widget_AppCompat_Light_ListView_DropDown=0x7f09012a;
+        public static final int Widget_AppCompat_Light_PopupMenu=0x7f09012b;
+        public static final int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f09012c;
+        public static final int Widget_AppCompat_Light_SearchView=0x7f09012d;
+        public static final int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f09012e;
+        public static final int Widget_AppCompat_ListPopupWindow=0x7f09012f;
+        public static final int Widget_AppCompat_ListView=0x7f090130;
+        public static final int Widget_AppCompat_ListView_DropDown=0x7f090131;
+        public static final int Widget_AppCompat_ListView_Menu=0x7f090132;
+        public static final int Widget_AppCompat_PopupMenu=0x7f090133;
+        public static final int Widget_AppCompat_PopupMenu_Overflow=0x7f090134;
+        public static final int Widget_AppCompat_PopupWindow=0x7f090135;
+        public static final int Widget_AppCompat_ProgressBar=0x7f090136;
+        public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f090137;
+        public static final int Widget_AppCompat_RatingBar=0x7f090138;
+        public static final int Widget_AppCompat_SearchView=0x7f090139;
+        public static final int Widget_AppCompat_SearchView_ActionBar=0x7f09013a;
+        public static final int Widget_AppCompat_SeekBar=0x7f09013b;
+        public static final int Widget_AppCompat_Spinner=0x7f09013c;
+        public static final int Widget_AppCompat_Spinner_DropDown=0x7f09013d;
+        public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f09013e;
+        public static final int Widget_AppCompat_Spinner_Underlined=0x7f09013f;
+        public static final int Widget_AppCompat_TextView_SpinnerItem=0x7f090140;
+        public static final int Widget_AppCompat_Toolbar=0x7f090141;
+        public static final int Widget_AppCompat_Toolbar_Button_Navigation=0x7f090142;
+        public static final int Widget_StarWars=0x7f090143;
+        public static final int Widget_StarWars_PersonItem=0x7f090144;
         public static final int Widget_StarWars_ProgressBar=0x7f090078;
-        public static final int Widget_StarWars_ResourceTitle=0x7f09013e;
-        public static final int Widget_StarWars_Toolbar=0x7f09013f;
+        public static final int Widget_StarWars_Toolbar=0x7f090145;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.
@@ -2189,33 +2226,33 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionBar_background com.mounacheikhna.ctc.tv.debug:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundSplit com.mounacheikhna.ctc.tv.debug:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_backgroundStacked com.mounacheikhna.ctc.tv.debug:backgroundStacked}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetEnd com.mounacheikhna.ctc.tv.debug:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetLeft com.mounacheikhna.ctc.tv.debug:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetRight com.mounacheikhna.ctc.tv.debug:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_contentInsetStart com.mounacheikhna.ctc.tv.debug:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_customNavigationLayout com.mounacheikhna.ctc.tv.debug:customNavigationLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_displayOptions com.mounacheikhna.ctc.tv.debug:displayOptions}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_divider com.mounacheikhna.ctc.tv.debug:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_elevation com.mounacheikhna.ctc.tv.debug:elevation}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_height com.mounacheikhna.ctc.tv.debug:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.mounacheikhna.ctc.tv.debug:hideOnContentScroll}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.mounacheikhna.ctc.tv.debug:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_homeLayout com.mounacheikhna.ctc.tv.debug:homeLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_icon com.mounacheikhna.ctc.tv.debug:icon}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.mounacheikhna.ctc.tv.debug:indeterminateProgressStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_itemPadding com.mounacheikhna.ctc.tv.debug:itemPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_logo com.mounacheikhna.ctc.tv.debug:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_navigationMode com.mounacheikhna.ctc.tv.debug:navigationMode}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_popupTheme com.mounacheikhna.ctc.tv.debug:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarPadding com.mounacheikhna.ctc.tv.debug:progressBarPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_progressBarStyle com.mounacheikhna.ctc.tv.debug:progressBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitle com.mounacheikhna.ctc.tv.debug:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.mounacheikhna.ctc.tv.debug:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_title com.mounacheikhna.ctc.tv.debug:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionBar_titleTextStyle com.mounacheikhna.ctc.tv.debug:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_background com.mounacheikhna.ctc.debug:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundSplit com.mounacheikhna.ctc.debug:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_backgroundStacked com.mounacheikhna.ctc.debug:backgroundStacked}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetEnd com.mounacheikhna.ctc.debug:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetLeft com.mounacheikhna.ctc.debug:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetRight com.mounacheikhna.ctc.debug:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_contentInsetStart com.mounacheikhna.ctc.debug:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_customNavigationLayout com.mounacheikhna.ctc.debug:customNavigationLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_displayOptions com.mounacheikhna.ctc.debug:displayOptions}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_divider com.mounacheikhna.ctc.debug:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_elevation com.mounacheikhna.ctc.debug:elevation}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_height com.mounacheikhna.ctc.debug:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_hideOnContentScroll com.mounacheikhna.ctc.debug:hideOnContentScroll}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeAsUpIndicator com.mounacheikhna.ctc.debug:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_homeLayout com.mounacheikhna.ctc.debug:homeLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_icon com.mounacheikhna.ctc.debug:icon}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_indeterminateProgressStyle com.mounacheikhna.ctc.debug:indeterminateProgressStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_itemPadding com.mounacheikhna.ctc.debug:itemPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_logo com.mounacheikhna.ctc.debug:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_navigationMode com.mounacheikhna.ctc.debug:navigationMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_popupTheme com.mounacheikhna.ctc.debug:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarPadding com.mounacheikhna.ctc.debug:progressBarPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_progressBarStyle com.mounacheikhna.ctc.debug:progressBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitle com.mounacheikhna.ctc.debug:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_subtitleTextStyle com.mounacheikhna.ctc.debug:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_title com.mounacheikhna.ctc.debug:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionBar_titleTextStyle com.mounacheikhna.ctc.debug:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionBar_background
            @see #ActionBar_backgroundSplit
@@ -2255,17 +2292,17 @@ containing a value of this type.
             0x7f01001a, 0x7f01001b, 0x7f010080
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#background}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#background}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:background
+          @attr name com.mounacheikhna.ctc.debug:background
         */
         public static final int ActionBar_background = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2273,11 +2310,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:backgroundSplit
+          @attr name com.mounacheikhna.ctc.debug:backgroundSplit
         */
         public static final int ActionBar_backgroundSplit = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#backgroundStacked}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#backgroundStacked}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2285,11 +2322,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:backgroundStacked
+          @attr name com.mounacheikhna.ctc.debug:backgroundStacked
         */
         public static final int ActionBar_backgroundStacked = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2301,11 +2338,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetEnd
+          @attr name com.mounacheikhna.ctc.debug:contentInsetEnd
         */
         public static final int ActionBar_contentInsetEnd = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2317,11 +2354,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetLeft
+          @attr name com.mounacheikhna.ctc.debug:contentInsetLeft
         */
         public static final int ActionBar_contentInsetLeft = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2333,11 +2370,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetRight
+          @attr name com.mounacheikhna.ctc.debug:contentInsetRight
         */
         public static final int ActionBar_contentInsetRight = 23;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2349,21 +2386,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetStart
+          @attr name com.mounacheikhna.ctc.debug:contentInsetStart
         */
         public static final int ActionBar_contentInsetStart = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#customNavigationLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#customNavigationLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:customNavigationLayout
+          @attr name com.mounacheikhna.ctc.debug:customNavigationLayout
         */
         public static final int ActionBar_customNavigationLayout = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#displayOptions}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#displayOptions}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2381,21 +2418,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>showCustom</code></td><td>0x10</td><td></td></tr>
 <tr><td><code>disableHome</code></td><td>0x20</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:displayOptions
+          @attr name com.mounacheikhna.ctc.debug:displayOptions
         */
         public static final int ActionBar_displayOptions = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#divider}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:divider
+          @attr name com.mounacheikhna.ctc.debug:divider
         */
         public static final int ActionBar_divider = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#elevation}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#elevation}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2407,11 +2444,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:elevation
+          @attr name com.mounacheikhna.ctc.debug:elevation
         */
         public static final int ActionBar_elevation = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#height}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#height}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2423,11 +2460,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:height
+          @attr name com.mounacheikhna.ctc.debug:height
         */
         public static final int ActionBar_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#hideOnContentScroll}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#hideOnContentScroll}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2437,51 +2474,51 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:hideOnContentScroll
+          @attr name com.mounacheikhna.ctc.debug:hideOnContentScroll
         */
         public static final int ActionBar_hideOnContentScroll = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:homeAsUpIndicator
+          @attr name com.mounacheikhna.ctc.debug:homeAsUpIndicator
         */
         public static final int ActionBar_homeAsUpIndicator = 26;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#homeLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#homeLayout}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:homeLayout
+          @attr name com.mounacheikhna.ctc.debug:homeLayout
         */
         public static final int ActionBar_homeLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#icon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#icon}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:icon
+          @attr name com.mounacheikhna.ctc.debug:icon
         */
         public static final int ActionBar_icon = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#indeterminateProgressStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#indeterminateProgressStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:indeterminateProgressStyle
+          @attr name com.mounacheikhna.ctc.debug:indeterminateProgressStyle
         */
         public static final int ActionBar_indeterminateProgressStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#itemPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#itemPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2493,21 +2530,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:itemPadding
+          @attr name com.mounacheikhna.ctc.debug:itemPadding
         */
         public static final int ActionBar_itemPadding = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#logo}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:logo
+          @attr name com.mounacheikhna.ctc.debug:logo
         */
         public static final int ActionBar_logo = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#navigationMode}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#navigationMode}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2521,21 +2558,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>listMode</code></td><td>1</td><td></td></tr>
 <tr><td><code>tabMode</code></td><td>2</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:navigationMode
+          @attr name com.mounacheikhna.ctc.debug:navigationMode
         */
         public static final int ActionBar_navigationMode = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#popupTheme}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:popupTheme
+          @attr name com.mounacheikhna.ctc.debug:popupTheme
         */
         public static final int ActionBar_popupTheme = 25;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#progressBarPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#progressBarPadding}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2547,21 +2584,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:progressBarPadding
+          @attr name com.mounacheikhna.ctc.debug:progressBarPadding
         */
         public static final int ActionBar_progressBarPadding = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#progressBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#progressBarStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:progressBarStyle
+          @attr name com.mounacheikhna.ctc.debug:progressBarStyle
         */
         public static final int ActionBar_progressBarStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2571,21 +2608,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitle
+          @attr name com.mounacheikhna.ctc.debug:subtitle
         */
         public static final int ActionBar_subtitle = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitleTextStyle
+          @attr name com.mounacheikhna.ctc.debug:subtitleTextStyle
         */
         public static final int ActionBar_subtitleTextStyle = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#title}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#title}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
@@ -2595,17 +2632,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:title
+          @attr name com.mounacheikhna.ctc.debug:title
         */
         public static final int ActionBar_title = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionBar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:titleTextStyle
+          @attr name com.mounacheikhna.ctc.debug:titleTextStyle
         */
         public static final int ActionBar_titleTextStyle = 5;
         /** Attributes that can be used with a ActionBarLayout.
@@ -2657,12 +2694,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActionMode_background com.mounacheikhna.ctc.tv.debug:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_backgroundSplit com.mounacheikhna.ctc.tv.debug:backgroundSplit}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_closeItemLayout com.mounacheikhna.ctc.tv.debug:closeItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_height com.mounacheikhna.ctc.tv.debug:height}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.mounacheikhna.ctc.tv.debug:subtitleTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActionMode_titleTextStyle com.mounacheikhna.ctc.tv.debug:titleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_background com.mounacheikhna.ctc.debug:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_backgroundSplit com.mounacheikhna.ctc.debug:backgroundSplit}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_closeItemLayout com.mounacheikhna.ctc.debug:closeItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_height com.mounacheikhna.ctc.debug:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_subtitleTextStyle com.mounacheikhna.ctc.debug:subtitleTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActionMode_titleTextStyle com.mounacheikhna.ctc.debug:titleTextStyle}</code></td><td></td></tr>
            </table>
            @see #ActionMode_background
            @see #ActionMode_backgroundSplit
@@ -2676,17 +2713,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01000e, 0x7f01001c
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#background}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#background}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:background
+          @attr name com.mounacheikhna.ctc.debug:background
         */
         public static final int ActionMode_background = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#backgroundSplit}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#backgroundSplit}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2694,21 +2731,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:backgroundSplit
+          @attr name com.mounacheikhna.ctc.debug:backgroundSplit
         */
         public static final int ActionMode_backgroundSplit = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#closeItemLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#closeItemLayout}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:closeItemLayout
+          @attr name com.mounacheikhna.ctc.debug:closeItemLayout
         */
         public static final int ActionMode_closeItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#height}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#height}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
@@ -2720,27 +2757,27 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:height
+          @attr name com.mounacheikhna.ctc.debug:height
         */
         public static final int ActionMode_height = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitleTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitleTextStyle
+          @attr name com.mounacheikhna.ctc.debug:subtitleTextStyle
         */
         public static final int ActionMode_subtitleTextStyle = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleTextStyle}
           attribute's value can be found in the {@link #ActionMode} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:titleTextStyle
+          @attr name com.mounacheikhna.ctc.debug:titleTextStyle
         */
         public static final int ActionMode_titleTextStyle = 1;
         /** Attributes that can be used with a ActivityChooserView.
@@ -2749,8 +2786,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.mounacheikhna.ctc.tv.debug:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.mounacheikhna.ctc.tv.debug:initialActivityCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_expandActivityOverflowButtonDrawable com.mounacheikhna.ctc.debug:expandActivityOverflowButtonDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #ActivityChooserView_initialActivityCount com.mounacheikhna.ctc.debug:initialActivityCount}</code></td><td></td></tr>
            </table>
            @see #ActivityChooserView_expandActivityOverflowButtonDrawable
            @see #ActivityChooserView_initialActivityCount
@@ -2759,17 +2796,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f01001d, 0x7f01001e
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#expandActivityOverflowButtonDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#expandActivityOverflowButtonDrawable}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:expandActivityOverflowButtonDrawable
+          @attr name com.mounacheikhna.ctc.debug:expandActivityOverflowButtonDrawable
         */
         public static final int ActivityChooserView_expandActivityOverflowButtonDrawable = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#initialActivityCount}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#initialActivityCount}
           attribute's value can be found in the {@link #ActivityChooserView} array.
 
 
@@ -2779,7 +2816,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:initialActivityCount
+          @attr name com.mounacheikhna.ctc.debug:initialActivityCount
         */
         public static final int ActivityChooserView_initialActivityCount = 0;
         /** Attributes that can be used with a AlertDialog.
@@ -2789,11 +2826,11 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AlertDialog_android_layout android:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.mounacheikhna.ctc.tv.debug:buttonPanelSideLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listItemLayout com.mounacheikhna.ctc.tv.debug:listItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_listLayout com.mounacheikhna.ctc.tv.debug:listLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.mounacheikhna.ctc.tv.debug:multiChoiceItemLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.mounacheikhna.ctc.tv.debug:singleChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_buttonPanelSideLayout com.mounacheikhna.ctc.debug:buttonPanelSideLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listItemLayout com.mounacheikhna.ctc.debug:listItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_listLayout com.mounacheikhna.ctc.debug:listLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_multiChoiceItemLayout com.mounacheikhna.ctc.debug:multiChoiceItemLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_singleChoiceItemLayout com.mounacheikhna.ctc.debug:singleChoiceItemLayout}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_android_layout
            @see #AlertDialog_buttonPanelSideLayout
@@ -2813,53 +2850,53 @@ containing a value of this type.
         */
         public static final int AlertDialog_android_layout = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonPanelSideLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonPanelSideLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonPanelSideLayout
+          @attr name com.mounacheikhna.ctc.debug:buttonPanelSideLayout
         */
         public static final int AlertDialog_buttonPanelSideLayout = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listItemLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:listItemLayout
+          @attr name com.mounacheikhna.ctc.debug:listItemLayout
         */
         public static final int AlertDialog_listItemLayout = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:listLayout
+          @attr name com.mounacheikhna.ctc.debug:listLayout
         */
         public static final int AlertDialog_listLayout = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#multiChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#multiChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:multiChoiceItemLayout
+          @attr name com.mounacheikhna.ctc.debug:multiChoiceItemLayout
         */
         public static final int AlertDialog_multiChoiceItemLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#singleChoiceItemLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#singleChoiceItemLayout}
           attribute's value can be found in the {@link #AlertDialog} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:singleChoiceItemLayout
+          @attr name com.mounacheikhna.ctc.debug:singleChoiceItemLayout
         */
         public static final int AlertDialog_singleChoiceItemLayout = 4;
         /** Attributes that can be used with a AppCompatTextView.
@@ -2869,7 +2906,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #AppCompatTextView_android_textAppearance android:textAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.mounacheikhna.ctc.tv.debug:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #AppCompatTextView_textAllCaps com.mounacheikhna.ctc.debug:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #AppCompatTextView_android_textAppearance
            @see #AppCompatTextView_textAllCaps
@@ -2884,14 +2921,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int AppCompatTextView_android_textAppearance = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAllCaps}
           attribute's value can be found in the {@link #AppCompatTextView} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAllCaps
+          @attr name com.mounacheikhna.ctc.debug:textAllCaps
         */
         public static final int AppCompatTextView_textAllCaps = 1;
         /** Attributes that can be used with a ButtonBarLayout.
@@ -2900,7 +2937,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.mounacheikhna.ctc.tv.debug:allowStacking}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarLayout_allowStacking com.mounacheikhna.ctc.debug:allowStacking}</code></td><td></td></tr>
            </table>
            @see #ButtonBarLayout_allowStacking
          */
@@ -2908,7 +2945,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f010025
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#allowStacking}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#allowStacking}
           attribute's value can be found in the {@link #ButtonBarLayout} array.
 
 
@@ -2918,7 +2955,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:allowStacking
+          @attr name com.mounacheikhna.ctc.debug:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
         /** Attributes that can be used with a CompoundButton.
@@ -2928,8 +2965,8 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #CompoundButton_android_button android:button}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTint com.mounacheikhna.ctc.tv.debug:buttonTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #CompoundButton_buttonTintMode com.mounacheikhna.ctc.tv.debug:buttonTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTint com.mounacheikhna.ctc.debug:buttonTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #CompoundButton_buttonTintMode com.mounacheikhna.ctc.debug:buttonTintMode}</code></td><td></td></tr>
            </table>
            @see #CompoundButton_android_button
            @see #CompoundButton_buttonTint
@@ -2945,7 +2982,7 @@ containing a value of this type.
         */
         public static final int CompoundButton_android_button = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonTint}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonTint}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -2956,11 +2993,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonTint
+          @attr name com.mounacheikhna.ctc.debug:buttonTint
         */
         public static final int CompoundButton_buttonTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonTintMode}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonTintMode}
           attribute's value can be found in the {@link #CompoundButton} array.
 
 
@@ -2976,7 +3013,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonTintMode
+          @attr name com.mounacheikhna.ctc.debug:buttonTintMode
         */
         public static final int CompoundButton_buttonTintMode = 2;
         /** Attributes that can be used with a DrawerArrowToggle.
@@ -2985,14 +3022,14 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.mounacheikhna.ctc.tv.debug:arrowHeadLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.mounacheikhna.ctc.tv.debug:arrowShaftLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_barLength com.mounacheikhna.ctc.tv.debug:barLength}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_color com.mounacheikhna.ctc.tv.debug:color}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.mounacheikhna.ctc.tv.debug:drawableSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.mounacheikhna.ctc.tv.debug:gapBetweenBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.mounacheikhna.ctc.tv.debug:spinBars}</code></td><td></td></tr>
-           <tr><td><code>{@link #DrawerArrowToggle_thickness com.mounacheikhna.ctc.tv.debug:thickness}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowHeadLength com.mounacheikhna.ctc.debug:arrowHeadLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_arrowShaftLength com.mounacheikhna.ctc.debug:arrowShaftLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_barLength com.mounacheikhna.ctc.debug:barLength}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_color com.mounacheikhna.ctc.debug:color}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_drawableSize com.mounacheikhna.ctc.debug:drawableSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_gapBetweenBars com.mounacheikhna.ctc.debug:gapBetweenBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_spinBars com.mounacheikhna.ctc.debug:spinBars}</code></td><td></td></tr>
+           <tr><td><code>{@link #DrawerArrowToggle_thickness com.mounacheikhna.ctc.debug:thickness}</code></td><td></td></tr>
            </table>
            @see #DrawerArrowToggle_arrowHeadLength
            @see #DrawerArrowToggle_arrowShaftLength
@@ -3008,7 +3045,7 @@ containing a value of this type.
             0x7f01002c, 0x7f01002d, 0x7f01002e, 0x7f01002f
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#arrowHeadLength}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#arrowHeadLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3020,11 +3057,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:arrowHeadLength
+          @attr name com.mounacheikhna.ctc.debug:arrowHeadLength
         */
         public static final int DrawerArrowToggle_arrowHeadLength = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#arrowShaftLength}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#arrowShaftLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3036,11 +3073,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:arrowShaftLength
+          @attr name com.mounacheikhna.ctc.debug:arrowShaftLength
         */
         public static final int DrawerArrowToggle_arrowShaftLength = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#barLength}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#barLength}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3052,11 +3089,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:barLength
+          @attr name com.mounacheikhna.ctc.debug:barLength
         */
         public static final int DrawerArrowToggle_barLength = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#color}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#color}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3067,11 +3104,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:color
+          @attr name com.mounacheikhna.ctc.debug:color
         */
         public static final int DrawerArrowToggle_color = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#drawableSize}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#drawableSize}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3083,11 +3120,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:drawableSize
+          @attr name com.mounacheikhna.ctc.debug:drawableSize
         */
         public static final int DrawerArrowToggle_drawableSize = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#gapBetweenBars}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#gapBetweenBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3099,11 +3136,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:gapBetweenBars
+          @attr name com.mounacheikhna.ctc.debug:gapBetweenBars
         */
         public static final int DrawerArrowToggle_gapBetweenBars = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#spinBars}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#spinBars}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3113,11 +3150,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:spinBars
+          @attr name com.mounacheikhna.ctc.debug:spinBars
         */
         public static final int DrawerArrowToggle_spinBars = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#thickness}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#thickness}
           attribute's value can be found in the {@link #DrawerArrowToggle} array.
 
 
@@ -3129,7 +3166,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:thickness
+          @attr name com.mounacheikhna.ctc.debug:thickness
         */
         public static final int DrawerArrowToggle_thickness = 7;
         /** Attributes that can be used with a LinearLayoutCompat.
@@ -3143,10 +3180,10 @@ containing a value of this type.
            <tr><td><code>{@link #LinearLayoutCompat_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_orientation android:orientation}</code></td><td></td></tr>
            <tr><td><code>{@link #LinearLayoutCompat_android_weightSum android:weightSum}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_divider com.mounacheikhna.ctc.tv.debug:divider}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.mounacheikhna.ctc.tv.debug:dividerPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.mounacheikhna.ctc.tv.debug:measureWithLargestChild}</code></td><td></td></tr>
-           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.mounacheikhna.ctc.tv.debug:showDividers}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_divider com.mounacheikhna.ctc.debug:divider}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_dividerPadding com.mounacheikhna.ctc.debug:dividerPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_measureWithLargestChild com.mounacheikhna.ctc.debug:measureWithLargestChild}</code></td><td></td></tr>
+           <tr><td><code>{@link #LinearLayoutCompat_showDividers com.mounacheikhna.ctc.debug:showDividers}</code></td><td></td></tr>
            </table>
            @see #LinearLayoutCompat_android_baselineAligned
            @see #LinearLayoutCompat_android_baselineAlignedChildIndex
@@ -3194,17 +3231,17 @@ containing a value of this type.
         */
         public static final int LinearLayoutCompat_android_weightSum = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#divider}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#divider}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:divider
+          @attr name com.mounacheikhna.ctc.debug:divider
         */
         public static final int LinearLayoutCompat_divider = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dividerPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dividerPadding}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3216,11 +3253,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:dividerPadding
+          @attr name com.mounacheikhna.ctc.debug:dividerPadding
         */
         public static final int LinearLayoutCompat_dividerPadding = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#measureWithLargestChild}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#measureWithLargestChild}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3230,11 +3267,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:measureWithLargestChild
+          @attr name com.mounacheikhna.ctc.debug:measureWithLargestChild
         */
         public static final int LinearLayoutCompat_measureWithLargestChild = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#showDividers}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#showDividers}
           attribute's value can be found in the {@link #LinearLayoutCompat} array.
 
 
@@ -3249,7 +3286,7 @@ containing a value of this type.
 <tr><td><code>middle</code></td><td>2</td><td></td></tr>
 <tr><td><code>end</code></td><td>4</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:showDividers
+          @attr name com.mounacheikhna.ctc.debug:showDividers
         */
         public static final int LinearLayoutCompat_showDividers = 7;
         /** Attributes that can be used with a LinearLayoutCompat_Layout.
@@ -3388,9 +3425,9 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #MenuItem_actionLayout com.mounacheikhna.ctc.tv.debug:actionLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionProviderClass com.mounacheikhna.ctc.tv.debug:actionProviderClass}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_actionViewClass com.mounacheikhna.ctc.tv.debug:actionViewClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionLayout com.mounacheikhna.ctc.debug:actionLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionProviderClass com.mounacheikhna.ctc.debug:actionProviderClass}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_actionViewClass com.mounacheikhna.ctc.debug:actionViewClass}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_alphabeticShortcut android:alphabeticShortcut}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checkable android:checkable}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_checked android:checked}</code></td><td></td></tr>
@@ -3404,7 +3441,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuItem_android_title android:title}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_titleCondensed android:titleCondensed}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuItem_android_visible android:visible}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuItem_showAsAction com.mounacheikhna.ctc.tv.debug:showAsAction}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuItem_showAsAction com.mounacheikhna.ctc.debug:showAsAction}</code></td><td></td></tr>
            </table>
            @see #MenuItem_actionLayout
            @see #MenuItem_actionProviderClass
@@ -3432,17 +3469,17 @@ containing a value of this type.
             0x7f010036
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionLayout}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionLayout
+          @attr name com.mounacheikhna.ctc.debug:actionLayout
         */
         public static final int MenuItem_actionLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionProviderClass}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionProviderClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3452,11 +3489,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:actionProviderClass
+          @attr name com.mounacheikhna.ctc.debug:actionProviderClass
         */
         public static final int MenuItem_actionProviderClass = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionViewClass}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionViewClass}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3466,7 +3503,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:actionViewClass
+          @attr name com.mounacheikhna.ctc.debug:actionViewClass
         */
         public static final int MenuItem_actionViewClass = 15;
         /**
@@ -3548,7 +3585,7 @@ containing a value of this type.
         */
         public static final int MenuItem_android_visible = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#showAsAction}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#showAsAction}
           attribute's value can be found in the {@link #MenuItem} array.
 
 
@@ -3564,7 +3601,7 @@ containing a value of this type.
 <tr><td><code>withText</code></td><td>4</td><td></td></tr>
 <tr><td><code>collapseActionView</code></td><td>8</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:showAsAction
+          @attr name com.mounacheikhna.ctc.debug:showAsAction
         */
         public static final int MenuItem_showAsAction = 13;
         /** Attributes that can be used with a MenuView.
@@ -3580,7 +3617,7 @@ containing a value of this type.
            <tr><td><code>{@link #MenuView_android_itemTextAppearance android:itemTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_verticalDivider android:verticalDivider}</code></td><td></td></tr>
            <tr><td><code>{@link #MenuView_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #MenuView_preserveIconSpacing com.mounacheikhna.ctc.tv.debug:preserveIconSpacing}</code></td><td></td></tr>
+           <tr><td><code>{@link #MenuView_preserveIconSpacing com.mounacheikhna.ctc.debug:preserveIconSpacing}</code></td><td></td></tr>
            </table>
            @see #MenuView_android_headerBackground
            @see #MenuView_android_horizontalDivider
@@ -3638,7 +3675,7 @@ containing a value of this type.
         */
         public static final int MenuView_android_windowAnimationStyle = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#preserveIconSpacing}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#preserveIconSpacing}
           attribute's value can be found in the {@link #MenuView} array.
 
 
@@ -3648,7 +3685,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:preserveIconSpacing
+          @attr name com.mounacheikhna.ctc.debug:preserveIconSpacing
         */
         public static final int MenuView_preserveIconSpacing = 7;
         /** Attributes that can be used with a PopupWindow.
@@ -3658,7 +3695,7 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #PopupWindow_android_popupBackground android:popupBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #PopupWindow_overlapAnchor com.mounacheikhna.ctc.tv.debug:overlapAnchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindow_overlapAnchor com.mounacheikhna.ctc.debug:overlapAnchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindow_android_popupBackground
            @see #PopupWindow_overlapAnchor
@@ -3673,7 +3710,7 @@ containing a value of this type.
         */
         public static final int PopupWindow_android_popupBackground = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#overlapAnchor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#overlapAnchor}
           attribute's value can be found in the {@link #PopupWindow} array.
 
 
@@ -3683,7 +3720,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:overlapAnchor
+          @attr name com.mounacheikhna.ctc.debug:overlapAnchor
         */
         public static final int PopupWindow_overlapAnchor = 1;
         /** Attributes that can be used with a PopupWindowBackgroundState.
@@ -3692,7 +3729,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.mounacheikhna.ctc.tv.debug:state_above_anchor}</code></td><td></td></tr>
+           <tr><td><code>{@link #PopupWindowBackgroundState_state_above_anchor com.mounacheikhna.ctc.debug:state_above_anchor}</code></td><td></td></tr>
            </table>
            @see #PopupWindowBackgroundState_state_above_anchor
          */
@@ -3700,7 +3737,7 @@ containing a value of this type.
             0x7f010039
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#state_above_anchor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#state_above_anchor}
           attribute's value can be found in the {@link #PopupWindowBackgroundState} array.
 
 
@@ -3710,7 +3747,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:state_above_anchor
+          @attr name com.mounacheikhna.ctc.debug:state_above_anchor
         */
         public static final int PopupWindowBackgroundState_state_above_anchor = 0;
         /** Attributes that can be used with a RecyclerView.
@@ -3720,10 +3757,10 @@ containing a value of this type.
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #RecyclerView_android_orientation android:orientation}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_layoutManager com.mounacheikhna.ctc.tv.debug:layoutManager}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_reverseLayout com.mounacheikhna.ctc.tv.debug:reverseLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_spanCount com.mounacheikhna.ctc.tv.debug:spanCount}</code></td><td></td></tr>
-           <tr><td><code>{@link #RecyclerView_stackFromEnd com.mounacheikhna.ctc.tv.debug:stackFromEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_layoutManager com.mounacheikhna.ctc.debug:layoutManager}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_reverseLayout com.mounacheikhna.ctc.debug:reverseLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_spanCount com.mounacheikhna.ctc.debug:spanCount}</code></td><td></td></tr>
+           <tr><td><code>{@link #RecyclerView_stackFromEnd com.mounacheikhna.ctc.debug:stackFromEnd}</code></td><td></td></tr>
            </table>
            @see #RecyclerView_android_orientation
            @see #RecyclerView_layoutManager
@@ -3742,7 +3779,7 @@ containing a value of this type.
         */
         public static final int RecyclerView_android_orientation = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#layoutManager}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#layoutManager}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -3752,11 +3789,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:layoutManager
+          @attr name com.mounacheikhna.ctc.debug:layoutManager
         */
         public static final int RecyclerView_layoutManager = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#reverseLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#reverseLayout}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -3766,11 +3803,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:reverseLayout
+          @attr name com.mounacheikhna.ctc.debug:reverseLayout
         */
         public static final int RecyclerView_reverseLayout = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#spanCount}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#spanCount}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -3780,11 +3817,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:spanCount
+          @attr name com.mounacheikhna.ctc.debug:spanCount
         */
         public static final int RecyclerView_spanCount = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#stackFromEnd}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#stackFromEnd}
           attribute's value can be found in the {@link #RecyclerView} array.
 
 
@@ -3794,7 +3831,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:stackFromEnd
+          @attr name com.mounacheikhna.ctc.debug:stackFromEnd
         */
         public static final int RecyclerView_stackFromEnd = 4;
         /** Attributes that can be used with a SearchView.
@@ -3807,19 +3844,19 @@ containing a value of this type.
            <tr><td><code>{@link #SearchView_android_imeOptions android:imeOptions}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_inputType android:inputType}</code></td><td></td></tr>
            <tr><td><code>{@link #SearchView_android_maxWidth android:maxWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_closeIcon com.mounacheikhna.ctc.tv.debug:closeIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_commitIcon com.mounacheikhna.ctc.tv.debug:commitIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_defaultQueryHint com.mounacheikhna.ctc.tv.debug:defaultQueryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_goIcon com.mounacheikhna.ctc.tv.debug:goIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_iconifiedByDefault com.mounacheikhna.ctc.tv.debug:iconifiedByDefault}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_layout com.mounacheikhna.ctc.tv.debug:layout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryBackground com.mounacheikhna.ctc.tv.debug:queryBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_queryHint com.mounacheikhna.ctc.tv.debug:queryHint}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchHintIcon com.mounacheikhna.ctc.tv.debug:searchHintIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_searchIcon com.mounacheikhna.ctc.tv.debug:searchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_submitBackground com.mounacheikhna.ctc.tv.debug:submitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_suggestionRowLayout com.mounacheikhna.ctc.tv.debug:suggestionRowLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #SearchView_voiceIcon com.mounacheikhna.ctc.tv.debug:voiceIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_closeIcon com.mounacheikhna.ctc.debug:closeIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_commitIcon com.mounacheikhna.ctc.debug:commitIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_defaultQueryHint com.mounacheikhna.ctc.debug:defaultQueryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_goIcon com.mounacheikhna.ctc.debug:goIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_iconifiedByDefault com.mounacheikhna.ctc.debug:iconifiedByDefault}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_layout com.mounacheikhna.ctc.debug:layout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryBackground com.mounacheikhna.ctc.debug:queryBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_queryHint com.mounacheikhna.ctc.debug:queryHint}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchHintIcon com.mounacheikhna.ctc.debug:searchHintIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_searchIcon com.mounacheikhna.ctc.debug:searchIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_submitBackground com.mounacheikhna.ctc.debug:submitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_suggestionRowLayout com.mounacheikhna.ctc.debug:suggestionRowLayout}</code></td><td></td></tr>
+           <tr><td><code>{@link #SearchView_voiceIcon com.mounacheikhna.ctc.debug:voiceIcon}</code></td><td></td></tr>
            </table>
            @see #SearchView_android_focusable
            @see #SearchView_android_imeOptions
@@ -3871,27 +3908,27 @@ containing a value of this type.
         */
         public static final int SearchView_android_maxWidth = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#closeIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#closeIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:closeIcon
+          @attr name com.mounacheikhna.ctc.debug:closeIcon
         */
         public static final int SearchView_closeIcon = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#commitIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#commitIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:commitIcon
+          @attr name com.mounacheikhna.ctc.debug:commitIcon
         */
         public static final int SearchView_commitIcon = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#defaultQueryHint}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#defaultQueryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3901,21 +3938,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:defaultQueryHint
+          @attr name com.mounacheikhna.ctc.debug:defaultQueryHint
         */
         public static final int SearchView_defaultQueryHint = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#goIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#goIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:goIcon
+          @attr name com.mounacheikhna.ctc.debug:goIcon
         */
         public static final int SearchView_goIcon = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#iconifiedByDefault}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#iconifiedByDefault}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3925,31 +3962,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:iconifiedByDefault
+          @attr name com.mounacheikhna.ctc.debug:iconifiedByDefault
         */
         public static final int SearchView_iconifiedByDefault = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#layout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#layout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:layout
+          @attr name com.mounacheikhna.ctc.debug:layout
         */
         public static final int SearchView_layout = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#queryBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#queryBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:queryBackground
+          @attr name com.mounacheikhna.ctc.debug:queryBackground
         */
         public static final int SearchView_queryBackground = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#queryHint}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#queryHint}
           attribute's value can be found in the {@link #SearchView} array.
 
 
@@ -3959,57 +3996,57 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:queryHint
+          @attr name com.mounacheikhna.ctc.debug:queryHint
         */
         public static final int SearchView_queryHint = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#searchHintIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#searchHintIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:searchHintIcon
+          @attr name com.mounacheikhna.ctc.debug:searchHintIcon
         */
         public static final int SearchView_searchHintIcon = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#searchIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#searchIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:searchIcon
+          @attr name com.mounacheikhna.ctc.debug:searchIcon
         */
         public static final int SearchView_searchIcon = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#submitBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#submitBackground}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:submitBackground
+          @attr name com.mounacheikhna.ctc.debug:submitBackground
         */
         public static final int SearchView_submitBackground = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#suggestionRowLayout}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#suggestionRowLayout}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:suggestionRowLayout
+          @attr name com.mounacheikhna.ctc.debug:suggestionRowLayout
         */
         public static final int SearchView_suggestionRowLayout = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#voiceIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#voiceIcon}
           attribute's value can be found in the {@link #SearchView} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:voiceIcon
+          @attr name com.mounacheikhna.ctc.debug:voiceIcon
         */
         public static final int SearchView_voiceIcon = 12;
         /** Attributes that can be used with a Spinner.
@@ -4021,7 +4058,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #Spinner_android_dropDownWidth android:dropDownWidth}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_popupBackground android:popupBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #Spinner_android_prompt android:prompt}</code></td><td></td></tr>
-           <tr><td><code>{@link #Spinner_popupTheme com.mounacheikhna.ctc.tv.debug:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Spinner_popupTheme com.mounacheikhna.ctc.debug:popupTheme}</code></td><td></td></tr>
            </table>
            @see #Spinner_android_dropDownWidth
            @see #Spinner_android_popupBackground
@@ -4050,13 +4087,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Spinner_android_prompt = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#popupTheme}
           attribute's value can be found in the {@link #Spinner} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:popupTheme
+          @attr name com.mounacheikhna.ctc.debug:popupTheme
         */
         public static final int Spinner_popupTheme = 3;
         /** Attributes that can be used with a SwitchCompat.
@@ -4068,13 +4105,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #SwitchCompat_android_textOff android:textOff}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_textOn android:textOn}</code></td><td></td></tr>
            <tr><td><code>{@link #SwitchCompat_android_thumb android:thumb}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_showText com.mounacheikhna.ctc.tv.debug:showText}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_splitTrack com.mounacheikhna.ctc.tv.debug:splitTrack}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.mounacheikhna.ctc.tv.debug:switchMinWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchPadding com.mounacheikhna.ctc.tv.debug:switchPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.mounacheikhna.ctc.tv.debug:switchTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.mounacheikhna.ctc.tv.debug:thumbTextPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #SwitchCompat_track com.mounacheikhna.ctc.tv.debug:track}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_showText com.mounacheikhna.ctc.debug:showText}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_splitTrack com.mounacheikhna.ctc.debug:splitTrack}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchMinWidth com.mounacheikhna.ctc.debug:switchMinWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchPadding com.mounacheikhna.ctc.debug:switchPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_switchTextAppearance com.mounacheikhna.ctc.debug:switchTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_thumbTextPadding com.mounacheikhna.ctc.debug:thumbTextPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #SwitchCompat_track com.mounacheikhna.ctc.debug:track}</code></td><td></td></tr>
            </table>
            @see #SwitchCompat_android_textOff
            @see #SwitchCompat_android_textOn
@@ -4111,7 +4148,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int SwitchCompat_android_thumb = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#showText}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#showText}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4121,11 +4158,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:showText
+          @attr name com.mounacheikhna.ctc.debug:showText
         */
         public static final int SwitchCompat_showText = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#splitTrack}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#splitTrack}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4135,11 +4172,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:splitTrack
+          @attr name com.mounacheikhna.ctc.debug:splitTrack
         */
         public static final int SwitchCompat_splitTrack = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#switchMinWidth}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#switchMinWidth}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4151,11 +4188,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:switchMinWidth
+          @attr name com.mounacheikhna.ctc.debug:switchMinWidth
         */
         public static final int SwitchCompat_switchMinWidth = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#switchPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#switchPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4167,21 +4204,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:switchPadding
+          @attr name com.mounacheikhna.ctc.debug:switchPadding
         */
         public static final int SwitchCompat_switchPadding = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#switchTextAppearance}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#switchTextAppearance}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:switchTextAppearance
+          @attr name com.mounacheikhna.ctc.debug:switchTextAppearance
         */
         public static final int SwitchCompat_switchTextAppearance = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#thumbTextPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#thumbTextPadding}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
@@ -4193,17 +4230,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:thumbTextPadding
+          @attr name com.mounacheikhna.ctc.debug:thumbTextPadding
         */
         public static final int SwitchCompat_thumbTextPadding = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#track}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#track}
           attribute's value can be found in the {@link #SwitchCompat} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:track
+          @attr name com.mounacheikhna.ctc.debug:track
         */
         public static final int SwitchCompat_track = 3;
         /** Attributes that can be used with a TextAppearance.
@@ -4220,7 +4257,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <tr><td><code>{@link #TextAppearance_android_textSize android:textSize}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_textStyle android:textStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #TextAppearance_android_typeface android:typeface}</code></td><td></td></tr>
-           <tr><td><code>{@link #TextAppearance_textAllCaps com.mounacheikhna.ctc.tv.debug:textAllCaps}</code></td><td></td></tr>
+           <tr><td><code>{@link #TextAppearance_textAllCaps com.mounacheikhna.ctc.debug:textAllCaps}</code></td><td></td></tr>
            </table>
            @see #TextAppearance_android_shadowColor
            @see #TextAppearance_android_shadowDx
@@ -4286,14 +4323,14 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int TextAppearance_android_typeface = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAllCaps}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAllCaps}
           attribute's value can be found in the {@link #TextAppearance} array.
 
 
           <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAllCaps
+          @attr name com.mounacheikhna.ctc.debug:textAllCaps
         */
         public static final int TextAppearance_textAllCaps = 8;
         /** Attributes that can be used with a Theme.
@@ -4302,116 +4339,116 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #Theme_actionBarDivider com.mounacheikhna.ctc.tv.debug:actionBarDivider}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarItemBackground com.mounacheikhna.ctc.tv.debug:actionBarItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarPopupTheme com.mounacheikhna.ctc.tv.debug:actionBarPopupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSize com.mounacheikhna.ctc.tv.debug:actionBarSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarSplitStyle com.mounacheikhna.ctc.tv.debug:actionBarSplitStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarStyle com.mounacheikhna.ctc.tv.debug:actionBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.mounacheikhna.ctc.tv.debug:actionBarTabBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabStyle com.mounacheikhna.ctc.tv.debug:actionBarTabStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.mounacheikhna.ctc.tv.debug:actionBarTabTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarTheme com.mounacheikhna.ctc.tv.debug:actionBarTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.mounacheikhna.ctc.tv.debug:actionBarWidgetTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionButtonStyle com.mounacheikhna.ctc.tv.debug:actionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionDropDownStyle com.mounacheikhna.ctc.tv.debug:actionDropDownStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.mounacheikhna.ctc.tv.debug:actionMenuTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionMenuTextColor com.mounacheikhna.ctc.tv.debug:actionMenuTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeBackground com.mounacheikhna.ctc.tv.debug:actionModeBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.mounacheikhna.ctc.tv.debug:actionModeCloseButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.mounacheikhna.ctc.tv.debug:actionModeCloseDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.mounacheikhna.ctc.tv.debug:actionModeCopyDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeCutDrawable com.mounacheikhna.ctc.tv.debug:actionModeCutDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeFindDrawable com.mounacheikhna.ctc.tv.debug:actionModeFindDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePasteDrawable com.mounacheikhna.ctc.tv.debug:actionModePasteDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.mounacheikhna.ctc.tv.debug:actionModePopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.mounacheikhna.ctc.tv.debug:actionModeSelectAllDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeShareDrawable com.mounacheikhna.ctc.tv.debug:actionModeShareDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeSplitBackground com.mounacheikhna.ctc.tv.debug:actionModeSplitBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeStyle com.mounacheikhna.ctc.tv.debug:actionModeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.mounacheikhna.ctc.tv.debug:actionModeWebSearchDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.mounacheikhna.ctc.tv.debug:actionOverflowButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.mounacheikhna.ctc.tv.debug:actionOverflowMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_activityChooserViewStyle com.mounacheikhna.ctc.tv.debug:activityChooserViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.mounacheikhna.ctc.tv.debug:alertDialogButtonGroupStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.mounacheikhna.ctc.tv.debug:alertDialogCenterButtons}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogStyle com.mounacheikhna.ctc.tv.debug:alertDialogStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_alertDialogTheme com.mounacheikhna.ctc.tv.debug:alertDialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarDivider com.mounacheikhna.ctc.debug:actionBarDivider}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarItemBackground com.mounacheikhna.ctc.debug:actionBarItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarPopupTheme com.mounacheikhna.ctc.debug:actionBarPopupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSize com.mounacheikhna.ctc.debug:actionBarSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarSplitStyle com.mounacheikhna.ctc.debug:actionBarSplitStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarStyle com.mounacheikhna.ctc.debug:actionBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabBarStyle com.mounacheikhna.ctc.debug:actionBarTabBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabStyle com.mounacheikhna.ctc.debug:actionBarTabStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTabTextStyle com.mounacheikhna.ctc.debug:actionBarTabTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarTheme com.mounacheikhna.ctc.debug:actionBarTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionBarWidgetTheme com.mounacheikhna.ctc.debug:actionBarWidgetTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionButtonStyle com.mounacheikhna.ctc.debug:actionButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionDropDownStyle com.mounacheikhna.ctc.debug:actionDropDownStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextAppearance com.mounacheikhna.ctc.debug:actionMenuTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionMenuTextColor com.mounacheikhna.ctc.debug:actionMenuTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeBackground com.mounacheikhna.ctc.debug:actionModeBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseButtonStyle com.mounacheikhna.ctc.debug:actionModeCloseButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCloseDrawable com.mounacheikhna.ctc.debug:actionModeCloseDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCopyDrawable com.mounacheikhna.ctc.debug:actionModeCopyDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeCutDrawable com.mounacheikhna.ctc.debug:actionModeCutDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeFindDrawable com.mounacheikhna.ctc.debug:actionModeFindDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePasteDrawable com.mounacheikhna.ctc.debug:actionModePasteDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModePopupWindowStyle com.mounacheikhna.ctc.debug:actionModePopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSelectAllDrawable com.mounacheikhna.ctc.debug:actionModeSelectAllDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeShareDrawable com.mounacheikhna.ctc.debug:actionModeShareDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeSplitBackground com.mounacheikhna.ctc.debug:actionModeSplitBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeStyle com.mounacheikhna.ctc.debug:actionModeStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionModeWebSearchDrawable com.mounacheikhna.ctc.debug:actionModeWebSearchDrawable}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowButtonStyle com.mounacheikhna.ctc.debug:actionOverflowButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_actionOverflowMenuStyle com.mounacheikhna.ctc.debug:actionOverflowMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_activityChooserViewStyle com.mounacheikhna.ctc.debug:activityChooserViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogButtonGroupStyle com.mounacheikhna.ctc.debug:alertDialogButtonGroupStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogCenterButtons com.mounacheikhna.ctc.debug:alertDialogCenterButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogStyle com.mounacheikhna.ctc.debug:alertDialogStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_alertDialogTheme com.mounacheikhna.ctc.debug:alertDialogTheme}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowAnimationStyle android:windowAnimationStyle}</code></td><td></td></tr>
            <tr><td><code>{@link #Theme_android_windowIsFloating android:windowIsFloating}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.mounacheikhna.ctc.tv.debug:autoCompleteTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_borderlessButtonStyle com.mounacheikhna.ctc.tv.debug:borderlessButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.mounacheikhna.ctc.tv.debug:buttonBarButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.mounacheikhna.ctc.tv.debug:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.mounacheikhna.ctc.tv.debug:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.mounacheikhna.ctc.tv.debug:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonBarStyle com.mounacheikhna.ctc.tv.debug:buttonBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyle com.mounacheikhna.ctc.tv.debug:buttonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_buttonStyleSmall com.mounacheikhna.ctc.tv.debug:buttonStyleSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkboxStyle com.mounacheikhna.ctc.tv.debug:checkboxStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_checkedTextViewStyle com.mounacheikhna.ctc.tv.debug:checkedTextViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorAccent com.mounacheikhna.ctc.tv.debug:colorAccent}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorButtonNormal com.mounacheikhna.ctc.tv.debug:colorButtonNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlActivated com.mounacheikhna.ctc.tv.debug:colorControlActivated}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlHighlight com.mounacheikhna.ctc.tv.debug:colorControlHighlight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorControlNormal com.mounacheikhna.ctc.tv.debug:colorControlNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimary com.mounacheikhna.ctc.tv.debug:colorPrimary}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorPrimaryDark com.mounacheikhna.ctc.tv.debug:colorPrimaryDark}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.mounacheikhna.ctc.tv.debug:colorSwitchThumbNormal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_controlBackground com.mounacheikhna.ctc.tv.debug:controlBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogPreferredPadding com.mounacheikhna.ctc.tv.debug:dialogPreferredPadding}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dialogTheme com.mounacheikhna.ctc.tv.debug:dialogTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerHorizontal com.mounacheikhna.ctc.tv.debug:dividerHorizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dividerVertical com.mounacheikhna.ctc.tv.debug:dividerVertical}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropDownListViewStyle com.mounacheikhna.ctc.tv.debug:dropDownListViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.mounacheikhna.ctc.tv.debug:dropdownListPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextBackground com.mounacheikhna.ctc.tv.debug:editTextBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextColor com.mounacheikhna.ctc.tv.debug:editTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_editTextStyle com.mounacheikhna.ctc.tv.debug:editTextStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_homeAsUpIndicator com.mounacheikhna.ctc.tv.debug:homeAsUpIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_imageButtonStyle com.mounacheikhna.ctc.tv.debug:imageButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.mounacheikhna.ctc.tv.debug:listChoiceBackgroundIndicator}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listDividerAlertDialog com.mounacheikhna.ctc.tv.debug:listDividerAlertDialog}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPopupWindowStyle com.mounacheikhna.ctc.tv.debug:listPopupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeight com.mounacheikhna.ctc.tv.debug:listPreferredItemHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.mounacheikhna.ctc.tv.debug:listPreferredItemHeightLarge}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.mounacheikhna.ctc.tv.debug:listPreferredItemHeightSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.mounacheikhna.ctc.tv.debug:listPreferredItemPaddingLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.mounacheikhna.ctc.tv.debug:listPreferredItemPaddingRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelBackground com.mounacheikhna.ctc.tv.debug:panelBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListTheme com.mounacheikhna.ctc.tv.debug:panelMenuListTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_panelMenuListWidth com.mounacheikhna.ctc.tv.debug:panelMenuListWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupMenuStyle com.mounacheikhna.ctc.tv.debug:popupMenuStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_popupWindowStyle com.mounacheikhna.ctc.tv.debug:popupWindowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_radioButtonStyle com.mounacheikhna.ctc.tv.debug:radioButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_ratingBarStyle com.mounacheikhna.ctc.tv.debug:ratingBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_searchViewStyle com.mounacheikhna.ctc.tv.debug:searchViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_seekBarStyle com.mounacheikhna.ctc.tv.debug:seekBarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackground com.mounacheikhna.ctc.tv.debug:selectableItemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.mounacheikhna.ctc.tv.debug:selectableItemBackgroundBorderless}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.mounacheikhna.ctc.tv.debug:spinnerDropDownItemStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_spinnerStyle com.mounacheikhna.ctc.tv.debug:spinnerStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_switchStyle com.mounacheikhna.ctc.tv.debug:switchStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.mounacheikhna.ctc.tv.debug:textAppearanceLargePopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItem com.mounacheikhna.ctc.tv.debug:textAppearanceListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.mounacheikhna.ctc.tv.debug:textAppearanceListItemSmall}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.mounacheikhna.ctc.tv.debug:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.mounacheikhna.ctc.tv.debug:textAppearanceSearchResultTitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.mounacheikhna.ctc.tv.debug:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.mounacheikhna.ctc.tv.debug:textColorAlertDialogListItem}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_textColorSearchUrl com.mounacheikhna.ctc.tv.debug:textColorSearchUrl}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.mounacheikhna.ctc.tv.debug:toolbarNavigationButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_toolbarStyle com.mounacheikhna.ctc.tv.debug:toolbarStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBar com.mounacheikhna.ctc.tv.debug:windowActionBar}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionBarOverlay com.mounacheikhna.ctc.tv.debug:windowActionBarOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowActionModeOverlay com.mounacheikhna.ctc.tv.debug:windowActionModeOverlay}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.mounacheikhna.ctc.tv.debug:windowFixedHeightMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.mounacheikhna.ctc.tv.debug:windowFixedHeightMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.mounacheikhna.ctc.tv.debug:windowFixedWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.mounacheikhna.ctc.tv.debug:windowFixedWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMajor com.mounacheikhna.ctc.tv.debug:windowMinWidthMajor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowMinWidthMinor com.mounacheikhna.ctc.tv.debug:windowMinWidthMinor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Theme_windowNoTitle com.mounacheikhna.ctc.tv.debug:windowNoTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_autoCompleteTextViewStyle com.mounacheikhna.ctc.debug:autoCompleteTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_borderlessButtonStyle com.mounacheikhna.ctc.debug:borderlessButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarButtonStyle com.mounacheikhna.ctc.debug:buttonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNegativeButtonStyle com.mounacheikhna.ctc.debug:buttonBarNegativeButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarNeutralButtonStyle com.mounacheikhna.ctc.debug:buttonBarNeutralButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarPositiveButtonStyle com.mounacheikhna.ctc.debug:buttonBarPositiveButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonBarStyle com.mounacheikhna.ctc.debug:buttonBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyle com.mounacheikhna.ctc.debug:buttonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_buttonStyleSmall com.mounacheikhna.ctc.debug:buttonStyleSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkboxStyle com.mounacheikhna.ctc.debug:checkboxStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_checkedTextViewStyle com.mounacheikhna.ctc.debug:checkedTextViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorAccent com.mounacheikhna.ctc.debug:colorAccent}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorButtonNormal com.mounacheikhna.ctc.debug:colorButtonNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlActivated com.mounacheikhna.ctc.debug:colorControlActivated}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlHighlight com.mounacheikhna.ctc.debug:colorControlHighlight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorControlNormal com.mounacheikhna.ctc.debug:colorControlNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimary com.mounacheikhna.ctc.debug:colorPrimary}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorPrimaryDark com.mounacheikhna.ctc.debug:colorPrimaryDark}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_colorSwitchThumbNormal com.mounacheikhna.ctc.debug:colorSwitchThumbNormal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_controlBackground com.mounacheikhna.ctc.debug:controlBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogPreferredPadding com.mounacheikhna.ctc.debug:dialogPreferredPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dialogTheme com.mounacheikhna.ctc.debug:dialogTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerHorizontal com.mounacheikhna.ctc.debug:dividerHorizontal}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dividerVertical com.mounacheikhna.ctc.debug:dividerVertical}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropDownListViewStyle com.mounacheikhna.ctc.debug:dropDownListViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_dropdownListPreferredItemHeight com.mounacheikhna.ctc.debug:dropdownListPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextBackground com.mounacheikhna.ctc.debug:editTextBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextColor com.mounacheikhna.ctc.debug:editTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_editTextStyle com.mounacheikhna.ctc.debug:editTextStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_homeAsUpIndicator com.mounacheikhna.ctc.debug:homeAsUpIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_imageButtonStyle com.mounacheikhna.ctc.debug:imageButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listChoiceBackgroundIndicator com.mounacheikhna.ctc.debug:listChoiceBackgroundIndicator}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listDividerAlertDialog com.mounacheikhna.ctc.debug:listDividerAlertDialog}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPopupWindowStyle com.mounacheikhna.ctc.debug:listPopupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeight com.mounacheikhna.ctc.debug:listPreferredItemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightLarge com.mounacheikhna.ctc.debug:listPreferredItemHeightLarge}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemHeightSmall com.mounacheikhna.ctc.debug:listPreferredItemHeightSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingLeft com.mounacheikhna.ctc.debug:listPreferredItemPaddingLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_listPreferredItemPaddingRight com.mounacheikhna.ctc.debug:listPreferredItemPaddingRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelBackground com.mounacheikhna.ctc.debug:panelBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListTheme com.mounacheikhna.ctc.debug:panelMenuListTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_panelMenuListWidth com.mounacheikhna.ctc.debug:panelMenuListWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupMenuStyle com.mounacheikhna.ctc.debug:popupMenuStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_popupWindowStyle com.mounacheikhna.ctc.debug:popupWindowStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_radioButtonStyle com.mounacheikhna.ctc.debug:radioButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_ratingBarStyle com.mounacheikhna.ctc.debug:ratingBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_searchViewStyle com.mounacheikhna.ctc.debug:searchViewStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_seekBarStyle com.mounacheikhna.ctc.debug:seekBarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackground com.mounacheikhna.ctc.debug:selectableItemBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_selectableItemBackgroundBorderless com.mounacheikhna.ctc.debug:selectableItemBackgroundBorderless}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerDropDownItemStyle com.mounacheikhna.ctc.debug:spinnerDropDownItemStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_spinnerStyle com.mounacheikhna.ctc.debug:spinnerStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_switchStyle com.mounacheikhna.ctc.debug:switchStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceLargePopupMenu com.mounacheikhna.ctc.debug:textAppearanceLargePopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItem com.mounacheikhna.ctc.debug:textAppearanceListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceListItemSmall com.mounacheikhna.ctc.debug:textAppearanceListItemSmall}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultSubtitle com.mounacheikhna.ctc.debug:textAppearanceSearchResultSubtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSearchResultTitle com.mounacheikhna.ctc.debug:textAppearanceSearchResultTitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textAppearanceSmallPopupMenu com.mounacheikhna.ctc.debug:textAppearanceSmallPopupMenu}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorAlertDialogListItem com.mounacheikhna.ctc.debug:textColorAlertDialogListItem}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_textColorSearchUrl com.mounacheikhna.ctc.debug:textColorSearchUrl}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarNavigationButtonStyle com.mounacheikhna.ctc.debug:toolbarNavigationButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_toolbarStyle com.mounacheikhna.ctc.debug:toolbarStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBar com.mounacheikhna.ctc.debug:windowActionBar}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionBarOverlay com.mounacheikhna.ctc.debug:windowActionBarOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowActionModeOverlay com.mounacheikhna.ctc.debug:windowActionModeOverlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMajor com.mounacheikhna.ctc.debug:windowFixedHeightMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedHeightMinor com.mounacheikhna.ctc.debug:windowFixedHeightMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMajor com.mounacheikhna.ctc.debug:windowFixedWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowFixedWidthMinor com.mounacheikhna.ctc.debug:windowFixedWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMajor com.mounacheikhna.ctc.debug:windowMinWidthMajor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowMinWidthMinor com.mounacheikhna.ctc.debug:windowMinWidthMinor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Theme_windowNoTitle com.mounacheikhna.ctc.debug:windowNoTitle}</code></td><td></td></tr>
            </table>
            @see #Theme_actionBarDivider
            @see #Theme_actionBarItemBackground
@@ -4555,37 +4592,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
             0x7f0100bc, 0x7f0100bd
         };
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarDivider}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarDivider}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarDivider
+          @attr name com.mounacheikhna.ctc.debug:actionBarDivider
         */
         public static final int Theme_actionBarDivider = 23;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarItemBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarItemBackground
+          @attr name com.mounacheikhna.ctc.debug:actionBarItemBackground
         */
         public static final int Theme_actionBarItemBackground = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarPopupTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarPopupTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarPopupTheme
+          @attr name com.mounacheikhna.ctc.debug:actionBarPopupTheme
         */
         public static final int Theme_actionBarPopupTheme = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarSize}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarSize}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4605,111 +4642,111 @@ containing a value of this type.
 <tr><th>Constant</th><th>Value</th><th>Description</th></tr>
 <tr><td><code>wrap_content</code></td><td>0</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarSize
+          @attr name com.mounacheikhna.ctc.debug:actionBarSize
         */
         public static final int Theme_actionBarSize = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarSplitStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarSplitStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarSplitStyle
+          @attr name com.mounacheikhna.ctc.debug:actionBarSplitStyle
         */
         public static final int Theme_actionBarSplitStyle = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarStyle
+          @attr name com.mounacheikhna.ctc.debug:actionBarStyle
         */
         public static final int Theme_actionBarStyle = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarTabBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarTabBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarTabBarStyle
+          @attr name com.mounacheikhna.ctc.debug:actionBarTabBarStyle
         */
         public static final int Theme_actionBarTabBarStyle = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarTabStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarTabStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarTabStyle
+          @attr name com.mounacheikhna.ctc.debug:actionBarTabStyle
         */
         public static final int Theme_actionBarTabStyle = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarTabTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarTabTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarTabTextStyle
+          @attr name com.mounacheikhna.ctc.debug:actionBarTabTextStyle
         */
         public static final int Theme_actionBarTabTextStyle = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarTheme
+          @attr name com.mounacheikhna.ctc.debug:actionBarTheme
         */
         public static final int Theme_actionBarTheme = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionBarWidgetTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionBarWidgetTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionBarWidgetTheme
+          @attr name com.mounacheikhna.ctc.debug:actionBarWidgetTheme
         */
         public static final int Theme_actionBarWidgetTheme = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:actionButtonStyle
         */
         public static final int Theme_actionButtonStyle = 49;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionDropDownStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionDropDownStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionDropDownStyle
+          @attr name com.mounacheikhna.ctc.debug:actionDropDownStyle
         */
         public static final int Theme_actionDropDownStyle = 45;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionMenuTextAppearance}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionMenuTextAppearance}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionMenuTextAppearance
+          @attr name com.mounacheikhna.ctc.debug:actionMenuTextAppearance
         */
         public static final int Theme_actionMenuTextAppearance = 25;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionMenuTextColor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionMenuTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4717,181 +4754,181 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionMenuTextColor
+          @attr name com.mounacheikhna.ctc.debug:actionMenuTextColor
         */
         public static final int Theme_actionMenuTextColor = 26;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeBackground
+          @attr name com.mounacheikhna.ctc.debug:actionModeBackground
         */
         public static final int Theme_actionModeBackground = 29;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeCloseButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeCloseButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeCloseButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:actionModeCloseButtonStyle
         */
         public static final int Theme_actionModeCloseButtonStyle = 28;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeCloseDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeCloseDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeCloseDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeCloseDrawable
         */
         public static final int Theme_actionModeCloseDrawable = 31;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeCopyDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeCopyDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeCopyDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeCopyDrawable
         */
         public static final int Theme_actionModeCopyDrawable = 33;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeCutDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeCutDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeCutDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeCutDrawable
         */
         public static final int Theme_actionModeCutDrawable = 32;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeFindDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeFindDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeFindDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeFindDrawable
         */
         public static final int Theme_actionModeFindDrawable = 37;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModePasteDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModePasteDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModePasteDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModePasteDrawable
         */
         public static final int Theme_actionModePasteDrawable = 34;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModePopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModePopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModePopupWindowStyle
+          @attr name com.mounacheikhna.ctc.debug:actionModePopupWindowStyle
         */
         public static final int Theme_actionModePopupWindowStyle = 39;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeSelectAllDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeSelectAllDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeSelectAllDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeSelectAllDrawable
         */
         public static final int Theme_actionModeSelectAllDrawable = 35;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeShareDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeShareDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeShareDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeShareDrawable
         */
         public static final int Theme_actionModeShareDrawable = 36;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeSplitBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeSplitBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeSplitBackground
+          @attr name com.mounacheikhna.ctc.debug:actionModeSplitBackground
         */
         public static final int Theme_actionModeSplitBackground = 30;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeStyle
+          @attr name com.mounacheikhna.ctc.debug:actionModeStyle
         */
         public static final int Theme_actionModeStyle = 27;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionModeWebSearchDrawable}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionModeWebSearchDrawable}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionModeWebSearchDrawable
+          @attr name com.mounacheikhna.ctc.debug:actionModeWebSearchDrawable
         */
         public static final int Theme_actionModeWebSearchDrawable = 38;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionOverflowButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionOverflowButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionOverflowButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:actionOverflowButtonStyle
         */
         public static final int Theme_actionOverflowButtonStyle = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#actionOverflowMenuStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#actionOverflowMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:actionOverflowMenuStyle
+          @attr name com.mounacheikhna.ctc.debug:actionOverflowMenuStyle
         */
         public static final int Theme_actionOverflowMenuStyle = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#activityChooserViewStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#activityChooserViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:activityChooserViewStyle
+          @attr name com.mounacheikhna.ctc.debug:activityChooserViewStyle
         */
         public static final int Theme_activityChooserViewStyle = 57;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#alertDialogButtonGroupStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#alertDialogButtonGroupStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:alertDialogButtonGroupStyle
+          @attr name com.mounacheikhna.ctc.debug:alertDialogButtonGroupStyle
         */
         public static final int Theme_alertDialogButtonGroupStyle = 92;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#alertDialogCenterButtons}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#alertDialogCenterButtons}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -4901,27 +4938,27 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:alertDialogCenterButtons
+          @attr name com.mounacheikhna.ctc.debug:alertDialogCenterButtons
         */
         public static final int Theme_alertDialogCenterButtons = 93;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#alertDialogStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#alertDialogStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:alertDialogStyle
+          @attr name com.mounacheikhna.ctc.debug:alertDialogStyle
         */
         public static final int Theme_alertDialogStyle = 91;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#alertDialogTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#alertDialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:alertDialogTheme
+          @attr name com.mounacheikhna.ctc.debug:alertDialogTheme
         */
         public static final int Theme_alertDialogTheme = 94;
         /**
@@ -4937,117 +4974,117 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int Theme_android_windowIsFloating = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#autoCompleteTextViewStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#autoCompleteTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:autoCompleteTextViewStyle
+          @attr name com.mounacheikhna.ctc.debug:autoCompleteTextViewStyle
         */
         public static final int Theme_autoCompleteTextViewStyle = 99;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#borderlessButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#borderlessButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:borderlessButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:borderlessButtonStyle
         */
         public static final int Theme_borderlessButtonStyle = 54;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonBarButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonBarButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonBarButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonBarButtonStyle
         */
         public static final int Theme_buttonBarButtonStyle = 51;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonBarNegativeButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonBarNegativeButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonBarNegativeButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonBarNegativeButtonStyle
         */
         public static final int Theme_buttonBarNegativeButtonStyle = 97;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonBarNeutralButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonBarNeutralButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonBarNeutralButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonBarNeutralButtonStyle
         */
         public static final int Theme_buttonBarNeutralButtonStyle = 98;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonBarPositiveButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonBarPositiveButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonBarPositiveButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonBarPositiveButtonStyle
         */
         public static final int Theme_buttonBarPositiveButtonStyle = 96;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonBarStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonBarStyle
         */
         public static final int Theme_buttonBarStyle = 50;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonStyle
+          @attr name com.mounacheikhna.ctc.debug:buttonStyle
         */
         public static final int Theme_buttonStyle = 100;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#buttonStyleSmall}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#buttonStyleSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:buttonStyleSmall
+          @attr name com.mounacheikhna.ctc.debug:buttonStyleSmall
         */
         public static final int Theme_buttonStyleSmall = 101;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#checkboxStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#checkboxStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:checkboxStyle
+          @attr name com.mounacheikhna.ctc.debug:checkboxStyle
         */
         public static final int Theme_checkboxStyle = 102;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#checkedTextViewStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#checkedTextViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:checkedTextViewStyle
+          @attr name com.mounacheikhna.ctc.debug:checkedTextViewStyle
         */
         public static final int Theme_checkedTextViewStyle = 103;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorAccent}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorAccent}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5058,11 +5095,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorAccent
+          @attr name com.mounacheikhna.ctc.debug:colorAccent
         */
         public static final int Theme_colorAccent = 84;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorButtonNormal}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorButtonNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5073,11 +5110,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorButtonNormal
+          @attr name com.mounacheikhna.ctc.debug:colorButtonNormal
         */
         public static final int Theme_colorButtonNormal = 88;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorControlActivated}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorControlActivated}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5088,11 +5125,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorControlActivated
+          @attr name com.mounacheikhna.ctc.debug:colorControlActivated
         */
         public static final int Theme_colorControlActivated = 86;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorControlHighlight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorControlHighlight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5103,11 +5140,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorControlHighlight
+          @attr name com.mounacheikhna.ctc.debug:colorControlHighlight
         */
         public static final int Theme_colorControlHighlight = 87;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorControlNormal}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorControlNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5118,11 +5155,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorControlNormal
+          @attr name com.mounacheikhna.ctc.debug:colorControlNormal
         */
         public static final int Theme_colorControlNormal = 85;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorPrimary}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorPrimary}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5133,11 +5170,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorPrimary
+          @attr name com.mounacheikhna.ctc.debug:colorPrimary
         */
         public static final int Theme_colorPrimary = 82;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorPrimaryDark}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorPrimaryDark}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5148,11 +5185,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorPrimaryDark
+          @attr name com.mounacheikhna.ctc.debug:colorPrimaryDark
         */
         public static final int Theme_colorPrimaryDark = 83;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#colorSwitchThumbNormal}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#colorSwitchThumbNormal}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5163,21 +5200,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:colorSwitchThumbNormal
+          @attr name com.mounacheikhna.ctc.debug:colorSwitchThumbNormal
         */
         public static final int Theme_colorSwitchThumbNormal = 89;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#controlBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#controlBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:controlBackground
+          @attr name com.mounacheikhna.ctc.debug:controlBackground
         */
         public static final int Theme_controlBackground = 90;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dialogPreferredPadding}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dialogPreferredPadding}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5189,51 +5226,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:dialogPreferredPadding
+          @attr name com.mounacheikhna.ctc.debug:dialogPreferredPadding
         */
         public static final int Theme_dialogPreferredPadding = 43;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dialogTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dialogTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:dialogTheme
+          @attr name com.mounacheikhna.ctc.debug:dialogTheme
         */
         public static final int Theme_dialogTheme = 42;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dividerHorizontal}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dividerHorizontal}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:dividerHorizontal
+          @attr name com.mounacheikhna.ctc.debug:dividerHorizontal
         */
         public static final int Theme_dividerHorizontal = 56;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dividerVertical}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dividerVertical}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:dividerVertical
+          @attr name com.mounacheikhna.ctc.debug:dividerVertical
         */
         public static final int Theme_dividerVertical = 55;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dropDownListViewStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dropDownListViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:dropDownListViewStyle
+          @attr name com.mounacheikhna.ctc.debug:dropDownListViewStyle
         */
         public static final int Theme_dropDownListViewStyle = 74;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#dropdownListPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#dropdownListPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5245,21 +5282,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:dropdownListPreferredItemHeight
+          @attr name com.mounacheikhna.ctc.debug:dropdownListPreferredItemHeight
         */
         public static final int Theme_dropdownListPreferredItemHeight = 46;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#editTextBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#editTextBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:editTextBackground
+          @attr name com.mounacheikhna.ctc.debug:editTextBackground
         */
         public static final int Theme_editTextBackground = 63;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#editTextColor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#editTextColor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5267,71 +5304,71 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:editTextColor
+          @attr name com.mounacheikhna.ctc.debug:editTextColor
         */
         public static final int Theme_editTextColor = 62;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#editTextStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#editTextStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:editTextStyle
+          @attr name com.mounacheikhna.ctc.debug:editTextStyle
         */
         public static final int Theme_editTextStyle = 104;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#homeAsUpIndicator}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#homeAsUpIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:homeAsUpIndicator
+          @attr name com.mounacheikhna.ctc.debug:homeAsUpIndicator
         */
         public static final int Theme_homeAsUpIndicator = 48;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#imageButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#imageButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:imageButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:imageButtonStyle
         */
         public static final int Theme_imageButtonStyle = 64;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listChoiceBackgroundIndicator}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listChoiceBackgroundIndicator}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:listChoiceBackgroundIndicator
+          @attr name com.mounacheikhna.ctc.debug:listChoiceBackgroundIndicator
         */
         public static final int Theme_listChoiceBackgroundIndicator = 81;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listDividerAlertDialog}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listDividerAlertDialog}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:listDividerAlertDialog
+          @attr name com.mounacheikhna.ctc.debug:listDividerAlertDialog
         */
         public static final int Theme_listDividerAlertDialog = 44;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPopupWindowStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPopupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:listPopupWindowStyle
+          @attr name com.mounacheikhna.ctc.debug:listPopupWindowStyle
         */
         public static final int Theme_listPopupWindowStyle = 75;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPreferredItemHeight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPreferredItemHeight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5343,11 +5380,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:listPreferredItemHeight
+          @attr name com.mounacheikhna.ctc.debug:listPreferredItemHeight
         */
         public static final int Theme_listPreferredItemHeight = 69;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPreferredItemHeightLarge}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPreferredItemHeightLarge}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5359,11 +5396,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:listPreferredItemHeightLarge
+          @attr name com.mounacheikhna.ctc.debug:listPreferredItemHeightLarge
         */
         public static final int Theme_listPreferredItemHeightLarge = 71;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPreferredItemHeightSmall}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPreferredItemHeightSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5375,11 +5412,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:listPreferredItemHeightSmall
+          @attr name com.mounacheikhna.ctc.debug:listPreferredItemHeightSmall
         */
         public static final int Theme_listPreferredItemHeightSmall = 70;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPreferredItemPaddingLeft}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPreferredItemPaddingLeft}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5391,11 +5428,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:listPreferredItemPaddingLeft
+          @attr name com.mounacheikhna.ctc.debug:listPreferredItemPaddingLeft
         */
         public static final int Theme_listPreferredItemPaddingLeft = 72;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#listPreferredItemPaddingRight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#listPreferredItemPaddingRight}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5407,31 +5444,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:listPreferredItemPaddingRight
+          @attr name com.mounacheikhna.ctc.debug:listPreferredItemPaddingRight
         */
         public static final int Theme_listPreferredItemPaddingRight = 73;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#panelBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#panelBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:panelBackground
+          @attr name com.mounacheikhna.ctc.debug:panelBackground
         */
         public static final int Theme_panelBackground = 78;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#panelMenuListTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#panelMenuListTheme}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:panelMenuListTheme
+          @attr name com.mounacheikhna.ctc.debug:panelMenuListTheme
         */
         public static final int Theme_panelMenuListTheme = 80;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#panelMenuListWidth}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#panelMenuListWidth}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5443,181 +5480,181 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:panelMenuListWidth
+          @attr name com.mounacheikhna.ctc.debug:panelMenuListWidth
         */
         public static final int Theme_panelMenuListWidth = 79;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#popupMenuStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#popupMenuStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:popupMenuStyle
+          @attr name com.mounacheikhna.ctc.debug:popupMenuStyle
         */
         public static final int Theme_popupMenuStyle = 60;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#popupWindowStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#popupWindowStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:popupWindowStyle
+          @attr name com.mounacheikhna.ctc.debug:popupWindowStyle
         */
         public static final int Theme_popupWindowStyle = 61;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#radioButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#radioButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:radioButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:radioButtonStyle
         */
         public static final int Theme_radioButtonStyle = 105;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#ratingBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#ratingBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:ratingBarStyle
+          @attr name com.mounacheikhna.ctc.debug:ratingBarStyle
         */
         public static final int Theme_ratingBarStyle = 106;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#searchViewStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#searchViewStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:searchViewStyle
+          @attr name com.mounacheikhna.ctc.debug:searchViewStyle
         */
         public static final int Theme_searchViewStyle = 68;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#seekBarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#seekBarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:seekBarStyle
+          @attr name com.mounacheikhna.ctc.debug:seekBarStyle
         */
         public static final int Theme_seekBarStyle = 107;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#selectableItemBackground}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#selectableItemBackground}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:selectableItemBackground
+          @attr name com.mounacheikhna.ctc.debug:selectableItemBackground
         */
         public static final int Theme_selectableItemBackground = 52;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#selectableItemBackgroundBorderless}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#selectableItemBackgroundBorderless}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:selectableItemBackgroundBorderless
+          @attr name com.mounacheikhna.ctc.debug:selectableItemBackgroundBorderless
         */
         public static final int Theme_selectableItemBackgroundBorderless = 53;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#spinnerDropDownItemStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#spinnerDropDownItemStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:spinnerDropDownItemStyle
+          @attr name com.mounacheikhna.ctc.debug:spinnerDropDownItemStyle
         */
         public static final int Theme_spinnerDropDownItemStyle = 47;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#spinnerStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#spinnerStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:spinnerStyle
+          @attr name com.mounacheikhna.ctc.debug:spinnerStyle
         */
         public static final int Theme_spinnerStyle = 108;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#switchStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#switchStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:switchStyle
+          @attr name com.mounacheikhna.ctc.debug:switchStyle
         */
         public static final int Theme_switchStyle = 109;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceLargePopupMenu}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceLargePopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceLargePopupMenu
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceLargePopupMenu
         */
         public static final int Theme_textAppearanceLargePopupMenu = 40;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceListItem}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceListItem
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceListItem
         */
         public static final int Theme_textAppearanceListItem = 76;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceListItemSmall}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceListItemSmall}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceListItemSmall
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceListItemSmall
         */
         public static final int Theme_textAppearanceListItemSmall = 77;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceSearchResultSubtitle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceSearchResultSubtitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceSearchResultSubtitle
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceSearchResultSubtitle
         */
         public static final int Theme_textAppearanceSearchResultSubtitle = 66;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceSearchResultTitle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceSearchResultTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceSearchResultTitle
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceSearchResultTitle
         */
         public static final int Theme_textAppearanceSearchResultTitle = 65;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textAppearanceSmallPopupMenu}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textAppearanceSmallPopupMenu}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textAppearanceSmallPopupMenu
+          @attr name com.mounacheikhna.ctc.debug:textAppearanceSmallPopupMenu
         */
         public static final int Theme_textAppearanceSmallPopupMenu = 41;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textColorAlertDialogListItem}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textColorAlertDialogListItem}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5625,11 +5662,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textColorAlertDialogListItem
+          @attr name com.mounacheikhna.ctc.debug:textColorAlertDialogListItem
         */
         public static final int Theme_textColorAlertDialogListItem = 95;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#textColorSearchUrl}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#textColorSearchUrl}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5637,31 +5674,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:textColorSearchUrl
+          @attr name com.mounacheikhna.ctc.debug:textColorSearchUrl
         */
         public static final int Theme_textColorSearchUrl = 67;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#toolbarNavigationButtonStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#toolbarNavigationButtonStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:toolbarNavigationButtonStyle
+          @attr name com.mounacheikhna.ctc.debug:toolbarNavigationButtonStyle
         */
         public static final int Theme_toolbarNavigationButtonStyle = 59;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#toolbarStyle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#toolbarStyle}
           attribute's value can be found in the {@link #Theme} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:toolbarStyle
+          @attr name com.mounacheikhna.ctc.debug:toolbarStyle
         */
         public static final int Theme_toolbarStyle = 58;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowActionBar}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowActionBar}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5671,11 +5708,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowActionBar
+          @attr name com.mounacheikhna.ctc.debug:windowActionBar
         */
         public static final int Theme_windowActionBar = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowActionBarOverlay}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowActionBarOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5685,11 +5722,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowActionBarOverlay
+          @attr name com.mounacheikhna.ctc.debug:windowActionBarOverlay
         */
         public static final int Theme_windowActionBarOverlay = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowActionModeOverlay}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowActionModeOverlay}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5699,11 +5736,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowActionModeOverlay
+          @attr name com.mounacheikhna.ctc.debug:windowActionModeOverlay
         */
         public static final int Theme_windowActionModeOverlay = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowFixedHeightMajor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowFixedHeightMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5718,11 +5755,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowFixedHeightMajor
+          @attr name com.mounacheikhna.ctc.debug:windowFixedHeightMajor
         */
         public static final int Theme_windowFixedHeightMajor = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowFixedHeightMinor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowFixedHeightMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5737,11 +5774,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowFixedHeightMinor
+          @attr name com.mounacheikhna.ctc.debug:windowFixedHeightMinor
         */
         public static final int Theme_windowFixedHeightMinor = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowFixedWidthMajor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowFixedWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5756,11 +5793,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowFixedWidthMajor
+          @attr name com.mounacheikhna.ctc.debug:windowFixedWidthMajor
         */
         public static final int Theme_windowFixedWidthMajor = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowFixedWidthMinor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowFixedWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5775,11 +5812,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowFixedWidthMinor
+          @attr name com.mounacheikhna.ctc.debug:windowFixedWidthMinor
         */
         public static final int Theme_windowFixedWidthMinor = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowMinWidthMajor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowMinWidthMajor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5794,11 +5831,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowMinWidthMajor
+          @attr name com.mounacheikhna.ctc.debug:windowMinWidthMajor
         */
         public static final int Theme_windowMinWidthMajor = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowMinWidthMinor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowMinWidthMinor}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5813,11 +5850,11 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowMinWidthMinor
+          @attr name com.mounacheikhna.ctc.debug:windowMinWidthMinor
         */
         public static final int Theme_windowMinWidthMinor = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#windowNoTitle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#windowNoTitle}
           attribute's value can be found in the {@link #Theme} array.
 
 
@@ -5827,7 +5864,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:windowNoTitle
+          @attr name com.mounacheikhna.ctc.debug:windowNoTitle
         */
         public static final int Theme_windowNoTitle = 3;
         /** Attributes that can be used with a Toolbar.
@@ -5838,29 +5875,29 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #Toolbar_android_gravity android:gravity}</code></td><td></td></tr>
            <tr><td><code>{@link #Toolbar_android_minHeight android:minHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseContentDescription com.mounacheikhna.ctc.tv.debug:collapseContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_collapseIcon com.mounacheikhna.ctc.tv.debug:collapseIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetEnd com.mounacheikhna.ctc.tv.debug:contentInsetEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetLeft com.mounacheikhna.ctc.tv.debug:contentInsetLeft}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetRight com.mounacheikhna.ctc.tv.debug:contentInsetRight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_contentInsetStart com.mounacheikhna.ctc.tv.debug:contentInsetStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logo com.mounacheikhna.ctc.tv.debug:logo}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_logoDescription com.mounacheikhna.ctc.tv.debug:logoDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_maxButtonHeight com.mounacheikhna.ctc.tv.debug:maxButtonHeight}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationContentDescription com.mounacheikhna.ctc.tv.debug:navigationContentDescription}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_navigationIcon com.mounacheikhna.ctc.tv.debug:navigationIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_popupTheme com.mounacheikhna.ctc.tv.debug:popupTheme}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitle com.mounacheikhna.ctc.tv.debug:subtitle}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.mounacheikhna.ctc.tv.debug:subtitleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_subtitleTextColor com.mounacheikhna.ctc.tv.debug:subtitleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_title com.mounacheikhna.ctc.tv.debug:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginBottom com.mounacheikhna.ctc.tv.debug:titleMarginBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginEnd com.mounacheikhna.ctc.tv.debug:titleMarginEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginStart com.mounacheikhna.ctc.tv.debug:titleMarginStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMarginTop com.mounacheikhna.ctc.tv.debug:titleMarginTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleMargins com.mounacheikhna.ctc.tv.debug:titleMargins}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextAppearance com.mounacheikhna.ctc.tv.debug:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #Toolbar_titleTextColor com.mounacheikhna.ctc.tv.debug:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseContentDescription com.mounacheikhna.ctc.debug:collapseContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_collapseIcon com.mounacheikhna.ctc.debug:collapseIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetEnd com.mounacheikhna.ctc.debug:contentInsetEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetLeft com.mounacheikhna.ctc.debug:contentInsetLeft}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetRight com.mounacheikhna.ctc.debug:contentInsetRight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_contentInsetStart com.mounacheikhna.ctc.debug:contentInsetStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logo com.mounacheikhna.ctc.debug:logo}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_logoDescription com.mounacheikhna.ctc.debug:logoDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_maxButtonHeight com.mounacheikhna.ctc.debug:maxButtonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationContentDescription com.mounacheikhna.ctc.debug:navigationContentDescription}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_navigationIcon com.mounacheikhna.ctc.debug:navigationIcon}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_popupTheme com.mounacheikhna.ctc.debug:popupTheme}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitle com.mounacheikhna.ctc.debug:subtitle}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextAppearance com.mounacheikhna.ctc.debug:subtitleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_subtitleTextColor com.mounacheikhna.ctc.debug:subtitleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_title com.mounacheikhna.ctc.debug:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginBottom com.mounacheikhna.ctc.debug:titleMarginBottom}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginEnd com.mounacheikhna.ctc.debug:titleMarginEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginStart com.mounacheikhna.ctc.debug:titleMarginStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMarginTop com.mounacheikhna.ctc.debug:titleMarginTop}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleMargins com.mounacheikhna.ctc.debug:titleMargins}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextAppearance com.mounacheikhna.ctc.debug:titleTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #Toolbar_titleTextColor com.mounacheikhna.ctc.debug:titleTextColor}</code></td><td></td></tr>
            </table>
            @see #Toolbar_android_gravity
            @see #Toolbar_android_minHeight
@@ -5910,7 +5947,7 @@ containing a value of this type.
         */
         public static final int Toolbar_android_minHeight = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#collapseContentDescription}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#collapseContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5920,21 +5957,21 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:collapseContentDescription
+          @attr name com.mounacheikhna.ctc.debug:collapseContentDescription
         */
         public static final int Toolbar_collapseContentDescription = 19;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#collapseIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#collapseIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:collapseIcon
+          @attr name com.mounacheikhna.ctc.debug:collapseIcon
         */
         public static final int Toolbar_collapseIcon = 18;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetEnd}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5946,11 +5983,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetEnd
+          @attr name com.mounacheikhna.ctc.debug:contentInsetEnd
         */
         public static final int Toolbar_contentInsetEnd = 6;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetLeft}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetLeft}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5962,11 +5999,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetLeft
+          @attr name com.mounacheikhna.ctc.debug:contentInsetLeft
         */
         public static final int Toolbar_contentInsetLeft = 7;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetRight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetRight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5978,11 +6015,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetRight
+          @attr name com.mounacheikhna.ctc.debug:contentInsetRight
         */
         public static final int Toolbar_contentInsetRight = 8;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#contentInsetStart}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#contentInsetStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -5994,21 +6031,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:contentInsetStart
+          @attr name com.mounacheikhna.ctc.debug:contentInsetStart
         */
         public static final int Toolbar_contentInsetStart = 5;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#logo}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#logo}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:logo
+          @attr name com.mounacheikhna.ctc.debug:logo
         */
         public static final int Toolbar_logo = 4;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#logoDescription}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#logoDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6018,11 +6055,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:logoDescription
+          @attr name com.mounacheikhna.ctc.debug:logoDescription
         */
         public static final int Toolbar_logoDescription = 22;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#maxButtonHeight}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#maxButtonHeight}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6034,11 +6071,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:maxButtonHeight
+          @attr name com.mounacheikhna.ctc.debug:maxButtonHeight
         */
         public static final int Toolbar_maxButtonHeight = 17;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#navigationContentDescription}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#navigationContentDescription}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6048,31 +6085,31 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:navigationContentDescription
+          @attr name com.mounacheikhna.ctc.debug:navigationContentDescription
         */
         public static final int Toolbar_navigationContentDescription = 21;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#navigationIcon}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#navigationIcon}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:navigationIcon
+          @attr name com.mounacheikhna.ctc.debug:navigationIcon
         */
         public static final int Toolbar_navigationIcon = 20;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#popupTheme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#popupTheme}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:popupTheme
+          @attr name com.mounacheikhna.ctc.debug:popupTheme
         */
         public static final int Toolbar_popupTheme = 9;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitle}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitle}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6082,21 +6119,21 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitle
+          @attr name com.mounacheikhna.ctc.debug:subtitle
         */
         public static final int Toolbar_subtitle = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitleTextAppearance}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitleTextAppearance
+          @attr name com.mounacheikhna.ctc.debug:subtitleTextAppearance
         */
         public static final int Toolbar_subtitleTextAppearance = 11;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#subtitleTextColor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#subtitleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6107,11 +6144,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:subtitleTextColor
+          @attr name com.mounacheikhna.ctc.debug:subtitleTextColor
         */
         public static final int Toolbar_subtitleTextColor = 24;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#title}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#title}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6121,11 +6158,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:title
+          @attr name com.mounacheikhna.ctc.debug:title
         */
         public static final int Toolbar_title = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleMarginBottom}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleMarginBottom}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6137,11 +6174,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleMarginBottom
+          @attr name com.mounacheikhna.ctc.debug:titleMarginBottom
         */
         public static final int Toolbar_titleMarginBottom = 16;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleMarginEnd}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleMarginEnd}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6153,11 +6190,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleMarginEnd
+          @attr name com.mounacheikhna.ctc.debug:titleMarginEnd
         */
         public static final int Toolbar_titleMarginEnd = 14;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleMarginStart}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleMarginStart}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6169,11 +6206,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleMarginStart
+          @attr name com.mounacheikhna.ctc.debug:titleMarginStart
         */
         public static final int Toolbar_titleMarginStart = 13;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleMarginTop}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleMarginTop}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6185,11 +6222,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleMarginTop
+          @attr name com.mounacheikhna.ctc.debug:titleMarginTop
         */
         public static final int Toolbar_titleMarginTop = 15;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleMargins}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleMargins}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6201,21 +6238,21 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleMargins
+          @attr name com.mounacheikhna.ctc.debug:titleMargins
         */
         public static final int Toolbar_titleMargins = 12;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleTextAppearance}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:titleTextAppearance
+          @attr name com.mounacheikhna.ctc.debug:titleTextAppearance
         */
         public static final int Toolbar_titleTextAppearance = 10;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#titleTextColor}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#titleTextColor}
           attribute's value can be found in the {@link #Toolbar} array.
 
 
@@ -6226,7 +6263,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:titleTextColor
+          @attr name com.mounacheikhna.ctc.debug:titleTextColor
         */
         public static final int Toolbar_titleTextColor = 23;
         /** Attributes that can be used with a View.
@@ -6237,9 +6274,9 @@ containing a value of this type.
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #View_android_focusable android:focusable}</code></td><td></td></tr>
            <tr><td><code>{@link #View_android_theme android:theme}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingEnd com.mounacheikhna.ctc.tv.debug:paddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_paddingStart com.mounacheikhna.ctc.tv.debug:paddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #View_theme com.mounacheikhna.ctc.tv.debug:theme}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingEnd com.mounacheikhna.ctc.debug:paddingEnd}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_paddingStart com.mounacheikhna.ctc.debug:paddingStart}</code></td><td></td></tr>
+           <tr><td><code>{@link #View_theme com.mounacheikhna.ctc.debug:theme}</code></td><td></td></tr>
            </table>
            @see #View_android_focusable
            @see #View_android_theme
@@ -6264,7 +6301,7 @@ containing a value of this type.
         */
         public static final int View_android_theme = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#paddingEnd}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#paddingEnd}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6276,11 +6313,11 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:paddingEnd
+          @attr name com.mounacheikhna.ctc.debug:paddingEnd
         */
         public static final int View_paddingEnd = 3;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#paddingStart}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#paddingStart}
           attribute's value can be found in the {@link #View} array.
 
 
@@ -6292,17 +6329,17 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:paddingStart
+          @attr name com.mounacheikhna.ctc.debug:paddingStart
         */
         public static final int View_paddingStart = 2;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#theme}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#theme}
           attribute's value can be found in the {@link #View} array.
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.mounacheikhna.ctc.tv.debug:theme
+          @attr name com.mounacheikhna.ctc.debug:theme
         */
         public static final int View_theme = 4;
         /** Attributes that can be used with a ViewBackgroundHelper.
@@ -6312,8 +6349,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
            <tr><td><code>{@link #ViewBackgroundHelper_android_background android:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.mounacheikhna.ctc.tv.debug:backgroundTint}</code></td><td></td></tr>
-           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.mounacheikhna.ctc.tv.debug:backgroundTintMode}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTint com.mounacheikhna.ctc.debug:backgroundTint}</code></td><td></td></tr>
+           <tr><td><code>{@link #ViewBackgroundHelper_backgroundTintMode com.mounacheikhna.ctc.debug:backgroundTintMode}</code></td><td></td></tr>
            </table>
            @see #ViewBackgroundHelper_android_background
            @see #ViewBackgroundHelper_backgroundTint
@@ -6329,7 +6366,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int ViewBackgroundHelper_android_background = 0;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#backgroundTint}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#backgroundTint}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -6340,11 +6377,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name com.mounacheikhna.ctc.tv.debug:backgroundTint
+          @attr name com.mounacheikhna.ctc.debug:backgroundTint
         */
         public static final int ViewBackgroundHelper_backgroundTint = 1;
         /**
-          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.tv.debug.R.attr#backgroundTintMode}
+          <p>This symbol is the offset where the {@link com.mounacheikhna.ctc.debug.R.attr#backgroundTintMode}
           attribute's value can be found in the {@link #ViewBackgroundHelper} array.
 
 
@@ -6360,7 +6397,7 @@ containing a value of this type.
 <tr><td><code>multiply</code></td><td>14</td><td></td></tr>
 <tr><td><code>screen</code></td><td>15</td><td></td></tr>
 </table>
-          @attr name com.mounacheikhna.ctc.tv.debug:backgroundTintMode
+          @attr name com.mounacheikhna.ctc.debug:backgroundTintMode
         */
         public static final int ViewBackgroundHelper_backgroundTintMode = 2;
         /** Attributes that can be used with a ViewStubCompat.

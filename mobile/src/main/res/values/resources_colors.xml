@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <color name="style_cyan_primary"/>
-  <color name="style_cyan_accent"/>
-  <color name="style_cyan_primary_dark"/>
+  <color name="text_light">@android:color/white</color>
 
-  <color name="theme_blue_background"/>
-  <color name="theme_blue_text"/>
+  <color name="style_people_primary">#39C2D7</color> <!-- #00BCD4 -->
+  <color name="style_people_accent">#607D8B</color>
+  <color name="style_people_primary_dark">#0097A7</color>
+  <color name="style_people_background">#B2EBF2</color>
+  <color name="style_people_text">@color/text_light</color>
 
-  <color name="style_blue_primary"/>
-  <color name="style_blue_primary_dark"/>
-  <color name="theme_blue_accent"/>
+  <color name="style_starships_primary">#337AA8</color><!-- #03a9f4 -->
+  <color name="style_starships_primary_dark">#038dcc</color>
+  <color name="style_starships_accent">#ff193a</color>
+  <color name="style_starships_background">#84ffff</color>
+  <color name="style_starships_text">@color/text_light</color>
 
-  <color name="theme_light_blue_primary"/>
-  <color name="theme_light_blue_primary_dark"/>
-  <color name="theme_light_blue_background"/>
-  <color name="theme_light_blue_text"/>
-  <color name="theme_light_blue_accent"/>
+  <color name="style_vehicles_primary">#F9F18A</color><!-- #03A9F4 -->
+  <color name="style_vehicles_primary_dark">#F9A91B</color><!-- #0288D1 -->
+  <color name="style_vehicles_background">#F9F100</color>
+  <color name="style_vehicles_text">@color/text_light</color>
+  <color name="style_vehicles_accent">#FF4081</color>
 
-  <color name="style_yellow_primary"/>
-  <color name="style_cyan_background"/>
-  <color name="style_cyan_text"/>
-  <color name="style_yellow_primary_dark"/>
-  <color name="style_yellow_background"/>
-  <color name="style_yellow_text"/>
-  <color name="style_yellow_accent"/>
-  <color name="style_amber_primary"/>
-  <color name="style_amber_background"/>
-  <color name="style_amber_accent"/>
+  <color name="style_species_primary">#39C2D7</color><!-- #FFEB3B -->
+  <color name="style_species_primary_dark">#0086A2</color><!-- #FBC02D -->
+  <color name="style_species_background">#39C2D0</color>
+  <color name="style_species_text">@color/text_light</color>
+  <color name="style_species_accent">#4CAF50</color>
+
+  <color name="style_planets_primary">#F9F18A</color> <!-- #FFC107 -->
+  <color name="style_planets_primary_dark">#F9A91B</color>
+  <color name="style_planets_background">#FFECB3</color>
+  <color name="style_planets_text">@color/text_light</color>
+  <color name="style_planets_accent">#795548</color>
 
 </resources>

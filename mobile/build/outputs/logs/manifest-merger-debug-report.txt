@@ -36,7 +36,7 @@ MERGED from [com.jakewharton.timber:timber:4.1.0] /Users/mouna/Documents/repos/c
 	android:icon
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:10:7-41
 	android:theme
-		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:12:7-43
+		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:12:7-38
 	android:name
 		ADDED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:7:7-28
 		REJECTED from /Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/AndroidManifest.xml:7:7-28

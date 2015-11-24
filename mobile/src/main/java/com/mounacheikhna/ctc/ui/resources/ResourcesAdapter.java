@@ -1,6 +1,13 @@
 package com.mounacheikhna.ctc.ui.resources;
 
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
+import android.os.Build;
+import android.support.annotation.ColorRes;
+import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,19 +23,15 @@ import java.util.List;
 public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.ResourceViewHolder> {
 
   private List<Resource> items;
-  private OnItemClickListener mOnItemClickListener;
-
-  public interface OnItemClickListener {
-    void onClick(View view, int position);
-  }
+  //@Nullable  private OnItemClickListener mOnItemClickListener;
 
   public ResourcesAdapter() {
     items = Arrays.asList(Resource.values());
   }
 
-  public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+  /*public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
     mOnItemClickListener = onItemClickListener;
-  }
+  }*/
 
   @Override public ResourceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     return new ResourceViewHolder(LayoutInflater.from(parent.getContext())
@@ -37,9 +40,24 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
 
   @Override public void onBindViewHolder(ResourceViewHolder holder, int position) {
     final Resource item = items.get(position);
-    holder.iconView.setImageDrawable(ContextCompat.getDrawable(
-        holder.itemView.getContext(), item.drawable));
-    holder.titleView.setText(item.text);
+    Context context = holder.itemView.getContext();
+    holder.iconView.setImageResource(item.getDrawableRes());
+
+    Resource.ResourceStyle style = item.getStyle();
+    holder.itemView.setBackgroundColor(ContextCompat.getColor(context,
+        style.getColorPrimary()));
+    holder.titleView.setTextColor(ContextCompat.getColor(context, style.getTextColorPrimary()));
+    holder.titleView.setBackgroundColor(ContextCompat.getColor(context, style.getColorPrimaryDark()));
+    holder.titleView.setText(item.getTextRes());
+
+
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+      final Drawable itemIcon = ContextCompat
+          .getDrawable(context, item.getDrawableRes()).mutate();
+      Drawable compatDrawable = DrawableCompat.wrap(itemIcon);
+      DrawableCompat.setTint(compatDrawable, ContextCompat.getColor(context, style.getColorPrimary()));
+    }
+
   }
 
   @Override public int getItemCount() {

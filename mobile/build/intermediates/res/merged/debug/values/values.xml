@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -79,11 +79,37 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="style_people_accent">#607D8B</color>
+    <color name="style_people_background">#B2EBF2</color>
+    <color name="style_people_primary">#39C2D7</color>
+    <color name="style_people_primary_dark">#0097A7</color>
+    <color name="style_people_text">@color/text_light</color>
+    <color name="style_planets_accent">#795548</color>
+    <color name="style_planets_background">#FFECB3</color>
+    <color name="style_planets_primary">#F9F18A</color>
+    <color name="style_planets_primary_dark">#F9A91B</color>
+    <color name="style_planets_text">@color/text_light</color>
+    <color name="style_species_accent">#4CAF50</color>
+    <color name="style_species_background">#39C2D0</color>
+    <color name="style_species_primary">#39C2D7</color>
+    <color name="style_species_primary_dark">#0086A2</color>
+    <color name="style_species_text">@color/text_light</color>
+    <color name="style_starships_accent">#ff193a</color>
+    <color name="style_starships_background">#84ffff</color>
+    <color name="style_starships_primary">#337AA8</color>
+    <color name="style_starships_primary_dark">#038dcc</color>
+    <color name="style_starships_text">@color/text_light</color>
+    <color name="style_vehicles_accent">#FF4081</color>
+    <color name="style_vehicles_background">#F9F100</color>
+    <color name="style_vehicles_primary">#F9F18A</color>
+    <color name="style_vehicles_primary_dark">#F9A91B</color>
+    <color name="style_vehicles_text">@color/text_light</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
     <color name="text_disabled_light">#4dffffff</color>
+    <color name="text_light">@android:color/white</color>
     <color name="text_primary_dark">#de000000</color>
     <color name="text_primary_light">#ffffffff</color>
     <color name="text_secondary_dark">#8a000000</color>
@@ -239,13 +265,17 @@
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">Sw</string>
     <string name="no_network">No network</string>
+    <string name="people">People</string>
+    <string name="planets">Planets</string>
     <string name="resource">Resource</string>
+    <string name="species">Species</string>
+    <string name="starships">Starships</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="vehicles">Vehicles</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <style name="Base"/>
     <style name="Base.AlertDialog.AppCompat" parent="android:Widget">
         <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="listLayout">@layout/abc_select_dialog_material</item>
@@ -537,20 +567,6 @@
         <!-- Used by MediaRouter -->
         <item name="isLightTheme">true</item>
     </style>
-    <style name="Base.TwoLinesIconItem">
-    <item name="android:layout_height">@dimen/two_lines_wicon_item_tile_height</item>
-    <item name="android:background">?attr/selectableItemBackground</item>
-  </style>
-    <style name="Base.TwoLinesIconItem.TextContainer">
-    <item name="android:paddingTop">@dimen/two_lines_wicon_item_text_tb_padding</item>
-    <item name="android:paddingBottom">@dimen/two_lines_wicon_item_text_tb_padding</item>
-    <item name="android:paddingLeft">@dimen/two_lines_wicon_item_text_lr_padding</item>
-    <item name="android:paddingRight">@dimen/two_lines_wicon_item_text_lr_padding</item>
-  </style>
-    <style name="Base.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
-  </style>
-    <style name="Base.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
-  </style>
     <style name="Base.V7.Theme.AppCompat" parent="Platform.AppCompat">
         <item name="windowNoTitle">false</item>
         <item name="windowActionBar">true</item>
@@ -1341,16 +1357,81 @@
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
-    <style name="StarWarsDarkOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
-
+    <style name="Specs"/>
+    <style name="Specs.SingleLineGrid">
+    <item name="android:padding">4dp</item>
   </style>
-    <style name="StarWarsTheme" parent="PlatformTheme">
+    <style name="Specs.SingleLineGrid.Text">
+    <item name="android:height">48dp</item>
+    <item name="android:padding">16dp</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+    <style name="Specs.TwoLinesIconItem">
+    <item name="android:layout_height">@dimen/two_lines_wicon_item_tile_height</item>
+    <item name="android:background">?attr/selectableItemBackground</item>
+  </style>
+    <style name="Specs.TwoLinesIconItem.TextContainer">
+    <item name="android:paddingTop">@dimen/two_lines_wicon_item_text_tb_padding</item>
+    <item name="android:paddingBottom">@dimen/two_lines_wicon_item_text_tb_padding</item>
+    <item name="android:paddingLeft">@dimen/two_lines_wicon_item_text_lr_padding</item>
+    <item name="android:paddingRight">@dimen/two_lines_wicon_item_text_lr_padding</item>
+  </style>
+    <style name="Specs.TwoLinesIconItem.TextPrimary" parent="TextAppearance.AppCompat.Subhead">
+  </style>
+    <style name="Specs.TwoLinesIconItem.TextSecondary" parent="TextAppearance.AppCompat.Body1">
+  </style>
+    <style name="StarWars" parent="PlatformTheme">
     <item name="colorPrimary">@color/primary</item>
     <item name="colorPrimaryDark">@color/primary_dark</item>
     <item name="colorAccent">@color/accent</item>
     <item name="android:colorBackground">@color/background_light</item>
     <item name="android:textColorHint">@color/hint_disabled_dark</item>
     <item name="android:windowBackground">@color/background_light</item>
+  </style>
+    <style name="StarWars.LightBlue">
+        <item name="colorPrimary">@color/style_vehicles_primary</item>
+        <item name="colorPrimaryDark">@color/style_vehicles_primary_dark</item>
+        <item name="android:textColorPrimary">@color/style_vehicles_text</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/style_vehicles_primary_dark</item>
+        <item name="android:windowBackground">@color/style_vehicles_background</item>
+        <item name="colorAccent">@color/style_vehicles_accent</item>
+    </style>
+    <style name="StarWars.People">
+        <item name="colorPrimary">@color/style_people_primary</item>
+        <item name="colorPrimaryDark">@color/style_people_primary_dark</item>
+        <item name="android:textColorPrimary">@color/style_people_text</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">
+            @color/primary_dark
+        </item>
+        <item name="android:windowBackground">@color/style_people_background</item>
+        <item name="colorAccent">@color/style_people_accent</item>
+    </style>
+    <style name="StarWars.Planets">
+        <item name="colorPrimary">@color/style_planets_primary</item>
+        <item name="colorPrimaryDark">@color/style_planets_primary_dark</item>
+        <item name="android:textColorPrimary">@color/style_planets_text</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/style_planets_primary_dark</item>
+        <item name="android:windowBackground">@color/style_planets_background</item>
+        <item name="colorAccent">@color/style_planets_accent</item>
+    </style>
+    <style name="StarWars.Species">
+        <item name="colorPrimary">@color/style_species_primary</item>
+        <item name="colorPrimaryDark">@color/style_species_primary_dark</item>
+        <item name="android:textColorPrimary">@color/style_species_text</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/style_species_primary_dark</item>
+        <item name="android:windowBackground">@color/style_species_background</item>
+        <item name="colorAccent">@color/style_species_accent</item>
+    </style>
+    <style name="StarWars.Vehicles">
+        <item name="colorPrimary">@color/style_starships_primary</item>
+        <item name="colorPrimaryDark">@color/style_starships_primary_dark</item>
+        <item name="android:textColorPrimary">@color/style_starships_text</item>
+        <item name="android:statusBarColor" ns1:targetApi="lollipop">@color/style_starships_primary_dark</item>
+        <item name="android:windowBackground">@color/style_starships_background</item>
+        <item name="colorAccent">@color/style_starships_accent</item>
+    </style>
+    <style name="StarWarsDarkOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+
   </style>
     <style name="TextAppearance.AppCompat" parent="Base.TextAppearance.AppCompat"/>
     <style name="TextAppearance.AppCompat.Body1" parent="Base.TextAppearance.AppCompat.Body1"/>
@@ -1540,13 +1621,10 @@
     <style name="Widget.AppCompat.Toolbar" parent="Base.Widget.AppCompat.Toolbar"/>
     <style name="Widget.AppCompat.Toolbar.Button.Navigation" parent="Base.Widget.AppCompat.Toolbar.Button.Navigation"/>
     <style name="Widget.StarWars" parent="android:Widget"/>
-    <style name="Widget.StarWars.PersonItem" parent="Base.TwoLinesIconItem">
+    <style name="Widget.StarWars.PersonItem" parent="Specs.TwoLinesIconItem">
   </style>
     <style name="Widget.StarWars.ProgressBar">
 
-  </style>
-    <style name="Widget.StarWars.ResourceTitle" parent="TextAppearance.AppCompat.Small">
-    <item name="android:textSize">14sp</item>
   </style>
     <style name="Widget.StarWars.Toolbar">
     <item name="android:background">?android:colorPrimary</item>

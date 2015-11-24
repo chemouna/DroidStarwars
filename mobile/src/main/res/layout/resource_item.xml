@@ -4,7 +4,8 @@
     android:id="@+id/category_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:foreground="@drawable/light_selector">
+    android:foreground="@drawable/light_selector"
+    style="@style/Specs.SingleLineGrid">
 
   <ImageView
       android:id="@+id/resource_icon"
@@ -19,8 +20,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom"
-      android:textAppearance="@style/Widget.StarWars.ResourceTitle"
-      android:padding="@dimen/spacing_double"
+      style="@style/Specs.SingleLineGrid.Text"
       tools:text="People"/>
 
 </FrameLayout>

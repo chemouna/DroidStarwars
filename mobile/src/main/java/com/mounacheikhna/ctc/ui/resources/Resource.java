@@ -6,12 +6,12 @@ import android.support.annotation.StringRes;
 import com.mounacheikhna.ctc.R;
 
 public enum Resource {
-  PEOPLE(R.string.people, R.drawable.people, ResourceStyle.light_blue),
+  PEOPLE(R.string.people, R.drawable.people, ResourceStyle.STYLE_PEOPLE),
   //FILMS("Films", R.drawable.films),
-  STARSHIPS(R.string.starships, R.drawable.starships, ResourceStyle.blue),
-  VEHICLES(R.string.vehicles, R.drawable.vehicles, ResourceStyle.yellow),
-  SPECIES(R.string.species, R.drawable.species, ResourceStyle.cyan),
-  PLANETS(R.string.planets, R.drawable.planets, ResourceStyle.amber);
+  STARSHIPS(R.string.starships, R.drawable.starships, ResourceStyle.STYLE_STARSHIPS),
+  VEHICLES(R.string.vehicles, R.drawable.vehicles, ResourceStyle.STYLE_VEHICLES),
+  SPECIES(R.string.species, R.drawable.species, ResourceStyle.STYLE_SPECIES),
+  PLANETS(R.string.planets, R.drawable.planets, ResourceStyle.STYLE_PLANETS);
 
   private final @StringRes int textRes;
   private final @DrawableRes int drawableRes;
@@ -36,36 +36,36 @@ public enum Resource {
   }
 
   public enum ResourceStyle {
-    cyan(R.color.style_cyan_primary, R.color.style_cyan_primary_dark,
-        R.color.style_cyan_background, R.color.style_cyan_text,
-        R.color.style_cyan_accent, R.style.StarWars_Cyan),
-    blue(R.color.style_blue_primary, R.color.style_blue_primary_dark,
-        R.color.theme_blue_background, R.color.theme_blue_text,
-        R.color.theme_blue_accent, R.style.StarWars_Blue),
-    light_blue(R.color.theme_light_blue_primary, R.color.theme_light_blue_primary_dark,
-        R.color.theme_light_blue_background, R.color.theme_light_blue_text,
-        R.color.theme_light_blue_accent, R.style.StarWars_Blue),
-    yellow(R.color.style_yellow_primary, R.color.style_yellow_primary_dark,
-        R.color.style_yellow_background, R.color.style_yellow_text,
-        R.color.style_yellow_accent, R.style.StarWars_Yellow),
-    amber(R.color.style_amber_primary, R.color.style_amber_primary_dark,
-        R.color.style_amber_background, R.color.style_amber_text,
-        R.color.style_amber_accent, R.style.StarWars_Amber);
+    STYLE_PEOPLE(R.color.style_people_primary, R.color.style_people_primary_dark,
+        R.color.style_people_background, R.color.style_people_text,
+        R.color.style_people_accent, R.style.StarWars_People),
+    STYLE_STARSHIPS(R.color.style_starships_primary, R.color.style_starships_primary_dark,
+        R.color.style_starships_background, R.color.style_starships_text,
+        R.color.style_starships_accent, R.style.StarWars_Vehicles),
+    STYLE_VEHICLES(R.color.style_vehicles_primary, R.color.style_vehicles_primary_dark,
+        R.color.style_vehicles_background, R.color.style_vehicles_text,
+        R.color.style_vehicles_accent, R.style.StarWars_Vehicles),
+    STYLE_SPECIES(R.color.style_species_primary, R.color.style_species_primary_dark,
+        R.color.style_species_background, R.color.style_species_text,
+        R.color.style_species_accent, R.style.StarWars_Species),
+    STYLE_PLANETS(R.color.style_planets_primary, R.color.style_planets_primary_dark,
+        R.color.style_planets_background, R.color.style_planets_text,
+        R.color.style_planets_accent, R.style.StarWars_Planets);
 
     @ColorRes private final int mColorPrimary;
-    @ColorRes private final int mBackgroundColor;
     @ColorRes private final int mColorPrimaryDark;
+    @ColorRes private final int mBackgroundColor;
     @ColorRes private final int mTextColorPrimary;
     @ColorRes private final int mAccentColor;
     @ColorRes private final int mStyle;
 
-    ResourceStyle(int accentColor, int colorPrimary, int backgroundColor, int colorPrimaryDark,
-        int textColorPrimary, int style) {
-      mAccentColor = accentColor;
+    ResourceStyle(int colorPrimary, int colorPrimaryDark, int backgroundColor,
+        int textColorPrimary, int accentColor, int style) {
       mColorPrimary = colorPrimary;
-      mBackgroundColor = backgroundColor;
       mColorPrimaryDark = colorPrimaryDark;
+      mBackgroundColor = backgroundColor;
       mTextColorPrimary = textColorPrimary;
+      mAccentColor = accentColor;
       mStyle = style;
     }
 

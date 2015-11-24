@@ -12,6 +12,10 @@
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_view_list_nav_layout.xml"
     },
     {
+        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/resource_activity.xml",
+        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/resource_activity.xml"
+    },
+    {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/notification_template_part_chronometer.xml"
     },
@@ -38,10 +42,6 @@
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_action_bar_title_item.xml",
         "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/layout/abc_action_bar_title_item.xml"
-    },
-    {
-        "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/activity_people.xml",
-        "source": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/layout/activity_people.xml"
     },
     {
         "merged": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/build/intermediates/res/merged/debug/layout/abc_screen_simple.xml",

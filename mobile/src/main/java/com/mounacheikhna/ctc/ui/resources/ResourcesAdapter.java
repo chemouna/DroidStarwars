@@ -21,14 +21,22 @@ import java.util.List;
 public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.ResourceViewHolder> {
 
   private List<Resource> items;
-  @Nullable  private OnClickListener mOnClickListener;
+  @Nullable private OnItemClickListener mOnItemClickListener;
 
   public ResourcesAdapter() {
     items = Arrays.asList(Resource.values());
   }
 
-  public void setOnClickListener(OnClickListener onClickListener) {
-    mOnClickListener = onClickListener;
+  public Resource getItem(int position) {
+    return items.get(position);
+  }
+
+  public interface OnItemClickListener {
+    void onItemClick(View view, int position);
+  }
+
+  public void setOnItemClickListener(@Nullable OnItemClickListener onItemClickListener) {
+    mOnItemClickListener = onItemClickListener;
   }
 
   @Override public ResourceViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -36,7 +44,7 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
         LayoutInflater.from(parent.getContext()).inflate(R.layout.resource_item, parent, false));
   }
 
-  @Override public void onBindViewHolder(ResourceViewHolder holder, int position) {
+  @Override public void onBindViewHolder(ResourceViewHolder holder, final int position) {
     final Resource item = items.get(position);
     Context context = holder.itemView.getContext();
     holder.iconView.setImageResource(item.getDrawableRes());
@@ -53,8 +61,12 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
     DrawableCompat.setTint(compatDrawable,
         ContextCompat.getColor(context, style.getColorPrimary()));
 
-    if(mOnClickListener != null) {
-      holder.itemView.setOnClickListener(mOnClickListener);
+    if (mOnItemClickListener != null) {
+      holder.itemView.setOnClickListener(new OnClickListener() {
+        @Override public void onClick(View v) {
+          mOnItemClickListener.onItemClick(v, position);
+        }
+      });
     }
   }
 

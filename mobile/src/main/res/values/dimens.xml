@@ -25,6 +25,7 @@
   <dimen name="two_lines_wicon_item_icon_left_padding">72dp</dimen>
   <dimen name="two_lines_wicon_item_text_lr_padding">72dp</dimen>
   <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
+  <dimen name="toolbar_elevation">4dp</dimen>
 
 
 </resources>

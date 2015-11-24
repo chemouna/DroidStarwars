@@ -29,7 +29,7 @@ import timber.log.Timber;
 /**
  * Created by cheikhnamouna on 11/21/15.
  */
-public class ListFragment extends Fragment {
+public class ResourceDetailsFragment extends Fragment {
 
   @Bind(R.id.rv) RecyclerView mRecyclerView;
 
@@ -55,6 +55,7 @@ public class ListFragment extends Fragment {
     SwApp.get(getActivity()).getComponent().injectListFragment(this);
     mStarWarsPersonAdapter = new StarWarsPersonAdapter();
     mRecyclerView.setAdapter(mStarWarsPersonAdapter);
+    mStarWarsPersonAdapter.setItemSelectedListener(mListener);
     fetchData();
   }
 
@@ -62,7 +63,6 @@ public class ListFragment extends Fragment {
     super.onAttach(context);
     if (getActivity() instanceof OnPersonSelectedListener) {
       mListener = (OnPersonSelectedListener) getActivity();
-      mStarWarsPersonAdapter.setItemListener(mListener);
     } else {
       throw new ClassCastException(getActivity().toString()
           + " must implement "+ OnPersonSelectedListener.class.getName());

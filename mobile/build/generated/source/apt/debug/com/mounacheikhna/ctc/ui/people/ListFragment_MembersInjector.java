@@ -7,7 +7,7 @@ import javax.annotation.Generated;
 import javax.inject.Provider;
 
 @Generated("dagger.internal.codegen.ComponentProcessor")
-public final class ListFragment_MembersInjector implements MembersInjector<ListFragment> {
+public final class ListFragment_MembersInjector implements MembersInjector<ResourceDetailsFragment> {
   private final MembersInjector<Fragment> supertypeInjector;
   private final Provider<SwapiManager> mApiManagerProvider;
 
@@ -19,7 +19,7 @@ public final class ListFragment_MembersInjector implements MembersInjector<ListF
   }
 
   @Override
-  public void injectMembers(ListFragment instance) {  
+  public void injectMembers(ResourceDetailsFragment instance) {
     if (instance == null) {
       throw new NullPointerException("Cannot inject members into a null reference");
     }
@@ -27,7 +27,7 @@ public final class ListFragment_MembersInjector implements MembersInjector<ListF
     instance.mApiManager = mApiManagerProvider.get();
   }
 
-  public static MembersInjector<ListFragment> create(MembersInjector<Fragment> supertypeInjector, Provider<SwapiManager> mApiManagerProvider) {  
+  public static MembersInjector<ResourceDetailsFragment> create(MembersInjector<Fragment> supertypeInjector, Provider<SwapiManager> mApiManagerProvider) {
       return new ListFragment_MembersInjector(supertypeInjector, mApiManagerProvider);
   }
 }

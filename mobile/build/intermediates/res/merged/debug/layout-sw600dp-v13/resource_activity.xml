@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/main_fragment"
-        android:name="com.mounacheikhna.ctc.ui.people.ListFragment"
+        android:name="com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1" />

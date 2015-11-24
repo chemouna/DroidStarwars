@@ -11,8 +11,8 @@ import com.mounacheikhna.ctc.api.DebugApiModule;
 import com.mounacheikhna.ctc.api.DebugApiModule_ProvideNetworkInterceptorsFactory;
 import com.mounacheikhna.ctc.lib.api.SwapiApi;
 import com.mounacheikhna.ctc.lib.api.SwapiManager;
-import com.mounacheikhna.ctc.ui.people.ListFragment;
-import com.mounacheikhna.ctc.ui.people.ListFragment_MembersInjector;
+import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment;
+import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment_MembersInjector;
 import com.squareup.moshi.Moshi;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
@@ -33,7 +33,7 @@ public final class DaggerAppComponent implements AppComponent {
   private Provider<Retrofit> provideRetrofitProvider;
   private Provider<SwapiApi> providesSwapiApiProvider;
   private Provider<SwapiManager> provideSwapiManagerProvider;
-  private MembersInjector<ListFragment> listFragmentMembersInjector;
+  private MembersInjector<ResourceDetailsFragment> resourceDetailsFragmentMembersInjector;
 
   private DaggerAppComponent(Builder builder) {  
     assert builder != null;
@@ -52,7 +52,7 @@ public final class DaggerAppComponent implements AppComponent {
     this.provideRetrofitProvider = ScopedProvider.create(CoreApiModule_ProvideRetrofitFactory.create(builder.coreApiModule, provideApiClientProvider, provideMoshiProvider));
     this.providesSwapiApiProvider = ScopedProvider.create(CoreApiModule_ProvidesSwapiApiFactory.create(builder.coreApiModule, provideRetrofitProvider));
     this.provideSwapiManagerProvider = ScopedProvider.create(CoreApiModule_ProvideSwapiManagerFactory.create(builder.coreApiModule, providesSwapiApiProvider));
-    this.listFragmentMembersInjector = ListFragment_MembersInjector.create((MembersInjector) MembersInjectors.noOp(), provideSwapiManagerProvider);
+    this.resourceDetailsFragmentMembersInjector = ResourceDetailsFragment_MembersInjector.create((MembersInjector) MembersInjectors.noOp(), provideSwapiManagerProvider);
   }
 
   @Override
@@ -61,8 +61,8 @@ public final class DaggerAppComponent implements AppComponent {
   }
 
   @Override
-  public void injectListFragment(ListFragment listFragment) {  
-    listFragmentMembersInjector.injectMembers(listFragment);
+  public void injectListFragment(ResourceDetailsFragment resourceDetailsFragment) {  
+    resourceDetailsFragmentMembersInjector.injectMembers(resourceDetailsFragment);
   }
 
   public static final class Builder {

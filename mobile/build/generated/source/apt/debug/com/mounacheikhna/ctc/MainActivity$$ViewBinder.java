@@ -8,8 +8,8 @@ import butterknife.ButterKnife.ViewBinder;
 public class MainActivity$$ViewBinder<T extends com.mounacheikhna.ctc.MainActivity> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
-    view = finder.findRequiredView(source, 2131492949, "field 'mToolbar'");
-    target.mToolbar = finder.castView(view, 2131492949, "field 'mToolbar'");
+    view = finder.findRequiredView(source, 2131492945, "field 'mToolbar'");
+    target.mToolbar = finder.castView(view, 2131492945, "field 'mToolbar'");
   }
 
   @Override public void unbind(T target) {

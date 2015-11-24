@@ -12,13 +12,13 @@ import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
 /**
  * Created by cheikhnamouna on 11/21/15.
  */
-public class StarWarsPersonFragment extends Fragment {
+public class ResourceFragment extends Fragment {
 
   public static final String STAR_WARS_PERSON = "StarWarsPerson";
   private StarWarsPerson mPerson;
 
-  public static StarWarsPersonFragment newInstance(StarWarsPerson person) {
-    StarWarsPersonFragment fragment = new StarWarsPersonFragment();
+  public static ResourceFragment newInstance(StarWarsPerson person) {
+    ResourceFragment fragment = new ResourceFragment();
     Bundle args = new Bundle();
     args.putParcelable(STAR_WARS_PERSON, person);
     fragment.setArguments(args);
@@ -29,7 +29,7 @@ public class StarWarsPersonFragment extends Fragment {
     super.onCreate(savedInstanceState);
     mPerson = getArguments().getParcelable(STAR_WARS_PERSON);
     if (mPerson == null) {
-      throw new IllegalArgumentException("StarWarsPersonFragment requires an item to display.");
+      throw new IllegalArgumentException("ResourceFragment requires an item to display.");
     }
   }
 
@@ -43,7 +43,6 @@ public class StarWarsPersonFragment extends Fragment {
   public void show(StarWarsPerson person) {
     //what ?
     //person.name (title)
-
   }
 
 

@@ -5,7 +5,7 @@ import android.view.View;
 import butterknife.ButterKnife.Finder;
 import butterknife.ButterKnife.ViewBinder;
 
-public class ListFragment$$ViewBinder<T extends com.mounacheikhna.ctc.ui.people.ListFragment> implements ViewBinder<T> {
+public class ListFragment$$ViewBinder<T extends ResourceDetailsFragment> implements ViewBinder<T> {
   @Override public void bind(final Finder finder, final T target, Object source) {
     View view;
     view = finder.findRequiredView(source, 2131492973, "field 'mRecyclerView'");

@@ -226,6 +226,7 @@
     <dimen name="spacing_small">4dp</dimen>
     <dimen name="spacing_very_large">72dp</dimen>
     <dimen name="spacing_very_small">2dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
     <dimen name="two_lines_wicon_item_icon_left_padding">72dp</dimen>
     <dimen name="two_lines_wicon_item_text_lr_padding">72dp</dimen>
     <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
@@ -265,7 +266,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <string name="app_name">Sw</string>
+    <string name="app_name">Star Wars</string>
     <string name="back_button">Back button</string>
     <string name="no_network">No network</string>
     <string name="people">People</string>

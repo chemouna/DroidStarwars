@@ -2,7 +2,7 @@ package com.mounacheikhna.ctc;
 
 import com.mounacheikhna.ctc.api.CoreApiModule;
 import com.mounacheikhna.ctc.api.DebugApiModule;
-import com.mounacheikhna.ctc.ui.people.ListFragment;
+import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -13,7 +13,7 @@ import javax.inject.Singleton;
 @Component(modules = { AppModule.class, CoreApiModule.class, DebugApiModule.class })
 public interface AppComponent {
   void injectApplication(SwApp swApp);
-  void injectListFragment(ListFragment listFragment);
+  void injectListFragment(ResourceDetailsFragment resourceDetailsFragment);
 
   final class Initializer {
     private Initializer() {

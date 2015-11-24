@@ -1,6 +1,6 @@
 package com.mounacheikhna.ctc.ui.resources;
 
-import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -12,21 +12,24 @@ import android.view.View;
 import android.view.ViewGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.mounacheikhna.ctc.PeopleActivity;
 import com.mounacheikhna.ctc.R;
+import com.mounacheikhna.ctc.ResourceActivity;
 import com.mounacheikhna.ctc.ui.OffsetDecoration;
+import com.mounacheikhna.ctc.util.ApiLevels;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResourcesFragment extends Fragment {
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
+
+public class ListResourcesFragment extends Fragment {
 
   private static final int REQUEST_RESOURCE_ITEM = 1;
 
   @Bind(R.id.resources) RecyclerView mResourcesView;
   private ResourcesAdapter mAdapter;
 
-  public static ResourcesFragment newInstance() {
-    return new ResourcesFragment();
+  public static ListResourcesFragment newInstance() {
+    return new ListResourcesFragment();
   }
 
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -42,31 +45,28 @@ public class ResourcesFragment extends Fragment {
         getContext().getResources().getDimensionPixelSize(R.dimen.spacing_very_small);
     mResourcesView.addItemDecoration(new OffsetDecoration(spacing));
     mAdapter = new ResourcesAdapter();
-    mAdapter.setOnClickListener(new View.OnClickListener() {
-      @Override public void onClick(View v) {
-
-        View decor = getActivity().getWindow().getDecorView();
-        View statusBar = null;
-        //if (includeStatusBar) {
-        statusBar = decor.findViewById(android.R.id.statusBarBackground);
-        //}
-        View navBar = decor.findViewById(android.R.id.navigationBarBackground);
+    mAdapter.setOnItemClickListener(new ResourcesAdapter.OnItemClickListener() {
+      @Override public void onItemClick(View view, int position) {
         List<Pair> pairs = new ArrayList<>(3);
+        View decor = getActivity().getWindow().getDecorView();
+        if (isAtLeastLollipop()) {
+          View statusBar = decor.findViewById(android.R.id.statusBarBackground);
+          View navBar = decor.findViewById(android.R.id.navigationBarBackground);
+          pairs.add(new Pair<>(statusBar, statusBar.getTransitionName()));
+          pairs.add(new Pair<>(navBar, navBar.getTransitionName()));
+        }
 
-        pairs.add(new Pair<>(statusBar, pairs));
-        pairs.add(new Pair<>(navBar, pairs));
-
-        pairs.add(new Pair<>(v.findViewById(R.id.resource_title),
+        pairs.add(new Pair<>(view.findViewById(R.id.resource_title),
             getActivity().getString(R.string.transition_with_toolbar)));
 
         @SuppressWarnings("unchecked") ActivityOptionsCompat sceneTransitionAnimation =
-            ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(), pairs.toArray(new Pair[pairs.size()]));
+            ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+                pairs.toArray(new Pair[pairs.size()]));
 
-        // Start the activity with the participants, animating from one to the other.
         final Bundle transitionBundle = sceneTransitionAnimation.toBundle();
-        Intent intent = new Intent(getActivity(), PeopleActivity.class); //temp
-        ActivityCompat.startActivityForResult(getActivity(), intent, REQUEST_RESOURCE_ITEM,
-            transitionBundle);
+        ActivityCompat.startActivityForResult(getActivity(),
+            ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()),
+            REQUEST_RESOURCE_ITEM, transitionBundle);
       }
     });
 

@@ -22,7 +22,7 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".PeopleActivity"/>
+    <activity android:name=".ResourceActivity"/>
 
 
   </application>

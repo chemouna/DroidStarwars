@@ -3,6 +3,7 @@ package com.mounacheikhna.ctc.ui.resources;
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
+import android.support.annotation.StyleRes;
 import com.mounacheikhna.ctc.R;
 
 public enum Resource {
@@ -57,16 +58,16 @@ public enum Resource {
     @ColorRes private final int mBackgroundColor;
     @ColorRes private final int mTextColorPrimary;
     @ColorRes private final int mAccentColor;
-    @ColorRes private final int mStyle;
+    @StyleRes private final int mStyleRes;
 
     ResourceStyle(int colorPrimary, int colorPrimaryDark, int backgroundColor,
-        int textColorPrimary, int accentColor, int style) {
+        int textColorPrimary, int accentColor, int styleRes) {
       mColorPrimary = colorPrimary;
       mColorPrimaryDark = colorPrimaryDark;
       mBackgroundColor = backgroundColor;
       mTextColorPrimary = textColorPrimary;
       mAccentColor = accentColor;
-      mStyle = style;
+      mStyleRes = styleRes;
     }
 
     @ColorRes
@@ -89,9 +90,9 @@ public enum Resource {
       return mColorPrimaryDark;
     }
 
-    @ColorRes
-    public int getStyle() {
-      return mStyle;
+    @StyleRes
+    public int getStyleRes() {
+      return mStyleRes;
     }
 
     @ColorRes

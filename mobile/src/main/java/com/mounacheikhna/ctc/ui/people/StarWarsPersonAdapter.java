@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
-import com.mounacheikhna.ctc.ui.people.ListFragment.OnPersonSelectedListener;
+import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment.OnPersonSelectedListener;
 import java.util.Collections;
 import java.util.List;
 import rx.functions.Action1;
@@ -18,7 +18,7 @@ public class StarWarsPersonAdapter extends RecyclerView.Adapter<StarWarsPersonAd
   private List<StarWarsPerson> mStarWarsPersons = Collections.emptyList();
   @Nullable private OnPersonSelectedListener mItemSelectedListener;
 
-  public void setItemListener(OnPersonSelectedListener itemListener) {
+  public void setItemSelectedListener(OnPersonSelectedListener itemListener) {
     mItemSelectedListener = itemListener;
   }
 

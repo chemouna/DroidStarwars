@@ -10,8 +10,8 @@ public class ResourcesAdapter$ResourceViewHolder$$ViewBinder<T extends com.mouna
     View view;
     view = finder.findRequiredView(source, 2131492966, "field 'iconView'");
     target.iconView = finder.castView(view, 2131492966, "field 'iconView'");
-    view = finder.findRequiredView(source, 2131492967, "field 'titleView'");
-    target.titleView = finder.castView(view, 2131492967, "field 'titleView'");
+    view = finder.findRequiredView(source, 2131492961, "field 'titleView'");
+    target.titleView = finder.castView(view, 2131492961, "field 'titleView'");
   }
 
   @Override public void unbind(T target) {

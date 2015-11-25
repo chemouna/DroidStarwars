@@ -25,4 +25,7 @@
     <item name="android:textColor">@color/primary</item>
   </style>
 
+  <style name="StarWars.ResourceActivity"/>
+
+
 </resources>

@@ -14,7 +14,7 @@
 
 package com.mounacheikhna.ctc.tv;
 
-import com.mounacheikhna.ctc.R;
+import android.support.v4.app.ActivityOptionsCompat;
 import java.net.URI;
 import java.util.Collections;
 import java.util.List;
@@ -38,7 +38,6 @@ import android.support.v17.leanback.widget.OnItemViewSelectedListener;
 import android.support.v17.leanback.widget.Presenter;
 import android.support.v17.leanback.widget.Row;
 import android.support.v17.leanback.widget.RowPresenter;
-import android.support.v4.app.ActivityOptionsCompat;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.Gravity;

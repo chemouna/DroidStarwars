@@ -42,7 +42,7 @@ public enum Resource {
         R.color.style_people_accent, R.style.StarWars_People),
     STYLE_STARSHIPS(R.color.style_starships_primary, R.color.style_starships_primary_dark,
         R.color.style_starships_background, R.color.style_starships_text,
-        R.color.style_starships_accent, R.style.StarWars_Vehicles),
+        R.color.style_starships_accent, R.style.StarWars_Starships),
     STYLE_VEHICLES(R.color.style_vehicles_primary, R.color.style_vehicles_primary_dark,
         R.color.style_vehicles_background, R.color.style_vehicles_text,
         R.color.style_vehicles_accent, R.style.StarWars_Vehicles),

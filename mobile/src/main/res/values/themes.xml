@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-  <style name="PlatformTheme" parent="Theme.AppCompat.Light.NoActionBar">
+  <style name="StarWarsBase" parent="Theme.AppCompat.Light.NoActionBar">
   </style>
 
-  <style name="StarWars" parent="PlatformTheme">
+  <style name="StarWars" parent="StarWarsBase">
     <item name="colorPrimary">@color/primary</item>
     <item name="colorPrimaryDark">@color/primary_dark</item>
     <item name="colorAccent">@color/accent</item>

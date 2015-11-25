@@ -1,9 +1,9 @@
 package com.mounacheikhna.ctc.ui.people;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.SwApp;
+import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.SwapiManager;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPeopleResponse;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
@@ -52,7 +52,7 @@ public class ResourceDetailsFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     ButterKnife.bind(this, view);
 
-    SwApp.get(getActivity()).getComponent().injectListFragment(this);
+    StarWarsApp.get(getActivity()).getComponent().injectListFragment(this);
     mStarWarsPersonAdapter = new StarWarsPersonAdapter();
     mRecyclerView.setAdapter(mStarWarsPersonAdapter);
     mStarWarsPersonAdapter.setItemSelectedListener(mListener);

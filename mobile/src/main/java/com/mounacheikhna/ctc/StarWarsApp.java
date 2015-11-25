@@ -6,7 +6,7 @@ import android.content.Context;
 /**
  * Created by cheikhnamouna on 11/21/15.
  */
-public class SwApp extends Application {
+public class StarWarsApp extends Application {
 
   private AppComponent mComponent;
 
@@ -18,8 +18,8 @@ public class SwApp extends Application {
   }
 
 
-  public static SwApp get(Context context) {
-    return (SwApp) context.getApplicationContext();
+  public static StarWarsApp get(Context context) {
+    return (StarWarsApp) context.getApplicationContext();
   }
 
   public AppComponent getComponent() {

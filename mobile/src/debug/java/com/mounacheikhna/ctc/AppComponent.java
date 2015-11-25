@@ -12,14 +12,14 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = { AppModule.class, CoreApiModule.class, DebugApiModule.class })
 public interface AppComponent {
-  void injectApplication(SwApp swApp);
+  void injectApplication(StarWarsApp starWarsApp);
   void injectListFragment(ResourceDetailsFragment resourceDetailsFragment);
 
   final class Initializer {
     private Initializer() {
     }
 
-    static AppComponent init(SwApp app) {
+    static AppComponent init(StarWarsApp app) {
       return DaggerAppComponent.builder().appModule(new AppModule(app)).build();
     }
   }

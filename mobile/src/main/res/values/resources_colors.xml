@@ -6,7 +6,7 @@
   <color name="style_people_primary">#39C2D7</color> <!-- #00BCD4 -->
   <color name="style_people_accent">#607D8B</color>
   <color name="style_people_primary_dark">#0097A7</color>
-  <color name="style_people_background">#B2EBF2</color>
+  <color name="style_people_background">#D0E0F0</color>
   <color name="style_people_text">@color/text_light</color>
 
   <color name="style_starships_primary">#337AA8</color><!-- #03a9f4 -->
@@ -23,7 +23,7 @@
 
   <color name="style_species_primary">#39C2D7</color><!-- #FFEB3B -->
   <color name="style_species_primary_dark">#0086A2</color><!-- #FBC02D -->
-  <color name="style_species_background">#39C2D0</color>
+  <color name="style_species_background">#A0C2D0</color>
   <color name="style_species_text">@color/text_light</color>
   <color name="style_species_accent">#4CAF50</color>
 

@@ -12,7 +12,7 @@
         <item name="android:windowBackground">@color/style_people_background</item>
     </style>
 
-    <style name="StarWars.Vehicles">
+    <style name="StarWars.Starships">
         <item name="colorPrimary">@color/style_starships_primary</item>
         <item name="colorPrimaryDark">@color/style_starships_primary_dark</item>
         <item name="android:textColorPrimary">@color/style_starships_text</item>
@@ -21,7 +21,7 @@
         <item name="android:windowBackground">@color/style_starships_background</item>
     </style>
 
-    <style name="StarWars.LightBlue">
+    <style name="StarWars.Vehicles">
         <item name="colorPrimary">@color/style_vehicles_primary</item>
         <item name="colorPrimaryDark">@color/style_vehicles_primary_dark</item>
         <item name="android:textColorPrimary">@color/style_vehicles_text</item>

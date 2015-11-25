@@ -1,8 +1,8 @@
 package com.mounacheikhna.ctc;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import butterknife.Bind;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
 
   private void attachResourcesFragment() {
-    FragmentManager fragmentManager = getSupportFragmentManager();
+    FragmentManager fragmentManager = getFragmentManager();
     Fragment fragment = fragmentManager.findFragmentById(R.id.root_container);
     if (!(fragment instanceof ListResourcesFragment)) {
       fragment = ListResourcesFragment.newInstance();

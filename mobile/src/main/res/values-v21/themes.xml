@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-  <style name="PlatformTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
-   <!-- <item name="android:statusBarColor">@color/immersive_bars</item>
-    <item name="android:navigationBarColor">@color/immersive_bars</item>
-    <item name="android:windowEnterTransition">@transition/main_enter</item>-->
-
+  <style name="StarWarsBase" parent="Theme.AppCompat.Light.NoActionBar">
+    <!--<item name="android:windowDrawsSystemBarBackgrounds">true</item>-->
+    <item name="android:windowContentTransitions">true</item>
   </style>
 
 </resources>

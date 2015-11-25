@@ -7,7 +7,7 @@ import rx.plugins.DebugNotificationListener;
 import rx.plugins.RxJavaPlugins;
 import timber.log.Timber;
 
-public class DebugSwApp extends SwApp {
+public class DebugStarWarsApp extends StarWarsApp {
 
   @Override public void onCreate() {
     super.onCreate();

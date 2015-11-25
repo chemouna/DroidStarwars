@@ -3,7 +3,7 @@
     package="com.mounacheikhna.ctc">
 
   <application
-      android:name=".DebugSwApp"
+      android:name=".DebugStarWarsApp"
       android:allowBackup="true"
       android:label="@string/app_name"
       android:icon="@mipmap/ic_launcher"

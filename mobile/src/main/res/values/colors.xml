@@ -2,11 +2,11 @@
 <resources>
 
   <!-- app main colors -->
-  <color name="primary">#1976D2</color>
-  <color name="primary_dark">#1976D2</color>
-  <color name="accent">#2196F3</color>
-  <color name="primary_super_dark">#11261c</color>
-  <color name="accent_dark">#1565C0</color>
+  <color name="primary">#03A9F4</color>
+  <color name="primary_dark">#0288D1</color>
+  <color name="accent">#EC407A</color>
+  <color name="primary_super_dark">#01579B</color>
+  <color name="accent_dark">#C2185B</color>
 
   <!-- app common colors -->
   <color name="text_primary_dark">#de000000</color>

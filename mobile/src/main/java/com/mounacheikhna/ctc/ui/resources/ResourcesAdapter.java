@@ -50,8 +50,8 @@ public class ResourcesAdapter extends RecyclerView.Adapter<ResourcesAdapter.Reso
     holder.iconView.setImageResource(item.getDrawableRes());
 
     Resource.ResourceStyle style = item.getStyle();
-    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, style.getColorPrimary()));
-    holder.titleView.setTextColor(ContextCompat.getColor(context, style.getTextColorPrimary()));
+    holder.itemView.setBackgroundColor(ContextCompat.getColor(context, style.getResourceColor()));
+    holder.titleView.setTextColor(ContextCompat.getColor(context, style.getTitleColorPrimary()));
     holder.titleView.setBackgroundColor(
         ContextCompat.getColor(context, style.getColorPrimaryDark()));
     holder.titleView.setText(item.getTextRes());

@@ -16,7 +16,7 @@ import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
 public class ResourceItemFragment extends Fragment {
 
   public static final String RESOURCE_ITEM_ARG = "StarWarsPerson";
-  private StarWarsPerson mItem;
+  private ResourceItem mItem;
 
   public static ResourceItemFragment newInstance(ResourceItem item) {
     ResourceItemFragment fragment = new ResourceItemFragment();

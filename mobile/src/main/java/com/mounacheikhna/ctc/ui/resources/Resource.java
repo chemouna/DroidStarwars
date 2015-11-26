@@ -12,8 +12,8 @@ public enum Resource {
   VEHICLES(R.string.vehicles, R.drawable.vehicles, ResourceStyle.STYLE_VEHICLES),
   PLANETS(R.string.planets, R.drawable.planets, ResourceStyle.STYLE_PLANETS),
   STARSHIPS(R.string.starships, R.drawable.starships, ResourceStyle.STYLE_STARSHIPS),
-  //FILMS("Films", R.drawable.films),
   SPECIES(R.string.species, R.drawable.species, ResourceStyle.STYLE_SPECIES);
+  //FILMS("Films", R.drawable.films),
 
   private final @StringRes int textRes;
   private final @DrawableRes int drawableRes;
@@ -39,34 +39,34 @@ public enum Resource {
 
   public enum ResourceStyle {
     STYLE_PEOPLE(R.color.style_people_primary, R.color.style_people_primary_dark,
-        R.color.style_people_background, R.color.style_people_accent,
+        R.color.style_people_resource, R.color.style_people_accent,
         R.color.style_people_title, R.color.style_people_text, R.style.StarWars_People),
     STYLE_STARSHIPS(R.color.style_starships_primary, R.color.style_starships_primary_dark,
-        R.color.style_starships_background, R.color.style_starships_accent,
+        R.color.style_starships_resource, R.color.style_starships_accent,
         R.color.style_starships_title, R.color.style_starships_text, R.style.StarWars_Starships),
     STYLE_VEHICLES(R.color.style_vehicles_primary, R.color.style_vehicles_primary_dark,
-        R.color.style_vehicles_background, R.color.style_vehicles_accent,
+        R.color.style_vehicles_resource, R.color.style_vehicles_accent,
         R.color.style_vehicles_title, R.color.style_vehicles_text, R.style.StarWars_Vehicles),
     STYLE_SPECIES(R.color.style_species_primary, R.color.style_species_primary_dark,
-        R.color.style_species_background, R.color.style_species_accent,
+        R.color.style_species_resource, R.color.style_species_accent,
         R.color.style_species_title, R.color.style_species_text, R.style.StarWars_Species),
     STYLE_PLANETS(R.color.style_planets_primary, R.color.style_planets_primary_dark,
-        R.color.style_planets_background, R.color.style_planets_accent,
+        R.color.style_planets_resource, R.color.style_planets_accent,
         R.color.style_planets_title, R.color.style_planets_text, R.style.StarWars_Planets);
 
     @ColorRes private final int mColorPrimary;
     @ColorRes private final int mColorPrimaryDark;
-    @ColorRes private final int mBackgroundColor;
+    @ColorRes private final int mResourceColor;
     @ColorRes private final int mAccentColor;
     @ColorRes private final int mTitleColorPrimary;
     @ColorRes private final int mTextColorPrimary;
     @StyleRes private final int mStyleRes;
 
-    ResourceStyle(int colorPrimary, int colorPrimaryDark, int backgroundColor,
+    ResourceStyle(int colorPrimary, int colorPrimaryDark, int resourceColor,
         int accentColor, int titleColorPrimary, int textColorPrimary, int styleRes) {
       mColorPrimary = colorPrimary;
       mColorPrimaryDark = colorPrimaryDark;
-      mBackgroundColor = backgroundColor;
+      mResourceColor = resourceColor;
       mTitleColorPrimary = titleColorPrimary;
       mTextColorPrimary = textColorPrimary;
       mAccentColor = accentColor;
@@ -96,6 +96,10 @@ public enum Resource {
     @ColorRes
     public int getTextColorPrimary() {
       return mTextColorPrimary;
+    }
+
+    public int getResourceColor() {
+      return mResourceColor;
     }
   }
 

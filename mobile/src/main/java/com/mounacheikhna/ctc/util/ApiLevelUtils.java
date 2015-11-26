@@ -5,9 +5,13 @@ import android.os.Build;
 /**
  * Created by mouna on 24/11/15.
  */
-public final class ApiLevels {
+public final class ApiLevelUtils {
 
-  private ApiLevels(){}
+  private ApiLevelUtils(){}
+
+  public static boolean isAtLeastM() {
+    return isAtLeast(Build.VERSION_CODES.M);
+  }
 
   public static boolean isAtLeastLollipop() {
     return isAtLeast(Build.VERSION_CODES.LOLLIPOP);

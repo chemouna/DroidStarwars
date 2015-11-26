@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:theme="@style/Widget.StarWars.Toolbar"
+    android:layout_height="?android:attr/actionBarSize"
+    style="@style/Widget.StarWars.Toolbar"
     tools:showIn="@layout/resource_activity"/>
 

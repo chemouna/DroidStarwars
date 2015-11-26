@@ -14,8 +14,8 @@ import android.util.Property;
 import android.util.TypedValue;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.mounacheikhna.ctc.util.Animations.FloatProperty;
-import com.mounacheikhna.ctc.util.Animations.IntProperty;
+import com.mounacheikhna.ctc.util.AnimationUtils.FloatProperty;
+import com.mounacheikhna.ctc.util.AnimationUtils.IntProperty;
 
 /**
  * Created by mouna on 24/11/15.

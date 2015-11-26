@@ -21,10 +21,6 @@ public class MainActivity extends AppCompatActivity {
     if (savedInstanceState == null) {
       attachResourcesFragment();
     }
-    /*else {
-      setProgressBarVisibility(View.GONE);
-    }*/
-    //supportPostponeEnterTransition();
   }
 
 
@@ -37,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     fragmentManager.beginTransaction()
         .replace(R.id.root_container, fragment)
         .commit();
-    //setProgressBarVisibility(View.GONE);
   }
 
 }

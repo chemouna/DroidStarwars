@@ -1,17 +1,11 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
   <style name="Widget.StarWars" parent="android:Widget" />
 
-  <style name="Widget.StarWars.Toolbar">
-    <item name="android:background">?android:colorPrimary</item>
-    <item name="android:theme">@style/StarWarsDarkOverlay</item>
-    <item name="android:minHeight">?attr/actionBarSize</item>
-  </style>
-
-  <!-- to theme toolbar with dark color in our app's light theme. we extend
-    ThemeOverlay.AppCompat.Dark to get text styling -->
-  <style name="StarWarsDarkOverlay" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
-
+  <style name="Widget.StarWars.Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:background">@color/primary</item>
+    <item name="android:textColor">@color/text_primary_light</item>
+    <item name="android:elevation" tools:targetApi="lollipop">@dimen/toolbar_elevation</item>
   </style>
 
   <style name="Widget.StarWars.ProgressBar">

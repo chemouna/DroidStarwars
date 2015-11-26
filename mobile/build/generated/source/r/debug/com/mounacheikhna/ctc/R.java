@@ -1402,20 +1402,20 @@ containing a value of this type.
         public static final int abc_config_showMenuShortcutsWhenKeyboardPresent=0x7f080007;
     }
     public static final class color {
-        public static final int abc_background_cache_hint_selector_material_dark=0x7f0c0066;
-        public static final int abc_background_cache_hint_selector_material_light=0x7f0c0067;
-        public static final int abc_color_highlight_material=0x7f0c0068;
+        public static final int abc_background_cache_hint_selector_material_dark=0x7f0c0067;
+        public static final int abc_background_cache_hint_selector_material_light=0x7f0c0068;
+        public static final int abc_color_highlight_material=0x7f0c0069;
         public static final int abc_input_method_navigation_guard=0x7f0c0000;
-        public static final int abc_primary_text_disable_only_material_dark=0x7f0c0069;
-        public static final int abc_primary_text_disable_only_material_light=0x7f0c006a;
-        public static final int abc_primary_text_material_dark=0x7f0c006b;
-        public static final int abc_primary_text_material_light=0x7f0c006c;
-        public static final int abc_search_url_text=0x7f0c006d;
+        public static final int abc_primary_text_disable_only_material_dark=0x7f0c006a;
+        public static final int abc_primary_text_disable_only_material_light=0x7f0c006b;
+        public static final int abc_primary_text_material_dark=0x7f0c006c;
+        public static final int abc_primary_text_material_light=0x7f0c006d;
+        public static final int abc_search_url_text=0x7f0c006e;
         public static final int abc_search_url_text_normal=0x7f0c0001;
         public static final int abc_search_url_text_pressed=0x7f0c0002;
         public static final int abc_search_url_text_selected=0x7f0c0003;
-        public static final int abc_secondary_text_material_dark=0x7f0c006e;
-        public static final int abc_secondary_text_material_light=0x7f0c006f;
+        public static final int abc_secondary_text_material_dark=0x7f0c006f;
+        public static final int abc_secondary_text_material_light=0x7f0c0070;
         public static final int accent=0x7f0c0004;
         public static final int accent_dark=0x7f0c0005;
         public static final int accent_material_dark=0x7f0c0006;
@@ -1506,16 +1506,17 @@ containing a value of this type.
         public static final int style_vehicles_text=0x7f0c005b;
         public static final int switch_thumb_disabled_material_dark=0x7f0c005c;
         public static final int switch_thumb_disabled_material_light=0x7f0c005d;
-        public static final int switch_thumb_material_dark=0x7f0c0070;
-        public static final int switch_thumb_material_light=0x7f0c0071;
+        public static final int switch_thumb_material_dark=0x7f0c0071;
+        public static final int switch_thumb_material_light=0x7f0c0072;
         public static final int switch_thumb_normal_material_dark=0x7f0c005e;
         public static final int switch_thumb_normal_material_light=0x7f0c005f;
-        public static final int text_disabled_light=0x7f0c0060;
-        public static final int text_light=0x7f0c0061;
-        public static final int text_primary_dark=0x7f0c0062;
-        public static final int text_primary_light=0x7f0c0063;
-        public static final int text_secondary_dark=0x7f0c0064;
-        public static final int text_secondary_light=0x7f0c0065;
+        public static final int text_black=0x7f0c0060;
+        public static final int text_disabled_light=0x7f0c0061;
+        public static final int text_light=0x7f0c0062;
+        public static final int text_primary_dark=0x7f0c0063;
+        public static final int text_primary_light=0x7f0c0064;
+        public static final int text_secondary_dark=0x7f0c0065;
+        public static final int text_secondary_light=0x7f0c0066;
     }
     public static final class dimen {
         public static final int abc_action_bar_content_inset_material=0x7f09000d;
@@ -2076,9 +2077,6 @@ containing a value of this type.
         /** <item name="android:windowBackground">@color/style_planets_background</item>
          */
         public static final int StarWars_Planets=0x7f0a00ba;
-        /** <item name="android:windowSharedElementReturnTransition">@transition/resource_shared_return</item>
-    
-         */
         public static final int StarWars_ResourceActivity=0x7f0a0078;
         /** <item name="android:windowBackground">@color/style_species_background</item>
          */
@@ -2237,8 +2235,10 @@ containing a value of this type.
         public static final int Widget_StarWars_Toolbar=0x7f0a0148;
     }
     public static final class transition {
-        public static final int resource_shared_enter=0x7f060000;
-        public static final int resource_shared_return=0x7f060001;
+        public static final int resource_enter=0x7f060000;
+        public static final int resource_return=0x7f060001;
+        public static final int resource_shared_enter=0x7f060002;
+        public static final int resource_shared_return=0x7f060003;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

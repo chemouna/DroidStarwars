@@ -88,7 +88,7 @@
     <color name="style_planets_background">#FFECB3</color>
     <color name="style_planets_primary">#F9F18A</color>
     <color name="style_planets_primary_dark">#F9A91B</color>
-    <color name="style_planets_text">@color/text_light</color>
+    <color name="style_planets_text">@color/text_black</color>
     <color name="style_species_accent">#4CAF50</color>
     <color name="style_species_background">#A0C2D0</color>
     <color name="style_species_primary">#39C2D7</color>
@@ -103,11 +103,12 @@
     <color name="style_vehicles_background">#F9F100</color>
     <color name="style_vehicles_primary">#F9F18A</color>
     <color name="style_vehicles_primary_dark">#F9A91B</color>
-    <color name="style_vehicles_text">@color/text_light</color>
+    <color name="style_vehicles_text">@color/text_black</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="text_black">#616161</color>
     <color name="text_disabled_light">#4dffffff</color>
     <color name="text_light">@android:color/white</color>
     <color name="text_primary_dark">#de000000</color>

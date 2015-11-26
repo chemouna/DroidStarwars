@@ -30,7 +30,8 @@ import java.util.List;
 /**
  * This callback allows a shared TextView to resize text and start padding during transition.
  */
-@TargetApi(Build.VERSION_CODES.LOLLIPOP) public class TextSharedElementCallback
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
+public class TextSharedElementCallback
     extends SharedElementCallback {
 
   private static final String TAG = "TextResize";

@@ -2,6 +2,7 @@
 <resources>
 
   <color name="text_light">@android:color/white</color>
+  <color name="text_black">#616161</color>
 
   <color name="style_people_primary">#39C2D7</color> <!-- #00BCD4 -->
   <color name="style_people_accent">#607D8B</color>
@@ -18,7 +19,7 @@
   <color name="style_vehicles_primary">#F9F18A</color><!-- #03A9F4 -->
   <color name="style_vehicles_primary_dark">#F9A91B</color><!-- #0288D1 -->
   <color name="style_vehicles_background">#F9F100</color>
-  <color name="style_vehicles_text">@color/text_light</color>
+  <color name="style_vehicles_text">@color/text_black</color>
   <color name="style_vehicles_accent">#FF4081</color>
 
   <color name="style_species_primary">#39C2D7</color><!-- #FFEB3B -->
@@ -30,7 +31,7 @@
   <color name="style_planets_primary">#F9F18A</color> <!-- #FFC107 -->
   <color name="style_planets_primary_dark">#F9A91B</color>
   <color name="style_planets_background">#FFECB3</color>
-  <color name="style_planets_text">@color/text_light</color>
+  <color name="style_planets_text">@color/text_black</color>
   <color name="style_planets_accent">#795548</color>
 
 </resources>

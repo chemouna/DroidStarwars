@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
  * Created by mouna on 24/11/15.
  */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-public class TextSizeTransition extends Transition {
+public class TextSizePaddingTransition extends Transition {
 
   @Override public void captureStartValues(TransitionValues transitionValues) {
 

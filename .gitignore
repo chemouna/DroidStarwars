@@ -8,4 +8,7 @@
 /captures
 .idea/
 */build
+/mobile/build
+/tv/build
+/wear/build
 ./build/*

@@ -5,11 +5,9 @@
 
   <changeBounds/>
   <arcMotion android:maximumAngle="50"/>
-  <!--<transition class="com.mounacheikhna.ctc.transition.TextSizeTransition"> -->
-  <changeBounds>
+  <transition class="com.mounacheikhna.ctc.transition.TextSizePaddingTransition">
     <targets>
       <target android:targetId="@id/resource_title"/>
     </targets>
-  </changeBounds>
-  <!--</transition>-->
+  </transition>
 </transitionSet>

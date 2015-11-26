@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
-import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment.OnPersonSelectedListener;
+import com.mounacheikhna.ctc.ui.people.ResourceFragment.OnPersonSelectedListener;
 import java.util.Collections;
 import java.util.List;
 import rx.functions.Action1;

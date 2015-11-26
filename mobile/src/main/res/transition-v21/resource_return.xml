@@ -5,7 +5,7 @@
 
   <transition
       class="com.mounacheikhna.ctc.transition.ScaleTransition"
-      android:duration="@integer/transition_with_toolbar_duration"
+      android:duration="@android:integer/config_shortAnimTime"
       android:interpolator="@android:interpolator/fast_out_linear_in">
     <targets>
       <target android:targetId="@id/back" />

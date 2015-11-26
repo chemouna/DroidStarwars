@@ -42,6 +42,34 @@ public class ResourceActivity extends AppCompatActivity
     super.onCreate(savedInstanceState);
     mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
     displayResource();
+
+    /*int resourceNameTextSize =
+        getResources().getDimensionPixelSize(R.dimen.resource_item_text_size);
+    int paddingStart = getResources().getDimensionPixelSize(R.dimen.spacing_double);
+    final int startDelay = getResources().getInteger(R.integer.transition_with_toolbar_duration);
+    ActivityCompat.setEnterSharedElementCallback(this,
+        new TextSharedElementCallback(resourceNameTextSize, paddingStart) {
+          @Override public void onSharedElementStart(List<String> sharedElementNames,
+              List<View> sharedElements, List<View> sharedElementSnapshots) {
+            super.onSharedElementStart(sharedElementNames, sharedElements, sharedElementSnapshots);
+            mBackButton.setScaleX(0f);
+            mBackButton.setScaleY(0f);
+          }
+
+          @Override
+          public void onSharedElementEnd(List<String> sharedElementNames, List<View> sharedElements,
+              List<View> sharedElementSnapshots) {
+            super.onSharedElementEnd(sharedElementNames, sharedElements, sharedElementSnapshots);
+            // Make sure to perform this animation after the transition has ended.
+            //TODO: maybe instead add this as an animation for enter & exit
+            ViewCompat.animate(mBackButton)
+                .setStartDelay(startDelay)
+                .scaleX(1f)
+                .scaleY(1f)
+                .alpha(1f); //TODO: for ctc try to do this in xml
+          }
+        });
+    */
   }
 
   @SuppressWarnings("NewApi") private void displayResource() {
@@ -60,7 +88,6 @@ public class ResourceActivity extends AppCompatActivity
     if (isAtLeastLollipop()) {
       mBackButton.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
     }
-
   }
 
   private void initFragment() {
@@ -93,4 +120,8 @@ public class ResourceActivity extends AppCompatActivity
     transaction.commit();
   }
 
+  /*@Override public void onBackPressed() {
+    ActivityCompat.finishAfterTransition(ResourceActivity.this);
+    super.onBackPressed();
+  }*/
 }

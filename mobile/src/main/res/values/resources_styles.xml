@@ -9,7 +9,7 @@
         <item name="android:statusBarColor" tools:targetApi="lollipop">
             @color/primary_dark
         </item>
-        <item name="android:windowBackground">@color/style_people_background</item>
+        <!--<item name="android:windowBackground">@color/style_people_background</item>-->
     </style>
 
     <style name="StarWars.Starships">
@@ -18,7 +18,7 @@
         <item name="android:textColorPrimary">@color/style_starships_text</item>
         <item name="colorAccent">@color/style_starships_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_starships_primary_dark</item>
-        <item name="android:windowBackground">@color/style_starships_background</item>
+        <!--<item name="android:windowBackground">@color/style_starships_background</item>-->
     </style>
 
     <style name="StarWars.Vehicles">
@@ -27,7 +27,7 @@
         <item name="android:textColorPrimary">@color/style_vehicles_text</item>
         <item name="colorAccent">@color/style_vehicles_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_vehicles_primary_dark</item>
-        <item name="android:windowBackground">@color/style_vehicles_background</item>
+        <!--<item name="android:windowBackground">@color/style_vehicles_background</item>-->
     </style>
 
     <style name="StarWars.Species">
@@ -36,7 +36,7 @@
         <item name="android:textColorPrimary">@color/style_species_text</item>
         <item name="colorAccent">@color/style_species_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_species_primary_dark</item>
-        <item name="android:windowBackground">@color/style_species_background</item>
+        <!--<item name="android:windowBackground">@color/style_species_background</item>-->
     </style>
 
     <style name="StarWars.Planets">
@@ -45,7 +45,7 @@
         <item name="android:textColorPrimary">@color/style_planets_text</item>
         <item name="colorAccent">@color/style_planets_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_planets_primary_dark</item>
-        <item name="android:windowBackground">@color/style_planets_background</item>
+        <!--<item name="android:windowBackground">@color/style_planets_background</item>-->
     </style>
 
 

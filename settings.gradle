@@ -1,3 +1,3 @@
 rootProject.name = 'CaptainTrainChallenge'
 
-include ':lib', ':mobile', ':wear', ':tv'
+include ':lib', ':mobile', ':wear'/*, ':tv'*/

@@ -26,6 +26,7 @@
   </style>
 
   <style name="StarWars.ResourceActivity"/>
+  <style name="StarWars.MainActivity"/>
 
 
 </resources>

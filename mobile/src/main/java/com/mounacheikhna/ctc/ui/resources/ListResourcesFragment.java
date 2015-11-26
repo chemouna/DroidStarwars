@@ -5,6 +5,7 @@ import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,13 +48,15 @@ public class ListResourcesFragment extends Fragment {
       @Override public void onItemClick(View view, int position) {
         List<Pair> pairs = new ArrayList<>(3);
         View decor = getActivity().getWindow().getDecorView();
+        View statusBar = null;
         if (isAtLeastLollipop()) {
-          View statusBar = decor.findViewById(android.R.id.statusBarBackground);
+          //View statusBar = decor.findViewById(android.R.id.statusBarBackground);
           View navBar = decor.findViewById(android.R.id.navigationBarBackground);
-          pairs.add(new Pair<>(statusBar, statusBar.getTransitionName()));
+          //pairs.add(new Pair<>(statusBar, statusBar.getTransitionName()));
           pairs.add(new Pair<>(navBar, navBar.getTransitionName()));
         }
 
+        //TODO: add this transition name in layout instead of here
         pairs.add(new Pair<>(view.findViewById(R.id.resource_title),
             getActivity().getString(R.string.transition_with_toolbar)));
 
@@ -61,14 +64,22 @@ public class ListResourcesFragment extends Fragment {
             ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
                 pairs.toArray(new Pair[pairs.size()]));
 
-        /*final Bundle transitionBundle = sceneTransitionAnimation.toBundle();
-        startActivity(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()),
-            /*REQUEST_RESOURCE_ITEM,*/ /*transitionBundle);*/
-        startActivity(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()));
+        final Bundle transitionBundle = sceneTransitionAnimation.toBundle();
+        startActivityForResult(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()),
+            REQUEST_RESOURCE_ITEM, transitionBundle);
+        //startActivity(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()));
       }
     });
 
     mResourcesView.setAdapter(mAdapter);
   }
+
+  @Override
+  public void onResume() {
+    //((AppCompatActivity) getActivity()).supportPostponeEnterTransition();
+    super.onResume();
+  }
+
+
 }
 

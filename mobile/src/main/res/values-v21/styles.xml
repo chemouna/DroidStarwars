@@ -6,15 +6,13 @@
     <item name="android:indeterminateTintMode">src_in</item>
   </style>
 
-  <style name="StarWars.ResourceActivity">
-<!--
-    <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter_transition</item>
-    &lt;!&ndash; temp &ndash;&gt;
-    <item name="android:windowAllowEnterTransitionOverlap">true</item>
-    <item name="android:windowAllowReturnTransitionOverlap">true</item>
-    <item name="android:windowSharedElementsUseOverlay">false</item>
--->
-
+  <style name="StarWars.MainActivity">
   </style>
+
+  <style name="StarWars.ResourceActivity"><!--
+    <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter</item>
+    <item name="android:windowSharedElementReturnTransition">@transition/resource_shared_return</item>
+    <item name="android:windowAllowReturnTransitionOverlap">false</item>
+  --></style>
 
 </resources>

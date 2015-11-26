@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     /*else {
       setProgressBarVisibility(View.GONE);
     }*/
-    supportPostponeEnterTransition();
+    //supportPostponeEnterTransition();
   }
 
 

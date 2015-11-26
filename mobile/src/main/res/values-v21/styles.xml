@@ -12,7 +12,6 @@
   <style name="StarWars.ResourceActivity">
     <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter</item>
     <!--<item name="android:windowSharedElementReturnTransition">@transition/resource_shared_return</item>
-    <item name="android:windowAllowReturnTransitionOverlap">false</item>
     -->
   </style>
 

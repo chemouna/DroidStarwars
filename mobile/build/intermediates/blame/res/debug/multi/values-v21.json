@@ -1702,19 +1702,40 @@
                     "startLine": 238,
                     "startColumn": 4,
                     "startOffset": 17496,
-                    "endLine": 244,
+                    "endLine": 239,
                     "endColumn": 10,
-                    "endOffset": 17806
+                    "endOffset": 17543
                 },
                 "from": {
-                    "file": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values-v21/themes.xml",
+                    "file": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values-v21/styles.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 8,
                         "startColumn": 2,
-                        "startOffset": 54,
+                        "startOffset": 243,
                         "endLine": 9,
                         "endColumn": 10,
-                        "endOffset": 364
+                        "endOffset": 290
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 240,
+                    "startColumn": 4,
+                    "startOffset": 17548,
+                    "endLine": 244,
+                    "endColumn": 10,
+                    "endOffset": 17815
+                },
+                "from": {
+                    "file": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 11,
+                        "startColumn": 2,
+                        "startOffset": 294,
+                        "endLine": 15,
+                        "endColumn": 10,
+                        "endOffset": 561
                     }
                 }
             },
@@ -1722,10 +1743,31 @@
                 "to": {
                     "startLine": 245,
                     "startColumn": 4,
-                    "startOffset": 17811,
+                    "startOffset": 17820,
                     "endLine": 248,
                     "endColumn": 10,
-                    "endOffset": 17996
+                    "endOffset": 18032
+                },
+                "from": {
+                    "file": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values-v21/themes.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 2,
+                        "startOffset": 54,
+                        "endLine": 6,
+                        "endColumn": 10,
+                        "endOffset": 266
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 249,
+                    "startColumn": 4,
+                    "startOffset": 18037,
+                    "endLine": 252,
+                    "endColumn": 10,
+                    "endOffset": 18222
                 },
                 "from": {
                     "file": "/Users/mouna/Documents/repos/captaintrainchallenge/mobile/src/main/res/values-v21/styles.xml",

@@ -11,7 +11,8 @@
     <!-- to have correct animations we need to fake our toolbar -->
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="9dp">
         <TextView android:id="@+id/resource_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

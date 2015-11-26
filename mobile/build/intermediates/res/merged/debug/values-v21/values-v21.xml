@@ -236,12 +236,16 @@
     </style>
     <style name="Platform.ThemeOverlay.AppCompat.Dark"/>
     <style name="Platform.ThemeOverlay.AppCompat.Light"/>
-    <style name="PlatformTheme" parent="Theme.AppCompat.Light.NoActionBar">
-
-   <!-- <item name="android:statusBarColor">@color/immersive_bars</item>
-    <item name="android:navigationBarColor">@color/immersive_bars</item>
-    <item name="android:windowEnterTransition">@transition/main_enter</item>-->
-
+    <style name="StarWars.MainActivity">
+  </style>
+    <style name="StarWars.ResourceActivity">
+    <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter</item>
+    <!--<item name="android:windowSharedElementReturnTransition">@transition/resource_shared_return</item>
+    -->
+  </style>
+    <style name="StarWarsBase" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:windowContentTransitions">true</item>
   </style>
     <style name="Widget.StarWars.ProgressBar">
     <item name="android:indeterminateTint">?android:colorAccent</item>

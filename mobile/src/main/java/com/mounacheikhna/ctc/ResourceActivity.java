@@ -48,7 +48,6 @@ public class ResourceActivity extends AppCompatActivity
     mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
     displayResource();
 
-    //this part here seems to be the pb
     int resourceNameTextSize =
         getResources().getDimensionPixelSize(R.dimen.resource_item_text_size);
     int paddingStart = getResources().getDimensionPixelSize(R.dimen.spacing_double);
@@ -126,8 +125,8 @@ public class ResourceActivity extends AppCompatActivity
     transaction.commit();
   }
 
-  /*@Override public void onBackPressed() {
+  @Override public void onBackPressed() {
     ActivityCompat.finishAfterTransition(ResourceActivity.this);
     super.onBackPressed();
-  }*/
+  }
 }

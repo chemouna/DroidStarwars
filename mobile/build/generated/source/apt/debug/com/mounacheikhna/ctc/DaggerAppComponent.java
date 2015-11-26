@@ -56,8 +56,8 @@ public final class DaggerAppComponent implements AppComponent {
   }
 
   @Override
-  public void injectApplication(SwApp swApp) {  
-    MembersInjectors.noOp().injectMembers(swApp);
+  public void injectApplication(StarWarsApp starWarsApp) {  
+    MembersInjectors.noOp().injectMembers(starWarsApp);
   }
 
   @Override

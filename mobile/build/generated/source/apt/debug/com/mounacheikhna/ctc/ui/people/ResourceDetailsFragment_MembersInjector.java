@@ -1,6 +1,6 @@
 package com.mounacheikhna.ctc.ui.people;
 
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import com.mounacheikhna.ctc.lib.api.SwapiManager;
 import dagger.MembersInjector;
 import javax.annotation.Generated;

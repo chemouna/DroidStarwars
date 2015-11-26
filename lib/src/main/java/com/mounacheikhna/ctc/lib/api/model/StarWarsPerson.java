@@ -3,9 +3,8 @@ package com.mounacheikhna.ctc.lib.api.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class StarWarsPerson implements Parcelable {
+public class StarWarsPerson extends ResourceItem implements Parcelable {
 
-  public String name;
   public String height;
   public String mass;
   public String hair_olor;

@@ -8,4 +8,5 @@
   <string name="species">Species</string>
   <string name="planets">Planets</string>
   <string name="back_button">Back button</string>
+  <string name="loading_error">Can\'t load %1$s</string>
 </resources>

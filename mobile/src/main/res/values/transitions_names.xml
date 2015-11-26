@@ -1,4 +1,4 @@
 <resources>
-  <string name="transition_with_toolbar">transition_with_toolbar</string>
+  <string name="transition_with_toolbar" translatable="false">transition_with_toolbar</string>
 
 </resources>

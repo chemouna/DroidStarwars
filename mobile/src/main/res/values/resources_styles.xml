@@ -4,6 +4,7 @@
     <style name="StarWars.People">
         <item name="colorPrimary">@color/style_people_primary</item>
         <item name="colorPrimaryDark">@color/style_people_primary_dark</item>
+        <item name="titleColorPrimary">@color/style_people_title</item>
         <item name="android:textColorPrimary">@color/style_people_text</item>
         <item name="colorAccent">@color/style_people_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">
@@ -15,6 +16,7 @@
     <style name="StarWars.Starships">
         <item name="colorPrimary">@color/style_starships_primary</item>
         <item name="colorPrimaryDark">@color/style_starships_primary_dark</item>
+        <item name="titleColorPrimary">@color/style_starships_title</item>
         <item name="android:textColorPrimary">@color/style_starships_text</item>
         <item name="colorAccent">@color/style_starships_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_starships_primary_dark</item>
@@ -24,6 +26,7 @@
     <style name="StarWars.Vehicles">
         <item name="colorPrimary">@color/style_vehicles_primary</item>
         <item name="colorPrimaryDark">@color/style_vehicles_primary_dark</item>
+        <item name="titleColorPrimary">@color/style_vehicles_title</item>
         <item name="android:textColorPrimary">@color/style_vehicles_text</item>
         <item name="colorAccent">@color/style_vehicles_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_vehicles_primary_dark</item>
@@ -33,6 +36,7 @@
     <style name="StarWars.Species">
         <item name="colorPrimary">@color/style_species_primary</item>
         <item name="colorPrimaryDark">@color/style_species_primary_dark</item>
+        <item name="titleColorPrimary">@color/style_species_title</item>
         <item name="android:textColorPrimary">@color/style_species_text</item>
         <item name="colorAccent">@color/style_species_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_species_primary_dark</item>
@@ -42,6 +46,7 @@
     <style name="StarWars.Planets">
         <item name="colorPrimary">@color/style_planets_primary</item>
         <item name="colorPrimaryDark">@color/style_planets_primary_dark</item>
+        <item name="titleColorPrimary">@color/style_planets_title</item>
         <item name="android:textColorPrimary">@color/style_planets_text</item>
         <item name="colorAccent">@color/style_planets_accent</item>
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/style_planets_primary_dark</item>

@@ -1,6 +1,7 @@
 package com.mounacheikhna.ctc.lib.api;
 
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPeopleResponse;
+import com.mounacheikhna.ctc.lib.api.model.StarWarsVehiclesResponse;
 import retrofit.Result;
 import retrofit.http.GET;
 import rx.Observable;
@@ -11,5 +12,7 @@ import rx.Observable;
 public interface SwapiApi {
 
   @GET("people") Observable<Result<StarWarsPeopleResponse>> getPeople();
+
+  @GET("vehicles") Observable<Result<StarWarsVehiclesResponse>> getVehicles();
 
 }

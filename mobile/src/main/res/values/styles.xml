@@ -15,7 +15,7 @@
   </style>
 
   <style name="Widget.StarWars.ProgressBar">
-
+    <item name="android:indeterminate">true</item>
   </style>
 
   <style name="Widget.StarWars.PersonItem" parent="Specs.TwoLinesIconItem">

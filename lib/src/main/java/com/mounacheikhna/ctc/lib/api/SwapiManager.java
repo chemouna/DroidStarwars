@@ -14,7 +14,11 @@ public class SwapiManager {
     mApi = api;
   }
 
-  public Observable<Result<StarWarsPeopleResponse>> fetchStarWarsPeople() {
+  public Observable<Result<StarWarsPeopleResponse>> fetchPeople() {
     return mApi.getPeople().subscribeOn(Schedulers.io());
+  }
+
+  public Observable fetchVehicles() {
+    return mApi.getVehicles().subscribeOn(Schedulers.io());
   }
 }

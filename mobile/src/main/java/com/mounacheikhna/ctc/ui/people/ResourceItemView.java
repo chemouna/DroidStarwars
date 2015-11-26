@@ -7,19 +7,20 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
+import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
 
-public class StarWarsPersonItemView extends LinearLayout {
+public class ResourceItemView extends LinearLayout {
 
   @Bind(R.id.name) TextView mNameView;
 
-  public StarWarsPersonItemView(Context context, AttributeSet attrs) {
+  public ResourceItemView(Context context, AttributeSet attrs) {
     super(context, attrs);
     setOrientation(VERTICAL);
   }
 
-  public void bindTo(StarWarsPerson person) {
-    mNameView.setText(person.name);
+  public void bindTo(ResourceItem resourceItem) {
+    mNameView.setText(resourceItem.name);
   }
 
   @Override protected void onFinishInflate() {

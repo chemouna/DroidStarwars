@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
 import com.mounacheikhna.ctc.ui.people.ResourceFragment;
@@ -26,10 +27,9 @@ import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
  * Created by cheikhnamouna on 11/21/15.
  */
 public class ResourceActivity extends AppCompatActivity
-    implements ResourceFragment.OnPersonSelectedListener {
+    implements ResourceFragment.OnItemSelectedListener {
 
   public static final String RESOURCE_EXTRA = "resource_extra";
-
   @Bind(R.id.back) ImageButton mBackButton;
   @Bind(R.id.resource_title) TextView mResourceTitle;
   private Resource mResource;
@@ -41,11 +41,18 @@ public class ResourceActivity extends AppCompatActivity
     return intent;
   }
 
-  @SuppressWarnings("NewApi")
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
     displayResource();
+    setupTransitions();
+  }
+
+  /**
+   * Setup for title and back button transitions.
+   */
+  @SuppressWarnings("NewApi")
+  private void setupTransitions() {
     int resourceNameTextSize =
         getResources().getDimensionPixelSize(R.dimen.resource_item_text_size);
     int paddingStart = getResources().getDimensionPixelSize(R.dimen.spacing_double);
@@ -78,27 +85,32 @@ public class ResourceActivity extends AppCompatActivity
     }
     setContentView(R.layout.resource_activity);
     ButterKnife.bind(this);
+    applyThemeColors();
+    initFragment();
+  }
+
+  @SuppressWarnings("NewApi")
+  private void applyThemeColors() {
     mResourceTitle.setText(mResource.getTextRes());
     mResourceTitle.setTextColor(
-        ContextCompat.getColor(this, mResource.getStyle().getTextColorPrimary()));
+        ContextCompat.getColor(this, mResource.getStyle().getTitleColorPrimary()));
     mResourceTitle.setBackgroundColor(
         ContextCompat.getColor(this, mResource.getStyle().getColorPrimary()));
     if (isAtLeastLollipop()) {
       mBackButton.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
     }
-    initFragment();
   }
 
   private void initFragment() {
-    ResourceFragment newFragment = new ResourceFragment();
+    ResourceFragment newFragment = ResourceFragment.newInstance(mResource);
     displayFragment(newFragment, true);
   }
 
-  @Override public void onItemSelected(StarWarsPerson person) {
+  @Override public void onItemSelected(ResourceItem item) {
     if (mResourceItemFragment != null) {
-      mResourceItemFragment.show(person);
+      mResourceItemFragment.show(item);
     } else {
-      mResourceItemFragment = new ResourceItemFragment();
+      mResourceItemFragment = ResourceItemFragment.newInstance(item);
       displayFragment(mResourceItemFragment, true);
     }
   }

@@ -1,5 +1,6 @@
 package com.mounacheikhna.ctc;
 
+import android.content.Context;
 import com.facebook.stetho.Stetho;
 import rx.plugins.DebugHook;
 import rx.plugins.DebugNotification;
@@ -15,6 +16,10 @@ public class DebugStarWarsApp extends StarWarsApp {
     Stetho.initializeWithDefaults(this);
     Timber.plant(new Timber.DebugTree());
     setupRxJavaDebug();
+  }
+
+  public static StarWarsApp get(Context context) {
+    return (DebugStarWarsApp) context.getApplicationContext();
   }
 
   @SuppressWarnings("unchecked") private void setupRxJavaDebug() {

@@ -5,17 +5,22 @@ import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
+import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
 import com.mounacheikhna.ctc.ui.people.ResourceDetailsFragment;
 import com.mounacheikhna.ctc.ui.people.ResourceFragment;
 import com.mounacheikhna.ctc.ui.resources.Resource;
+import java.util.List;
 
 import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
@@ -43,7 +48,8 @@ public class ResourceActivity extends AppCompatActivity
     mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
     displayResource();
 
-    /*int resourceNameTextSize =
+    //this part here seems to be the pb
+    int resourceNameTextSize =
         getResources().getDimensionPixelSize(R.dimen.resource_item_text_size);
     int paddingStart = getResources().getDimensionPixelSize(R.dimen.spacing_double);
     final int startDelay = getResources().getInteger(R.integer.transition_with_toolbar_duration);
@@ -69,7 +75,7 @@ public class ResourceActivity extends AppCompatActivity
                 .alpha(1f); //TODO: for ctc try to do this in xml
           }
         });
-    */
+
   }
 
   @SuppressWarnings("NewApi") private void displayResource() {

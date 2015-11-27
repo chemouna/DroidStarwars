@@ -1,9 +1,10 @@
 package com.mounacheikhna.ctc.api;
 
-import com.mounacheikhna.ctc.annotations.ApiClient;
-import com.mounacheikhna.ctc.annotations.NetworkInterceptors;
+import com.mounacheikhna.ctc.annotation.ApiClient;
+import com.mounacheikhna.ctc.annotation.NetworkInterceptors;
+import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.SwapiApi;
-import com.mounacheikhna.ctc.lib.api.SwapiManager;
+import com.mounacheikhna.ctc.lib.api.TmdbApi;
 import com.squareup.moshi.Moshi;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Interceptor;
@@ -54,8 +55,12 @@ public class CoreApiModule {
     return retrofit.create(SwapiApi.class);
   }
 
-  @Provides @Singleton SwapiManager provideSwapiManager(SwapiApi api) {
-    return new SwapiManager(api);
+  @Provides @Singleton TmdbApi providesTmdbApi(Retrofit retrofit) {
+    return retrofit.create(TmdbApi.class);
+  }
+
+  @Provides @Singleton ApiManager provideSwapiManager(SwapiApi swapi, TmdbApi tmdb) {
+    return new ApiManager(swapi, tmdb);
   }
 
 }

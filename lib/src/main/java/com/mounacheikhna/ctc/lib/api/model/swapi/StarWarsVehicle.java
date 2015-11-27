@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.lib.api.model;
+package com.mounacheikhna.ctc.lib.api.model.swapi;
 
 import android.os.Parcel;
 import java.util.ArrayList;
@@ -22,7 +22,9 @@ public class StarWarsVehicle extends ResourceItem {
   public String edited;
   public String url;
   public ArrayList<String> pilots;
-  public ArrayList<String> films;
+
+  public StarWarsVehicle() {
+  }
 
   @Override public int describeContents() {
     return 0;
@@ -45,10 +47,6 @@ public class StarWarsVehicle extends ResourceItem {
     dest.writeString(this.edited);
     dest.writeString(this.url);
     dest.writeStringList(this.pilots);
-    dest.writeStringList(this.films);
-  }
-
-  public StarWarsVehicle() {
   }
 
   protected StarWarsVehicle(Parcel in) {
@@ -68,7 +66,6 @@ public class StarWarsVehicle extends ResourceItem {
     this.edited = in.readString();
     this.url = in.readString();
     this.pilots = in.createStringArrayList();
-    this.films = in.createStringArrayList();
   }
 
   public static final Creator<StarWarsVehicle> CREATOR = new Creator<StarWarsVehicle>() {

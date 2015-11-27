@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.people;
+package com.mounacheikhna.ctc.ui.resources;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -7,8 +7,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
-import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
+import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 
 public class ResourceItemView extends LinearLayout {
 

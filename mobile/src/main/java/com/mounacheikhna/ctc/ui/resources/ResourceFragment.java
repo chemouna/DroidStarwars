@@ -1,30 +1,29 @@
-package com.mounacheikhna.ctc.ui.people;
+package com.mounacheikhna.ctc.ui.resources;
 
 import android.app.Fragment;
 import android.content.Context;
-import android.graphics.drawable.AnimatedVectorDrawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewStub;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
-import com.mounacheikhna.ctc.lib.api.SwapiManager;
-import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
-import com.mounacheikhna.ctc.lib.api.model.StarWarsPeopleResponse;
-import com.mounacheikhna.ctc.lib.api.model.StarWarsPerson;
-import com.mounacheikhna.ctc.ui.resources.Resource;
+import com.mounacheikhna.ctc.lib.api.ApiManager;
+import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.model.swapi.StarWarsPeopleResponse;
+import com.mounacheikhna.ctc.lib.api.model.swapi.StarWarsPerson;
+import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -48,7 +47,7 @@ public class ResourceFragment extends Fragment {
   @Bind(R.id.rv) RecyclerView mRecyclerView;
   @Bind(R.id.progress) ProgressBar mProgressBar;
 
-  @Inject SwapiManager mApiManager;
+  @Inject ApiManager mApiManager;
 
   private final CompositeSubscription subscriptions = new CompositeSubscription();
   private ResourceItemAdapter mResourceItemAdapter;
@@ -84,6 +83,9 @@ public class ResourceFragment extends Fragment {
     mResourceItemAdapter = new ResourceItemAdapter();
     mRecyclerView.setAdapter(mResourceItemAdapter);
     mResourceItemAdapter.setItemSelectedListener(mListener);
+    mRecyclerView.addItemDecoration(
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,
+            0/*dividerPaddingStart*/,  true));
     fetchData();
   }
 

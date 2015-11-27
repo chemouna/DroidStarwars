@@ -12,7 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.ResourceActivity;
-import com.mounacheikhna.ctc.ui.OffsetDecoration;
+import com.mounacheikhna.ctc.ui.decoration.OffsetDecoration;
 import java.util.ArrayList;
 import java.util.List;
 

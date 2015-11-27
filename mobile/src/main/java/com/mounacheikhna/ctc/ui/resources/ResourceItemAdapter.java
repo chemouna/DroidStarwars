@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.people;
+package com.mounacheikhna.ctc.ui.resources;
 
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
-import com.mounacheikhna.ctc.ui.people.ResourceFragment.OnItemSelectedListener;
+import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
+import com.mounacheikhna.ctc.ui.resources.ResourceFragment.OnItemSelectedListener;
 import java.util.Collections;
 import java.util.List;
 import rx.functions.Action1;

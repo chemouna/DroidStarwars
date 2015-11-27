@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.annotations;
+package com.mounacheikhna.ctc.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
@@ -8,5 +8,5 @@ import javax.inject.Qualifier;
 @Qualifier
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ApiClient {
+public @interface NetworkInterceptors {
 }

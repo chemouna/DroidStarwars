@@ -2,7 +2,7 @@ package com.mounacheikhna.ctc;
 
 import android.app.Application;
 import android.content.Context;
-import com.mounacheikhna.ctc.annotations.ApplicationContext;
+import com.mounacheikhna.ctc.annotation.ApplicationContext;
 import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;

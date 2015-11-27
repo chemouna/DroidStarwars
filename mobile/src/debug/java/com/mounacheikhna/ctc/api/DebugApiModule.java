@@ -1,7 +1,7 @@
 package com.mounacheikhna.ctc.api;
 
 import com.facebook.stetho.okhttp.StethoInterceptor;
-import com.mounacheikhna.ctc.annotations.NetworkInterceptors;
+import com.mounacheikhna.ctc.annotation.NetworkInterceptors;
 import com.squareup.okhttp.Interceptor;
 import dagger.Module;
 import dagger.Provides;

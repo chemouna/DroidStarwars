@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -14,14 +13,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.mounacheikhna.ctc.lib.api.model.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
-import com.mounacheikhna.ctc.ui.people.ResourceFragment;
-import com.mounacheikhna.ctc.ui.people.ResourceItemFragment;
+import com.mounacheikhna.ctc.ui.resources.ResourceFragment;
+import com.mounacheikhna.ctc.ui.resources.ResourceItemFragment;
 import com.mounacheikhna.ctc.ui.resources.Resource;
 import com.mounacheikhna.ctc.util.AnimationUtils.EmptyTransitionListener;
-import com.mounacheikhna.ctc.util.ApiLevelUtils;
-import com.mounacheikhna.ctc.util.ViewUtils;
 
 import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
 

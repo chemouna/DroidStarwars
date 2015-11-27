@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.lib.api.model;
+package com.mounacheikhna.ctc.lib.api.model.swapi;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -7,7 +7,7 @@ public class StarWarsPerson extends ResourceItem implements Parcelable {
 
   public String height;
   public String mass;
-  public String hair_olor;
+  public String hair_color;
   public String skin_color;
   public String eye_color;
   public String birth_year;
@@ -22,7 +22,7 @@ public class StarWarsPerson extends ResourceItem implements Parcelable {
     dest.writeString(this.name);
     dest.writeString(this.height);
     dest.writeString(this.mass);
-    dest.writeString(this.hair_olor);
+    dest.writeString(this.hair_color);
     dest.writeString(this.skin_color);
     dest.writeString(this.eye_color);
     dest.writeString(this.birth_year);
@@ -37,7 +37,7 @@ public class StarWarsPerson extends ResourceItem implements Parcelable {
     this.name = in.readString();
     this.height = in.readString();
     this.mass = in.readString();
-    this.hair_olor = in.readString();
+    this.hair_color = in.readString();
     this.skin_color = in.readString();
     this.eye_color = in.readString();
     this.birth_year = in.readString();

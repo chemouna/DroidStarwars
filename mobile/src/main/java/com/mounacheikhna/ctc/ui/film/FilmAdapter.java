@@ -1,7 +1,9 @@
 package com.mounacheikhna.ctc.ui.film;
 
+import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
@@ -18,9 +20,14 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
 
   private List<FilmDetails> mItems = new ArrayList<>();
   private Picasso mPicasso;
+  @Nullable private OnFilmItemSelectedListener mFilmSelected;
 
   public FilmAdapter(Picasso picasso) {
     mPicasso = picasso;
+  }
+
+  public void setFilmItemSelectedListener(OnFilmItemSelectedListener itemListener) {
+    mFilmSelected = itemListener;
   }
 
   @Override public FilmViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -30,7 +37,15 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
   }
 
   @Override public void onBindViewHolder(FilmViewHolder holder, int position) {
-    holder.itemView.bindTo(mItems.get(position), mPicasso);
+    final FilmDetails filmItem = mItems.get(position);
+    holder.itemView.bindTo(filmItem, mPicasso);
+    holder.itemView.setOnClickListener(new View.OnClickListener() {
+      @Override public void onClick(View v) {
+        if (mFilmSelected != null) {
+          mFilmSelected.onFilmSelected(filmItem);
+        }
+      }
+    });
   }
 
   @Override public int getItemCount() {
@@ -49,5 +64,9 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
       super(itemView);
       this.itemView = itemView;
     }
+  }
+
+  public interface OnFilmItemSelectedListener {
+    void onFilmSelected(FilmDetails filmItem);
   }
 }

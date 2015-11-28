@@ -26,7 +26,7 @@
       </intent-filter>
     </activity>
 
-    <activity android:name=".ResourceActivity"
+    <activity android:name=".ui.resource.ResourceActivity"
         android:theme="@style/StarWars.ResourceActivity"
         android:parentActivityName=".MainActivity">
       <meta-data

@@ -1,5 +1,6 @@
 package com.mounacheikhna.ctc.ui.resource;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Context;
 import android.net.ConnectivityManager;
@@ -9,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,7 @@ import com.mounacheikhna.ctc.lib.api.model.swapi.Person;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.lib.api.model.swapi.PeopleResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
+import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -42,6 +45,7 @@ import timber.log.Timber;
 public class ResourceFragment extends Fragment {
 
   private static final String RESOURCE_ARG = "ResourceArg";
+  private static final String TAG = "ResourceFragment";
 
   private TextView mStateView;
   @Bind(R.id.rv) RecyclerView mRecyclerView;
@@ -51,7 +55,7 @@ public class ResourceFragment extends Fragment {
 
   private final CompositeSubscription subscriptions = new CompositeSubscription();
   private ResourceItemAdapter mResourceItemAdapter;
-  private OnItemSelectedListener mListener;
+  private OnResourceItemSelectedListener mListener;
   private Resource mResource;
 
   public static ResourceFragment newInstance(Resource resource) {
@@ -64,10 +68,11 @@ public class ResourceFragment extends Fragment {
 
   @Override public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    mResource = (Resource) getArguments().getSerializable(RESOURCE_ARG);
-    if (mResource == null) {
-      throw new IllegalArgumentException("ResourceItemFragment requires an item to display.");
+    if (getArguments() == null || !getArguments().containsKey(RESOURCE_ARG) ||
+        getArguments().getSerializable(RESOURCE_ARG) == null) {
+      throw new IllegalArgumentException("ResourceFragment requires a resource to display.");
     }
+    mResource = (Resource) getArguments().getSerializable(RESOURCE_ARG);
   }
 
   @Nullable @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -77,31 +82,43 @@ public class ResourceFragment extends Fragment {
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
+    Log.d(TAG, "onViewCreated() called with: "
+        + "view = ["
+        + view
+        + "], savedInstanceState = ["
+        + savedInstanceState
+        + "]");
     ButterKnife.bind(this, view);
-
     StarWarsApp.get(getActivity()).getComponent().injectListFragment(this);
-    mResourceItemAdapter = new ResourceItemAdapter();
-    mRecyclerView.setAdapter(mResourceItemAdapter);
-    mResourceItemAdapter.setItemSelectedListener(mListener);
-    mRecyclerView.addItemDecoration(
-        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,
-            0/*dividerPaddingStart*/,  true));
-    fetchData();
+    setupList();
   }
 
-  @Override public void onAttach(Context context) {
-    super.onAttach(context);
-    if (getActivity() instanceof OnItemSelectedListener) {
-      mListener = (OnItemSelectedListener) getActivity();
+  @SuppressWarnings("deprecation") @Override public void onAttach(Activity activity) {
+    super.onAttach(activity);
+    Log.d(TAG, "onAttach() called ");
+    if (getActivity() instanceof OnResourceItemSelectedListener) {
+      Log.d(TAG, "onAttach: activity does implement OnResourceItemSelectedListener");
+      mListener = (OnResourceItemSelectedListener) getActivity();
     } else {
       throw new ClassCastException(getActivity().toString()
-          + " must implement "+ OnItemSelectedListener.class.getName());
+          + " must implement " + OnResourceItemSelectedListener.class.getName());
     }
+  }
+
+  private void setupList() {
+    Log.d(TAG, "setupList() called ");
+    mResourceItemAdapter = new ResourceItemAdapter();
+    mResourceItemAdapter.setOnResourceItemSelectedListener(mListener);
+    mRecyclerView.setAdapter(mResourceItemAdapter);
+    mRecyclerView.addItemDecoration(
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, 0/*dividerPaddingStart*/,
+            true));
+    fetchData();
   }
 
   //TODO: improve readability of this
   private void fetchData() {
-    if(! isConnected()) {
+    if (!isConnected()) {
       getStateView().setText(R.string.no_network); //TODO: maybe add a link for a try again
       return; //return for now -> TODO: later font check here if we add caching
     }
@@ -115,8 +132,7 @@ public class ResourceFragment extends Fragment {
             .observeOn(AndroidSchedulers.mainThread())
             .share()
             .doOnNext(new Action1<Result<PeopleResponse>>() {
-              @Override
-              public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
+              @Override public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
                 mProgressBar.setVisibility(View.GONE);
               }
             });
@@ -144,9 +160,8 @@ public class ResourceFragment extends Fragment {
   }
 
   private TextView getStateView() {
-    if(mStateView == null && getView() != null) {
-      mStateView =
-          (TextView) ((ViewStub) getView().findViewById(R.id.list_state)).inflate();
+    if (mStateView == null && getView() != null) {
+      mStateView = (TextView) ((ViewStub) getView().findViewById(R.id.list_state)).inflate();
     }
     return mStateView;
   }
@@ -165,16 +180,14 @@ public class ResourceFragment extends Fragment {
       @Override public List<ResourceItem> call(Result<PeopleResponse> result) {
         PeopleResponse response = result.response().body();
         List<Person> items =
-            response.results == null ? Collections.<Person>emptyList()
-                : response.results;
+            response.results == null ? Collections.<Person>emptyList() : response.results;
         return new ArrayList<ResourceItem>(items);
       }
     });
   }
 
   private boolean isConnected() {
-    ConnectivityManager connectivityManager
-        = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+    ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
     return activeNetworkInfo != null && activeNetworkInfo.isConnected();
   }
@@ -183,10 +196,5 @@ public class ResourceFragment extends Fragment {
     super.onDestroy();
     subscriptions.unsubscribe();
   }
-
-  public interface OnItemSelectedListener {
-    void onItemSelected(ResourceItem resourceItem);
-  }
-
-
 }
+

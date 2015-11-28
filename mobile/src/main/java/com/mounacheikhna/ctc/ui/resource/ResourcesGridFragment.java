@@ -11,22 +11,22 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.ResourceActivity;
 import com.mounacheikhna.ctc.ui.decoration.OffsetDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
 
-public class ListResourcesFragment extends Fragment {
+public class ResourcesGridFragment extends Fragment {
 
   private static final int REQUEST_RESOURCE_ITEM = 1;
 
   @Bind(R.id.resources) RecyclerView mResourcesView;
+
   private ResourcesAdapter mAdapter;
 
-  public static ListResourcesFragment newInstance() {
-    return new ListResourcesFragment();
+  public static ResourcesGridFragment newInstance() {
+    return new ResourcesGridFragment();
   }
 
   @Override public View onCreateView(LayoutInflater inflater, ViewGroup container,

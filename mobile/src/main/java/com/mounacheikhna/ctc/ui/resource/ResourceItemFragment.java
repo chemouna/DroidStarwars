@@ -71,6 +71,11 @@ public class ResourceItemFragment extends Fragment {
     StarWarsApp.get(getActivity()).getComponent().injectResourceItemFragment(this);
     ButterKnife.bind(this, view);
     mFilmAdapter = new FilmAdapter(mPicasso);
+    mFilmAdapter.setFilmItemSelectedListener(new FilmAdapter.OnFilmItemSelectedListener() {
+      @Override public void onFilmSelected(FilmDetails filmItem) {
+
+      }
+    });
     mRecyclerView.setAdapter(mFilmAdapter);
     mRecyclerView.addItemDecoration(
         new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,

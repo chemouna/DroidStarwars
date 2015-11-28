@@ -9,4 +9,4 @@
     android:clipToPadding="false"
     android:scrollbarStyle="outsideOverlay"
     app:layoutManager="android.support.v7.widget.GridLayoutManager"
-    app:spanCount="2"/>
+    app:spanCount="@integer/nb_columns_resources"/>

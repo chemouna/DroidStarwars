@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.mounacheikhna.ctc.ui.resource.ListResourcesFragment;
+import com.mounacheikhna.ctc.ui.resource.ResourcesGridFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
   private void attachResourcesFragment() {
     FragmentManager fragmentManager = getFragmentManager();
     Fragment fragment = fragmentManager.findFragmentById(R.id.root_container);
-    if (!(fragment instanceof ListResourcesFragment)) {
-      fragment = ListResourcesFragment.newInstance();
+    if (!(fragment instanceof ResourcesGridFragment)) {
+      fragment = ResourcesGridFragment.newInstance();
     }
     fragmentManager.beginTransaction()
         .replace(R.id.root_container, fragment)

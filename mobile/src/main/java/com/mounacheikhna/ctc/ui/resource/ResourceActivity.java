@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc;
+package com.mounacheikhna.ctc.ui.resource;
 
 import android.app.Fragment;
 import android.app.FragmentTransaction;
@@ -13,11 +13,10 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
-import com.mounacheikhna.ctc.ui.resource.ResourceFragment;
-import com.mounacheikhna.ctc.ui.resource.ResourceItemFragment;
-import com.mounacheikhna.ctc.ui.resource.Resource;
+import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
 import com.mounacheikhna.ctc.util.AnimationUtils.EmptyTransitionListener;
 
 import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
@@ -25,8 +24,7 @@ import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
 /**
  * Created by cheikhnamouna on 11/21/15.
  */
-public class ResourceActivity extends AppCompatActivity
-    implements ResourceFragment.OnItemSelectedListener {
+public class ResourceActivity extends AppCompatActivity implements OnResourceItemSelectedListener {
 
   public static final String RESOURCE_EXTRA = "resource_extra";
 
@@ -52,8 +50,7 @@ public class ResourceActivity extends AppCompatActivity
   /**
    * Setup for title and back button transitions.
    */
-  @SuppressWarnings("NewApi")
-  private void setupTransitions() {
+  @SuppressWarnings("NewApi") private void setupTransitions() {
     int resourceNameTextSize =
         getResources().getDimensionPixelSize(R.dimen.resource_item_text_size);
     int paddingStart = getResources().getDimensionPixelSize(R.dimen.spacing_double);
@@ -77,8 +74,7 @@ public class ResourceActivity extends AppCompatActivity
     }
   }
 
-  @SuppressWarnings("NewApi")
-  private void displayResource() {
+  @SuppressWarnings("NewApi") private void displayResource() {
     setTheme(mResource.getStyle().getStyleRes());
     if (isAtLeastLollipop()) {
       getWindow().setStatusBarColor(
@@ -90,8 +86,7 @@ public class ResourceActivity extends AppCompatActivity
     initFragment();
   }
 
-  @SuppressWarnings("NewApi")
-  private void applyThemeColors() {
+  @SuppressWarnings("NewApi") private void applyThemeColors() {
     mResourceTitle.setText(mResource.getTextRes());
     mResourceTitle.setTextColor(
         ContextCompat.getColor(this, mResource.getStyle().getTitleColorPrimary()));
@@ -100,31 +95,12 @@ public class ResourceActivity extends AppCompatActivity
     if (isAtLeastLollipop()) {
       mBackButton.setElevation(getResources().getDimension(R.dimen.toolbar_elevation));
     }
-
-
   }
 
   private void initFragment() {
     ResourceFragment newFragment = ResourceFragment.newInstance(mResource);
-    displayFragment(newFragment, true);
-  }
-
-  @Override public void onItemSelected(ResourceItem item) {
-    if (mResourceItemFragment != null) {
-      mResourceItemFragment.show(item);
-    } else {
-      mResourceItemFragment = ResourceItemFragment.newInstance(item);
-      displayFragment(mResourceItemFragment, true);
-    }
-  }
-
-  private void displayFragment(Fragment fragment, boolean replace) {
     FragmentTransaction transaction = getFragmentManager().beginTransaction();
-    if (replace) {
-      transaction.replace(R.id.main_fragment, fragment);
-    } else {
-      transaction.add(R.id.main_fragment, fragment);
-    }
+    transaction.replace(R.id.main_fragment, newFragment);
     transaction.addToBackStack(null);
     transaction.commit();
   }
@@ -134,4 +110,21 @@ public class ResourceActivity extends AppCompatActivity
     super.onBackPressed();
   }
 
+  @Override public void onResourceItemSelected(ResourceItem item) {
+    if (mResourceItemFragment != null) {
+      mResourceItemFragment.show(item);
+    } else {
+      mResourceItemFragment = ResourceItemFragment.newInstance(item);
+      FragmentTransaction transaction = getFragmentManager().beginTransaction();
+      if(findViewById(R.id.item_fragment) == null) {
+        transaction.replace(R.id.main_fragment, mResourceItemFragment);
+      }
+      else {
+        transaction.replace(R.id.item_fragment, mResourceItemFragment);
+      }
+      transaction.addToBackStack(null);
+      transaction.commit();
+
+    }
+  }
 }

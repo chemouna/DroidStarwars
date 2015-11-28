@@ -2,12 +2,12 @@ package com.mounacheikhna.ctc.ui.resource;
 
 import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
-import com.mounacheikhna.ctc.ui.resource.ResourceFragment.OnItemSelectedListener;
 import java.util.Collections;
 import java.util.List;
 import rx.functions.Action1;
@@ -15,10 +15,16 @@ import rx.functions.Action1;
 public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapter.ViewHolder>
         implements Action1<List<ResourceItem>> {
 
-  private List<ResourceItem> mItems = Collections.emptyList();
-  @Nullable private OnItemSelectedListener mItemSelectedListener;
+  private static final String TAG = "ResourceItemAdapter";
 
-  public void setItemSelectedListener(OnItemSelectedListener itemListener) {
+  private List<ResourceItem> mItems = Collections.emptyList();
+  @Nullable private OnResourceItemSelectedListener mItemSelectedListener;
+
+  public void setOnResourceItemSelectedListener(@Nullable OnResourceItemSelectedListener itemListener) {
+    Log.d(TAG, "setOnResourceItemSelectedListener() called with: "
+        + "itemListener = ["
+        + itemListener
+        + "]");
     mItemSelectedListener = itemListener;
   }
 
@@ -50,8 +56,9 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
       itemView.bindTo(resourceItem);
       itemView.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
+          Log.d(TAG, "onClick() called with: " + "v = [" + v + "] and listener : "+ mItemSelectedListener);
           if (mItemSelectedListener != null) {
-            mItemSelectedListener.onItemSelected(resourceItem);
+            mItemSelectedListener.onResourceItemSelected(resourceItem);
           }
         }
       });
@@ -61,6 +68,10 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
   @Override public void call(List<ResourceItem> items) {
     mItems = items;
     notifyDataSetChanged();
+  }
+
+  public interface OnResourceItemSelectedListener {
+    void onResourceItemSelected(ResourceItem resourceItem);
   }
 
 }

@@ -5,10 +5,10 @@ import java.util.List;
 /**
  * Created by mouna on 26/11/15.
  */
-public class StarWarsVehiclesResponse {
-  public final List<StarWarsVehicle> results;
+public class VehiclesResponse {
+  public final List<Vehicle> results;
 
-  public StarWarsVehiclesResponse(List<StarWarsVehicle> results) {
+  public VehiclesResponse(List<Vehicle> results) {
     this.results = results;
   }
 

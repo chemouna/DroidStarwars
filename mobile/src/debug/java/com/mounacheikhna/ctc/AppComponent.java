@@ -2,8 +2,8 @@ package com.mounacheikhna.ctc;
 
 import com.mounacheikhna.ctc.api.CoreApiModule;
 import com.mounacheikhna.ctc.api.DebugApiModule;
-import com.mounacheikhna.ctc.ui.resources.ResourceFragment;
-import com.mounacheikhna.ctc.ui.resources.ResourceItemFragment;
+import com.mounacheikhna.ctc.ui.resource.ResourceFragment;
+import com.mounacheikhna.ctc.ui.resource.ResourceItemFragment;
 import dagger.Component;
 import javax.inject.Singleton;
 
@@ -15,7 +15,7 @@ import javax.inject.Singleton;
 public interface AppComponent {
   void injectApplication(StarWarsApp starWarsApp);
   void injectListFragment(ResourceFragment resourceFragment);
-  void injectRssourceItemFragment(ResourceItemFragment resourceItemFragment);
+  void injectResourceItemFragment(ResourceItemFragment resourceItemFragment);
 
   final class Initializer {
     private Initializer() {

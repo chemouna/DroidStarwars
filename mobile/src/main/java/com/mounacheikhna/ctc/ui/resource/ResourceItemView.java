@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.resources;
+package com.mounacheikhna.ctc.ui.resource;
 
 import android.content.Context;
 import android.util.AttributeSet;

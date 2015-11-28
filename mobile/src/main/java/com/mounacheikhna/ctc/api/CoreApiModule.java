@@ -1,5 +1,7 @@
 package com.mounacheikhna.ctc.api;
 
+import android.app.Application;
+import android.net.Uri;
 import com.mounacheikhna.ctc.annotation.ApiClient;
 import com.mounacheikhna.ctc.annotation.NetworkInterceptors;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
@@ -9,6 +11,8 @@ import com.squareup.moshi.Moshi;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Interceptor;
 import com.squareup.okhttp.OkHttpClient;
+import com.squareup.picasso.OkHttpDownloader;
+import com.squareup.picasso.Picasso;
 import dagger.Module;
 import dagger.Provides;
 import java.util.List;
@@ -16,14 +20,14 @@ import javax.inject.Singleton;
 import retrofit.MoshiConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
+import rx.functions.Func1;
+import timber.log.Timber;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
  */
 @Module
 public class CoreApiModule {
-
-  public static final String SWAPI_ENDPOINT_URL = "http://swapi.co/api/";
 
   @Provides @Singleton Moshi provideMoshi() {
     return new Moshi.Builder()
@@ -45,7 +49,7 @@ public class CoreApiModule {
   @Provides @Singleton Retrofit provideRetrofit(@ApiClient OkHttpClient  apiClient, Moshi moshi) {
     return new Retrofit.Builder()
         .client(apiClient)
-        .baseUrl(HttpUrl.parse(SWAPI_ENDPOINT_URL))
+        .baseUrl(HttpUrl.parse(SwapiApi.SWAPI_ENDPOINT_URL))
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
         .build();
@@ -61,6 +65,20 @@ public class CoreApiModule {
 
   @Provides @Singleton ApiManager provideSwapiManager(SwapiApi swapi, TmdbApi tmdb) {
     return new ApiManager(swapi, tmdb);
+  }
+
+  @Provides @Singleton Picasso providePicasso(Application app, OkHttpClient client,
+      @NetworkInterceptors List<Interceptor> networkInterceptors) {
+    OkHttpClient okClient = client.clone();
+    okClient.networkInterceptors().addAll(networkInterceptors);
+    return new Picasso.Builder(app)
+        .downloader(new OkHttpDownloader(okClient))
+        .listener(new Picasso.Listener() {
+          @Override public void onImageLoadFailed(Picasso picasso, Uri uri, Exception e) {
+            Timber.e("Failed to load image: %s, cause : %s", uri, e);
+          }
+        })
+        .build();
   }
 
 }

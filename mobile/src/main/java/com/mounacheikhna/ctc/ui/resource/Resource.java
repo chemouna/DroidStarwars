@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.resources;
+package com.mounacheikhna.ctc.ui.resource;
 
 import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;

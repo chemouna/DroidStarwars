@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.resources;
+package com.mounacheikhna.ctc.ui.resource;
 
 import android.app.Fragment;
 import android.content.Context;
@@ -20,9 +20,9 @@ import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
+import com.mounacheikhna.ctc.lib.api.model.swapi.Person;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
-import com.mounacheikhna.ctc.lib.api.model.swapi.StarWarsPeopleResponse;
-import com.mounacheikhna.ctc.lib.api.model.swapi.StarWarsPerson;
+import com.mounacheikhna.ctc.lib.api.model.swapi.PeopleResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -111,23 +111,23 @@ public class ResourceFragment extends Fragment {
       case PEOPLE:
         //share this observable to not create a request per subscription
         // and make same requests multiple times for same data
-        final Observable<Result<StarWarsPeopleResponse>> results = mApiManager.fetchPeople()
+        final Observable<Result<PeopleResponse>> results = mApiManager.fetchPeople()
             .observeOn(AndroidSchedulers.mainThread())
             .share()
-            .doOnNext(new Action1<Result<StarWarsPeopleResponse>>() {
+            .doOnNext(new Action1<Result<PeopleResponse>>() {
               @Override
-              public void call(Result<StarWarsPeopleResponse> starWarsPeopleResponseResult) {
+              public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
                 mProgressBar.setVisibility(View.GONE);
               }
             });
         subscriptions.add(getPeopleObservable(results).subscribe(mResourceItemAdapter));
 
-        subscriptions.add(results.filter(new Func1<Result<StarWarsPeopleResponse>, Boolean>() {
-          @Override public Boolean call(Result<StarWarsPeopleResponse> result) {
+        subscriptions.add(results.filter(new Func1<Result<PeopleResponse>, Boolean>() {
+          @Override public Boolean call(Result<PeopleResponse> result) {
             return result.isError() || !result.response().isSuccess();
           }
-        }).subscribe(new Action1<Result<StarWarsPeopleResponse>>() {
-          @Override public void call(Result<StarWarsPeopleResponse> result) {
+        }).subscribe(new Action1<Result<PeopleResponse>>() {
+          @Override public void call(Result<PeopleResponse> result) {
             getStateView().setText(String.format(getString(R.string.loading_error),
                 getString(mResource.getTextRes())));
             if (result.isError()) {
@@ -151,21 +151,21 @@ public class ResourceFragment extends Fragment {
     return mStateView;
   }
 
-  private Observable getVehicleObservable(Observable<Result<StarWarsPeopleResponse>> results) {
+  private Observable getVehicleObservable(Observable<Result<PeopleResponse>> results) {
     return null;
   }
 
   @NonNull private Observable<List<ResourceItem>> getPeopleObservable(
-      Observable<Result<StarWarsPeopleResponse>> results) {
-    return results.filter(new Func1<Result<StarWarsPeopleResponse>, Boolean>() {
-      @Override public Boolean call(Result<StarWarsPeopleResponse> result) {
+      Observable<Result<PeopleResponse>> results) {
+    return results.filter(new Func1<Result<PeopleResponse>, Boolean>() {
+      @Override public Boolean call(Result<PeopleResponse> result) {
         return !result.isError() && result.response().isSuccess();
       }
-    }).map(new Func1<Result<StarWarsPeopleResponse>, List<ResourceItem>>() {
-      @Override public List<ResourceItem> call(Result<StarWarsPeopleResponse> result) {
-        StarWarsPeopleResponse response = result.response().body();
-        List<StarWarsPerson> items =
-            response.results == null ? Collections.<StarWarsPerson>emptyList()
+    }).map(new Func1<Result<PeopleResponse>, List<ResourceItem>>() {
+      @Override public List<ResourceItem> call(Result<PeopleResponse> result) {
+        PeopleResponse response = result.response().body();
+        List<Person> items =
+            response.results == null ? Collections.<Person>emptyList()
                 : response.results;
         return new ArrayList<ResourceItem>(items);
       }

@@ -26,15 +26,12 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 import java.util.List;
+import timber.log.Timber;
 
-/**
- * This callback allows a shared TextView to resize text and start padding during transition.
- */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
 public class TextSharedElementCallback
     extends SharedElementCallback {
 
-  private static final String TAG = "TextResize";
   private final int mInitialPaddingStart;
   private final float mInitialTextSize;
   private float mTargetViewTextSize;
@@ -50,17 +47,17 @@ public class TextSharedElementCallback
       List<View> sharedElementSnapshots) {
     TextView targetView = getTextView(sharedElements);
     if (targetView == null) {
-      Log.w(TAG, "onSharedElementStart: No shared TextView, skipping.");
+      Timber.w("No shared TextView, skip.");
       return;
     }
     mTargetViewTextSize = targetView.getTextSize();
     mTargetViewPaddingStart = targetView.getPaddingStart();
-    // Setup the TextView's start values.
     targetView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mInitialTextSize);
 
-    ViewCompat.setPaddingRelative(targetView, mInitialPaddingStart, targetView.getPaddingTop(),
+    targetView.setPaddingRelative(mInitialPaddingStart, targetView.getPaddingTop(),
         ViewCompat.getPaddingEnd(targetView), targetView.getPaddingBottom());
-
+    /*ViewCompat.setPaddingRelative(targetView, mInitialPaddingStart, targetView.getPaddingTop(),
+        ViewCompat.getPaddingEnd(targetView), targetView.getPaddingBottom());*/
   }
 
   @Override
@@ -69,16 +66,18 @@ public class TextSharedElementCallback
     TextView initialView = getTextView(sharedElements);
 
     if (initialView == null) {
-      Log.w(TAG, "onSharedElementEnd: No shared TextView, skipping");
+      Timber.w("No shared TextView, Skip");
       return;
     }
 
-    // Setup the TextView's end values.
     initialView.setTextSize(TypedValue.COMPLEX_UNIT_PX, mTargetViewTextSize);
-    ViewCompat.setPaddingRelative(initialView, mTargetViewPaddingStart, initialView.getPaddingTop(),
-        ViewCompat.getPaddingEnd(initialView), initialView.getPaddingBottom());
 
-    // Re-measure the TextView (since the text size has changed).
+    initialView.setPaddingRelative(mTargetViewPaddingStart, initialView.getPaddingTop(),
+        ViewCompat.getPaddingEnd(initialView), initialView.getPaddingBottom());
+    /*ViewCompat.setPaddingRelative(initialView, mTargetViewPaddingStart, initialView.getPaddingTop(),
+        ViewCompat.getPaddingEnd(initialView), initialView.getPaddingBottom());*/
+
+    // Re-measure because text size changes
     int widthSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
     int heightSpec = View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED);
     initialView.measure(widthSpec, heightSpec);

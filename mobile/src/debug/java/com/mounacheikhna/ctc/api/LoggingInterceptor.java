@@ -9,7 +9,6 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import timber.log.Timber;
 
-/** Verbose logging of network calls, which includes path, headers, and times. */
 @Singleton
 public final class LoggingInterceptor implements Interceptor {
 

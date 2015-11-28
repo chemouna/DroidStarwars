@@ -15,9 +15,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
-import com.mounacheikhna.ctc.ui.resources.ResourceFragment;
-import com.mounacheikhna.ctc.ui.resources.ResourceItemFragment;
-import com.mounacheikhna.ctc.ui.resources.Resource;
+import com.mounacheikhna.ctc.ui.resource.ResourceFragment;
+import com.mounacheikhna.ctc.ui.resource.ResourceItemFragment;
+import com.mounacheikhna.ctc.ui.resource.Resource;
 import com.mounacheikhna.ctc.util.AnimationUtils.EmptyTransitionListener;
 
 import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
@@ -29,8 +29,10 @@ public class ResourceActivity extends AppCompatActivity
     implements ResourceFragment.OnItemSelectedListener {
 
   public static final String RESOURCE_EXTRA = "resource_extra";
+
   @Bind(R.id.back) ImageButton mBackButton;
   @Bind(R.id.resource_title) TextView mResourceTitle;
+
   private Resource mResource;
   private ResourceItemFragment mResourceItemFragment;
 

@@ -12,11 +12,9 @@ public class StarWarsApp extends Application {
 
   @Override public void onCreate() {
     super.onCreate();
-
     mComponent = AppComponent.Initializer.init(this);
     mComponent.injectApplication(this);
   }
-
 
   public static StarWarsApp get(Context context) {
     return (StarWarsApp) context.getApplicationContext();

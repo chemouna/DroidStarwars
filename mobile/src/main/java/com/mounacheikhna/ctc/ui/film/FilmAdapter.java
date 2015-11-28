@@ -1,11 +1,12 @@
-package com.mounacheikhna.ctc.ui.resources;
+package com.mounacheikhna.ctc.ui.film;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
-import java.util.Collections;
+import com.squareup.picasso.Picasso;
+import java.util.ArrayList;
 import java.util.List;
 import rx.functions.Action1;
 
@@ -15,7 +16,12 @@ import rx.functions.Action1;
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder>
     implements Action1<FilmDetails> {
 
-  private List<FilmDetails> mItems = Collections.emptyList();
+  private List<FilmDetails> mItems = new ArrayList<>();
+  private Picasso mPicasso;
+
+  public FilmAdapter(Picasso picasso) {
+    mPicasso = picasso;
+  }
 
   @Override public FilmViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
     FilmItemView view = (FilmItemView) LayoutInflater.from(parent.getContext())
@@ -24,7 +30,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
   }
 
   @Override public void onBindViewHolder(FilmViewHolder holder, int position) {
-    //holder.bindTo(mItems.get(position));
+    holder.itemView.bindTo(mItems.get(position), mPicasso);
   }
 
   @Override public int getItemCount() {
@@ -44,5 +50,4 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
       this.itemView = itemView;
     }
   }
-
 }

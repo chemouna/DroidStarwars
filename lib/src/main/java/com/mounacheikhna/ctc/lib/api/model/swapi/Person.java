@@ -3,7 +3,7 @@ package com.mounacheikhna.ctc.lib.api.model.swapi;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class StarWarsPerson extends ResourceItem implements Parcelable {
+public class Person extends ResourceItem implements Parcelable {
 
   public String height;
   public String mass;
@@ -30,10 +30,10 @@ public class StarWarsPerson extends ResourceItem implements Parcelable {
     dest.writeString(this.homeworld);
   }
 
-  public StarWarsPerson() {
+  public Person() {
   }
 
-  protected StarWarsPerson(Parcel in) {
+  protected Person(Parcel in) {
     this.name = in.readString();
     this.height = in.readString();
     this.mass = in.readString();
@@ -45,14 +45,14 @@ public class StarWarsPerson extends ResourceItem implements Parcelable {
     this.homeworld = in.readString();
   }
 
-  public static final Parcelable.Creator<StarWarsPerson> CREATOR =
-      new Parcelable.Creator<StarWarsPerson>() {
-        public StarWarsPerson createFromParcel(Parcel source) {
-          return new StarWarsPerson(source);
+  public static final Parcelable.Creator<Person> CREATOR =
+      new Parcelable.Creator<Person>() {
+        public Person createFromParcel(Parcel source) {
+          return new Person(source);
         }
 
-        public StarWarsPerson[] newArray(int size) {
-          return new StarWarsPerson[size];
+        public Person[] newArray(int size) {
+          return new Person[size];
         }
       };
 }

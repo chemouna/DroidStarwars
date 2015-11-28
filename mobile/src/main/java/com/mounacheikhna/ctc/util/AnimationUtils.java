@@ -1,5 +1,7 @@
 package com.mounacheikhna.ctc.util;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.transition.Transition;
 import android.util.Property;
 
@@ -39,6 +41,7 @@ public final class AnimationUtils {
     }
   }
 
+  @TargetApi(Build.VERSION_CODES.KITKAT)
   public static class EmptyTransitionListener implements Transition.TransitionListener {
 
     @Override public void onTransitionStart(Transition transition) {

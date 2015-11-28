@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Created by mouna on 26/11/15.
  */
-public class StarWarsVehicle extends ResourceItem {
+public class Vehicle extends ResourceItem {
   public String name;
   public String model;
   public String vehicle_class;
@@ -23,7 +23,7 @@ public class StarWarsVehicle extends ResourceItem {
   public String url;
   public ArrayList<String> pilots;
 
-  public StarWarsVehicle() {
+  public Vehicle() {
   }
 
   @Override public int describeContents() {
@@ -49,7 +49,7 @@ public class StarWarsVehicle extends ResourceItem {
     dest.writeStringList(this.pilots);
   }
 
-  protected StarWarsVehicle(Parcel in) {
+  protected Vehicle(Parcel in) {
     super(in);
     this.name = in.readString();
     this.model = in.readString();
@@ -68,13 +68,13 @@ public class StarWarsVehicle extends ResourceItem {
     this.pilots = in.createStringArrayList();
   }
 
-  public static final Creator<StarWarsVehicle> CREATOR = new Creator<StarWarsVehicle>() {
-    public StarWarsVehicle createFromParcel(Parcel source) {
-      return new StarWarsVehicle(source);
+  public static final Creator<Vehicle> CREATOR = new Creator<Vehicle>() {
+    public Vehicle createFromParcel(Parcel source) {
+      return new Vehicle(source);
     }
 
-    public StarWarsVehicle[] newArray(int size) {
-      return new StarWarsVehicle[size];
+    public Vehicle[] newArray(int size) {
+      return new Vehicle[size];
     }
   };
 }

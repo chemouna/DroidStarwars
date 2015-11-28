@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
-import com.mounacheikhna.ctc.ui.resources.ListResourcesFragment;
+import com.mounacheikhna.ctc.ui.resource.ListResourcesFragment;
 
 public class MainActivity extends AppCompatActivity {
 

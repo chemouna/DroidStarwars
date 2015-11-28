@@ -43,6 +43,7 @@ dependencies {
   compile rootProject.ext.stetho
   compile rootProject.ext.stethoOkhttp
   compile rootProject.ext.butterknife
+  compile rootProject.ext.picasso
 
   debugCompile rootProject.ext.rxJavaDebug
 

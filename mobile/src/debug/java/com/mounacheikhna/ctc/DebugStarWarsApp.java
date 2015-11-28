@@ -12,21 +12,16 @@ public class DebugStarWarsApp extends StarWarsApp {
 
   @Override public void onCreate() {
     super.onCreate();
-
     Stetho.initializeWithDefaults(this);
     Timber.plant(new Timber.DebugTree());
     setupRxJavaDebug();
-  }
-
-  public static StarWarsApp get(Context context) {
-    return (DebugStarWarsApp) context.getApplicationContext();
   }
 
   @SuppressWarnings("unchecked") private void setupRxJavaDebug() {
     RxJavaPlugins.getInstance()
         .registerObservableExecutionHook(new DebugHook(new DebugNotificationListener() {
           @Override public Object onNext(DebugNotification n) {
-            Timber.v("DebugHook - onNext with value " + n.getValue() + " from op : " + n.getFrom());
+            Timber.v("DebugHook - onNext with value %s from op : %s ", n.getValue(), n.getFrom());
             return super.onNext(n);
           }
 
@@ -37,12 +32,11 @@ public class DebugStarWarsApp extends StarWarsApp {
 
           @Override public void complete(Object context) {
             super.complete(context);
-            //Timber.v("DebugHook - complete event ");
           }
 
           @Override public void error(Object context, Throwable e) {
             super.error(context, e);
-            Timber.v("DebugHook - error event e : " + e.getCause());
+            Timber.v("DebugHook - error event e : %s ", e.getCause());
           }
         }));
   }

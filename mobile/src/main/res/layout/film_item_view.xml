@@ -1,37 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.mounacheikhna.ctc.ui.film.FilmItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     style="@style/Widget.StarWars.PersonItem">
 
   <ImageView
       android:id="@+id/film_image"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_centerInParent="true"/>
+      app:layout_widthPercent="25%"
+      android:layout_height="match_parent"
+      tools:src="@drawable/people"
+      tools:background="@color/primary"/>
 
   <LinearLayout
       android:id="@+id/film_text_container"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
+      android:layout_toEndOf="@id/film_image"
+      android:layout_toRightOf="@id/film_image"
       android:orientation="vertical"
-      style="@style/Specs.TwoLinesIconItem.TextContainer">
+      android:padding="8dp">
 
     <TextView
         android:id="@+id/film_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:maxLines="2"
+        android:ellipsize="end"
         style="@style/Specs.TwoLinesIconItem.TextPrimary"
-        tools:text="Luke Sywalker"/>
+        tools:text="StarWars: Episode III - Revenge of the Sith"/>
 
     <TextView
         android:id="@+id/film_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="3"
         style="@style/Specs.TwoLinesIconItem.TextSecondary"
-        tools:text="Hey, Luke! May the Force be with you."/>
+        tools:text="Years after the onset of the Clone Wars, the noble Jedi..."/>
 
   </LinearLayout>
 

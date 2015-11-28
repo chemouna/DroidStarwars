@@ -33,6 +33,7 @@ dependencies {
 
   compile rootProject.ext.supportAppCompat
   compile rootProject.ext.supportRecyclerView
+  compile rootProject.ext.supportPercent
 
   compile rootProject.ext.timber
 

@@ -1,6 +1,8 @@
 package com.mounacheikhna.ctc.ui.film;
 
 import android.content.Context;
+import android.support.percent.PercentRelativeLayout;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -14,7 +16,7 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by mouna on 26/11/15.
  */
-public class FilmItemView extends LinearLayout {
+public class FilmItemView extends PercentRelativeLayout {
 
   @Bind(R.id.film_image) ImageView mImage;
   @Bind(R.id.film_title) TextView mTitle;
@@ -22,23 +24,24 @@ public class FilmItemView extends LinearLayout {
 
   public FilmItemView(Context context, AttributeSet attrs) {
     super(context, attrs);
-    setOrientation(VERTICAL);
   }
 
   public void bindTo(FilmDetails filmDetails, Picasso picasso) {
     mTitle.setText(filmDetails.movieResult.title);
     mDescription.setText(filmDetails.movieResult.overview); //TODO: make desc tv an expandable one
-    picasso.load(filmDetails.movieResult.poster_path)
-        .placeholder(R.drawable.people) //temp
-        .error(R.drawable.people) //temp
-        .fit()
-        .into(mImage);
+    if(!TextUtils.isEmpty(filmDetails.posterUrl)) {
+      picasso.load(filmDetails.posterUrl)
+          .placeholder(R.drawable.people) //temp
+          .error(R.drawable.people) //temp
+          .fit().into(mImage);
+    }
   }
 
   @Override protected void onFinishInflate() {
     super.onFinishInflate();
     ButterKnife.bind(this);
   }
+
 
 
 

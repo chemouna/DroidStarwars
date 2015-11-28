@@ -10,6 +10,8 @@ import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse.MovieResult;
 public class FilmDetails {
   public final Film film;
   public MovieResult movieResult;
+  public String posterUrl;
+
   //temp for now all response
   //private SearchMovieResponse mMovieResponse;
 
@@ -19,6 +21,7 @@ public class FilmDetails {
     this.film = film;
     if(movieResponse.results.length > 0) {
       this.movieResult = movieResponse.results[0]; //temp
+      this.posterUrl = "http://image.tmdb.org/t/p/w500"+ this.movieResult.poster_path; //this is ugly & temp
     }
   }
 }

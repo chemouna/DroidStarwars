@@ -2,6 +2,7 @@ package com.mounacheikhna.ctc.lib.api.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Size;
 import com.mounacheikhna.ctc.lib.api.model.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse;
 import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse.MovieResult;
@@ -13,18 +14,19 @@ public class FilmDetails implements Parcelable {
   public final Film film;
   public MovieResult movieResult;
   public String posterUrl;
-
-  //temp for now all response
-  //private SearchMovieResponse mMovieResponse;
-
-  //and other details from SearchMovieResponse
+  public String backdropUrl;
 
   public FilmDetails(Film film, SearchMovieResponse movieResponse) {
     this.film = film;
     if(movieResponse.results.length > 0) {
       this.movieResult = movieResponse.results[0]; //temp
-      this.posterUrl = "http://image.tmdb.org/t/p/w500"+ this.movieResult.poster_path; //this is ugly & temp
+      this.posterUrl = buildMovieImageUrl(this.movieResult.poster_path, "w185");
+      this.backdropUrl = buildMovieImageUrl(this.movieResult.backdrop_path, "w500");
     }
+  }
+
+  public static String buildMovieImageUrl(String path, String size) {
+    return String.format("http://image.tmdb.org/t/p/%s%s", size, path);
   }
 
   @Override public int describeContents() {

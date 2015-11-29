@@ -24,6 +24,7 @@ import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
+import com.mounacheikhna.ctc.ui.view.ExpandingTextView;
 import com.mounacheikhna.ctc.util.Colors;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
@@ -40,6 +41,7 @@ public class FilmDetailsFragment extends Fragment {
   @Bind(R.id.poster_image) ImageView mPosterImage;
   @Bind(R.id.toolbar) Toolbar mToolbar;
   @Bind(R.id.collapsing_toolbar) CollapsingToolbarLayout mCollapsingToolbarLayout;
+  @Bind(R.id.description) ExpandingTextView mDescriptionTextView;
 
   @Inject Picasso mPicasso;
 
@@ -79,8 +81,10 @@ public class FilmDetailsFragment extends Fragment {
 
   private void display(FilmDetails filmDetails) {
     mCollapsingToolbarLayout.setTitle(filmDetails.movieResult.title);
+    mDescriptionTextView.setText(filmDetails.movieResult.overview);
     if (!TextUtils.isEmpty(filmDetails.posterUrl)) {
-      mPicasso.load(filmDetails.posterUrl).placeholder(R.drawable.people) //temp
+      mPicasso.load(filmDetails.movieResult.backdrop_path)
+          .placeholder(R.drawable.people) //temp
           .error(R.drawable.people) //temp
           .fit().into(mPosterImage, new Callback() {
         @Override public void onSuccess() {

@@ -2,4 +2,10 @@
 <resources>
   <attr name="titleColorPrimary" format="color"/>
   <attr name="resourceColor" format="color"/>
+
+  <declare-styleable name="ExpandingTextView">
+    <attr name="tv_expanded" format="boolean|reference" />
+    <attr name="collapsed_maxLines" format="integer|reference" />
+  </declare-styleable>
+
 </resources>

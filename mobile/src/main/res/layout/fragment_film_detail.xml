@@ -59,7 +59,26 @@
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
+      <LinearLayout
+          android:id="@+id/content"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="vertical">
 
+        <com.mounacheikhna.ctc.ui.view.ExpandingTextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/spacing_normal"
+            android:paddingLeft="@dimen/spacing_double"
+            android:paddingRight="@dimen/spacing_double"
+            android:paddingBottom="@dimen/spacing_normal"
+            android:textAppearance="@style/TextAppearance.FilmDescription"
+            app:collapsed_maxLines="3"
+            app:tv_expanded="false"
+            tools:text="This is a description of the movie"/>
+
+      </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 
 

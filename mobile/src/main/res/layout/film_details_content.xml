@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" tools:showIn="@layout/fragment_film_detail">
+
+  <com.mounacheikhna.ctc.ui.view.ExpandingTextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/spacing_normal"
+      android:paddingLeft="@dimen/spacing_double"
+      android:paddingRight="@dimen/spacing_double"
+      android:paddingBottom="@dimen/spacing_normal"
+      android:textAppearance="@style/TextAppearance.FilmDescription"
+      app:collapsed_maxLines="3"
+      app:tv_expanded="false"
+      android:textIsSelectable="true"
+      android:layout_marginBottom="@dimen/spacing_double"
+      tools:text="This is a description of the movie"/>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_marginLeft="@dimen/spacing_double"
+      android:layout_marginRight="@dimen/spacing_double"
+      android:background="@color/divider" />
+
+  <RelativeLayout
+      android:id="@+id/rating_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/spacing_double">
+
+    <TextView
+        android:id="@+id/tv_rating_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_rating"
+        android:textAppearance="@style/TextAppearance.Rating"
+        android:layout_centerInParent="true"
+        tools:text="8.5"/>
+
+    <TextView
+        android:id="@+id/tv_rating_range"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/spacing_normal"
+        android:layout_alignBaseline="@+id/tv_rating_value"
+        android:layout_toRightOf="@+id/tv_rating_value"
+        android:text="@string/rating_range"
+        android:textAppearance="@style/TextAppearance.Caption"/>
+
+    <TextView
+        android:id="@+id/tv_rating_votes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_rating_value"
+        android:layout_toRightOf="@id/tv_rating_range"
+        android:layout_toEndOf="@id/tv_rating_range"
+        android:text="@string/none_rating"
+        tools:text="700 votes"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textAppearance="@style/TextAppearance.Caption"/>
+
+  </RelativeLayout>
+
+</LinearLayout>

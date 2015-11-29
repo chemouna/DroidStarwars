@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
@@ -27,6 +28,7 @@ import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
+import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
@@ -43,6 +45,7 @@ public class ResourceItemFragment extends Fragment {
 
   private ResourceItem mItem;
   private FilmAdapter mFilmAdapter;
+  private CompositeSubscription mCompositeSubscription = new CompositeSubscription();
 
   public static ResourceItemFragment newInstance(ResourceItem item) {
     ResourceItemFragment fragment = new ResourceItemFragment();
@@ -112,10 +115,15 @@ public class ResourceItemFragment extends Fragment {
           }
         };
 
-    Observable.merge(Observable.from(item.films).map(starWarsFilmSearch))
+    mCompositeSubscription.add(Observable.merge(Observable.from(item.films).map(starWarsFilmSearch))
         .flatMap(tmdbFilmSearch)
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
-        .subscribe(mFilmAdapter);
+        .subscribe(mFilmAdapter));
+  }
+
+  @Override public void onDestroy() {
+    super.onDestroy();
+    mCompositeSubscription.clear();
   }
 }

@@ -9,4 +9,8 @@
   <string name="planets">Planets</string>
   <string name="back_button">Back button</string>
   <string name="loading_error">Can\'t load %1$s</string>
+  <string name="rating_range">/10</string>
+  <string name="none_rating">n/a</string>
+
+
 </resources>

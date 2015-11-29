@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-  <style name="Widget.StarWars" parent="android:Widget" />
+  <style name="Widget.StarWars" parent="android:Widget"/>
 
   <style name="Widget.StarWars.Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
     <item name="android:background">@color/primary</item>
@@ -24,6 +24,14 @@
 
   <style name="TextAppearance.FilmDescription" parent="TextAppearance.AppCompat.Subhead">
     <item name="android:textColor">@color/text_tertiary_dark</item>
+  </style>
+
+  <style name="TextAppearance.Rating" parent="TextAppearance.AppCompat.Display1">
+    <item name="android:textColor">?android:attr/textColorSecondary</item>
+    <item name="android:textSize">34sp</item>
+  </style>
+
+  <style name="TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption">
   </style>
 
 

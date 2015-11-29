@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <plurals name="votes">
+    <item quantity="zero">%d votes</item>
+    <item quantity="one">%d vote</item>
+    <item quantity="two">%d votes</item>
+    <item quantity="few">%d votes</item>
+    <item quantity="many">%d votes</item>
+    <item quantity="other">%d votes</item>
+  </plurals>
+
+  <string name="empty_rating" translatable="false">--</string>
+
+
+</resources>

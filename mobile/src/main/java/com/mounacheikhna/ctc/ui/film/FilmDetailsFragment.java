@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
@@ -42,6 +43,8 @@ public class FilmDetailsFragment extends Fragment {
   @Bind(R.id.toolbar) Toolbar mToolbar;
   @Bind(R.id.collapsing_toolbar) CollapsingToolbarLayout mCollapsingToolbarLayout;
   @Bind(R.id.description) ExpandingTextView mDescriptionTextView;
+  @Bind(R.id.tv_rating_value) TextView mRatingValueView;
+  @Bind(R.id.tv_rating_votes) TextView mRatingVotesView;
 
   @Inject Picasso mPicasso;
 
@@ -82,6 +85,10 @@ public class FilmDetailsFragment extends Fragment {
   private void display(FilmDetails filmDetails) {
     mCollapsingToolbarLayout.setTitle(filmDetails.movieResult.title);
     mDescriptionTextView.setText(filmDetails.movieResult.overview);
+
+    mRatingValueView.setText(filmDetails.getVotesAverage(getActivity()));
+    mRatingVotesView.setText(filmDetails.getVotesValue(getActivity()));
+
     if (!TextUtils.isEmpty(filmDetails.posterUrl)) {
       mPicasso.load(filmDetails.movieResult.backdrop_path)
           .placeholder(R.drawable.people) //temp

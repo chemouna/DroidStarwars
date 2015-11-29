@@ -1,11 +1,16 @@
 package com.mounacheikhna.ctc.lib.api.model;
 
+import android.app.Activity;
+import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.text.TextUtils;
 import android.util.Size;
 import com.mounacheikhna.ctc.lib.api.model.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse;
 import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse.MovieResult;
+import java.util.Locale;
+import com.mounacheikhna.ctc.lib.R;
 
 /**
  * Created by mouna on 27/11/15.
@@ -28,6 +33,19 @@ public class FilmDetails implements Parcelable {
   public static String buildMovieImageUrl(String path, String size) {
     return String.format("http://image.tmdb.org/t/p/%s%s", size, path);
   }
+
+  public static String buildRatingValue(Context context, Double rating) {
+    return rating == null || rating == 0 ? context.getString(R.string.empty_rating)
+        : String.format(Locale.getDefault(), "%.1f", rating);
+  }
+
+  public static String buildRatingVotesValue(Context context, Integer votes) {
+    if (votes == null || votes < 0) {
+      votes = 0;
+    }
+    return context.getResources().getQuantityString(R.plurals.votes, votes, votes);
+  }
+
 
   @Override public int describeContents() {
     return 0;
@@ -55,4 +73,12 @@ public class FilmDetails implements Parcelable {
           return new FilmDetails[size];
         }
       };
+
+  public String getVotesAverage(Context context) {
+    return buildRatingValue(context, movieResult.vote_average);
+  }
+
+  public String getVotesValue(Context context) {
+    return buildRatingVotesValue(context, movieResult.vote_count);
+  }
 }

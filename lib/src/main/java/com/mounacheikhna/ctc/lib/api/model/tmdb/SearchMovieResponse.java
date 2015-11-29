@@ -20,16 +20,18 @@ public class SearchMovieResponse implements Parcelable {
     public String poster_path;
     public String overview;
     public String title;
-    public String vote_average;
+    public double vote_average;
+    public int vote_count;
     public String backdrop_path;
 
     public MovieResult(int id, String poster_path, String overview, String title,
-        String vote_average, String backdrop_path) {
+        double vote_average, int vote_count, String backdrop_path) {
       this.id = id;
       this.poster_path = poster_path;
       this.overview = overview;
       this.title = title;
       this.vote_average = vote_average;
+      this.vote_count = vote_count;
       this.backdrop_path = backdrop_path;
     }
 
@@ -42,7 +44,8 @@ public class SearchMovieResponse implements Parcelable {
       dest.writeString(this.poster_path);
       dest.writeString(this.overview);
       dest.writeString(this.title);
-      dest.writeString(this.vote_average);
+      dest.writeDouble(this.vote_average);
+      dest.writeInt(this.vote_count);
       dest.writeString(this.backdrop_path);
     }
 
@@ -51,7 +54,8 @@ public class SearchMovieResponse implements Parcelable {
       this.poster_path = in.readString();
       this.overview = in.readString();
       this.title = in.readString();
-      this.vote_average = in.readString();
+      this.vote_average = in.readDouble();
+      this.vote_count = in.readInt();
       this.backdrop_path = in.readString();
     }
 

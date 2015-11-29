@@ -16,7 +16,7 @@ import com.squareup.picasso.Picasso;
 /**
  * Created by mouna on 26/11/15.
  */
-public class FilmItemView extends PercentRelativeLayout {
+public class FilmItemView extends LinearLayout {
 
   @Bind(R.id.film_image) ImageView mImage;
   @Bind(R.id.film_title) TextView mTitle;

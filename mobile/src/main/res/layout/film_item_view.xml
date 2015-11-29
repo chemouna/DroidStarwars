@@ -5,14 +5,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    style="@style/Widget.StarWars.PersonItem">
+    android:orientation="horizontal"
+    style="@style/Widget.StarWars.Item">
 
   <ImageView
       android:id="@+id/film_image"
-      app:layout_widthPercent="25%"
+      android:layout_width="@dimen/film_item_image"
       android:layout_height="match_parent"
       tools:src="@drawable/people"
-      tools:background="@color/primary"/>
+      tools:background="@color/primary"
+      tools:ignore="RtlSymmetry"/>
 
   <LinearLayout
       android:id="@+id/film_text_container"
@@ -21,7 +23,7 @@
       android:layout_toEndOf="@id/film_image"
       android:layout_toRightOf="@id/film_image"
       android:orientation="vertical"
-      android:padding="8dp">
+      android:padding="16dp">
 
     <TextView
         android:id="@+id/film_title"

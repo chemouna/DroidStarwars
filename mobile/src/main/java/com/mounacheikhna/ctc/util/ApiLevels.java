@@ -5,9 +5,9 @@ import android.os.Build;
 /**
  * Created by mouna on 24/11/15.
  */
-public final class ApiLevelUtils {
+public final class ApiLevels {
 
-  private ApiLevelUtils(){}
+  private ApiLevels(){}
 
   public static boolean isAtLeastM() {
     return isAtLeast(Build.VERSION_CODES.M);

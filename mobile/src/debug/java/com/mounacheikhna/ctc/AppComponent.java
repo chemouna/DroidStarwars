@@ -2,6 +2,7 @@ package com.mounacheikhna.ctc;
 
 import com.mounacheikhna.ctc.api.CoreApiModule;
 import com.mounacheikhna.ctc.api.DebugApiModule;
+import com.mounacheikhna.ctc.ui.film.FilmDetailsFragment;
 import com.mounacheikhna.ctc.ui.resource.ResourceFragment;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemFragment;
 import dagger.Component;
@@ -16,6 +17,7 @@ public interface AppComponent {
   void injectApplication(StarWarsApp starWarsApp);
   void injectListFragment(ResourceFragment resourceFragment);
   void injectResourceItemFragment(ResourceItemFragment resourceItemFragment);
+  void injectFilmDetailsFragment(FilmDetailsFragment filmDetailsFragment);
 
   final class Initializer {
     private Initializer() {

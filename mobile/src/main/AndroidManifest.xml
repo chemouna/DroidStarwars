@@ -34,6 +34,12 @@
           android:value=".MainActivity" />
     </activity>
 
+    <activity android:name=".ui.film.FilmActivity"
+        android:parentActivityName=".ui.resource.ResourceActivity">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value=".ui.resource.ResourceActivity" />
+    </activity>
   </application>
 
 </manifest>

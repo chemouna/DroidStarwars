@@ -15,7 +15,7 @@ import com.mounacheikhna.ctc.ui.decoration.OffsetDecoration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
 public class ResourcesGridFragment extends Fragment {
 

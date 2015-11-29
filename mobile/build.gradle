@@ -34,6 +34,8 @@ dependencies {
   compile rootProject.ext.supportAppCompat
   compile rootProject.ext.supportRecyclerView
   compile rootProject.ext.supportPercent
+  compile rootProject.ext.supportDesign
+  compile rootProject.ext.supportPalette
 
   compile rootProject.ext.timber
 

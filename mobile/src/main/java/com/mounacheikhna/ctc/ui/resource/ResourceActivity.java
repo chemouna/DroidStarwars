@@ -1,6 +1,5 @@
 package com.mounacheikhna.ctc.ui.resource;
 
-import android.app.Fragment;
 import android.app.FragmentTransaction;
 import android.content.Context;
 import android.content.Intent;
@@ -17,9 +16,9 @@ import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
-import com.mounacheikhna.ctc.util.AnimationUtils.EmptyTransitionListener;
+import com.mounacheikhna.ctc.util.Animations.EmptyTransitionListener;
 
-import static com.mounacheikhna.ctc.util.ApiLevelUtils.isAtLeastLollipop;
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
 /**
  * Created by cheikhnamouna on 11/21/15.

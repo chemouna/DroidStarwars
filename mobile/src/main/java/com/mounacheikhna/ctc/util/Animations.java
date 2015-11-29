@@ -8,9 +8,9 @@ import android.util.Property;
 /**
  * Created by mouna on 25/11/15.
  */
-public final class AnimationUtils {
+public final class Animations {
 
-  private AnimationUtils() {}
+  private Animations() {}
 
   public static abstract class FloatProperty<T> extends Property<T, Float> {
 
@@ -64,4 +64,6 @@ public final class AnimationUtils {
 
     }
   }
+
+
 }

@@ -18,6 +18,7 @@ import com.mounacheikhna.ctc.lib.api.model.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
 import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
+import com.mounacheikhna.ctc.ui.film.FilmActivity;
 import com.mounacheikhna.ctc.ui.film.FilmAdapter;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
@@ -73,13 +74,14 @@ public class ResourceItemFragment extends Fragment {
     mFilmAdapter = new FilmAdapter(mPicasso);
     mFilmAdapter.setFilmItemSelectedListener(new FilmAdapter.OnFilmItemSelectedListener() {
       @Override public void onFilmSelected(FilmDetails filmItem) {
-
+        //TODO: setup and add transition
+        startActivity(FilmActivity.getIntent(getActivity(), filmItem));
       }
     });
     mRecyclerView.setAdapter(mFilmAdapter);
     mRecyclerView.addItemDecoration(
-        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL,
-            0/*dividerPaddingStart*/,  true));
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, 0/*dividerPaddingStart*/,
+            true));
     show(mItem);
   }
 
@@ -110,13 +112,10 @@ public class ResourceItemFragment extends Fragment {
           }
         };
 
-    //Observable<FilmDetails> detailsObservable =
-        Observable.merge(Observable.from(item.films).map(starWarsFilmSearch))
-            .flatMap(tmdbFilmSearch)
-            .subscribeOn(Schedulers.io())
-            .observeOn(AndroidSchedulers.mainThread())
-            //.share();
-            .subscribe(mFilmAdapter);
-    //detailsObservable.subscribe(mFilmAdapter);
+    Observable.merge(Observable.from(item.films).map(starWarsFilmSearch))
+        .flatMap(tmdbFilmSearch)
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(mFilmAdapter);
   }
 }

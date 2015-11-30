@@ -6,15 +6,12 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.ViewStub;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.Bind;
@@ -22,28 +19,20 @@ import butterknife.BindDimen;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
+import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.StarWarsCharacter;
-import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
-import com.mounacheikhna.ctc.lib.api.comicvine.CvCharacter;
-import com.mounacheikhna.ctc.lib.api.swapi.Person;
-import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
-import com.mounacheikhna.ctc.lib.api.swapi.PeopleResponse;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
+import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
 import com.squareup.picasso.Picasso;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import javax.inject.Inject;
 import retrofit.Result;
 import rx.Observable;
-import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
-import rx.functions.Func1;
 import rx.subscriptions.CompositeSubscription;
-import timber.log.Timber;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
@@ -53,18 +42,22 @@ public class ResourceFragment extends Fragment {
   private static final String RESOURCE_ARG = "ResourceArg";
   private static final String TAG = "ResourceFragment";
 
-  private TextView mStateView;
+  private CompositeSubscription subscriptions = new CompositeSubscription();
+
+  @Bind(R.id.state_animator) CustomViewAnimator mAnimatorView;
+  @Bind(R.id.list_state) TextView mStateView;
   @Bind(R.id.rv) RecyclerView mRecyclerView;
   @Bind(R.id.progress) ProgressBar mProgressBar;
   @BindDimen(R.dimen.resource_divider_padding_start) float dividerPaddingStart;
 
   @Inject ApiManager mApiManager;
+  @Inject ResourceManager mResourceManager;
   @Inject Picasso mPicasso;
 
-  private final CompositeSubscription subscriptions = new CompositeSubscription();
   private ResourceItemAdapter mResourceItemAdapter;
   private OnResourceItemSelectedListener mListener;
   private Resource mResource;
+  private CompositeSubscription mSubscriptions = new CompositeSubscription();
 
   public static ResourceFragment newInstance(Resource resource) {
     ResourceFragment fragment = new ResourceFragment();
@@ -90,12 +83,6 @@ public class ResourceFragment extends Fragment {
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
-    Log.d(TAG, "onViewCreated() called with: "
-        + "view = ["
-        + view
-        + "], savedInstanceState = ["
-        + savedInstanceState
-        + "]");
     ButterKnife.bind(this, view);
     StarWarsApp.get(getActivity()).getComponent().injectListFragment(this);
     setupList();
@@ -103,141 +90,62 @@ public class ResourceFragment extends Fragment {
 
   @SuppressWarnings("deprecation") @Override public void onAttach(Activity activity) {
     super.onAttach(activity);
-    Log.d(TAG, "onAttach() called ");
     if (getActivity() instanceof OnResourceItemSelectedListener) {
-      Log.d(TAG, "onAttach: activity does implement OnResourceItemSelectedListener");
       mListener = (OnResourceItemSelectedListener) getActivity();
     } else {
       throw new ClassCastException(getActivity().toString()
-          + " must implement " + OnResourceItemSelectedListener.class.getName());
+          + " must implement "
+          + OnResourceItemSelectedListener.class.getName());
     }
   }
 
   private void setupList() {
-    Log.d(TAG, "setupList() called ");
     mResourceItemAdapter = new ResourceItemAdapter(mPicasso);
     mResourceItemAdapter.setOnResourceItemSelectedListener(mListener);
+
+    mAnimatorView.setDisplayedChildId(R.id.progress);
+    mResourceItemAdapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+      @Override public void onChanged() {
+        if (mResourceItemAdapter.getItemCount() == 0) {
+          mStateView.setText(
+              String.format(getString(R.string.empty_resource), getString(mResource.getTextRes())));
+        }
+        mAnimatorView.setDisplayedChildId(
+            mResourceItemAdapter.getItemCount() == 0 ? R.id.list_state : R.id.rv);
+      }
+    });
+
     mRecyclerView.addItemDecoration(
-        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart /*55*/,
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart,
             false));
     mRecyclerView.setAdapter(mResourceItemAdapter);
-    fetchData();
+    loadData();
   }
 
-  //TODO: improve readability of this
-  private void fetchData() {
+  private void loadData() {
     if (!isConnected()) {
-      getStateView().setText(R.string.no_network); //TODO: maybe add a link for a try again
-      return; //return for now -> TODO: later font check here if we add caching
+      mStateView.setText(R.string.no_network); //TODO: maybe add a link for a try again
+      return;
     }
 
-    //TODO: first make it work really well with people only
-    switch (mResource) {
-      case PEOPLE:
-        final Action1<Result<PeopleResponse>> peopleErrorAction = new Action1<Result<PeopleResponse>>() {
-          @Override public void call(Result<PeopleResponse> result) {
-            getStateView().setText(String.format(getString(R.string.loading_error),
+    Action1<Result<? extends ResourceResponse>> errorAction =
+        new Action1<Result<? extends ResourceResponse>>() {
+          @Override public void call(Result<? extends ResourceResponse> result) {
+            mStateView.setText(String.format(getString(R.string.loading_error),
                 getString(mResource.getTextRes())));
-            if (result.isError()) {
-              Timber.d("Error : %s", result.error());
-            } else {
-              Timber.e("Error from server : %s", result.response().code());
-            }
+            mAnimatorView.setDisplayedChildId(R.id.list_state);
           }
         };
 
-        final Func1<Result<PeopleResponse>, Boolean> errorFilter =
-            new Func1<Result<PeopleResponse>, Boolean>() {
-              @Override public Boolean call(Result<PeopleResponse> result) {
-                return result.isError() || !result.response().isSuccess();
-              }
-            };
-
-        //share this observable to not create a request per subscription
-        // and make same requests multiple times for same data
-        final Observable<Result<PeopleResponse>> results = mApiManager.fetchPeople()
-            .share();
-            /*.doOnNext(new Action1<Result<PeopleResponse>>() {
-              @Override public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
-                mProgressBar.setVisibility(View.GONE);
-              }
-            });*/
-        final Observable<StarWarsCharacter> starWarsCharacterObservable = fetchPeople(results)
-            //TODO: improve this its ugly as hell
-            .flatMap(new Func1<List<ResourceItem>, Observable<StarWarsCharacter>>() {
-              @Override
-              public Observable<StarWarsCharacter> call(List<ResourceItem> resourceItems) {
-                return Observable.from(resourceItems)
-                    .flatMap(new Func1<ResourceItem, Observable<StarWarsCharacter>>() {
-                      @Override
-                      public Observable<StarWarsCharacter> call(final ResourceItem resourceItem) {
-                        return mApiManager.searchCharacter(resourceItem.name)
-                            .map(new Func1<CharacterResponse, StarWarsCharacter>() {
-                              @Override
-                              public StarWarsCharacter call(CharacterResponse characterResponse) {
-                                return new StarWarsCharacter(characterResponse.getResults().get(0),
-                                    resourceItem); //Temp
-                              }
-                            });
-                      }
-                    });
-              }
-            }).share();
-
-        starWarsCharacterObservable.subscribe(new Subscriber<StarWarsCharacter>() {
-          @Override public void onCompleted() {
-
-          }
-
-          @Override public void onError(Throwable e) {
-            Log.d(TAG, "onError() called with: " + "e = [" + e + "]");
-          }
-
-          @Override public void onNext(StarWarsCharacter starWarsCharacter) {
-            Log.d(TAG,
-                "onNext() called with: " + "starWarsCharacter = [" + starWarsCharacter + "]");
-          }
-        });
-        subscriptions.add(
-              starWarsCharacterObservable
-                  .observeOn(AndroidSchedulers.mainThread())
-              .subscribe(mResourceItemAdapter));
-        subscriptions.add(results.filter(errorFilter).subscribe(peopleErrorAction));
-
-        break;
-      //case VEHICLES:
-    }
-  }
-
-  private TextView getStateView() {
-    if (mStateView == null && getView() != null) {
-      mStateView = (TextView) ((ViewStub) getView().findViewById(R.id.list_state)).inflate();
-    }
-    return mStateView;
-  }
-
-  private Observable getVehicleObservable(Observable<Result<PeopleResponse>> results) {
-    return null;
-  }
-
-  @NonNull private Observable<List<ResourceItem>> fetchPeople(
-      Observable<Result<PeopleResponse>> results) {
-    return results.filter(new Func1<Result<PeopleResponse>, Boolean>() {
-      @Override public Boolean call(Result<PeopleResponse> result) {
-        return !result.isError() && result.response().isSuccess();
-      }
-    }).map(new Func1<Result<PeopleResponse>, List<ResourceItem>>() {
-      @Override public List<ResourceItem> call(Result<PeopleResponse> result) {
-        PeopleResponse response = result.response().body();
-        List<Person> items =
-            response.results == null ? Collections.<Person>emptyList() : response.results;
-        return new ArrayList<ResourceItem>(items);
-      }
-    });
+    final Observable<StarWarsCharacter> starWarsCharacterObservable =
+        mResourceManager.fetchData(mResource, null, errorAction);
+    mSubscriptions.add(starWarsCharacterObservable.observeOn(AndroidSchedulers.mainThread())
+        .subscribe(mResourceItemAdapter));
   }
 
   private boolean isConnected() {
-    ConnectivityManager connectivityManager = (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+    ConnectivityManager connectivityManager =
+        (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
     return activeNetworkInfo != null && activeNetworkInfo.isConnected();
   }
@@ -245,6 +153,7 @@ public class ResourceFragment extends Fragment {
   @Override public void onDestroy() {
     super.onDestroy();
     subscriptions.unsubscribe();
+    mResourceManager.unbind();
   }
 }
 

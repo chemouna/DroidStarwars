@@ -10,16 +10,6 @@ public class ResourceItem implements Parcelable {
   public String name;
   public String[] films;
 
-  public static final Creator<ResourceItem> CREATOR = new Creator<ResourceItem>() {
-    @Override public ResourceItem createFromParcel(Parcel in) {
-      return new ResourceItem(in);
-    }
-
-    @Override public ResourceItem[] newArray(int size) {
-      return new ResourceItem[size];
-    }
-  };
-
   @Override public int describeContents() {
     return 0;
   }

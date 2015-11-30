@@ -67,9 +67,13 @@ public class CoreApiModule {
     return retrofit.create(ComicVineApi.class);
   }
 
-  @Provides @Singleton ApiManager provideSwapiManager(SwapiApi swapi, TmdbApi tmdb,
+  @Provides @Singleton ApiManager provideApiManager(SwapiApi swapi, TmdbApi tmdb,
       ComicVineApi comicVineApi) {
     return new ApiManager(swapi, tmdb, comicVineApi);
+  }
+
+  @Provides @Singleton ResourceManager provideResourceManager(ApiManager apiManager) {
+    return new ResourceManager(apiManager);
   }
 
   @Provides @Singleton Picasso providePicasso(Application app, OkHttpClient client,

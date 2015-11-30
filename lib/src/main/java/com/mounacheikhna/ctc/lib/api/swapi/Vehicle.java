@@ -7,7 +7,6 @@ import java.util.ArrayList;
  * Created by mouna on 26/11/15.
  */
 public class Vehicle extends ResourceItem {
-  public String name;
   public String model;
   public String vehicle_class;
   public String manufacturer;
@@ -21,7 +20,6 @@ public class Vehicle extends ResourceItem {
   public String created;
   public String edited;
   public String url;
-  public ArrayList<String> pilots;
 
   public Vehicle() {
   }
@@ -46,7 +44,6 @@ public class Vehicle extends ResourceItem {
     dest.writeString(this.created);
     dest.writeString(this.edited);
     dest.writeString(this.url);
-    dest.writeStringList(this.pilots);
   }
 
   protected Vehicle(Parcel in) {
@@ -65,7 +62,6 @@ public class Vehicle extends ResourceItem {
     this.created = in.readString();
     this.edited = in.readString();
     this.url = in.readString();
-    this.pilots = in.createStringArrayList();
   }
 
   public static final Creator<Vehicle> CREATOR = new Creator<Vehicle>() {

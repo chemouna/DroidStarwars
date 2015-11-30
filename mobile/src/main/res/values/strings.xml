@@ -14,6 +14,9 @@
   <string name="empty_resource">No resource found.</string>
   <string name="empty_films">No films.</string>
   <string name="loading_error_films">Error loading films.</string>
+  <string name="share">Share</string>
+  <string name="watched">Watched</string>
+  <string name="evaluate">Evaluate</string>
 
 
 </resources>

@@ -65,4 +65,16 @@
     <item name="android:layout_marginRight">@dimen/spacing_double</item>
   </style>
 
+  <style name="TextAppearance.GrayContent" parent="TextAppearance.AppCompat.Caption" tools:ignore="NewApi">
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="Widget.StarWars.FilmAction" parent="Widget.AppCompat.Button">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textAppearance">@style/TextAppearance.GrayContent</item>
+    <item name="android:drawablePadding">4dp</item>
+    <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+  </style>
+
 </resources>

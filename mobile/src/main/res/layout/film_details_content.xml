@@ -22,51 +22,69 @@
       android:layout_marginBottom="@dimen/spacing_double"
       tools:text="This is a description of the movie"/>
 
-  <View
+  <!--<View
       android:layout_width="match_parent"
       android:layout_height="1dp"
       android:layout_marginLeft="@dimen/spacing_double"
       android:layout_marginRight="@dimen/spacing_double"
-      android:background="@color/divider" />
+      android:background="@color/divider" />-->
 
-  <RelativeLayout
-      android:id="@+id/rating_container"
+  <GridLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:tools="http://schemas.android.com/tools"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_marginTop="@dimen/spacing_double">
+      android:alignmentMode="alignBounds"
+      android:columnCount="3"
+      android:useDefaultMargins="false"
+      android:background="@android:color/transparent"
+      tools:background="@color/primary">
 
-    <TextView
-        android:id="@+id/tv_rating_value"
-        android:layout_width="wrap_content"
+    <include layout="@layout/rating_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/empty_rating"
-        android:textAppearance="@style/TextAppearance.Rating"
-        android:layout_centerInParent="true"
-        tools:text="8.5"/>
+        android:layout_columnSpan="3"/>
 
-    <TextView
-        android:id="@+id/tv_rating_range"
-        android:layout_width="wrap_content"
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/film_actions"
+        android:layout_columnSpan="3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/spacing_normal"
-        android:layout_alignBaseline="@+id/tv_rating_value"
-        android:layout_toRightOf="@+id/tv_rating_value"
-        android:text="@string/rating_range"
-        android:textAppearance="@style/TextAppearance.Caption"/>
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingTop="32dp"
+        android:paddingEnd="@dimen/padding_normal">
 
-    <TextView
-        android:id="@+id/tv_rating_votes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/tv_rating_value"
-        android:layout_toRightOf="@id/tv_rating_range"
-        android:layout_toEndOf="@id/tv_rating_range"
-        android:text="@string/none_rating"
-        tools:text="700 votes"
-        android:maxLines="2"
-        android:ellipsize="end"
-        android:textAppearance="@style/TextAppearance.Caption"/>
+      <Button
+          android:id="@+id/evaluate"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:drawableTop="@drawable/ic_evaluate"
+          android:text="@string/evaluate"
+          style="@style/Widget.StarWars.FilmAction"/>
 
-  </RelativeLayout>
+      <Button
+          android:id="@+id/watched"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/evaluate"
+          android:layout_toEndOf="@id/evaluate"
+          android:drawableTop="@drawable/ic_watched"
+          android:text="@string/watched"
+          style="@style/Widget.StarWars.FilmAction"/>
+
+      <Button
+          android:id="@+id/share"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/watched"
+          android:layout_toEndOf="@id/watched"
+          android:drawableTop="@drawable/ic_share"
+          android:text="@string/share"
+          style="@style/Widget.StarWars.FilmAction"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+  </GridLayout>
 
 </LinearLayout>

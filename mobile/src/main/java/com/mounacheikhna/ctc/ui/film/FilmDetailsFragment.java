@@ -21,7 +21,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import butterknife.Bind;
-import butterknife.BindDimen;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
@@ -91,8 +90,7 @@ public class FilmDetailsFragment extends Fragment {
     mRatingVotesView.setText(filmDetails.getVotesValue(getActivity()));
 
     if (!TextUtils.isEmpty(filmDetails.posterUrl)) {
-      mPicasso.load(filmDetails.posterUrl)
-          .placeholder(R.drawable.people) //temp
+      mPicasso.load(filmDetails.posterUrl).placeholder(R.drawable.people) //temp
           .error(R.drawable.people) //temp
           .fit().into(mPosterImage, new Callback() {
         @Override public void onSuccess() {
@@ -126,8 +124,8 @@ public class FilmDetailsFragment extends Fragment {
    * Applies palette to status bar with a light or dark color on M
    * and with status bar icons matching the same color.
    */
-  @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-  private void applyToStatusBar(Boolean isDark, Palette palette) {
+  @TargetApi(Build.VERSION_CODES.LOLLIPOP) private void applyToStatusBar(Boolean isDark,
+      Palette palette) {
     int statusBarColor = getActivity().getWindow().getStatusBarColor();
     Palette.Swatch topColor = Colors.getMostPopulousSwatch(palette);
     if (topColor != null && (isDark || isAtLeastM())) {
@@ -138,21 +136,21 @@ public class FilmDetailsFragment extends Fragment {
     }
 
     if (statusBarColor != getActivity().getWindow().getStatusBarColor()) {
-      ValueAnimator statusBarColorAnim = ValueAnimator.ofArgb(getActivity().getWindow().getStatusBarColor(), statusBarColor);
+      ValueAnimator statusBarColorAnim =
+          ValueAnimator.ofArgb(getActivity().getWindow().getStatusBarColor(), statusBarColor);
       statusBarColorAnim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
         @Override public void onAnimationUpdate(ValueAnimator animation) {
           getActivity().getWindow().setStatusBarColor((Integer) animation.getAnimatedValue());
         }
       });
       statusBarColorAnim.setDuration(1000);
-      statusBarColorAnim.setInterpolator(AnimationUtils.loadInterpolator(
-          getActivity(), android.R.interpolator.fast_out_slow_in));
+      statusBarColorAnim.setInterpolator(
+          AnimationUtils.loadInterpolator(getActivity(), android.R.interpolator.fast_out_slow_in));
       statusBarColorAnim.start();
     }
   }
 
-  @TargetApi(Build.VERSION_CODES.M)
-  private void setLightStatusBar(View view) {
+  @TargetApi(Build.VERSION_CODES.M) private void setLightStatusBar(View view) {
     if (isAtLeastM()) {
       int flags = view.getSystemUiVisibility();
       flags = flags | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
@@ -166,5 +164,4 @@ public class FilmDetailsFragment extends Fragment {
     mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
     mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
   }
-
 }

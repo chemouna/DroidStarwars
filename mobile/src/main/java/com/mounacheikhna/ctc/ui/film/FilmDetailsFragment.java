@@ -41,7 +41,7 @@ public class FilmDetailsFragment extends Fragment {
 
   @Bind(R.id.poster_image) ImageView mPosterImage;
   @Bind(R.id.toolbar) Toolbar mToolbar;
-  @Bind(R.id.collapsing_toolbar) CollapsingToolbarLayout mCollapsingToolbarLayout;
+  @Bind(R.id.collapsing_toolbar) @Nullable CollapsingToolbarLayout mCollapsingToolbarLayout;
   @Bind(R.id.description) ExpandingTextView mDescriptionTextView;
   @Bind(R.id.tv_rating_value) TextView mRatingValueView;
   @Bind(R.id.tv_rating_votes) TextView mRatingVotesView;
@@ -83,7 +83,14 @@ public class FilmDetailsFragment extends Fragment {
   }
 
   private void display(FilmDetails filmDetails) {
-    mCollapsingToolbarLayout.setTitle(filmDetails.movieResult.title);
+    if (mCollapsingToolbarLayout == null) {
+      mToolbar.setTitle(filmDetails.film.title);
+      final AppCompatActivity activity = (AppCompatActivity) getActivity();
+      activity.setSupportActionBar(mToolbar);
+    }
+    else {
+      mCollapsingToolbarLayout.setTitle(filmDetails.film.title);
+    }
     mDescriptionTextView.setText(filmDetails.movieResult.overview);
 
     mRatingValueView.setText(filmDetails.getVotesAverage(getActivity()));
@@ -161,7 +168,12 @@ public class FilmDetailsFragment extends Fragment {
   private void applyToToolbar(Palette palette) {
     int primaryDark = ContextCompat.getColor(getActivity(), R.color.primary_dark);
     int primary = ContextCompat.getColor(getActivity(), R.color.primary);
-    mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
-    mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
+    if (mCollapsingToolbarLayout == null) {
+      mToolbar.setBackgroundColor(palette.getMutedColor(primary));
+    }
+    else {
+      mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
+      mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
+    }
   }
 }

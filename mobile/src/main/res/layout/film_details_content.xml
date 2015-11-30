@@ -22,16 +22,7 @@
       android:layout_marginBottom="@dimen/spacing_double"
       tools:text="This is a description of the movie"/>
 
-  <!--<View
-      android:layout_width="match_parent"
-      android:layout_height="1dp"
-      android:layout_marginLeft="@dimen/spacing_double"
-      android:layout_marginRight="@dimen/spacing_double"
-      android:background="@color/divider" />-->
-
   <GridLayout
-      xmlns:android="http://schemas.android.com/apk/res/android"
-      xmlns:tools="http://schemas.android.com/tools"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:alignmentMode="alignBounds"
@@ -55,19 +46,19 @@
         android:paddingEnd="@dimen/padding_normal">
 
       <Button
-          android:id="@+id/evaluate"
+          android:id="@+id/review"
           app:layout_widthPercent="33%"
           android:layout_height="wrap_content"
           android:drawableTop="@drawable/ic_evaluate"
-          android:text="@string/evaluate"
+          android:text="@string/review"
           style="@style/Widget.StarWars.FilmAction"/>
 
       <Button
           android:id="@+id/watched"
           app:layout_widthPercent="33%"
           android:layout_height="wrap_content"
-          android:layout_toRightOf="@id/evaluate"
-          android:layout_toEndOf="@id/evaluate"
+          android:layout_toRightOf="@id/review"
+          android:layout_toEndOf="@id/review"
           android:drawableTop="@drawable/ic_watched"
           android:text="@string/watched"
           style="@style/Widget.StarWars.FilmAction"/>

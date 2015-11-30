@@ -91,7 +91,7 @@ public class FilmDetailsFragment extends Fragment {
     mRatingVotesView.setText(filmDetails.getVotesValue(getActivity()));
 
     if (!TextUtils.isEmpty(filmDetails.posterUrl)) {
-      mPicasso.load(filmDetails.movieResult.backdrop_path)
+      mPicasso.load(filmDetails.posterUrl)
           .placeholder(R.drawable.people) //temp
           .error(R.drawable.people) //temp
           .fit().into(mPosterImage, new Callback() {

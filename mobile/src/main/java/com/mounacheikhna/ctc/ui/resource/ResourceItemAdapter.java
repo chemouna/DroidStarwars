@@ -7,18 +7,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.StarWarsCharacter;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
+import com.squareup.picasso.Picasso;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import rx.functions.Action1;
 
 public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapter.ViewHolder>
-        implements Action1<List<ResourceItem>> {
+        implements Action1<StarWarsCharacter> {
 
   private static final String TAG = "ResourceItemAdapter";
 
-  private List<ResourceItem> mItems = Collections.emptyList();
+  private List<StarWarsCharacter> mItems = new ArrayList<>();
   @Nullable private OnResourceItemSelectedListener mItemSelectedListener;
+  private Picasso mPicasso;
+
+  public ResourceItemAdapter(Picasso picasso) {
+    mPicasso = picasso;
+  }
 
   public void setOnResourceItemSelectedListener(@Nullable OnResourceItemSelectedListener itemListener) {
     Log.d(TAG, "setOnResourceItemSelectedListener() called with: "
@@ -52,21 +60,21 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
       this.itemView = itemView;
     }
 
-    public void bindTo(final ResourceItem resourceItem) {
-      itemView.bindTo(resourceItem);
+    public void bindTo(final StarWarsCharacter character) {
+      itemView.bindTo(character, mPicasso);
       itemView.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
           Log.d(TAG, "onClick() called with: " + "v = [" + v + "] and listener : "+ mItemSelectedListener);
           if (mItemSelectedListener != null) {
-            mItemSelectedListener.onResourceItemSelected(resourceItem);
+            mItemSelectedListener.onResourceItemSelected(character.getItem());
           }
         }
       });
     }
   }
 
-  @Override public void call(List<ResourceItem> items) {
-    mItems = items;
+  @Override public void call(StarWarsCharacter item) {
+    mItems.add(item);
     notifyDataSetChanged();
   }
 

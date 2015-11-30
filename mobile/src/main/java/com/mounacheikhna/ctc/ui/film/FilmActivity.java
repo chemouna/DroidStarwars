@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 
 /**
  * Created by mouna on 28/11/15.

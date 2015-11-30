@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:foreground="@drawable/light_selector"
-    style="@style/Specs.SingleLineGrid">
+    style="@style/Widget.StarWars.SingleLineGrid">
 
   <ImageView
       android:id="@+id/resource_icon"
@@ -20,7 +20,7 @@
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_gravity="bottom"
-      style="@style/Specs.SingleLineGrid.Text"
+      style="@style/Widget.StarWars.SingleLineGrid.Text"
       tools:text="People"/>
 
 </FrameLayout>

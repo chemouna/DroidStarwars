@@ -1,8 +1,8 @@
-package com.mounacheikhna.ctc.lib.api;
+package com.mounacheikhna.ctc.lib.api.swapi;
 
-import com.mounacheikhna.ctc.lib.api.model.swapi.Film;
-import com.mounacheikhna.ctc.lib.api.model.swapi.PeopleResponse;
-import com.mounacheikhna.ctc.lib.api.model.swapi.VehiclesResponse;
+import com.mounacheikhna.ctc.lib.api.swapi.Film;
+import com.mounacheikhna.ctc.lib.api.swapi.PeopleResponse;
+import com.mounacheikhna.ctc.lib.api.swapi.VehiclesResponse;
 import retrofit.Result;
 import retrofit.http.GET;
 import retrofit.http.Path;

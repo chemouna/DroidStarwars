@@ -24,7 +24,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
-import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.mounacheikhna.ctc.ui.view.ExpandingTextView;
 import com.mounacheikhna.ctc.util.Colors;
 import com.squareup.picasso.Callback;

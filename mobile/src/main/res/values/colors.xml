@@ -23,6 +23,7 @@
   <color name="mid_grey">#40808080</color>
   <color name="divider">#1f000000</color>
   <color name="hint_disabled_dark">#43000000</color>
+  <color name="resource_avatar_stroke">#1a000000</color>
 
 
 </resources>

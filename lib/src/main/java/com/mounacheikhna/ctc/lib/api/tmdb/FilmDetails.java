@@ -1,14 +1,10 @@
-package com.mounacheikhna.ctc.lib.api.model;
+package com.mounacheikhna.ctc.lib.api.tmdb;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.text.TextUtils;
-import android.util.Size;
-import com.mounacheikhna.ctc.lib.api.model.swapi.Film;
-import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse;
-import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse.MovieResult;
+import com.mounacheikhna.ctc.lib.api.swapi.Film;
+import com.mounacheikhna.ctc.lib.api.tmdb.SearchMovieResponse.MovieResult;
 import java.util.Locale;
 import com.mounacheikhna.ctc.lib.R;
 

@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.lib.api.model.swapi;
+package com.mounacheikhna.ctc.lib.api.swapi;
 
 import java.util.List;
 

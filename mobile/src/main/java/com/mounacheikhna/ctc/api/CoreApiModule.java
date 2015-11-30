@@ -5,8 +5,9 @@ import android.net.Uri;
 import com.mounacheikhna.ctc.annotation.ApiClient;
 import com.mounacheikhna.ctc.annotation.NetworkInterceptors;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.SwapiApi;
-import com.mounacheikhna.ctc.lib.api.TmdbApi;
+import com.mounacheikhna.ctc.lib.api.comicvine.ComicVineApi;
+import com.mounacheikhna.ctc.lib.api.swapi.SwapiApi;
+import com.mounacheikhna.ctc.lib.api.tmdb.TmdbApi;
 import com.squareup.moshi.Moshi;
 import com.squareup.okhttp.HttpUrl;
 import com.squareup.okhttp.Interceptor;
@@ -20,7 +21,6 @@ import javax.inject.Singleton;
 import retrofit.MoshiConverterFactory;
 import retrofit.Retrofit;
 import retrofit.RxJavaCallAdapterFactory;
-import rx.functions.Func1;
 import timber.log.Timber;
 
 /**
@@ -63,8 +63,13 @@ public class CoreApiModule {
     return retrofit.create(TmdbApi.class);
   }
 
-  @Provides @Singleton ApiManager provideSwapiManager(SwapiApi swapi, TmdbApi tmdb) {
-    return new ApiManager(swapi, tmdb);
+  @Provides @Singleton ComicVineApi providesComicVineApi(Retrofit retrofit) {
+    return retrofit.create(ComicVineApi.class);
+  }
+
+  @Provides @Singleton ApiManager provideSwapiManager(SwapiApi swapi, TmdbApi tmdb,
+      ComicVineApi comicVineApi) {
+    return new ApiManager(swapi, tmdb, comicVineApi);
   }
 
   @Provides @Singleton Picasso providePicasso(Application app, OkHttpClient client,

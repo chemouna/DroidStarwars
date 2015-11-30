@@ -1,25 +1,46 @@
 package com.mounacheikhna.ctc.ui.resource;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v4.content.ContextCompat;
+import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.StarWarsCharacter;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
+import com.mounacheikhna.ctc.ui.image.CircleStrokeTransformation;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
+import com.squareup.picasso.Transformation;
 
-public class ResourceItemView extends LinearLayout {
+public class ResourceItemView extends RelativeLayout {
 
+  private final Transformation mImageTransformation;
   @Bind(R.id.name) TextView mNameView;
+  @Bind(R.id.avatar) ImageView mAvatarView;
 
   public ResourceItemView(Context context, AttributeSet attrs) {
     super(context, attrs);
-    setOrientation(VERTICAL);
+    mImageTransformation =
+        new CircleStrokeTransformation(context, ContextCompat.getColor(context, R.color.resource_avatar_stroke), 1);
   }
 
-  public void bindTo(ResourceItem resourceItem) {
-    mNameView.setText(resourceItem.name);
+  public void bindTo(@NonNull StarWarsCharacter starWarsCharacter, @NonNull  Picasso picasso) {
+    mNameView.setText(starWarsCharacter.getItem().name);
+    final String image = starWarsCharacter.getCvCharacter().image.screen_url;
+    if(!TextUtils.isEmpty(image)) {
+      picasso.load(image)
+          .placeholder(R.drawable.people) //temp
+          .error(R.drawable.people) //temp
+          .transform(mImageTransformation)
+          .fit().into(mAvatarView);
+    }
   }
 
   @Override protected void onFinishInflate() {

@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.lib.api.model.swapi;
+package com.mounacheikhna.ctc.lib.api.swapi;
 
 import android.os.Parcel;
 import android.os.Parcelable;

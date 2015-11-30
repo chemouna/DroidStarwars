@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.List;

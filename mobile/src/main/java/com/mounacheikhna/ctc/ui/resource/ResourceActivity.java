@@ -13,7 +13,7 @@ import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 import com.mounacheikhna.ctc.transition.TextSharedElementCallback;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
 import com.mounacheikhna.ctc.util.Animations.EmptyTransitionListener;

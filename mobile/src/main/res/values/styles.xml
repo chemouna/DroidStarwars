@@ -12,7 +12,10 @@
     <item name="android:indeterminate">true</item>
   </style>
 
-  <style name="Widget.StarWars.Item" parent="Specs.TwoLinesIconItem">
+  <style name="Widget.StarWars.Item">
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:padding">16dp</item>
   </style>
 
   <style name="StarWars.TextAppearance.Title" parent="TextAppearance.AppCompat.Title">
@@ -21,6 +24,14 @@
 
   <style name="StarWars.ResourceActivity"/>
   <style name="StarWars.MainActivity"/>
+
+  <style name="Widget.StarWars.SingleLineGrid">
+  </style>
+
+  <style name="Widget.StarWars.SingleLineGrid.Text">
+    <item name="android:padding">16dp</item>
+    <item name="android:textSize">14sp</item>
+  </style>
 
   <style name="TextAppearance.FilmDescription" parent="TextAppearance.AppCompat.Subhead">
     <item name="android:textColor">@color/text_tertiary_dark</item>
@@ -34,5 +45,24 @@
   <style name="TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption">
   </style>
 
+  <style name="Widget.StarWars.Item.Title">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+
+  <style name="Widget.StarWars.Item.Description">
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:maxLines">3</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="Widget.StarWars.Item.Image">
+    <item name="android:layout_marginEnd" tools:targetApi="JELLY_BEAN_MR1">@dimen/spacing_double</item>
+    <item name="android:layout_marginRight">@dimen/spacing_double</item>
+  </style>
 
 </resources>

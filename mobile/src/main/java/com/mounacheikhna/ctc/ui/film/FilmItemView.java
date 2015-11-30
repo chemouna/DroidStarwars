@@ -1,22 +1,22 @@
 package com.mounacheikhna.ctc.ui.film;
 
 import android.content.Context;
-import android.support.percent.PercentRelativeLayout;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.lib.api.model.FilmDetails;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.squareup.picasso.Picasso;
 
 /**
  * Created by mouna on 26/11/15.
  */
-public class FilmItemView extends LinearLayout {
+public class FilmItemView extends RelativeLayout {
 
   @Bind(R.id.film_image) ImageView mImage;
   @Bind(R.id.film_title) TextView mTitle;

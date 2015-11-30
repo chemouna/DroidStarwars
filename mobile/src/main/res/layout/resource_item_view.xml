@@ -6,34 +6,32 @@
     android:layout_height="wrap_content"
     style="@style/Widget.StarWars.Item">
 
- <ImageView
+  <ImageView
       android:id="@+id/avatar"
-      android:layout_width="56dp"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      style="@style/Widget.StarWars.Item.Image"
+      tools:src="@drawable/people"/>
+
+  <TextView
+      android:id="@+id/name"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
-      android:layout_centerInParent="true"/>
+      android:layout_toEndOf="@id/avatar"
+      android:layout_toRightOf="@id/avatar"
+      style="@style/Widget.StarWars.Item.Title"
+      tools:text="Luke Sywalker"/>
 
-    <LinearLayout
-        android:id="@+id/text_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        style="@style/Specs.TwoLinesIconItem.TextContainer">
-
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Specs.TwoLinesIconItem.TextPrimary"
-            tools:text="Luke Sywalker"/>
-
-        <TextView
-            android:id="@+id/description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/Specs.TwoLinesIconItem.TextSecondary"
-            tools:text="Hey, Luke! May the Force be with you."/>
-
-    </LinearLayout>
-
+  <TextView
+      android:id="@+id/description"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/name"
+      android:layout_toEndOf="@id/avatar"
+      android:layout_toRightOf="@id/avatar"
+      style="Widget.StarWars.Item.Description"
+      tools:text="Hey, Luke! May the Force be with you."/>
 
 </com.mounacheikhna.ctc.ui.resource.ResourceItemView>

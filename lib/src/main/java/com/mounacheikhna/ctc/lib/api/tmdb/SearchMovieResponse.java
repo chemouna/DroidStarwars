@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.lib.api.model.tmdb;
+package com.mounacheikhna.ctc.lib.api.tmdb;
 
 import android.os.Parcel;
 import android.os.Parcelable;

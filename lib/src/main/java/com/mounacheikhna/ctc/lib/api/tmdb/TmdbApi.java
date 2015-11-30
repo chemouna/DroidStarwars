@@ -1,6 +1,5 @@
-package com.mounacheikhna.ctc.lib.api;
+package com.mounacheikhna.ctc.lib.api.tmdb;
 
-import com.mounacheikhna.ctc.lib.api.model.tmdb.SearchMovieResponse;
 import retrofit.http.GET;
 import retrofit.http.Query;
 import rx.Observable;

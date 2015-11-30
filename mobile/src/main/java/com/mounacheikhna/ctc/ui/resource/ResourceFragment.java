@@ -22,17 +22,22 @@ import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.model.swapi.Person;
-import com.mounacheikhna.ctc.lib.api.model.swapi.ResourceItem;
-import com.mounacheikhna.ctc.lib.api.model.swapi.PeopleResponse;
+import com.mounacheikhna.ctc.lib.api.StarWarsCharacter;
+import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
+import com.mounacheikhna.ctc.lib.api.comicvine.CvCharacter;
+import com.mounacheikhna.ctc.lib.api.swapi.Person;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.swapi.PeopleResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
+import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.inject.Inject;
 import retrofit.Result;
 import rx.Observable;
+import rx.Subscriber;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
@@ -52,6 +57,7 @@ public class ResourceFragment extends Fragment {
   @Bind(R.id.progress) ProgressBar mProgressBar;
 
   @Inject ApiManager mApiManager;
+  @Inject Picasso mPicasso;
 
   private final CompositeSubscription subscriptions = new CompositeSubscription();
   private ResourceItemAdapter mResourceItemAdapter;
@@ -107,7 +113,7 @@ public class ResourceFragment extends Fragment {
 
   private void setupList() {
     Log.d(TAG, "setupList() called ");
-    mResourceItemAdapter = new ResourceItemAdapter();
+    mResourceItemAdapter = new ResourceItemAdapter(mPicasso);
     mResourceItemAdapter.setOnResourceItemSelectedListener(mListener);
     mRecyclerView.setAdapter(mResourceItemAdapter);
     mRecyclerView.addItemDecoration(
@@ -126,23 +132,7 @@ public class ResourceFragment extends Fragment {
     //TODO: first make it work really well with people only
     switch (mResource) {
       case PEOPLE:
-        //share this observable to not create a request per subscription
-        // and make same requests multiple times for same data
-        final Observable<Result<PeopleResponse>> results = mApiManager.fetchPeople()
-            .observeOn(AndroidSchedulers.mainThread())
-            .share()
-            .doOnNext(new Action1<Result<PeopleResponse>>() {
-              @Override public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
-                mProgressBar.setVisibility(View.GONE);
-              }
-            });
-        subscriptions.add(getPeopleObservable(results).subscribe(mResourceItemAdapter));
-
-        subscriptions.add(results.filter(new Func1<Result<PeopleResponse>, Boolean>() {
-          @Override public Boolean call(Result<PeopleResponse> result) {
-            return result.isError() || !result.response().isSuccess();
-          }
-        }).subscribe(new Action1<Result<PeopleResponse>>() {
+        final Action1<Result<PeopleResponse>> peopleErrorAction = new Action1<Result<PeopleResponse>>() {
           @Override public void call(Result<PeopleResponse> result) {
             getStateView().setText(String.format(getString(R.string.loading_error),
                 getString(mResource.getTextRes())));
@@ -152,7 +142,65 @@ public class ResourceFragment extends Fragment {
               Timber.e("Error from server : %s", result.response().code());
             }
           }
-        }));
+        };
+
+        final Func1<Result<PeopleResponse>, Boolean> errorFilter =
+            new Func1<Result<PeopleResponse>, Boolean>() {
+              @Override public Boolean call(Result<PeopleResponse> result) {
+                return result.isError() || !result.response().isSuccess();
+              }
+            };
+
+        //share this observable to not create a request per subscription
+        // and make same requests multiple times for same data
+        final Observable<Result<PeopleResponse>> results = mApiManager.fetchPeople()
+            .share();
+            /*.doOnNext(new Action1<Result<PeopleResponse>>() {
+              @Override public void call(Result<PeopleResponse> starWarsPeopleResponseResult) {
+                mProgressBar.setVisibility(View.GONE);
+              }
+            });*/
+        final Observable<StarWarsCharacter> starWarsCharacterObservable = fetchPeople(results)
+            //TODO: improve this its ugly as hell
+            .flatMap(new Func1<List<ResourceItem>, Observable<StarWarsCharacter>>() {
+              @Override
+              public Observable<StarWarsCharacter> call(List<ResourceItem> resourceItems) {
+                return Observable.from(resourceItems)
+                    .flatMap(new Func1<ResourceItem, Observable<StarWarsCharacter>>() {
+                      @Override
+                      public Observable<StarWarsCharacter> call(final ResourceItem resourceItem) {
+                        return mApiManager.searchCharacter(resourceItem.name)
+                            .map(new Func1<CharacterResponse, StarWarsCharacter>() {
+                              @Override
+                              public StarWarsCharacter call(CharacterResponse characterResponse) {
+                                return new StarWarsCharacter(characterResponse.getResults().get(0),
+                                    resourceItem); //Temp
+                              }
+                            });
+                      }
+                    });
+              }
+            }).share();
+
+        starWarsCharacterObservable.subscribe(new Subscriber<StarWarsCharacter>() {
+          @Override public void onCompleted() {
+
+          }
+
+          @Override public void onError(Throwable e) {
+            Log.d(TAG, "onError() called with: " + "e = [" + e + "]");
+          }
+
+          @Override public void onNext(StarWarsCharacter starWarsCharacter) {
+            Log.d(TAG,
+                "onNext() called with: " + "starWarsCharacter = [" + starWarsCharacter + "]");
+          }
+        });
+        subscriptions.add(
+              starWarsCharacterObservable
+                  .observeOn(AndroidSchedulers.mainThread())
+              .subscribe(mResourceItemAdapter));
+        subscriptions.add(results.filter(errorFilter).subscribe(peopleErrorAction));
 
         break;
       //case VEHICLES:
@@ -170,7 +218,7 @@ public class ResourceFragment extends Fragment {
     return null;
   }
 
-  @NonNull private Observable<List<ResourceItem>> getPeopleObservable(
+  @NonNull private Observable<List<ResourceItem>> fetchPeople(
       Observable<Result<PeopleResponse>> results) {
     return results.filter(new Func1<Result<PeopleResponse>, Boolean>() {
       @Override public Boolean call(Result<PeopleResponse> result) {

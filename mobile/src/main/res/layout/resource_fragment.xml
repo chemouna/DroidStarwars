@@ -2,40 +2,10 @@
 <!-- TODO: maybe there's no need for linearlayout , a simple layout is possible ? -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-  <com.mounacheikhna.ctc.ui.view.CustomViewAnimator
-      android:id="@+id/state_animator"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:inAnimation="@android:anim/fade_in"
-      android:outAnimation="@android:anim/fade_out">
-
-    <TextView
-        android:id="@+id/list_state"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        tools:text="Empty results."/>
-
-    <ProgressBar
-        android:id="@+id/progress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        style="@style/Widget.StarWars.ProgressBar"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
-
-
-  </com.mounacheikhna.ctc.ui.view.CustomViewAnimator>
+  <include layout="@layout/list_component_layout"/>
 
 </LinearLayout>

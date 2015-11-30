@@ -4,12 +4,15 @@ import android.support.annotation.Nullable;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
+import com.mounacheikhna.ctc.lib.api.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.swapi.PeopleResponse;
 import com.mounacheikhna.ctc.lib.api.swapi.Person;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.lib.api.swapi.Vehicle;
 import com.mounacheikhna.ctc.lib.api.swapi.VehiclesResponse;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
+import com.mounacheikhna.ctc.lib.api.tmdb.SearchMovieResponse;
 import com.mounacheikhna.ctc.ui.resource.Resource;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -80,6 +83,19 @@ public class ResourceManager {
       new Func1<List<ResourceItem>, Observable<ResourceDetails>>() {
         @Override public Observable<ResourceDetails> call(List<ResourceItem> resourceItems) {
           return Observable.from(resourceItems).flatMap(searchCharacterByItem);
+        }
+      };
+
+  public final Func1<Result<Film>, Observable<FilmDetails>> tmdbFilmSearch =
+      new Func1<Result<Film>, Observable<FilmDetails>>() {
+        @Override public Observable<FilmDetails> call(Result<Film> filmResult) {
+          final Film film = filmResult.response().body();
+          return mApiManager.getFilmDetails(film.title)
+              .map(new Func1<SearchMovieResponse, FilmDetails>() {
+                @Override public FilmDetails call(SearchMovieResponse searchMovieResponse) {
+                  return new FilmDetails(film, searchMovieResponse);
+                }
+              });
         }
       };
 

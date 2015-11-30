@@ -31,7 +31,8 @@
       android:layout_below="@id/name"
       android:layout_toEndOf="@id/avatar"
       android:layout_toRightOf="@id/avatar"
-      style="Widget.StarWars.ItemDescription"
+      style="@style/Widget.StarWars.ItemDescription"
+      android:maxLines="3"
       tools:text="Hey, Luke! May the Force be with you."/>
 
 </com.mounacheikhna.ctc.ui.resource.ResourceItemView>

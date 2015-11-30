@@ -12,6 +12,8 @@
   <string name="rating_range">/10</string>
   <string name="none_rating">n/a</string>
   <string name="empty_resource">No resource found.</string>
+  <string name="empty_films">No films.</string>
+  <string name="loading_error_films">Error loading films.</string>
 
 
 </resources>

@@ -21,6 +21,7 @@ public class ResourceItemView extends RelativeLayout {
 
   private final Transformation mImageTransformation;
   @Bind(R.id.name) TextView mNameView;
+  @Bind(R.id.description) TextView mDescriptionView;
   @Bind(R.id.avatar) ImageView mAvatarView;
 
   public ResourceItemView(Context context, AttributeSet attrs) {
@@ -30,10 +31,10 @@ public class ResourceItemView extends RelativeLayout {
   }
 
   public void bindTo(@NonNull ResourceDetails resourceDetails, @NonNull  Picasso picasso) {
-    if(resourceDetails.getItem() == null) return;
+    if(resourceDetails.getItem() == null || resourceDetails.getCvCharacter() == null) return;
     mNameView.setText(resourceDetails.getItem().name);
     final CvCharacter cvCharacter = resourceDetails.getCvCharacter();
-
+    mDescriptionView.setText(resourceDetails.getCvCharacter().deck);
     if(cvCharacter != null && cvCharacter.image != null) {
       final String image = cvCharacter.image.screen_url;
       if (!TextUtils.isEmpty(image)) {

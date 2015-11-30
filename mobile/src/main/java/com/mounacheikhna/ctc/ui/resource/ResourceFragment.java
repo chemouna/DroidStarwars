@@ -40,7 +40,6 @@ import rx.subscriptions.CompositeSubscription;
 public class ResourceFragment extends Fragment {
 
   private static final String RESOURCE_ARG = "ResourceArg";
-  private static final String TAG = "ResourceFragment";
 
   private CompositeSubscription subscriptions = new CompositeSubscription();
 

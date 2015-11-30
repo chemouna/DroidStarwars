@@ -42,7 +42,4 @@ public class FilmItemView extends RelativeLayout {
     ButterKnife.bind(this);
   }
 
-
-
-
 }

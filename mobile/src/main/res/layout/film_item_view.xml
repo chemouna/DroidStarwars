@@ -13,6 +13,7 @@
       android:layout_height="match_parent"
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true"
+      style="@style/Widget.StarWars.ItemImage"
       tools:src="@drawable/people"
       tools:background="@color/primary"
       tools:ignore="RtlSymmetry"/>
@@ -23,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/film_image"
         android:layout_toRightOf="@id/film_image"
-        style="@style/Widget.StarWars.Item.Title"
+        style="@style/Widget.StarWars.ItemTitle"
         tools:text="StarWars: Episode III - Revenge of the Sith"/>
 
     <TextView
@@ -33,7 +34,7 @@
         android:layout_below="@id/film_title"
         android:layout_toEndOf="@id/film_image"
         android:layout_toRightOf="@id/film_image"
-        style="Widget.StarWars.Item.Description"
+        style="Widget.StarWars.ItemDescription"
         tools:text="Years after the onset of the Clone Wars, the noble Jedi..."/>
 
 

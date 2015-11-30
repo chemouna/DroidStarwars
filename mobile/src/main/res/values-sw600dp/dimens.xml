@@ -5,6 +5,6 @@
   <dimen name="spacing_normal">16dp</dimen>
   <dimen name="spacing_double">24dp</dimen>
   <dimen name="padding_normal">24dp</dimen>
-  <dimen name="film_item_image">72dp</dimen>
-
+  <dimen name="film_item_image">88dp</dimen>
+  <dimen name="resource_item_image">72dp</dimen>
 </resources>

@@ -10,7 +10,7 @@
   <ImageView
       android:id="@+id/film_image"
       android:layout_width="@dimen/film_item_image"
-      android:layout_height="match_parent"
+      android:layout_height="@dimen/film_item_image"
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true"
       style="@style/Widget.StarWars.ItemImage"
@@ -34,7 +34,8 @@
         android:layout_below="@id/film_title"
         android:layout_toEndOf="@id/film_image"
         android:layout_toRightOf="@id/film_image"
-        style="Widget.StarWars.ItemDescription"
+        style="@style/Widget.StarWars.ItemDescription"
+        android:maxLines="3"
         tools:text="Years after the onset of the Clone Wars, the noble Jedi..."/>
 
 

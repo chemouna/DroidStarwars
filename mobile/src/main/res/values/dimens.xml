@@ -27,7 +27,8 @@
   <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
   <dimen name="toolbar_elevation">4dp</dimen>
   <dimen name="resource_item_text_size">14sp</dimen>
-  <dimen name="film_item_image">56dp</dimen>
+  <dimen name="film_item_image">72dp</dimen>
+  <dimen name="resource_item_image">56dp</dimen>
 
 
 </resources>

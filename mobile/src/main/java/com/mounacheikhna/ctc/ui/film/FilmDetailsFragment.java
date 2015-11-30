@@ -84,12 +84,12 @@ public class FilmDetailsFragment extends Fragment {
 
   private void display(FilmDetails filmDetails) {
     if (mCollapsingToolbarLayout == null) {
-      mToolbar.setTitle(filmDetails.film.title);
+      mToolbar.setTitle(filmDetails.movieResult.title);
       final AppCompatActivity activity = (AppCompatActivity) getActivity();
       activity.setSupportActionBar(mToolbar);
     }
     else {
-      mCollapsingToolbarLayout.setTitle(filmDetails.film.title);
+      mCollapsingToolbarLayout.setTitle(filmDetails.movieResult.title);
     }
     mDescriptionTextView.setText(filmDetails.movieResult.overview);
 

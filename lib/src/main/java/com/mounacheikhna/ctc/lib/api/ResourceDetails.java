@@ -7,12 +7,12 @@ import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 /**
  * Created by mouna on 30/11/15.
  */
-public class StarWarsCharacter {
+public class ResourceDetails {
 
   CvCharacter mCvCharacter;
   ResourceItem item;
 
-  public StarWarsCharacter(CvCharacter cvCharacter, ResourceItem item) {
+  public ResourceDetails(CvCharacter cvCharacter, ResourceItem item) {
     mCvCharacter = cvCharacter;
     this.item = item;
   }

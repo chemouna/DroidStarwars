@@ -21,7 +21,7 @@ import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.StarWarsCharacter;
+import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
@@ -137,8 +137,8 @@ public class ResourceFragment extends Fragment {
           }
         };
 
-    final Observable<StarWarsCharacter> starWarsCharacterObservable =
-        mResourceManager.fetchData(mResource, null, errorAction);
+    final Observable<ResourceDetails> starWarsCharacterObservable =
+        mResourceManager.fetchResourceData(mResource, null, errorAction);
     mSubscriptions.add(starWarsCharacterObservable.observeOn(AndroidSchedulers.mainThread())
         .subscribe(mResourceItemAdapter));
   }

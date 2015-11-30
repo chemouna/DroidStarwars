@@ -16,6 +16,7 @@ import java.util.Collections;
 import java.util.List;
 import retrofit.Result;
 import rx.Observable;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.subscriptions.CompositeSubscription;
@@ -63,7 +64,8 @@ public class ResourceManager {
       @Nullable final Action1<Result<? extends ResourceResponse>> errorAction) {
     switch (resource) {
       case PEOPLE:
-        final Observable<Result<PeopleResponse>> peopleObs = mApiManager.fetchPeople().share();
+        final Observable<Result<PeopleResponse>> peopleObs = mApiManager.fetchPeople()
+            .observeOn(AndroidSchedulers.mainThread()).share();
         final Func1<Result<PeopleResponse>, List<ResourceItem>> peopleToResourceItems =
             new Func1<Result<PeopleResponse>, List<ResourceItem>>() {
               @Override
@@ -83,11 +85,13 @@ public class ResourceManager {
                   }
                 })
                 .share();
-        mSubscriptions.add(peopleObs.filter(Results.isSuccess()).subscribe(errorAction));
+        if(errorAction != null) {
+          mSubscriptions.add(peopleObs.filter(Results.isSuccess()).subscribe(errorAction));
+        }
         return characterPeopleObservable;
       case VEHICLES:
         final Observable<Result<VehiclesResponse>> vehiclesObs =
-            mApiManager.fetchVehicles().share();
+            mApiManager.fetchVehicles().observeOn(AndroidSchedulers.mainThread()).share();
         final Observable<StarWarsCharacter> characterVehiclesObservable =
             vehiclesObs.filter(Results.isSuccess())
                 .map(new Func1<Result<VehiclesResponse>, List<ResourceItem>>() {
@@ -102,7 +106,9 @@ public class ResourceManager {
                 })
                 .flatMap(listCharactersForItem)
                 .share();
-        mSubscriptions.add(vehiclesObs.filter(Results.isError()).subscribe(errorAction));
+        if (errorAction != null) {
+          mSubscriptions.add(vehiclesObs.filter(Results.isError()).subscribe(errorAction));
+        }
         return characterVehiclesObservable;
       default:
         //TODO: just display empty results

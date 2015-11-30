@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import butterknife.Bind;
+import butterknife.BindDimen;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
@@ -38,6 +39,7 @@ public class ResourceItemFragment extends Fragment {
   public static final String URL_LAST_SEGMENT_REGEX = ".*/([^/?]+).*";
 
   @Bind(R.id.rv) RecyclerView mRecyclerView;
+  @BindDimen(R.dimen.film_divider_padding_start) float dividerPaddingStart;
 
   @Inject ApiManager mApiManager;
   @Inject Picasso mPicasso;
@@ -82,8 +84,8 @@ public class ResourceItemFragment extends Fragment {
     });
     mRecyclerView.setAdapter(mFilmAdapter);
     mRecyclerView.addItemDecoration(
-        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, 0/*dividerPaddingStart*/,
-            true));
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart,
+            false));
     show(mItem);
   }
 

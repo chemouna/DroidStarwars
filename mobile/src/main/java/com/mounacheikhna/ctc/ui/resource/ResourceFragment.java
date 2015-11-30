@@ -18,6 +18,7 @@ import android.view.ViewStub;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import butterknife.Bind;
+import butterknife.BindDimen;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
@@ -55,6 +56,7 @@ public class ResourceFragment extends Fragment {
   private TextView mStateView;
   @Bind(R.id.rv) RecyclerView mRecyclerView;
   @Bind(R.id.progress) ProgressBar mProgressBar;
+  @BindDimen(R.dimen.resource_divider_padding_start) float dividerPaddingStart;
 
   @Inject ApiManager mApiManager;
   @Inject Picasso mPicasso;
@@ -115,10 +117,10 @@ public class ResourceFragment extends Fragment {
     Log.d(TAG, "setupList() called ");
     mResourceItemAdapter = new ResourceItemAdapter(mPicasso);
     mResourceItemAdapter.setOnResourceItemSelectedListener(mListener);
-    mRecyclerView.setAdapter(mResourceItemAdapter);
     mRecyclerView.addItemDecoration(
-        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, 0/*dividerPaddingStart*/,
-            true));
+        new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart /*55*/,
+            false));
+    mRecyclerView.setAdapter(mResourceItemAdapter);
     fetchData();
   }
 

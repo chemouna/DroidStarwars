@@ -51,8 +51,7 @@ public class ResourceManager {
           return new ArrayList<ResourceItem>(items);
         }
       };
-  private CompositeSubscription mSubscriptions;
-  private ApiManager mApiManager;
+
   /**
    * Finds {@link ResourceDetails}s that match a Resource item name. (ex. search characters that
    * are based on 'Luke skywalker' from comicvine api.
@@ -69,7 +68,7 @@ public class ResourceManager {
               })
               .filter(new Func1<ResourceDetails, Boolean>() {
                 @Override public Boolean call(ResourceDetails resourceDetails) {
-                  return resourceDetails == null;
+                  return resourceDetails != null;
                 }
               });
         }
@@ -84,17 +83,20 @@ public class ResourceManager {
         }
       };
 
+  private CompositeSubscription mSubscriptions;
+  private ApiManager mApiManager;
+
   public ResourceManager(ApiManager apiManager) {
     mApiManager = apiManager;
     mSubscriptions = new CompositeSubscription();
   }
 
   /**
-   * Fetches characters of a resource.
-   * @param resource
-   * @param successAction
-   * @param errorAction
-   * @return
+   * Fetches details of a resource.
+   * @param resource to fetch characters for.
+   * @param successAction an action to run when request succeeds.
+   * @param errorAction an action to run when an error happens in this flow.
+   * @return an {@link Observable} that emits {@link ResourceDetails}s.
    */
   public Observable<ResourceDetails> fetchResourceData(Resource resource,
       @Nullable Action1 successAction,

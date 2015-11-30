@@ -1,7 +1,6 @@
 package com.mounacheikhna.ctc.lib.api;
 
 import com.mounacheikhna.ctc.lib.api.comicvine.CvCharacter;
-import com.mounacheikhna.ctc.lib.api.swapi.Person;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 
 /**
@@ -10,11 +9,11 @@ import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 public class ResourceDetails {
 
   CvCharacter mCvCharacter;
-  ResourceItem item;
+  ResourceItem mItem;
 
   public ResourceDetails(CvCharacter cvCharacter, ResourceItem item) {
     mCvCharacter = cvCharacter;
-    this.item = item;
+    mItem = item;
   }
 
   public CvCharacter getCvCharacter() {
@@ -22,6 +21,6 @@ public class ResourceDetails {
   }
 
   public ResourceItem getItem() {
-    return item;
+    return mItem;
   }
 }

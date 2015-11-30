@@ -12,6 +12,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.ResourceDetails;
+import com.mounacheikhna.ctc.lib.api.comicvine.CvCharacter;
 import com.mounacheikhna.ctc.ui.image.CircleStrokeTransformation;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
@@ -29,15 +30,19 @@ public class ResourceItemView extends RelativeLayout {
   }
 
   public void bindTo(@NonNull ResourceDetails resourceDetails, @NonNull  Picasso picasso) {
+    if(resourceDetails.getItem() == null) return;
     mNameView.setText(resourceDetails.getItem().name);
-    final String image = resourceDetails.getCvCharacter().image.screen_url;
-    if(!TextUtils.isEmpty(image)) {
-      picasso.load(image)
-          .placeholder(R.drawable.people) //temp
-          .error(R.drawable.people) //temp
-          .transform(mImageTransformation)
-          .fit().into(mAvatarView);
+    final CvCharacter cvCharacter = resourceDetails.getCvCharacter();
+
+    if(cvCharacter != null && cvCharacter.image != null) {
+      final String image = cvCharacter.image.screen_url;
+      if (!TextUtils.isEmpty(image)) {
+        picasso.load(image).placeholder(R.drawable.people) //temp
+            .error(R.drawable.people) //temp
+            .transform(mImageTransformation).fit().into(mAvatarView);
+      }
     }
+
   }
 
   @Override protected void onFinishInflate() {

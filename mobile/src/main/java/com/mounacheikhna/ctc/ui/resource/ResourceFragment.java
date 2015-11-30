@@ -21,7 +21,6 @@ import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
@@ -29,13 +28,14 @@ import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 import retrofit.Result;
-import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.subscriptions.CompositeSubscription;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
+ *
+ * Display a {@link Resource} (ex. People, Vehicle,...).
  */
 public class ResourceFragment extends Fragment {
 
@@ -58,6 +58,18 @@ public class ResourceFragment extends Fragment {
   private OnResourceItemSelectedListener mListener;
   private Resource mResource;
   private CompositeSubscription mSubscriptions = new CompositeSubscription();
+
+  /**
+   * An action to run when an error occurs while loading data.
+   */
+  private Action1<Result<? extends ResourceResponse>> mErrorAction =
+      new Action1<Result<? extends ResourceResponse>>() {
+    @Override public void call(Result<? extends ResourceResponse> result) {
+      mStateView.setText(String.format(getString(R.string.loading_error),
+          getString(mResource.getTextRes())));
+      mAnimatorView.setDisplayedChildId(R.id.list_state);
+    }
+  };
 
   public static ResourceFragment newInstance(Resource resource) {
     ResourceFragment fragment = new ResourceFragment();
@@ -85,7 +97,7 @@ public class ResourceFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     ButterKnife.bind(this, view);
     StarWarsApp.get(getActivity()).getComponent().injectListFragment(this);
-    setupList();
+    initList();
   }
 
   @SuppressWarnings("deprecation") @Override public void onAttach(Activity activity) {
@@ -99,7 +111,7 @@ public class ResourceFragment extends Fragment {
     }
   }
 
-  private void setupList() {
+  private void initList() {
     mResourceItemAdapter = new ResourceItemAdapter(mPicasso);
     mResourceItemAdapter.setOnResourceItemSelectedListener(mListener);
 
@@ -124,23 +136,12 @@ public class ResourceFragment extends Fragment {
 
   private void loadData() {
     if (!isConnected()) {
-      mStateView.setText(R.string.no_network); //TODO: maybe add a link for a try again
+      mStateView.setText(R.string.no_network);
       return;
     }
-
-    Action1<Result<? extends ResourceResponse>> errorAction =
-        new Action1<Result<? extends ResourceResponse>>() {
-          @Override public void call(Result<? extends ResourceResponse> result) {
-            mStateView.setText(String.format(getString(R.string.loading_error),
-                getString(mResource.getTextRes())));
-            mAnimatorView.setDisplayedChildId(R.id.list_state);
-          }
-        };
-
-    final Observable<ResourceDetails> starWarsCharacterObservable =
-        mResourceManager.fetchResourceData(mResource, null, errorAction);
-    mSubscriptions.add(starWarsCharacterObservable.observeOn(AndroidSchedulers.mainThread())
-        .subscribe(mResourceItemAdapter));
+    mSubscriptions.add(mResourceManager.fetchResourceData(mResource, null, mErrorAction)
+                          .observeOn(AndroidSchedulers.mainThread())
+                          .subscribe(mResourceItemAdapter));
   }
 
   private boolean isConnected() {

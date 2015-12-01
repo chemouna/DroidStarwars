@@ -65,7 +65,7 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
         @Override public void onClick(View v) {
           Log.d(TAG, "onClick() called with: " + "v = [" + v + "] and listener : "+ mItemSelectedListener);
           if (mItemSelectedListener != null) {
-            mItemSelectedListener.onResourceItemSelected(character.getItem());
+            mItemSelectedListener.onResourceItemSelected(v, character.getItem());
           }
         }
       });
@@ -78,7 +78,7 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
   }
 
   public interface OnResourceItemSelectedListener {
-    void onResourceItemSelected(ResourceItem resourceItem);
+    void onResourceItemSelected(View itemView, ResourceItem resourceItem);
   }
 
 }

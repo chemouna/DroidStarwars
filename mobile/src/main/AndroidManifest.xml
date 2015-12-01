@@ -40,6 +40,8 @@
           android:name="android.support.PARENT_ACTIVITY"
           android:value=".ui.resource.ResourceActivity" />
     </activity>
+    <activity android:name=".ui.resource.ResourceItemActivity"/>
+
   </application>
 
 </manifest>

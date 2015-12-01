@@ -127,6 +127,11 @@ public class ResourceItemFragment extends Fragment {
           }
         };
 
+    if(item.films == null || item.films.length == 0) {
+      mStateView.setText(R.string.empty_films);
+      mAnimatorView.setDisplayedChildId(R.id.list_state);
+      return;
+    }
     mSubscriptions.add(Observable.merge(Observable.from(item.films).map(starWarsFilmSearch))
         .flatMap(mResourceManager.tmdbFilmSearch)
         .subscribeOn(Schedulers.io())

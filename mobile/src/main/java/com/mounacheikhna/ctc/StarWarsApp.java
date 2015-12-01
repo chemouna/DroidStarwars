@@ -23,5 +23,4 @@ public class StarWarsApp extends Application {
   public AppComponent getComponent() {
     return mComponent;
   }
-
 }

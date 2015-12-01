@@ -25,30 +25,28 @@ import timber.log.Timber;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
+ *
+ * Core module with main api dependencies.
  */
-@Module
-public class CoreApiModule {
+@Module public class CoreApiModule {
 
   @Provides @Singleton Moshi provideMoshi() {
-    return new Moshi.Builder()
-        .build();
+    return new Moshi.Builder().build();
   }
 
-  @Provides @Singleton @ApiClient
-  OkHttpClient provideApiClient(OkHttpClient client,
+  @Provides @Singleton @ApiClient OkHttpClient provideApiClient(OkHttpClient client,
       @NetworkInterceptors List<Interceptor> networkInterceptors) {
     OkHttpClient okClient = client.clone();
     okClient.networkInterceptors().addAll(networkInterceptors);
     return okClient;
   }
 
-  @Provides @Singleton OkHttpClient provideOkHttpClient(){
+  @Provides @Singleton OkHttpClient provideOkHttpClient() {
     return new OkHttpClient();
   }
 
-  @Provides @Singleton Retrofit provideRetrofit(@ApiClient OkHttpClient  apiClient, Moshi moshi) {
-    return new Retrofit.Builder()
-        .client(apiClient)
+  @Provides @Singleton Retrofit provideRetrofit(@ApiClient OkHttpClient apiClient, Moshi moshi) {
+    return new Retrofit.Builder().client(apiClient)
         .baseUrl(HttpUrl.parse(SwapiApi.SWAPI_ENDPOINT_URL))
         .addConverterFactory(MoshiConverterFactory.create(moshi))
         .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
@@ -80,8 +78,7 @@ public class CoreApiModule {
       @NetworkInterceptors List<Interceptor> networkInterceptors) {
     OkHttpClient okClient = client.clone();
     okClient.networkInterceptors().addAll(networkInterceptors);
-    return new Picasso.Builder(app)
-        .downloader(new OkHttpDownloader(okClient))
+    return new Picasso.Builder(app).downloader(new OkHttpDownloader(okClient))
         .listener(new Picasso.Listener() {
           @Override public void onImageLoadFailed(Picasso picasso, Uri uri, Exception e) {
             Timber.e("Failed to load image: %s, cause : %s", uri, e);
@@ -89,5 +86,4 @@ public class CoreApiModule {
         })
         .build();
   }
-
 }

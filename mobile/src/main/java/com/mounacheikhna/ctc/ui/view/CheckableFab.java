@@ -8,12 +8,14 @@ import android.widget.Checkable;
 
 /**
  * Created by mouna on 01/12/15.
+ *
+ * A checkable {@link FloatingActionButton}.
  */
 public class CheckableFab extends FloatingActionButton implements Checkable {
 
   private boolean isChecked = false;
   private int minOffset;
-  private int[] CHECKED_STATE_SET = new int[]{android.R.attr.state_checked};
+  private int[] CHECKED_STATE_SET = new int[] { android.R.attr.state_checked };
 
   public CheckableFab(Context context) {
     super(context);
@@ -31,7 +33,7 @@ public class CheckableFab extends FloatingActionButton implements Checkable {
   }
 
   private void init() {
-    if(isInEditMode()) return;
+    if (isInEditMode()) return;
     setOnClickListener(new OnClickListener() {
       @Override public void onClick(View v) {
         toggle();
@@ -62,5 +64,4 @@ public class CheckableFab extends FloatingActionButton implements Checkable {
     }
     return drawableState;
   }
-
 }

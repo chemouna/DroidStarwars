@@ -22,10 +22,10 @@ import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
+import com.mounacheikhna.ctc.ui.recyclerview.ItemSelectionSupport;
 import com.mounacheikhna.ctc.ui.recyclerview.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
 import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
-import com.mounacheikhna.ctc.ui.recyclerview.ItemSelectionSupport;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 import retrofit.Result;
@@ -36,7 +36,8 @@ import rx.subscriptions.CompositeSubscription;
 /**
  * Created by cheikhnamouna on 11/21/15.
  *
- * Display a {@link Resource} (ex. People, Vehicle,...).
+ * Display a {@link Resource} (ex. People, Vehicle,...) by using details fetched with swapi combined
+ * with avatars from comic vine for characters of each item.
  */
 public class ResourceFragment extends Fragment {
 
@@ -129,8 +130,7 @@ public class ResourceFragment extends Fragment {
             false));
 
     ItemSelectionSupport itemSelectionSupport = ItemSelectionSupport.addTo(mRecyclerView);
-    itemSelectionSupport.setChoiceMode(
-        mActivateOnItemClick ? ItemSelectionSupport.ChoiceMode.SINGLE
+    itemSelectionSupport.setChoiceMode(mActivateOnItemClick ? ItemSelectionSupport.ChoiceMode.SINGLE
         : ItemSelectionSupport.ChoiceMode.NONE);
 
     mRecyclerView.setAdapter(mResourceItemAdapter);
@@ -165,7 +165,7 @@ public class ResourceFragment extends Fragment {
   @Override public void onDestroy() {
     super.onDestroy();
     subscriptions.clear();
-    if(mResourceManager != null){
+    if (mResourceManager != null) {
       mResourceManager.unbind();
     }
   }

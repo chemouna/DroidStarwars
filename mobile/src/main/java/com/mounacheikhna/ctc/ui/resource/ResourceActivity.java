@@ -26,6 +26,9 @@ import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 /**
  * Created by cheikhnamouna on 11/21/15.
  *
+ * Hosts {@link Fragment}s that display a {@link Resource} and handles transition animation from
+ * resources grid screen, and dispatches either to a fragment or a new activity after a click
+ * on a {@link ResourceItem} based on a device's screen size (handset, tablet).
  */
 public class ResourceActivity extends AppCompatActivity implements OnResourceItemSelectedListener {
 
@@ -45,7 +48,7 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    if(getIntent().getStringExtra(RESOURCE_EXTRA) != null) { //TODO: save this in state
+    if (getIntent().getStringExtra(RESOURCE_EXTRA) != null) { //TODO: save this in state
       mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
       displayResource();
       setupTransitions();
@@ -111,7 +114,7 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
 
     mIsTwoPane = findViewById(R.id.item_fragment) != null;
     // in two-pane display mode, when an item is touched it should be activated.
-    if(mIsTwoPane) {
+    if (mIsTwoPane) {
       newFragment.setActivateOnItemClick(true);
     }
   }
@@ -122,13 +125,10 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
   }
 
   @Override public void onResourceItemSelected(View view, ResourceItem item) {
-    if(mIsTwoPane) { //show inline
+    if (mIsTwoPane) { //show inline
       ResourceItemFragment fragment = ResourceItemFragment.newInstance(item);
-      getFragmentManager().beginTransaction()
-            .replace(R.id.item_fragment, fragment)
-            .commit();
-    }
-    else {
+      getFragmentManager().beginTransaction().replace(R.id.item_fragment, fragment).commit();
+    } else {
       Intent intent = new Intent(this, ResourceItemActivity.class);
       //for some reason putting entire ResourceItem as extra films is null when we get it from intent.
       intent.putExtra(ResourceItemActivity.RESOURCE_ITEM_NAME, item.name);
@@ -136,9 +136,8 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
       intent.putExtra(ResourceItemActivity.PARENT_RESOURCE, mResource);
       if (view != null) {
         ActivityCompat.startActivity(this, intent,
-            ActivityOptionsCompat
-                .makeScaleUpAnimation(view, 0, 0, view.getWidth(), view.getHeight())
-                .toBundle());
+            ActivityOptionsCompat.makeScaleUpAnimation(view, 0, 0, view.getWidth(),
+                view.getHeight()).toBundle());
       } else {
         startActivity(intent);
       }

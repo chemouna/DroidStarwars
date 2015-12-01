@@ -17,6 +17,10 @@ import java.util.List;
 
 import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
+/**
+ * Displays a grid of {@link Resource}s.
+ *
+ */
 public class ResourcesGridFragment extends Fragment {
 
   private static final int REQUEST_RESOURCE_ITEM = 1;
@@ -34,8 +38,8 @@ public class ResourcesGridFragment extends Fragment {
     return inflater.inflate(R.layout.resources_fragment, container, false);
   }
 
-  @SuppressWarnings("NewApi")
-  @Override public void onViewCreated(View view, Bundle savedInstanceState) {
+  @SuppressWarnings("NewApi") @Override
+  public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
     ButterKnife.bind(this, view);
 
@@ -46,11 +50,8 @@ public class ResourcesGridFragment extends Fragment {
       @Override public void onItemClick(View view, int position) {
         List<Pair> pairs = new ArrayList<>(3);
         View decor = getActivity().getWindow().getDecorView();
-        View statusBar = null;
         if (isAtLeastLollipop()) {
-          //View statusBar = decor.findViewById(android.R.id.statusBarBackground);
           View navBar = decor.findViewById(android.R.id.navigationBarBackground);
-          //pairs.add(new Pair<>(statusBar, statusBar.getTransitionName()));
           pairs.add(new Pair<>(navBar, navBar.getTransitionName()));
         }
 
@@ -63,21 +64,17 @@ public class ResourcesGridFragment extends Fragment {
                 pairs.toArray(new Pair[pairs.size()]));
 
         final Bundle transitionBundle = sceneTransitionAnimation.toBundle();
-        startActivityForResult(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()),
+        startActivityForResult(
+            ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()),
             REQUEST_RESOURCE_ITEM, transitionBundle);
-        //startActivity(ResourceActivity.getIntent(getActivity(), mAdapter.getItem(position).name()));
       }
     });
 
     mResourcesView.setAdapter(mAdapter);
   }
 
-  @Override
-  public void onResume() {
-    //((AppCompatActivity) getActivity()).supportPostponeEnterTransition();
+  @Override public void onResume() {
     super.onResume();
   }
-
-
 }
 

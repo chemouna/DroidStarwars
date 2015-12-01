@@ -13,10 +13,15 @@ import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.comicvine.CvCharacter;
+import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
 import com.mounacheikhna.ctc.ui.image.CircleStrokeTransformation;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Transformation;
 
+/**
+ * Display a {@link ResourceItem} (ex: a character (like Luke Skywalker) or a vehicle (like T-16
+ * skyhopper).
+ */
 public class ResourceItemView extends RelativeLayout {
 
   private final Transformation mImageTransformation;
@@ -26,17 +31,16 @@ public class ResourceItemView extends RelativeLayout {
 
   public ResourceItemView(Context context, AttributeSet attrs) {
     super(context, attrs);
-    mImageTransformation =
-        new CircleStrokeTransformation(context, ContextCompat.getColor(context, R.color.resource_avatar_stroke), 1);
+    mImageTransformation = new CircleStrokeTransformation(context,
+        ContextCompat.getColor(context, R.color.resource_avatar_stroke), 1);
   }
 
-  public void bindTo(@NonNull ResourceDetails resourceDetails, @NonNull  Picasso picasso) {
-    if(resourceDetails.getItem() == null || resourceDetails.getCvCharacter() == null) return;
+  public void bindTo(@NonNull ResourceDetails resourceDetails, @NonNull Picasso picasso) {
+    if (resourceDetails.getItem() == null || resourceDetails.getCvCharacter() == null) return;
     mNameView.setText(resourceDetails.getItem().name);
     final CvCharacter cvCharacter = resourceDetails.getCvCharacter();
     mDescriptionView.setText(resourceDetails.getCvCharacter().deck);
-    if(cvCharacter != null && cvCharacter.image != null) {
-      //final String image = cvCharacter.image.screen_url;
+    if (cvCharacter != null && cvCharacter.image != null) {
       final String image = cvCharacter.image.medium_url;
       if (!TextUtils.isEmpty(image)) {
         picasso.load(image)
@@ -45,12 +49,10 @@ public class ResourceItemView extends RelativeLayout {
             .transform(mImageTransformation).fit().into(mAvatarView);
       }
     }
-
   }
 
   @Override protected void onFinishInflate() {
     super.onFinishInflate();
     ButterKnife.bind(this);
   }
-
 }

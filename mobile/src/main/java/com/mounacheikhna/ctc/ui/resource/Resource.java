@@ -6,6 +6,9 @@ import android.support.annotation.StringRes;
 import android.support.annotation.StyleRes;
 import com.mounacheikhna.ctc.R;
 
+/**
+ * Defines a resource title, drawable and style.
+ */
 public enum Resource {
 
   PEOPLE(R.string.people, R.drawable.people, ResourceStyle.STYLE_PEOPLE),
@@ -39,8 +42,8 @@ public enum Resource {
 
   public enum ResourceStyle {
     STYLE_PEOPLE(R.color.style_people_primary, R.color.style_people_primary_dark,
-        R.color.style_people_resource, R.color.style_people_accent,
-        R.color.style_people_title, R.color.style_people_text, R.style.StarWars_People),
+        R.color.style_people_resource, R.color.style_people_accent, R.color.style_people_title,
+        R.color.style_people_text, R.style.StarWars_People),
     STYLE_STARSHIPS(R.color.style_starships_primary, R.color.style_starships_primary_dark,
         R.color.style_starships_resource, R.color.style_starships_accent,
         R.color.style_starships_title, R.color.style_starships_text, R.style.StarWars_Starships),
@@ -48,11 +51,11 @@ public enum Resource {
         R.color.style_vehicles_resource, R.color.style_vehicles_accent,
         R.color.style_vehicles_title, R.color.style_vehicles_text, R.style.StarWars_Vehicles),
     STYLE_SPECIES(R.color.style_species_primary, R.color.style_species_primary_dark,
-        R.color.style_species_resource, R.color.style_species_accent,
-        R.color.style_species_title, R.color.style_species_text, R.style.StarWars_Species),
+        R.color.style_species_resource, R.color.style_species_accent, R.color.style_species_title,
+        R.color.style_species_text, R.style.StarWars_Species),
     STYLE_PLANETS(R.color.style_planets_primary, R.color.style_planets_primary_dark,
-        R.color.style_planets_resource, R.color.style_planets_accent,
-        R.color.style_planets_title, R.color.style_planets_text, R.style.StarWars_Planets);
+        R.color.style_planets_resource, R.color.style_planets_accent, R.color.style_planets_title,
+        R.color.style_planets_text, R.style.StarWars_Planets);
 
     @ColorRes private final int mColorPrimary;
     @ColorRes private final int mColorPrimaryDark;
@@ -62,8 +65,8 @@ public enum Resource {
     @ColorRes private final int mTextColorPrimary;
     @StyleRes private final int mStyleRes;
 
-    ResourceStyle(int colorPrimary, int colorPrimaryDark, int resourceColor,
-        int accentColor, int titleColorPrimary, int textColorPrimary, int styleRes) {
+    ResourceStyle(int colorPrimary, int colorPrimaryDark, int resourceColor, int accentColor,
+        int titleColorPrimary, int textColorPrimary, int styleRes) {
       mColorPrimary = colorPrimary;
       mColorPrimaryDark = colorPrimaryDark;
       mResourceColor = resourceColor;
@@ -73,28 +76,23 @@ public enum Resource {
       mStyleRes = styleRes;
     }
 
-    @ColorRes
-    public int getColorPrimary() {
+    @ColorRes public int getColorPrimary() {
       return mColorPrimary;
     }
 
-    @ColorRes
-    public int getColorPrimaryDark() {
+    @ColorRes public int getColorPrimaryDark() {
       return mColorPrimaryDark;
     }
 
-    @StyleRes
-    public int getStyleRes() {
+    @StyleRes public int getStyleRes() {
       return mStyleRes;
     }
 
-    @ColorRes
-    public int getTitleColorPrimary() {
+    @ColorRes public int getTitleColorPrimary() {
       return mTitleColorPrimary;
     }
 
-    @ColorRes
-    public int getTextColorPrimary() {
+    @ColorRes public int getTextColorPrimary() {
       return mTextColorPrimary;
     }
 
@@ -102,7 +100,5 @@ public enum Resource {
       return mResourceColor;
     }
   }
-
-
 
 }

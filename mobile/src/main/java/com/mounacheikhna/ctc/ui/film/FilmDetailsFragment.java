@@ -47,6 +47,8 @@ import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastM;
 
 /**
  * Created by mouna on 28/11/15.
+ *
+ * Displays a film : its poster, details with a different layout for handset and tablet.
  */
 public class FilmDetailsFragment extends Fragment {
 

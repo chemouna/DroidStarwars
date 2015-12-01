@@ -7,6 +7,9 @@ android {
   defaultConfig {
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
+
+    buildConfigField "String", "TMDB_API_KEY", "\"" + "ef144f1cbb32018e681291bdf05f85bb" + "\"";
+    buildConfigField "String", "COMIC_VINE_API_KEY", "\"" + "0fc5af501a324750d745947b5f34829f28e5ee4b" + "\"";
   }
 
 }
@@ -14,11 +17,9 @@ android {
 dependencies {
 
   compile rootProject.ext.supportAnnotations
-
   compile rootProject.ext.retrofit
   compile rootProject.ext.converterMoshi
   compile rootProject.ext.adapterRxjava
-
   compile rootProject.ext.rxJava
   compile rootProject.ext.rxAndroid
 

@@ -20,7 +20,7 @@ public class FilmDetails implements Parcelable {
   public FilmDetails(Film film, SearchMovieResponse movieResponse) {
     this.film = film;
     if(movieResponse.results.length > 0) {
-      this.movieResult = movieResponse.results[0]; //temp
+      this.movieResult = movieResponse.results[0];
       this.posterUrl = buildMovieImageUrl(this.movieResult.poster_path, "w185");
       this.backdropUrl = buildMovieImageUrl(this.movieResult.backdrop_path, "w500");
     }

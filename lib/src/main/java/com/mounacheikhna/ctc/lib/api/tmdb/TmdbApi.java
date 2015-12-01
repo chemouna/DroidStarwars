@@ -1,5 +1,7 @@
 package com.mounacheikhna.ctc.lib.api.tmdb;
 
+import android.os.Build;
+import com.mounacheikhna.ctc.lib.BuildConfig;
 import retrofit.http.GET;
 import retrofit.http.Query;
 import rx.Observable;
@@ -9,7 +11,6 @@ import rx.Observable;
  */
 public interface TmdbApi {
 
-  String TMDB_API_KEY = "ef144f1cbb32018e681291bdf05f85bb";// (api key -> put it in manifest & get it from there)
   String TMDB_BASE_URL = "http://api.themoviedb.org/3/";
 
   @GET(TMDB_BASE_URL + "search/movie")

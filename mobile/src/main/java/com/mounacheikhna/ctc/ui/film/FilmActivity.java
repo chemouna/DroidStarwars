@@ -11,6 +11,8 @@ import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 
 /**
  * Created by mouna on 28/11/15.
+ *
+ * Hosts the fragment that displays film's screen.
  */
 public class FilmActivity extends AppCompatActivity {
 

@@ -7,7 +7,8 @@ import android.os.Build;
  */
 public final class ApiLevels {
 
-  private ApiLevels(){}
+  private ApiLevels() {
+  }
 
   public static boolean isAtLeastM() {
     return isAtLeast(Build.VERSION_CODES.M);
@@ -20,5 +21,4 @@ public final class ApiLevels {
   public static boolean isAtLeast(int apiLevel) {
     return Build.VERSION.SDK_INT >= apiLevel;
   }
-
 }

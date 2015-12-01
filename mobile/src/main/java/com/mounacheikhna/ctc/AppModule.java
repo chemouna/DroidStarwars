@@ -7,8 +7,7 @@ import dagger.Module;
 import dagger.Provides;
 import javax.inject.Singleton;
 
-@Module
-public class AppModule {
+@Module public class AppModule {
   private final Application application;
 
   public AppModule(Application application) {
@@ -22,6 +21,4 @@ public class AppModule {
   @Provides @ApplicationContext public Context provideApplicationContext() {
     return application.getApplicationContext();
   }
-
-
 }

@@ -14,6 +14,8 @@ import rx.functions.Action1;
 
 /**
  * Created by mouna on 26/11/15.
+ *
+ * Shows a list of films.
  */
 public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder>
     implements Action1<FilmDetails> {

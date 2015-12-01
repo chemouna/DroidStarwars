@@ -1,6 +1,7 @@
 package com.mounacheikhna.ctc.lib.api;
 
 import android.util.Log;
+import com.mounacheikhna.ctc.lib.BuildConfig;
 import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
 import com.mounacheikhna.ctc.lib.api.comicvine.ComicVineApi;
 import com.mounacheikhna.ctc.lib.api.swapi.Film;
@@ -53,7 +54,7 @@ public class ApiManager {
   }
 
   public Observable<SearchMovieResponse> getFilmDetails(String query) {
-    return mTmdbApi.search(TmdbApi.TMDB_API_KEY, query).subscribeOn(Schedulers.io());
+    return mTmdbApi.search(BuildConfig.TMDB_API_KEY, query).subscribeOn(Schedulers.io());
   }
 
   public Observable<CharacterResponse> searchCharacter(String query) {

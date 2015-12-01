@@ -8,15 +8,8 @@ import android.support.annotation.Nullable;
  * Created by mouna on 27/11/15.
  */
 public class SearchMovieResponse implements Parcelable {
-  //@Nullable public String status_message;
   public final int page;
   public final MovieResult[] results;
-
-  /*public SearchMovieResponse(@Nullable String status_message, int page, MovieResult[] results) {
-    this.status_message = status_message;
-    this.page = page;
-    this.results = results;
-  }*/
 
   public SearchMovieResponse(int page, MovieResult[] results) {
     this.page = page;
@@ -83,13 +76,11 @@ public class SearchMovieResponse implements Parcelable {
   }
 
   @Override public void writeToParcel(Parcel dest, int flags) {
-    //dest.writeString(this.status_message);
     dest.writeInt(this.page);
     dest.writeParcelableArray(this.results, 0);
   }
 
   protected SearchMovieResponse(Parcel in) {
-    //this.status_message = in.readString();
     this.page = in.readInt();
     this.results = (MovieResult[]) in.readParcelableArray(MovieResult.class.getClassLoader());
   }

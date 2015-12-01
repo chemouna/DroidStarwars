@@ -6,6 +6,8 @@ import android.widget.ViewAnimator;
 
 /**
  * Created by mouna on 30/11/15.
+ *
+ * A {@link ViewAnimator} that switches with an animation between its children.
  */
 public class CustomViewAnimator extends ViewAnimator {
 
@@ -30,5 +32,4 @@ public class CustomViewAnimator extends ViewAnimator {
   public int getDisplayedChildId() {
     return getChildAt(getDisplayedChild()).getId();
   }
-
 }

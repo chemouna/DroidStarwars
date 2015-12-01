@@ -4,7 +4,6 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import butterknife.Bind;
@@ -15,6 +14,8 @@ import com.squareup.picasso.Picasso;
 
 /**
  * Created by mouna on 26/11/15.
+ *
+ * Display a film item with an image, title and description.
  */
 public class FilmItemView extends RelativeLayout {
 
@@ -28,12 +29,13 @@ public class FilmItemView extends RelativeLayout {
 
   public void bindTo(FilmDetails filmDetails, Picasso picasso) {
     mTitle.setText(filmDetails.movieResult.title);
-    mDescription.setText(filmDetails.movieResult.overview); //TODO: make desc tv an expandable one
-    if(!TextUtils.isEmpty(filmDetails.posterUrl)) {
+    mDescription.setText(filmDetails.movieResult.overview);
+    if (!TextUtils.isEmpty(filmDetails.posterUrl)) {
       picasso.load(filmDetails.posterUrl)
-          .placeholder(R.drawable.people) //temp
-          .error(R.drawable.people) //temp
-          .fit().into(mImage);
+          .placeholder(R.drawable.people)
+          .error(R.drawable.people)
+          .fit()
+          .into(mImage);
     }
   }
 
@@ -41,5 +43,4 @@ public class FilmItemView extends RelativeLayout {
     super.onFinishInflate();
     ButterKnife.bind(this);
   }
-
 }

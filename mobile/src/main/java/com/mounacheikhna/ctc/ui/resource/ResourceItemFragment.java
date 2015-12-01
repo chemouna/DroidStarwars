@@ -4,6 +4,7 @@ import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,11 +21,12 @@ import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.api.Results;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.mounacheikhna.ctc.lib.api.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
+import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.mounacheikhna.ctc.ui.film.FilmActivity;
 import com.mounacheikhna.ctc.ui.film.FilmAdapter;
+import com.mounacheikhna.ctc.ui.recyclerview.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
@@ -35,10 +37,12 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
-import com.mounacheikhna.ctc.ui.recyclerview.decoration.DividerItemDecoration;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
+ *
+ * Display a {link ResourceItem}'s films (ex: for 'Luke Skywalker' displays all movies in which that
+ * character appears (using Tmdb api).
  */
 public class ResourceItemFragment extends Fragment {
 
@@ -57,6 +61,15 @@ public class ResourceItemFragment extends Fragment {
   private ResourceItem mItem;
   private FilmAdapter mFilmAdapter;
   private CompositeSubscription mSubscriptions = new CompositeSubscription();
+  /**
+   * An action to run when an error occurs while loading data.
+   */
+  private Action1<Result<Film>> mErrorAction = new Action1<Result<Film>>() {
+    @Override public void call(Result<Film> result) {
+      mStateView.setText(R.string.loading_error_films);
+      mAnimatorView.setDisplayedChildId(R.id.list_state);
+    }
+  };
 
   public static ResourceItemFragment newInstance(ResourceItem item) {
     ResourceItemFragment fragment = new ResourceItemFragment();
@@ -104,9 +117,7 @@ public class ResourceItemFragment extends Fragment {
         final ActivityOptionsCompat options =
             ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
                 new Pair<>(view, getString(R.string.transition_film_image)));
-            /*android.util.Pair.create<View, String>(venueImage,
-            context.resources.getString(R.string.transition_venue_background)))*/
-        startActivity(intent, options.toBundle());
+        ActivityCompat.startActivity(getActivity(), intent, options.toBundle());
       }
     });
     mRecyclerView.setAdapter(mFilmAdapter);
@@ -117,7 +128,7 @@ public class ResourceItemFragment extends Fragment {
   }
 
   public void show(ResourceItem item) {
-    if(getActivity() instanceof ResourceActivity) {//toolbar of ResourceActivity is a fake one
+    if (getActivity() instanceof ResourceActivity) {//toolbar of ResourceActivity is a fake one
       ((ResourceActivity) getActivity()).updateTitle(item.name);
     }
     loadFilms(item);
@@ -132,7 +143,7 @@ public class ResourceItemFragment extends Fragment {
           }
         };
 
-    if(item.films == null || item.films.length == 0) {
+    if (item.films == null || item.films.length == 0) {
       mStateView.setText(R.string.empty_films);
       mAnimatorView.setDisplayedChildId(R.id.list_state);
       return;
@@ -143,17 +154,6 @@ public class ResourceItemFragment extends Fragment {
         .observeOn(AndroidSchedulers.mainThread())
         .subscribe(mFilmAdapter));
   }
-
-  /**
-   * An action to run when an error occurs while loading data.
-   */
-  private Action1<Result<Film>> mErrorAction =
-      new Action1<Result<Film>>() {
-        @Override public void call(Result<Film> result) {
-          mStateView.setText(R.string.loading_error_films);
-          mAnimatorView.setDisplayedChildId(R.id.list_state);
-        }
-      };
 
   @NonNull private Observable<Result<Film>> handleFilmFetch(String idFilm) {
     final Observable<Result<Film>> filmObs = mApiManager.getFilm(Integer.parseInt(idFilm));

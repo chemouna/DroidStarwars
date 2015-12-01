@@ -12,6 +12,9 @@ import static android.graphics.Bitmap.Config.ARGB_8888;
 import static android.graphics.Paint.ANTI_ALIAS_FLAG;
 import static android.graphics.Shader.TileMode.CLAMP;
 
+/**
+ * A transformation for picasso to make circle avatars.
+ */
 public class CircleStrokeTransformation implements Transformation {
   private final float strokeWidth;
   private final Paint strokePaint;

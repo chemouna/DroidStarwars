@@ -20,40 +20,34 @@ import com.mounacheikhna.ctc.util.Animations.IntProperty;
 /**
  * Created by mouna on 24/11/15.
  */
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-public class TextSizePaddingTransition extends Transition {
+@TargetApi(Build.VERSION_CODES.LOLLIPOP) public class TextSizePaddingTransition extends Transition {
 
   private static final String PROPNAME_TEXTSIZE = "com:mounacheikhna:ctc:transition:textSize";
-  private static final String PROPNAME_PADDING_START = "com:mounacheikhna:ctc:transition:paddingStart";
+  private static final String PROPNAME_PADDING_START =
+      "com:mounacheikhna:ctc:transition:paddingStart";
 
   public static final Property<TextView, Float> PROP_TEXT_SIZE =
       new FloatProperty<TextView>("textSize") {
-        @Override
-        public Float get(TextView view) {
+        @Override public Float get(TextView view) {
           return view.getTextSize();
         }
 
-        @Override
-        public void setValue(TextView view, float textSize) {
+        @Override public void setValue(TextView view, float textSize) {
           view.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         }
       };
 
   public static final Property<TextView, Integer> PROP_PADDING_START =
       new IntProperty<TextView>("paddingStart") {
-        @Override
-        public Integer get(TextView view) {
+        @Override public Integer get(TextView view) {
           return ViewCompat.getPaddingStart(view);
         }
 
-        @Override
-        public void setValue(TextView view, int paddingStart) {
+        @Override public void setValue(TextView view, int paddingStart) {
           ViewCompat.setPaddingRelative(view, paddingStart, view.getPaddingTop(),
               ViewCompat.getPaddingEnd(view), view.getPaddingBottom());
         }
       };
-
-
 
   public TextSizePaddingTransition(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -90,11 +84,8 @@ public class TextSizePaddingTransition extends Transition {
 
     AnimatorSet animatorSet = new AnimatorSet();
     animatorSet.playTogether(
-        ObjectAnimator.ofFloat(targetView, PROP_TEXT_SIZE,
-            initialTextSize,
-            targetTextSize),
-        ObjectAnimator.ofInt(targetView, PROP_PADDING_START,
-            initialPaddingStart,
+        ObjectAnimator.ofFloat(targetView, PROP_TEXT_SIZE, initialTextSize, targetTextSize),
+        ObjectAnimator.ofInt(targetView, PROP_PADDING_START, initialPaddingStart,
             targetPaddingStart));
     return animatorSet;
   }

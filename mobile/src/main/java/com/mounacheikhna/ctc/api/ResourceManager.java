@@ -1,7 +1,6 @@
 package com.mounacheikhna.ctc.api;
 
 import android.support.annotation.Nullable;
-import android.text.TextUtils;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
@@ -28,6 +27,8 @@ import static rx.android.schedulers.AndroidSchedulers.mainThread;
 
 /**
  * Created by mouna on 30/11/15.
+ *
+ * Manages logic for requests to various used apis (swapi, tmdb, comicvine (defined in lib module).
  */
 public class ResourceManager {
 
@@ -55,7 +56,17 @@ public class ResourceManager {
           return new ArrayList<ResourceItem>(items);
         }
       };
-
+  /**
+   * Fetches a {@link ResourceDetails} for each {@link ResourceItem}.
+   */
+  final Func1<List<ResourceItem>, Observable<ResourceDetails>> listCharactersForItem =
+      new Func1<List<ResourceItem>, Observable<ResourceDetails>>() {
+        @Override public Observable<ResourceDetails> call(List<ResourceItem> resourceItems) {
+          return Observable.from(resourceItems).flatMap(searchCharacterByItem);
+        }
+      };
+  private CompositeSubscription mSubscriptions;
+  private ApiManager mApiManager;
   /**
    * Finds {@link ResourceDetails}s that match a Resource item name. (ex. search characters that
    * are based on 'Luke skywalker' from comicvine api.
@@ -64,15 +75,12 @@ public class ResourceManager {
       new Func1<ResourceItem, Observable<ResourceDetails>>() {
         @Override public Observable<ResourceDetails> call(final ResourceItem resourceItem) {
           return mApiManager.searchCharacter(resourceItem.name)
-              /*.filter(new Func1<CharacterResponse, Boolean>() {
-                @Override public Boolean call(CharacterResponse characterResponse) {
-                  return characterResponse.getError().equals("OK");
-                }
-              })*/
               .map(new Func1<CharacterResponse, ResourceDetails>() {
                 @Override public ResourceDetails call(CharacterResponse characterResponse) {
-                  if (characterResponse.getResults() == null ||
-                      characterResponse.getResults().size() == 0) return null;
+                  if (characterResponse.getResults() == null
+                      || characterResponse.getResults().size() == 0) {
+                    return null;
+                  }
                   return new ResourceDetails(characterResponse.getResults().get(0), resourceItem);
                 }
               })
@@ -83,30 +91,17 @@ public class ResourceManager {
               });
         }
       };
-  /**
-   * Fetches a {@link ResourceDetails} for each {@link ResourceItem}.
-   */
-  final Func1<List<ResourceItem>, Observable<ResourceDetails>> listCharactersForItem =
-      new Func1<List<ResourceItem>, Observable<ResourceDetails>>() {
-        @Override public Observable<ResourceDetails> call(List<ResourceItem> resourceItems) {
-          return Observable.from(resourceItems).flatMap(searchCharacterByItem);
-        }
-      };
-
   public final Func1<Result<Film>, Observable<FilmDetails>> tmdbFilmSearch =
       new Func1<Result<Film>, Observable<FilmDetails>>() {
         @Override public Observable<FilmDetails> call(Result<Film> filmResult) {
-          if(filmResult.isError() || filmResult.response() == null || filmResult.response().body() == null) {//Temp
-              return Observable.empty();
+          if (filmResult.isError()
+              || filmResult.response() == null
+              || filmResult.response().body() == null) {//Temp
+            return Observable.empty();
           }
 
           final Film film = filmResult.response().body();
           return mApiManager.getFilmDetails(film.title)
-              /*.filter(new Func1<SearchMovieResponse, Boolean>() {
-                @Override public Boolean call(SearchMovieResponse searchMovieResponse) {
-                  return TextUtils.isEmpty(searchMovieResponse.status_message);
-                }
-              })*/
               .map(new Func1<SearchMovieResponse, FilmDetails>() {
                 @Override public FilmDetails call(SearchMovieResponse searchMovieResponse) {
                   return new FilmDetails(film, searchMovieResponse);
@@ -115,9 +110,6 @@ public class ResourceManager {
         }
       };
 
-  private CompositeSubscription mSubscriptions;
-  private ApiManager mApiManager;
-
   public ResourceManager(ApiManager apiManager) {
     mApiManager = apiManager;
     mSubscriptions = new CompositeSubscription();
@@ -125,6 +117,7 @@ public class ResourceManager {
 
   /**
    * Fetches details of a resource.
+   *
    * @param resource to fetch characters for.
    * @param successAction an action to run when request succeeds.
    * @param errorAction an action to run when an error happens in this flow.
@@ -135,8 +128,7 @@ public class ResourceManager {
       @Nullable final Action1<Result<? extends ResourceResponse>> errorAction) {
     switch (resource) {
       case PEOPLE:
-        final Observable<Result<PeopleResponse>> peopleObs =
-            mApiManager.fetchPeople().share();
+        final Observable<Result<PeopleResponse>> peopleObs = mApiManager.fetchPeople().share();
         final Observable<ResourceDetails> characterPeopleObservable =
             peopleObs.filter(Results.isSuccess())
                 .map(peopleToResourceItems)
@@ -156,7 +148,8 @@ public class ResourceManager {
                 .flatMap(listCharactersForItem)
                 .share();
         if (errorAction != null) {
-          mSubscriptions.add(vehiclesObs.observeOn(mainThread()).filter(Results.isError()).subscribe(errorAction));
+          mSubscriptions.add(
+              vehiclesObs.observeOn(mainThread()).filter(Results.isError()).subscribe(errorAction));
         }
         return characterVehiclesObservable;
       default:

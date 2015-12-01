@@ -10,17 +10,18 @@ import android.util.Property;
  */
 public final class Animations {
 
-  private Animations() {}
+  private Animations() {
+  }
 
   public static abstract class FloatProperty<T> extends Property<T, Float> {
 
     public FloatProperty(String name) {
       super(Float.class, name);
     }
+
     public abstract void setValue(T object, float value);
 
-    @Override
-    final public void set(T object, Float value) {
+    @Override final public void set(T object, Float value) {
       //noinspection UnnecessaryUnboxing
       setValue(object, value.floatValue());
     }
@@ -34,15 +35,14 @@ public final class Animations {
 
     public abstract void setValue(T object, int value);
 
-    @Override
-    final public void set(T object, Integer value) {
+    @Override final public void set(T object, Integer value) {
       //noinspection UnnecessaryUnboxing
       setValue(object, value.intValue());
     }
   }
 
-  @TargetApi(Build.VERSION_CODES.KITKAT)
-  public static class EmptyTransitionListener implements Transition.TransitionListener {
+  @TargetApi(Build.VERSION_CODES.KITKAT) public static class EmptyTransitionListener
+      implements Transition.TransitionListener {
 
     @Override public void onTransitionStart(Transition transition) {
 
@@ -64,6 +64,4 @@ public final class Animations {
 
     }
   }
-
-
 }

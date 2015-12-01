@@ -23,16 +23,12 @@ public class MainActivity extends AppCompatActivity {
     }
   }
 
-
   private void attachResourcesFragment() {
     FragmentManager fragmentManager = getFragmentManager();
     Fragment fragment = fragmentManager.findFragmentById(R.id.root_container);
     if (!(fragment instanceof ResourcesGridFragment)) {
       fragment = ResourcesGridFragment.newInstance();
     }
-    fragmentManager.beginTransaction()
-        .replace(R.id.root_container, fragment)
-        .commit();
+    fragmentManager.beginTransaction().replace(R.id.root_container, fragment).commit();
   }
-
 }

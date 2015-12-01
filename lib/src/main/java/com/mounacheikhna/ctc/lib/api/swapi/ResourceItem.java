@@ -10,8 +10,6 @@ import java.util.Arrays;
  */
 public class ResourceItem implements Parcelable {
 
-  private static final String TAG = "ResourceItem";
-
   public String name;
   public String[] films = new String[]{};
 
@@ -25,17 +23,14 @@ public class ResourceItem implements Parcelable {
   }
 
   @Override public void writeToParcel(Parcel dest, int flags) {
-    Log.d(TAG, "writeToParcel() called with: " + "dest = [" + dest + "], flags = [" + flags + "]");
     dest.writeString(this.name);
     dest.writeStringArray(this.films);
-    Log.d(TAG, "writeToParcel() returned: films = " + Arrays.toString(this.films));
   }
 
   public ResourceItem() {
   }
 
   protected ResourceItem(Parcel in) {
-    Log.d(TAG, "ResourceItem: in");
     this.name = in.readString();
     this.films = in.createStringArray();
   }

@@ -45,7 +45,6 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    mIsTwoPane = findViewById(R.id.item_fragment) != null;
     if(getIntent().getStringExtra(RESOURCE_EXTRA) != null) { //TODO: save this in state
       mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
       displayResource();
@@ -109,6 +108,12 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
     transaction.replace(R.id.main_fragment, newFragment);
     transaction.addToBackStack(null);
     transaction.commit();
+
+    mIsTwoPane = findViewById(R.id.item_fragment) != null;
+    // in two-pane display mode, when an item is touched it should be activated.
+    if(mIsTwoPane) {
+      newFragment.setActivateOnItemClick(true);
+    }
   }
 
   @Override public void onBackPressed() {
@@ -118,7 +123,7 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
 
   @Override public void onResourceItemSelected(View view, ResourceItem item) {
     if(mIsTwoPane) { //show inline
-      Fragment fragment = ResourceItemFragment.newInstance(item);
+      ResourceItemFragment fragment = ResourceItemFragment.newInstance(item);
       getFragmentManager().beginTransaction()
             .replace(R.id.item_fragment, fragment)
             .commit();

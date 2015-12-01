@@ -20,7 +20,6 @@ public class ResourceItemActivity extends AppCompatActivity {
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_resource_item);
-    //setupToolbar();
 
     if (savedInstanceState == null) {
       ResourceItemFragment fragment = ResourceItemFragment.newInstance(

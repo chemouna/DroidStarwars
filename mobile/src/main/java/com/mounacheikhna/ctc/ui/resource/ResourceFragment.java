@@ -40,22 +40,19 @@ import rx.subscriptions.CompositeSubscription;
 public class ResourceFragment extends Fragment {
 
   private static final String RESOURCE_ARG = "ResourceArg";
-
-  private CompositeSubscription subscriptions = new CompositeSubscription();
-
   @Bind(R.id.state_animator) CustomViewAnimator mAnimatorView;
   @Bind(R.id.list_state) TextView mStateView;
   @Bind(R.id.rv) RecyclerView mRecyclerView;
   @Bind(R.id.progress) ProgressBar mProgressBar;
   @BindDimen(R.dimen.resource_divider_padding_start) float dividerPaddingStart;
-
   @Inject ApiManager mApiManager;
   @Inject ResourceManager mResourceManager;
   @Inject Picasso mPicasso;
-
+  private CompositeSubscription subscriptions = new CompositeSubscription();
   private ResourceItemAdapter mResourceItemAdapter;
   private OnResourceItemSelectedListener mListener;
   private Resource mResource;
+  private boolean mActivateOnItemClick;
   private CompositeSubscription mSubscriptions = new CompositeSubscription();
 
   /**
@@ -63,12 +60,12 @@ public class ResourceFragment extends Fragment {
    */
   private Action1<Result<? extends ResourceResponse>> mErrorAction =
       new Action1<Result<? extends ResourceResponse>>() {
-    @Override public void call(Result<? extends ResourceResponse> result) {
-      mStateView.setText(String.format(getString(R.string.loading_error),
-          getString(mResource.getTextRes())));
-      mAnimatorView.setDisplayedChildId(R.id.list_state);
-    }
-  };
+        @Override public void call(Result<? extends ResourceResponse> result) {
+          mStateView.setText(
+              String.format(getString(R.string.loading_error), getString(mResource.getTextRes())));
+          mAnimatorView.setDisplayedChildId(R.id.list_state);
+        }
+      };
 
   public static ResourceFragment newInstance(Resource resource) {
     ResourceFragment fragment = new ResourceFragment();
@@ -129,6 +126,12 @@ public class ResourceFragment extends Fragment {
     mRecyclerView.addItemDecoration(
         new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart,
             false));
+
+    /*ItemSelectionSupport itemSelectionSupport = ItemSelectionSupport.addTo(mRecyclerView);
+    itemSelectionSupport.setChoiceMode(
+        mActivateOnItemClick ? ItemSelectionSupport.ChoiceMode.SINGLE
+        : ItemSelectionSupport.ChoiceMode.NONE);*/
+
     mRecyclerView.setAdapter(mResourceItemAdapter);
     loadData();
   }
@@ -139,8 +142,8 @@ public class ResourceFragment extends Fragment {
       return;
     }
     mSubscriptions.add(mResourceManager.fetchResourceData(mResource, null, mErrorAction)
-                          .observeOn(AndroidSchedulers.mainThread())
-                          .subscribe(mResourceItemAdapter));
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(mResourceItemAdapter));
   }
 
   private boolean isConnected() {
@@ -148,6 +151,14 @@ public class ResourceFragment extends Fragment {
         (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
     NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
     return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+  }
+
+  /**
+   * activate on click mode. When its activate on, recyclerview items will be
+   * given the 'activated' state when touched.
+   */
+  public void setActivateOnItemClick(boolean activateOnItemClick) {
+    mActivateOnItemClick = activateOnItemClick;
   }
 
   @Override public void onDestroy() {

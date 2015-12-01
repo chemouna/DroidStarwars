@@ -109,7 +109,12 @@ public class ResourceItemFragment extends Fragment {
   }
 
   public void show(ResourceItem item) {
-    getActivity().setTitle(item.name);
+    if(getActivity() instanceof ResourceActivity) {//toolbar is a fake one
+      ((ResourceActivity) getActivity()).updateTitle(item.name);
+    }
+    else {
+      getActivity().setTitle(item.name);
+    }
     loadFilms(item);
   }
 

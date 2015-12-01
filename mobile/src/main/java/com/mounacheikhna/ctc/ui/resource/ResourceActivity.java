@@ -112,7 +112,7 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
   }
 
   @Override public void onResourceItemSelected(ResourceItem item) {
-    if (mResourceItemFragment != null) {
+    if (mResourceItemFragment != null) { //isTwoPane
       mResourceItemFragment.show(item);
     } else {
       mResourceItemFragment = ResourceItemFragment.newInstance(item);
@@ -127,5 +127,9 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
       transaction.commit();
 
     }
+  }
+
+  public void updateTitle(String title) {
+    mResourceTitle.setText(title);
   }
 }

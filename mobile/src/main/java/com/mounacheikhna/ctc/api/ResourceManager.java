@@ -127,9 +127,9 @@ public class ResourceManager {
                 .flatMap(listCharactersForItem)
                 .share()
                 .observeOn(mainThread());
-        if (errorAction != null) {
+        /*if (errorAction != null) {
           mSubscriptions.add(peopleObs.filter(Results.isSuccess()).subscribe(errorAction));
-        }
+        }*/
         return characterPeopleObservable;
       case VEHICLES:
         final Observable<Result<VehiclesResponse>> vehiclesObs =

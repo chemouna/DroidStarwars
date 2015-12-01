@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"/>
 
-    <View android:background="#000000"
+    <View android:background="@color/divider"
         android:layout_width="1dp"
         android:layout_height="wrap_content"/>
 

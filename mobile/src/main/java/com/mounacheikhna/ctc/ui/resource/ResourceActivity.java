@@ -41,9 +41,11 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
-    displayResource();
-    setupTransitions();
+    if(getIntent().getStringExtra(RESOURCE_EXTRA) != null) { //TODO: save this in state
+      mResource = Resource.valueOf(getIntent().getStringExtra(RESOURCE_EXTRA));
+      displayResource();
+      setupTransitions();
+    }
   }
 
   /**

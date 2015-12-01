@@ -6,8 +6,6 @@
     <item name="android:indeterminateTintMode">src_in</item>
   </style>
 
-  <style name="StarWars.MainActivity">
-  </style>
 
   <style name="StarWars.ResourceActivity">
     <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter</item>

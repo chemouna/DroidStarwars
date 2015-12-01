@@ -109,6 +109,7 @@ public class ResourceItemFragment extends Fragment {
   }
 
   public void show(ResourceItem item) {
+    getActivity().setTitle(item.name);
     loadFilms(item);
   }
 

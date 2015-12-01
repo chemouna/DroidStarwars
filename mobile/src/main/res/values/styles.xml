@@ -4,6 +4,7 @@
 
   <style name="Widget.StarWars.Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
     <item name="android:background">@color/primary</item>
+    <item name="titleTextColor">@color/text_primary_light</item>
     <item name="android:textColor">@color/text_primary_light</item>
     <item name="android:elevation" tools:targetApi="lollipop">@dimen/toolbar_elevation</item>
   </style>
@@ -23,7 +24,10 @@
   </style>
 
   <style name="StarWars.ResourceActivity"/>
-  <style name="StarWars.MainActivity"/>
+  <style name="StarWars.MainActivity">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:titleTextColor" tools:targetApi="M">@android:color/white</item>
+  </style>
 
   <style name="Widget.StarWars.SingleLineGrid">
   </style>

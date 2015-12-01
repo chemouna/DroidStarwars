@@ -1,9 +1,16 @@
 package com.mounacheikhna.ctc.ui.resource;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import butterknife.Bind;
+import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
+
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 
 /**
  * Created by mouna on 01/12/15.
@@ -14,18 +21,40 @@ import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
  */
 public class ResourceItemActivity extends AppCompatActivity {
 
+  public static final String PARENT_RESOURCE = "parent_resource";
   public static final String RESOURCE_ITEM_NAME = "resource_item_name";
   public static final String RESOURCE_ITEM_FILMS = "resource_item_films";
+
+  @Bind(R.id.toolbar) Toolbar mToolbar;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_resource_item);
+    ButterKnife.bind(this);
 
     if (savedInstanceState == null) {
+      final String resource_item_name = getIntent().getStringExtra(RESOURCE_ITEM_NAME);
       ResourceItemFragment fragment = ResourceItemFragment.newInstance(
-          new ResourceItem(getIntent().getStringExtra(RESOURCE_ITEM_NAME),
+          new ResourceItem(resource_item_name,
               getIntent().getStringArrayExtra(RESOURCE_ITEM_FILMS)));
       getFragmentManager().beginTransaction().add(R.id.container_item, fragment).commit();
+      mToolbar.setTitle(resource_item_name);
+      final Resource resource = (Resource) getIntent().getSerializableExtra(PARENT_RESOURCE);
+      applyResourceTheme(resource);
+    }
+    setSupportActionBar(mToolbar);
+  }
+
+  @SuppressLint("NewApi")
+  private void applyResourceTheme(Resource resource) {
+    setTheme(resource.getStyle().getStyleRes());
+    if (isAtLeastLollipop()) {
+      getWindow().setStatusBarColor(
+          ContextCompat.getColor(this, resource.getStyle().getColorPrimaryDark()));
+      mToolbar.setTitleTextColor(
+          ContextCompat.getColor(this, resource.getStyle().getTitleColorPrimary()));
+      mToolbar.setBackgroundColor(
+          ContextCompat.getColor(this, resource.getStyle().getColorPrimary()));
     }
   }
 }

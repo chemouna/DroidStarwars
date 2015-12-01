@@ -28,10 +28,6 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
   }
 
   public void setOnResourceItemSelectedListener(@Nullable OnResourceItemSelectedListener itemListener) {
-    Log.d(TAG, "setOnResourceItemSelectedListener() called with: "
-        + "itemListener = ["
-        + itemListener
-        + "]");
     mItemSelectedListener = itemListener;
   }
 
@@ -63,7 +59,6 @@ public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapte
       itemView.bindTo(character, mPicasso);
       itemView.setOnClickListener(new View.OnClickListener() {
         @Override public void onClick(View v) {
-          Log.d(TAG, "onClick() called with: " + "v = [" + v + "] and listener : "+ mItemSelectedListener);
           if (mItemSelectedListener != null) {
             mItemSelectedListener.onResourceItemSelected(v, character.getItem());
           }

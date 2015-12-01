@@ -133,6 +133,7 @@ public class ResourceActivity extends AppCompatActivity implements OnResourceIte
       //for some reason putting entire ResourceItem as extra films is null when we get it from intent.
       intent.putExtra(ResourceItemActivity.RESOURCE_ITEM_NAME, item.name);
       intent.putExtra(ResourceItemActivity.RESOURCE_ITEM_FILMS, item.films);
+      intent.putExtra(ResourceItemActivity.PARENT_RESOURCE, mResource);
       if (view != null) {
         ActivityCompat.startActivity(this, intent,
             ActivityOptionsCompat

@@ -25,6 +25,7 @@ import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.resource.ResourceItemAdapter.OnResourceItemSelectedListener;
 import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
+import com.mounacheikhna.ctc.ui.view.ItemSelectionSupport;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 import retrofit.Result;
@@ -127,10 +128,10 @@ public class ResourceFragment extends Fragment {
         new DividerItemDecoration(getActivity(), LinearLayoutManager.VERTICAL, dividerPaddingStart,
             false));
 
-    /*ItemSelectionSupport itemSelectionSupport = ItemSelectionSupport.addTo(mRecyclerView);
+    ItemSelectionSupport itemSelectionSupport = ItemSelectionSupport.addTo(mRecyclerView);
     itemSelectionSupport.setChoiceMode(
         mActivateOnItemClick ? ItemSelectionSupport.ChoiceMode.SINGLE
-        : ItemSelectionSupport.ChoiceMode.NONE);*/
+        : ItemSelectionSupport.ChoiceMode.NONE);
 
     mRecyclerView.setAdapter(mResourceItemAdapter);
     loadData();

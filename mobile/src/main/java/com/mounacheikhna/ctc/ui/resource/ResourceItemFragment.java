@@ -3,6 +3,7 @@ package com.mounacheikhna.ctc.ui.resource;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -111,9 +112,6 @@ public class ResourceItemFragment extends Fragment {
   public void show(ResourceItem item) {
     if(getActivity() instanceof ResourceActivity) {//toolbar is a fake one
       ((ResourceActivity) getActivity()).updateTitle(item.name);
-    }
-    else {
-      getActivity().setTitle(item.name);
     }
     loadFilms(item);
   }

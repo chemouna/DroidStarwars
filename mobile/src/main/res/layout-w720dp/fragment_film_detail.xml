@@ -13,7 +13,9 @@
       android:layout_height="match_parent"
       android:layout_weight="2"
       android:scaleType="centerCrop"
-      tools:background="@color/accent"/>
+      tools:background="@color/accent"
+      android:transitionName="@string/transition_film_image"
+      tools:ignore="NewApi"/>
 
   <android.support.design.widget.CoordinatorLayout
       tools:ignore="NewApi"

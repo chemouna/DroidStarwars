@@ -1,9 +1,11 @@
 package com.mounacheikhna.ctc.ui.resource;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -96,9 +98,15 @@ public class ResourceItemFragment extends Fragment {
       }
     });
     mFilmAdapter.setFilmItemSelectedListener(new FilmAdapter.OnFilmItemSelectedListener() {
-      @Override public void onFilmSelected(FilmDetails filmItem) {
-        //TODO: setup and add transition
-        startActivity(FilmActivity.getIntent(getActivity(), filmItem));
+      @Override public void onFilmSelected(View view, FilmDetails filmItem) {
+        final Intent intent = FilmActivity.getIntent(getActivity(), filmItem);
+
+        final ActivityOptionsCompat options =
+            ActivityOptionsCompat.makeSceneTransitionAnimation(getActivity(),
+                new Pair<>(view, getString(R.string.transition_film_image)));
+            /*android.util.Pair.create<View, String>(venueImage,
+            context.resources.getString(R.string.transition_venue_background)))*/
+        startActivity(intent, options.toBundle());
       }
     });
     mRecyclerView.setAdapter(mFilmAdapter);

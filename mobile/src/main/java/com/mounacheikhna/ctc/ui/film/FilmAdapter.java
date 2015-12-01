@@ -36,13 +36,13 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
     return new FilmViewHolder(view);
   }
 
-  @Override public void onBindViewHolder(FilmViewHolder holder, int position) {
+  @Override public void onBindViewHolder(final FilmViewHolder holder, int position) {
     final FilmDetails filmItem = mItems.get(position);
     holder.itemView.bindTo(filmItem, mPicasso);
     holder.itemView.setOnClickListener(new View.OnClickListener() {
       @Override public void onClick(View v) {
         if (mFilmSelected != null) {
-          mFilmSelected.onFilmSelected(filmItem);
+          mFilmSelected.onFilmSelected(holder.itemView.mImage, filmItem);
         }
       }
     });
@@ -67,6 +67,6 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.FilmViewHolder
   }
 
   public interface OnFilmItemSelectedListener {
-    void onFilmSelected(FilmDetails filmItem);
+    void onFilmSelected(View v, FilmDetails filmItem);
   }
 }

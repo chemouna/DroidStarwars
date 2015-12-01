@@ -14,9 +14,10 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true"
       style="@style/Widget.StarWars.ItemImage"
+      android:transitionName="@string/transition_film_image"
       tools:src="@drawable/people"
       tools:background="@color/primary"
-      tools:ignore="RtlSymmetry"/>
+      tools:ignore="NewApi, RtlSymmetry"/>
 
     <TextView
         android:id="@+id/film_title"

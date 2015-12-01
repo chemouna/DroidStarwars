@@ -1,12 +1,19 @@
 package com.mounacheikhna.ctc.ui.film;
 
 import android.animation.ValueAnimator;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Fragment;
+import android.app.SharedElementCallback;
+import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Matrix;
+import android.graphics.RectF;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
@@ -14,6 +21,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
+import android.transition.Transition;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,12 +35,14 @@ import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.mounacheikhna.ctc.ui.view.CheckableFab;
 import com.mounacheikhna.ctc.ui.view.ExpandingTextView;
+import com.mounacheikhna.ctc.util.Animations.EmptyTransitionListener;
 import com.mounacheikhna.ctc.util.Colors;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 
 import static com.mounacheikhna.ctc.ui.film.FilmActivity.FILM_EXTRA;
+import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastLollipop;
 import static com.mounacheikhna.ctc.util.ApiLevels.isAtLeastM;
 
 /**
@@ -49,6 +59,15 @@ public class FilmDetailsFragment extends Fragment {
   @Bind(R.id.film_fab) CheckableFab mFilmFab;
 
   @Inject Picasso mPicasso;
+  private Transition.TransitionListener mReturnTransitionListener = new EmptyTransitionListener() {
+    @SuppressLint("NewApi") @Override public void onTransitionStart(Transition transition) {
+      super.onTransitionStart(transition);
+      mFilmFab.setVisibility(View.INVISIBLE);
+      if (isAtLeastLollipop()) {
+        mPosterImage.setElevation(1f);
+      }
+    }
+  };
 
   public static FilmDetailsFragment newInstance(FilmDetails film) {
     FilmDetailsFragment fragment = new FilmDetailsFragment();
@@ -67,10 +86,31 @@ public class FilmDetailsFragment extends Fragment {
     super.onViewCreated(view, savedInstanceState);
     ButterKnife.bind(this, view);
     StarWarsApp.get(getActivity()).getComponent().injectFilmDetailsFragment(this);
-
     setupToolbar();
+    setupTransitions();
     final FilmDetails filmDetails = getArguments().getParcelable(FILM_EXTRA);
     display(filmDetails);
+  }
+
+  @SuppressLint("NewApi") private void setupTransitions() {
+    if (isAtLeastLollipop()) {
+      getActivity().setExitSharedElementCallback(new SharedElementCallback() {
+        @Override public Parcelable onCaptureSharedElementSnapshot(View sharedElement,
+            Matrix viewToGlobalMatrix, RectF screenBounds) {
+          int bitmapWidth = Math.round(screenBounds.width());
+          int bitmapHeight = Math.round(screenBounds.height());
+          Bitmap bitmap = null;
+          if (bitmapWidth > 0 && bitmapHeight > 0) {
+            bitmap = Bitmap.createBitmap(bitmapWidth, bitmapHeight, Bitmap.Config.ARGB_8888);
+            sharedElement.draw(new Canvas(bitmap));
+          }
+          return bitmap;
+        }
+      });
+      getActivity().getWindow()
+          .getSharedElementReturnTransition()
+          .addListener(mReturnTransitionListener);
+    }
   }
 
   private void setupToolbar() {
@@ -117,7 +157,7 @@ public class FilmDetailsFragment extends Fragment {
                   }
                   applyToStatusBar(isDark, palette);
                   applyToToolbar(palette);
-                  applyToFab(isDark, palette);
+                  applyToFab(palette);
                 }
               });
         }
@@ -128,15 +168,10 @@ public class FilmDetailsFragment extends Fragment {
     }
   }
 
-  private void applyToFab(boolean isDark, Palette palette) {
-    /*Palette.Swatch topColor = palette.getVibrantSwatch();
-    if(topColor == null) return;
-    ColorFilter colorFilter =
-        new PorterDuffColorFilter(topColor.getRgb(),
-            PorterDuff.Mode.SRC_OVER);
-    mFilmFab.setColorFilter(colorFilter);
-    */
-    //if color is light set ic_fab to a dark color
+  private void applyToFab(Palette palette) {
+    Palette.Swatch topColor = palette.getVibrantSwatch();
+    if (topColor == null) return;
+    mFilmFab.setBackgroundTintList(ColorStateList.valueOf(topColor.getRgb()));
   }
 
   /**

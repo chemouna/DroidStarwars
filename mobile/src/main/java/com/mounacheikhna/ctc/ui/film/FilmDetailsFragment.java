@@ -59,13 +59,11 @@ public class FilmDetailsFragment extends Fragment {
   @Bind(R.id.film_fab) CheckableFab mFilmFab;
 
   @Inject Picasso mPicasso;
+
   private Transition.TransitionListener mReturnTransitionListener = new EmptyTransitionListener() {
     @SuppressLint("NewApi") @Override public void onTransitionStart(Transition transition) {
       super.onTransitionStart(transition);
       mFilmFab.setVisibility(View.INVISIBLE);
-      if (isAtLeastLollipop()) {
-        mPosterImage.setElevation(1f);
-      }
     }
   };
 
@@ -158,6 +156,7 @@ public class FilmDetailsFragment extends Fragment {
                   applyToStatusBar(isDark, palette);
                   applyToToolbar(palette);
                   applyToFab(palette);
+                  //applyToBackButton(isDark);
                 }
               });
         }
@@ -167,6 +166,20 @@ public class FilmDetailsFragment extends Fragment {
       });
     }
   }
+
+  //TODO: make these common somehow ?
+ /* private void applyToBackButton(boolean isDark) {
+    //if(isDark) {
+      final AppCompatActivity activity = (AppCompatActivity) getActivity();
+      ColorFilter colorFilter = new PorterDuffColorFilter(ContextCompat.getColor(activity, android.R.color.white),
+          PorterDuff.Mode.SRC_ATOP);
+      Drawable upArrow = ContextCompat.getDrawable(activity, R.drawable.ic_arrow_back);
+      upArrow.setColorFilter(colorFilter);
+      if (activity.getSupportActionBar() != null) {
+        activity.getSupportActionBar().setHomeAsUpIndicator(upArrow);
+      }
+    //}
+  }*/
 
   private void applyToFab(Palette palette) {
     Palette.Swatch topColor = palette.getVibrantSwatch();

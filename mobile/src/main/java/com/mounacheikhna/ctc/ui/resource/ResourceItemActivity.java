@@ -1,6 +1,10 @@
 package com.mounacheikhna.ctc.ui.resource;
 
 import android.annotation.SuppressLint;
+import android.graphics.ColorFilter;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffColorFilter;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -38,23 +42,37 @@ public class ResourceItemActivity extends AppCompatActivity {
           new ResourceItem(resource_item_name,
               getIntent().getStringArrayExtra(RESOURCE_ITEM_FILMS)));
       getFragmentManager().beginTransaction().add(R.id.container_item, fragment).commit();
+
       mToolbar.setTitle(resource_item_name);
+      setSupportActionBar(mToolbar);
+      if (getSupportActionBar() != null) {
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+      }
       final Resource resource = (Resource) getIntent().getSerializableExtra(PARENT_RESOURCE);
       applyResourceTheme(resource);
     }
-    setSupportActionBar(mToolbar);
   }
 
-  @SuppressLint("NewApi")
-  private void applyResourceTheme(Resource resource) {
+  @SuppressLint("NewApi") private void applyResourceTheme(Resource resource) {
     setTheme(resource.getStyle().getStyleRes());
+
+    final int titleColorPrimary = resource.getStyle().getTitleColorPrimary();
     if (isAtLeastLollipop()) {
       getWindow().setStatusBarColor(
           ContextCompat.getColor(this, resource.getStyle().getColorPrimaryDark()));
-      mToolbar.setTitleTextColor(
-          ContextCompat.getColor(this, resource.getStyle().getTitleColorPrimary()));
+      mToolbar.setTitleTextColor(ContextCompat.getColor(this, titleColorPrimary));
       mToolbar.setBackgroundColor(
           ContextCompat.getColor(this, resource.getStyle().getColorPrimary()));
     }
+    //tint back button
+    ColorFilter colorFilter =
+        new PorterDuffColorFilter(ContextCompat.getColor(this, titleColorPrimary),
+            PorterDuff.Mode.SRC_ATOP);
+    Drawable upArrow = ContextCompat.getDrawable(this, R.drawable.ic_arrow_back);
+    upArrow.setColorFilter(colorFilter);
+    if (getSupportActionBar() != null) {
+      getSupportActionBar().setHomeAsUpIndicator(upArrow);
+    }
+
   }
 }

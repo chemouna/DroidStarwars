@@ -2,6 +2,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
   <style name="StarWars.People">
+<!--
+    <item name="actionBarTheme">@style/StarWars.ActionBarTheme.Dark</item>
+-->
+    <!--<item name="actionBarStyle">@style/StarWars.ActionBarStyle.Dark</item>-->
     <item name="colorPrimary">@color/style_people_primary</item>
     <item name="colorPrimaryDark">@color/style_people_primary_dark</item>
     <item name="titleColorPrimary">@color/style_people_title</item>
@@ -11,8 +15,18 @@
       @color/primary_dark
     </item>
     <item name="resourceColor">@color/style_people_resource</item>
-    <!--<item name="android:windowBackground">@color/style_people_background</item>-->
   </style>
+
+  <style name="StarWars.ActionBarTheme.Dark" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="colorControlNormal">@android:color/white</item>
+  </style>
+
+<!--
+  <style name="StarWars.ActionBarStyle.Dark" parent="@style/Widget.AppCompat.Light.ActionBar">
+    <item name="titleTextStyle">@style/ActionBarTitleText</item>
+    <item name="subtitleTextStyle">@style/ActionBarSubtitleText</item>
+  </style>
+-->
 
   <style name="StarWars.Starships">
     <item name="colorPrimary">@color/style_starships_primary</item>
@@ -24,9 +38,6 @@
       @color/style_starships_primary_dark
     </item>
     <item name="resourceColor">@color/style_starships_resource</item>
-    <!--
-        <item name="android:windowBackground">@color/style_starships_background</item>
-    -->
   </style>
 
   <style name="StarWars.Vehicles">
@@ -53,7 +64,6 @@
       @color/style_species_primary_dark
     </item>
     <item name="resourceColor">@color/style_species_resource</item>
-    <!--<item name="android:windowBackground">@color/style_species_background</item>-->
   </style>
 
   <style name="StarWars.Planets">
@@ -67,7 +77,6 @@
     </item>
     <item name="resourceColor">@color/style_planets_resource</item>
     <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
-    <!--<item name="android:windowBackground">@color/style_planets_background</item>-->
   </style>
 
 </resources>

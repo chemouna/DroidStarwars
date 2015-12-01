@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.decoration;
+package com.mounacheikhna.ctc.ui.recyclerview.decoration;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

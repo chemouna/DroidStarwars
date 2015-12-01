@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
-import com.mounacheikhna.ctc.ui.decoration.OffsetDecoration;
+import com.mounacheikhna.ctc.ui.recyclerview.decoration.OffsetDecoration;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.view;
+package com.mounacheikhna.ctc.ui.recyclerview;
 
 import android.content.Context;
 import android.os.Build;

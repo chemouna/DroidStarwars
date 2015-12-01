@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.ui.decoration;
+package com.mounacheikhna.ctc.ui.recyclerview.decoration;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -3,7 +3,7 @@ package com.mounacheikhna.ctc.ui.resource;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -18,11 +18,9 @@ import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.api.ResourceManager;
 import com.mounacheikhna.ctc.api.Results;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
-import com.mounacheikhna.ctc.lib.api.swapi.ResourceResponse;
 import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 import com.mounacheikhna.ctc.lib.api.swapi.Film;
 import com.mounacheikhna.ctc.lib.api.swapi.ResourceItem;
-import com.mounacheikhna.ctc.ui.decoration.DividerItemDecoration;
 import com.mounacheikhna.ctc.ui.film.FilmActivity;
 import com.mounacheikhna.ctc.ui.film.FilmAdapter;
 import com.mounacheikhna.ctc.ui.view.CustomViewAnimator;
@@ -35,6 +33,7 @@ import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import rx.subscriptions.CompositeSubscription;
+import com.mounacheikhna.ctc.ui.recyclerview.decoration.DividerItemDecoration;
 
 /**
  * Created by cheikhnamouna on 11/21/15.
@@ -110,7 +109,7 @@ public class ResourceItemFragment extends Fragment {
   }
 
   public void show(ResourceItem item) {
-    if(getActivity() instanceof ResourceActivity) {//toolbar is a fake one
+    if(getActivity() instanceof ResourceActivity) {//toolbar of ResourceActivity is a fake one
       ((ResourceActivity) getActivity()).updateTitle(item.name);
     }
     loadFilms(item);

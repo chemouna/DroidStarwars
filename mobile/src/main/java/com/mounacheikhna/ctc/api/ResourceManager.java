@@ -1,6 +1,7 @@
 package com.mounacheikhna.ctc.api;
 
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import com.mounacheikhna.ctc.lib.api.ApiManager;
 import com.mounacheikhna.ctc.lib.api.ResourceDetails;
 import com.mounacheikhna.ctc.lib.api.comicvine.CharacterResponse;
@@ -63,9 +64,15 @@ public class ResourceManager {
       new Func1<ResourceItem, Observable<ResourceDetails>>() {
         @Override public Observable<ResourceDetails> call(final ResourceItem resourceItem) {
           return mApiManager.searchCharacter(resourceItem.name)
+              /*.filter(new Func1<CharacterResponse, Boolean>() {
+                @Override public Boolean call(CharacterResponse characterResponse) {
+                  return characterResponse.getError().equals("OK");
+                }
+              })*/
               .map(new Func1<CharacterResponse, ResourceDetails>() {
                 @Override public ResourceDetails call(CharacterResponse characterResponse) {
-                  if (characterResponse.getResults().size() == 0) return null;
+                  if (characterResponse.getResults() == null ||
+                      characterResponse.getResults().size() == 0) return null;
                   return new ResourceDetails(characterResponse.getResults().get(0), resourceItem);
                 }
               })
@@ -89,8 +96,17 @@ public class ResourceManager {
   public final Func1<Result<Film>, Observable<FilmDetails>> tmdbFilmSearch =
       new Func1<Result<Film>, Observable<FilmDetails>>() {
         @Override public Observable<FilmDetails> call(Result<Film> filmResult) {
+          if(filmResult.isError() || filmResult.response() == null || filmResult.response().body() == null) {//Temp
+              return Observable.empty();
+          }
+
           final Film film = filmResult.response().body();
           return mApiManager.getFilmDetails(film.title)
+              /*.filter(new Func1<SearchMovieResponse, Boolean>() {
+                @Override public Boolean call(SearchMovieResponse searchMovieResponse) {
+                  return TextUtils.isEmpty(searchMovieResponse.status_message);
+                }
+              })*/
               .map(new Func1<SearchMovieResponse, FilmDetails>() {
                 @Override public FilmDetails call(SearchMovieResponse searchMovieResponse) {
                   return new FilmDetails(film, searchMovieResponse);
@@ -120,7 +136,7 @@ public class ResourceManager {
     switch (resource) {
       case PEOPLE:
         final Observable<Result<PeopleResponse>> peopleObs =
-            mApiManager.fetchPeople().observeOn(mainThread()).share();
+            mApiManager.fetchPeople().share();
         final Observable<ResourceDetails> characterPeopleObservable =
             peopleObs.filter(Results.isSuccess())
                 .map(peopleToResourceItems)
@@ -128,19 +144,19 @@ public class ResourceManager {
                 .share()
                 .observeOn(mainThread());
         /*if (errorAction != null) {
-          mSubscriptions.add(peopleObs.filter(Results.isSuccess()).subscribe(errorAction));
+          mSubscriptions.add(peopleObs.observeOn(mainThread()).filter(Results.isSuccess()).subscribe(errorAction));
         }*/
         return characterPeopleObservable;
       case VEHICLES:
         final Observable<Result<VehiclesResponse>> vehiclesObs =
-            mApiManager.fetchVehicles().observeOn(mainThread()).share();
+            mApiManager.fetchVehicles().share();
         final Observable<ResourceDetails> characterVehiclesObservable =
             vehiclesObs.filter(Results.isSuccess())
                 .map(vehiclesToResourceItems)
                 .flatMap(listCharactersForItem)
                 .share();
         if (errorAction != null) {
-          mSubscriptions.add(vehiclesObs.filter(Results.isError()).subscribe(errorAction));
+          mSubscriptions.add(vehiclesObs.observeOn(mainThread()).filter(Results.isError()).subscribe(errorAction));
         }
         return characterVehiclesObservable;
       default:

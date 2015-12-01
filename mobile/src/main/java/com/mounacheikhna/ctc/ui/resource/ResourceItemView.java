@@ -36,10 +36,12 @@ public class ResourceItemView extends RelativeLayout {
     final CvCharacter cvCharacter = resourceDetails.getCvCharacter();
     mDescriptionView.setText(resourceDetails.getCvCharacter().deck);
     if(cvCharacter != null && cvCharacter.image != null) {
-      final String image = cvCharacter.image.screen_url;
+      //final String image = cvCharacter.image.screen_url;
+      final String image = cvCharacter.image.medium_url;
       if (!TextUtils.isEmpty(image)) {
-        picasso.load(image).placeholder(R.drawable.people) //temp
-            .error(R.drawable.people) //temp
+        picasso.load(image)
+            //.placeholder(R.drawable.people) //temp
+            //.error(R.drawable.people) //temp
             .transform(mImageTransformation).fit().into(mAvatarView);
       }
     }

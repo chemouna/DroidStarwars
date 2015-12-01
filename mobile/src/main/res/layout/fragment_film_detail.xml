@@ -60,6 +60,18 @@
 
     </android.support.v4.widget.NestedScrollView>
 
+    <com.mounacheikhna.ctc.ui.view.CheckableFab
+        android:id="@+id/film_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|right|end"
+        app:fabSize="normal"
+        android:src="@drawable/ic_add_to_collection_selector"
+        android:layout_margin="@dimen/spacing_double"
+        app:backgroundTint="@color/fab_film"
+        android:clickable="true"
+        tools:ignore="NewApi"/>
 
   </android.support.design.widget.CoordinatorLayout>
 

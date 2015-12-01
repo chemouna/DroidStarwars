@@ -24,6 +24,7 @@
   <color name="divider">#1f000000</color>
   <color name="hint_disabled_dark">#43000000</color>
   <color name="resource_avatar_stroke">#1a000000</color>
+  <color name="fab_film">#795548</color>
 
 
 </resources>

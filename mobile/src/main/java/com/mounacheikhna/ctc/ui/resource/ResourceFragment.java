@@ -164,8 +164,10 @@ public class ResourceFragment extends Fragment {
 
   @Override public void onDestroy() {
     super.onDestroy();
-    subscriptions.unsubscribe();
-    mResourceManager.unbind();
+    subscriptions.clear();
+    if(mResourceManager != null){
+      mResourceManager.unbind();
+    }
   }
 }
 

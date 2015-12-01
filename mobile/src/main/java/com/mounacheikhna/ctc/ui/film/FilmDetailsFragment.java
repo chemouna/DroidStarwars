@@ -25,6 +25,7 @@ import butterknife.ButterKnife;
 import com.mounacheikhna.ctc.R;
 import com.mounacheikhna.ctc.StarWarsApp;
 import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
+import com.mounacheikhna.ctc.ui.view.CheckableFab;
 import com.mounacheikhna.ctc.ui.view.ExpandingTextView;
 import com.mounacheikhna.ctc.util.Colors;
 import com.squareup.picasso.Callback;
@@ -45,6 +46,7 @@ public class FilmDetailsFragment extends Fragment {
   @Bind(R.id.description) ExpandingTextView mDescriptionTextView;
   @Bind(R.id.tv_rating_value) TextView mRatingValueView;
   @Bind(R.id.tv_rating_votes) TextView mRatingVotesView;
+  @Bind(R.id.film_fab) CheckableFab mFilmFab;
 
   @Inject Picasso mPicasso;
 
@@ -87,8 +89,7 @@ public class FilmDetailsFragment extends Fragment {
       mToolbar.setTitle(filmDetails.movieResult.title);
       final AppCompatActivity activity = (AppCompatActivity) getActivity();
       activity.setSupportActionBar(mToolbar);
-    }
-    else {
+    } else {
       mCollapsingToolbarLayout.setTitle(filmDetails.movieResult.title);
     }
     mDescriptionTextView.setText(filmDetails.movieResult.overview);
@@ -116,15 +117,26 @@ public class FilmDetailsFragment extends Fragment {
                   }
                   applyToStatusBar(isDark, palette);
                   applyToToolbar(palette);
+                  applyToFab(isDark, palette);
                 }
               });
         }
 
         @Override public void onError() {
-
         }
       });
     }
+  }
+
+  private void applyToFab(boolean isDark, Palette palette) {
+    /*Palette.Swatch topColor = palette.getVibrantSwatch();
+    if(topColor == null) return;
+    ColorFilter colorFilter =
+        new PorterDuffColorFilter(topColor.getRgb(),
+            PorterDuff.Mode.SRC_OVER);
+    mFilmFab.setColorFilter(colorFilter);
+    */
+    //if color is light set ic_fab to a dark color
   }
 
   /**
@@ -170,8 +182,7 @@ public class FilmDetailsFragment extends Fragment {
     int primary = ContextCompat.getColor(getActivity(), R.color.primary);
     if (mCollapsingToolbarLayout == null) {
       mToolbar.setBackgroundColor(palette.getMutedColor(primary));
-    }
-    else {
+    } else {
       mCollapsingToolbarLayout.setContentScrimColor(palette.getMutedColor(primary));
       mCollapsingToolbarLayout.setStatusBarScrimColor(palette.getDarkMutedColor(primaryDark));
     }

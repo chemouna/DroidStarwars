@@ -55,7 +55,6 @@ public class ResourceItemActivity extends AppCompatActivity {
 
   @SuppressLint("NewApi") private void applyResourceTheme(Resource resource) {
     setTheme(resource.getStyle().getStyleRes());
-
     final int titleColorPrimary = resource.getStyle().getTitleColorPrimary();
     if (isAtLeastLollipop()) {
       getWindow().setStatusBarColor(
@@ -73,6 +72,5 @@ public class ResourceItemActivity extends AppCompatActivity {
     if (getSupportActionBar() != null) {
       getSupportActionBar().setHomeAsUpIndicator(upArrow);
     }
-
   }
 }

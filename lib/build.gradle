@@ -13,6 +13,8 @@ android {
 
 dependencies {
 
+  compile rootProject.ext.supportAnnotations
+
   compile rootProject.ext.retrofit
   compile rootProject.ext.converterMoshi
   compile rootProject.ext.adapterRxjava

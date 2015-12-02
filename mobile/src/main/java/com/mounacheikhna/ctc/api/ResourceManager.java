@@ -133,6 +133,7 @@ public class ResourceManager {
             peopleObs.filter(Results.isSuccess())
                 .map(peopleToResourceItems)
                 .flatMap(listCharactersForItem)
+                .onErrorResumeNext(Observable.<ResourceDetails>empty()) //temp because comicvine api is buggy
                 .share()
                 .observeOn(mainThread());
         /*if (errorAction != null) {
@@ -146,6 +147,7 @@ public class ResourceManager {
             vehiclesObs.filter(Results.isSuccess())
                 .map(vehiclesToResourceItems)
                 .flatMap(listCharactersForItem)
+                .onErrorResumeNext(Observable.<ResourceDetails>empty())  //temp because comicvine api is buggy
                 .share();
         if (errorAction != null) {
           mSubscriptions.add(

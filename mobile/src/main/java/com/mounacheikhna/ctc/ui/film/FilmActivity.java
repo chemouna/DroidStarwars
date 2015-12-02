@@ -17,7 +17,6 @@ import com.mounacheikhna.ctc.lib.api.tmdb.FilmDetails;
 public class FilmActivity extends AppCompatActivity {
 
   public static final String FILM_EXTRA = "film_extra";
-  private FilmDetails mFilm;
 
   public static Intent getIntent(Context context, FilmDetails resource) {
     Intent intent = new Intent(context, FilmActivity.class);
@@ -29,8 +28,8 @@ public class FilmActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.film_layout);
 
-    mFilm = getIntent().getParcelableExtra(FILM_EXTRA);
-    FilmDetailsFragment fragment = FilmDetailsFragment.newInstance(mFilm);
+    FilmDetails film = getIntent().getParcelableExtra(FILM_EXTRA);
+    FilmDetailsFragment fragment = FilmDetailsFragment.newInstance(film);
     FragmentTransaction transaction = getFragmentManager().beginTransaction();
     transaction.add(R.id.main_fragment, fragment);
     transaction.addToBackStack(null);

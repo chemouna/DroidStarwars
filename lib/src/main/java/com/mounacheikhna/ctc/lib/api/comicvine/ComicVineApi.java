@@ -14,7 +14,7 @@ public interface ComicVineApi {
 
   String COMIC_VINE_BASE_URL = "http://www.comicvine.com/api/";
 
-  @GET(COMIC_VINE_BASE_URL + "search?api_key="+ BuildConfig.COMIC_VINE_API_KEY
+  @GET(COMIC_VINE_BASE_URL + "search/?api_key="+ BuildConfig.COMIC_VINE_API_KEY
       + "&format=json&resources=character&limit=1")
   Observable<CharacterResponse> search(@Query("query") String query);
 

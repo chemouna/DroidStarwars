@@ -58,21 +58,6 @@ public class ItemSelectionSupport {
     }
   }
 
-  /**
-   * Returns the number of items currently selected. This will only be valid
-   * if the choice mode is not {@link ChoiceMode#NONE} (default).
-   *
-   * <p>To determine the specific items that are currently selected, use one of
-   * the <code>getChecked*</code> methods.
-   *
-   * @return The number of items currently selected
-   * @see #getCheckedItemPosition()
-   * @see #getCheckedItemPositions()
-   * @see #getCheckedItemIds()
-   */
-  public int getCheckedItemCount() {
-    return mCheckedCount;
-  }
 
   /**
    * Returns the checked state of the specified position. The result is only
@@ -90,22 +75,6 @@ public class ItemSelectionSupport {
     }
 
     return false;
-  }
-
-  /**
-   * Returns the currently checked item. The result is only valid if the choice
-   * mode has been set to {@link ChoiceMode#SINGLE}.
-   *
-   * @return The position of the currently checked item or
-   * {@link #INVALID_POSITION} if nothing is selected
-   * @see #setChoiceMode(ChoiceMode)
-   */
-  public int getCheckedItemPosition() {
-    if (mChoiceMode == ChoiceMode.SINGLE && mCheckedStates != null && mCheckedStates.size() == 1) {
-      return mCheckedStates.keyAt(0);
-    }
-
-    return INVALID_POSITION;
   }
 
   /**

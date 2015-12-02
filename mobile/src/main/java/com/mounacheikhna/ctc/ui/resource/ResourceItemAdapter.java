@@ -19,8 +19,6 @@ import rx.functions.Action1;
 public class ResourceItemAdapter extends RecyclerView.Adapter<ResourceItemAdapter.ViewHolder>
     implements Action1<ResourceDetails> {
 
-  private static final String TAG = "ResourceItemAdapter";
-
   private List<ResourceDetails> mItems = new ArrayList<>();
   @Nullable private OnResourceItemSelectedListener mItemSelectedListener;
   private Picasso mPicasso;

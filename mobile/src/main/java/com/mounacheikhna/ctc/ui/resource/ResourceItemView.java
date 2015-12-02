@@ -44,8 +44,8 @@ public class ResourceItemView extends RelativeLayout {
       final String image = cvCharacter.image.medium_url;
       if (!TextUtils.isEmpty(image)) {
         picasso.load(image)
-            //.placeholder(R.drawable.people) //temp
-            //.error(R.drawable.people) //temp
+            //.placeholder(R.drawable.people)
+            //.error(R.drawable.people)
             .transform(mImageTransformation).fit().into(mAvatarView);
       }
     }

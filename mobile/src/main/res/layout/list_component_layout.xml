@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mounacheikhna.starwars.ui.view.CustomViewAnimator
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/state_animator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out"
+    tools:showIn="@layout/resource_fragment">
+
+  <TextView
+      android:id="@+id/list_state"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      tools:text="Empty results."/>
+
+  <ProgressBar
+      android:id="@+id/progress"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      style="@style/Widget.StarWars.ProgressBar"/>
+
+  <android.support.v7.widget.RecyclerView
+      android:id="@+id/rv"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+
+</com.mounacheikhna.starwars.ui.view.CustomViewAnimator>
+

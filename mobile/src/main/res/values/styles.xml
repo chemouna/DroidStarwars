@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <style name="Widget.StarWars" parent="android:Widget"/>
+
+  <style name="Widget.StarWars.Toolbar" parent="Base.ThemeOverlay.AppCompat.Dark.ActionBar">
+    <item name="android:background">@color/primary</item>
+    <item name="titleTextColor">@color/text_primary_light</item>
+    <item name="android:textColor">@color/text_primary_light</item>
+    <item name="android:elevation" tools:targetApi="lollipop">@dimen/toolbar_elevation</item>
+  </style>
+
+  <style name="Widget.StarWars.ProgressBar">
+    <item name="android:indeterminate">true</item>
+  </style>
+
+  <style name="Widget.StarWars.Item">
+    <item name="android:background">?android:attr/selectableItemBackground</item>
+    <item name="android:clickable">true</item>
+    <item name="android:padding">16dp</item>
+  </style>
+
+  <style name="StarWars.TextAppearance.Title" parent="TextAppearance.AppCompat.Title">
+    <item name="android:textColor">@color/primary</item>
+  </style>
+
+  <style name="StarWars.ResourceActivity"/>
+  <style name="StarWars.MainActivity">
+    <item name="android:textColor">@android:color/white</item>
+    <item name="android:titleTextColor" tools:targetApi="M">@android:color/white</item>
+  </style>
+
+  <style name="Widget.StarWars.SingleLineGrid">
+  </style>
+
+  <style name="Widget.StarWars.SingleLineGrid.Text">
+    <item name="android:padding">16dp</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="TextAppearance.FilmDescription" parent="TextAppearance.AppCompat.Subhead">
+    <item name="android:textColor">@color/text_tertiary_dark</item>
+  </style>
+
+  <style name="TextAppearance.Rating" parent="TextAppearance.AppCompat.Display1">
+    <item name="android:textColor">?android:attr/textColorSecondary</item>
+    <item name="android:textSize">34sp</item>
+  </style>
+
+  <style name="TextAppearance.Caption" parent="TextAppearance.AppCompat.Caption">
+  </style>
+
+  <style name="Widget.StarWars.ItemTitle">
+    <item name="android:ellipsize">end</item>
+    <item name="android:maxLines">1</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <item name="android:textSize">16sp</item>
+  </style>
+
+  <style name="Widget.StarWars.ItemDescription">
+    <item name="android:textColor">?android:attr/textColorPrimary</item>
+    <item name="android:textSize">14sp</item>
+    <item name="android:maxLines">2</item>
+    <item name="android:ellipsize">end</item>
+  </style>
+
+  <style name="Widget.StarWars.ItemImage">
+    <item name="android:layout_marginEnd" tools:targetApi="JELLY_BEAN_MR1">@dimen/spacing_double</item>
+    <item name="android:layout_marginRight">@dimen/spacing_double</item>
+  </style>
+
+  <style name="TextAppearance.GrayContent" parent="TextAppearance.AppCompat.Caption" tools:ignore="NewApi">
+    <item name="android:fontFamily">sans-serif-medium</item>
+    <item name="android:textSize">14sp</item>
+  </style>
+
+  <style name="Widget.StarWars.FilmAction" parent="Widget.AppCompat.Button">
+    <item name="android:gravity">center_horizontal</item>
+    <item name="android:textAppearance">@style/TextAppearance.GrayContent</item>
+    <item name="android:drawablePadding">4dp</item>
+    <item name="android:background">?android:selectableItemBackgroundBorderless</item>
+  </style>
+
+</resources>

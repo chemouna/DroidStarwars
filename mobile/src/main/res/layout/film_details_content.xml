@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" tools:showIn="@layout/fragment_film_detail">
+
+  <com.mounacheikhna.starwars.ui.view.ExpandingTextView
+      android:id="@+id/description"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingTop="@dimen/spacing_normal"
+      android:paddingLeft="@dimen/spacing_double"
+      android:paddingRight="@dimen/spacing_double"
+      android:paddingBottom="@dimen/spacing_normal"
+      android:textAppearance="@style/TextAppearance.FilmDescription"
+      app:collapsed_maxLines="3"
+      app:tv_expanded="false"
+      android:textIsSelectable="true"
+      android:layout_marginBottom="@dimen/spacing_double"
+      tools:text="This is a description of the movie"/>
+
+  <GridLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:alignmentMode="alignBounds"
+      android:columnCount="3"
+      android:useDefaultMargins="false"
+      android:background="@android:color/transparent"
+      tools:background="@color/primary">
+
+    <include layout="@layout/rating_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_columnSpan="3"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:id="@+id/film_actions"
+        android:layout_columnSpan="3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_normal"
+        android:paddingTop="32dp"
+        android:paddingEnd="@dimen/padding_normal">
+
+      <Button
+          android:id="@+id/review"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:drawableTop="@drawable/ic_evaluate"
+          android:text="@string/review"
+          style="@style/Widget.StarWars.FilmAction"/>
+
+      <Button
+          android:id="@+id/watched"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/review"
+          android:layout_toEndOf="@id/review"
+          android:drawableTop="@drawable/ic_watched"
+          android:text="@string/watched"
+          style="@style/Widget.StarWars.FilmAction"/>
+
+      <Button
+          android:id="@+id/share"
+          app:layout_widthPercent="33%"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@id/watched"
+          android:layout_toEndOf="@id/watched"
+          android:drawableTop="@drawable/ic_share"
+          android:text="@string/share"
+          style="@style/Widget.StarWars.FilmAction"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+
+  </GridLayout>
+
+</LinearLayout>

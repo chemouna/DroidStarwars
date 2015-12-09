@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- Some conventions used here :
+        tb : top and bottom
+        lr : left and right
+        wicon : with an icon
+   -->
+
+
+  <!-- Main dimensions -->
+  <dimen name="spacing_very_small">2dp</dimen>
+  <dimen name="spacing_small">4dp</dimen>
+  <dimen name="spacing_normal">8dp</dimen>
+  <dimen name="spacing_double">16dp</dimen>
+  <dimen name="spacing_very_large">72dp</dimen>
+  <dimen name="padding_normal">16dp</dimen>
+
+  <!-- lists metrics (@see https://www.google.fr/design/spec/components/lists.html#lists-specs) -->
+  <dimen name="list_tb_padding">8dp</dimen>
+
+  <!-- Two lines item in a list with text and icon/avatar -->
+  <dimen name="two_lines_wicon_item_tile_height">72dp</dimen>
+
+  <dimen name="two_lines_wicon_item_icon_left_padding">72dp</dimen>
+  <dimen name="two_lines_wicon_item_text_lr_padding">72dp</dimen>
+  <dimen name="two_lines_wicon_item_text_tb_padding">20dp</dimen>
+  <dimen name="toolbar_elevation">4dp</dimen>
+  <dimen name="resource_item_text_size">14sp</dimen>
+
+  <dimen name="film_item_image">72dp</dimen>
+  <dimen name="film_divider_padding_start">106dp</dimen>
+
+  <dimen name="resource_item_image">56dp</dimen>
+  <dimen name="resource_divider_padding_start">88dp</dimen>
+
+
+</resources>

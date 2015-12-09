@@ -1,0 +1,7 @@
+<resources>
+
+  <!-- transition shared elements -->
+  <string name="transition_with_toolbar" translatable="false">transition_with_toolbar</string>
+  <string name="transition_film_image" translatable="false">transition_film_image</string>
+
+</resources>

@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+  compileSdkVersion rootProject.ext.compileSdkVersion
+  buildToolsVersion rootProject.ext.buildToolsVersion
+
+  defaultConfig {
+    applicationId "com.mounacheikhna.droidstarwars"
+    minSdkVersion rootProject.ext.minSdkVersion
+    targetSdkVersion rootProject.ext.targetSdkVersion
+    versionCode rootProject.ext.versionCode
+    versionName rootProject.ext.versionName
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  buildTypes {
+    debug {
+      applicationIdSuffix '.debug'
+    }
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+
+}
+
+dependencies {
+  compile project(':lib')
+  wearApp project(':wear')
+
+  compile rootProject.ext.supportAppCompat
+  compile rootProject.ext.supportRecyclerView
+  compile rootProject.ext.supportPercent
+  compile rootProject.ext.supportDesign
+  compile rootProject.ext.supportPalette
+  compile rootProject.ext.supportV4
+
+  compile rootProject.ext.timber
+
+  compile rootProject.ext.dagger
+  apt rootProject.ext.daggerCompiler
+  provided rootProject.ext.javaxAnnotation
+
+  compile rootProject.ext.stetho
+  compile rootProject.ext.stethoOkhttp
+  compile rootProject.ext.butterknife
+  compile rootProject.ext.picasso
+
+  debugCompile rootProject.ext.rxJavaDebug
+
+  testCompile rootProject.ext.junit
+
+}
+
+

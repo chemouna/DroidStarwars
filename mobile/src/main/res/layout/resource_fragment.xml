@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TODO: maybe there's no need for linearlayout , a simple layout is possible ? -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+  <include layout="@layout/list_component_layout"/>
+
+</LinearLayout>

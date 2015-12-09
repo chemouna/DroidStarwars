@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="Widget.StarWars.ProgressBar" parent="@style/Widget.AppCompat.ProgressBar">
+    <item name="android:indeterminateTint">?android:colorAccent</item>
+    <item name="android:indeterminateTintMode">src_in</item>
+  </style>
+
+
+  <style name="StarWars.ResourceActivity">
+    <item name="android:windowSharedElementEnterTransition">@transition/resource_shared_enter</item>
+  </style>
+
+</resources>

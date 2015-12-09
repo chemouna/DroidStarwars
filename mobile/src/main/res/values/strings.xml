@@ -1,0 +1,23 @@
+<resources>
+  <string name="app_name">Star Wars</string>
+  <string name="no_network">No network</string>
+  <string name="resource">Resource</string>
+  <string name="people">People</string>
+  <string name="starships">Starships</string>
+  <string name="vehicles">Vehicles</string>
+  <string name="species">Species</string>
+  <string name="planets">Planets</string>
+  <string name="back_button">Back button</string>
+  <string name="loading_error">Can\'t load %1$s.</string>
+  <string name="rating_range">/10</string>
+  <string name="none_rating">n/a</string>
+  <string name="empty_resource">No resource found.</string>
+  <string name="empty_films">No films.</string>
+  <string name="loading_error_films">Error loading films.</string>
+  <string name="share">Share</string>
+  <string name="watched">Watched</string>
+  <string name="evaluate">Evaluate</string>
+  <string name="review">Review</string>
+
+
+</resources>

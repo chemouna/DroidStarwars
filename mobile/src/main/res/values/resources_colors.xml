@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="text_light">@android:color/white</color>
+  <color name="text_black">#616161</color>
+
+  <color name="style_people_primary">#249fb1</color>
+  <color name="style_people_primary_dark">#1a7380</color>
+  <color name="style_people_accent">#607D8B</color>
+  <color name="style_people_resource">#39C2D7</color>
+  <color name="style_people_title">@color/text_light</color>
+  <color name="style_people_text">@color/text_primary_dark</color>
+
+  <color name="style_starships_primary">#2e6f99</color>
+  <color name="style_starships_primary_dark">#25597b</color>
+  <color name="style_starships_accent">#ff193a</color>
+  <color name="style_starships_resource">#337AA8</color>
+  <color name="style_starships_title">@color/text_light</color>
+  <color name="style_starships_text">@color/text_primary_dark</color>
+
+  <color name="style_vehicles_primary">#fab741</color>
+  <color name="style_vehicles_primary_dark">#e79606</color>
+  <color name="style_vehicles_accent">#FF4081</color>
+  <color name="style_vehicles_resource">#F9F18A</color>
+  <color name="style_vehicles_title">@color/text_black</color>
+  <color name="style_vehicles_text">@color/text_primary_dark</color>
+
+  <color name="style_species_primary">#27adc2</color>
+  <color name="style_species_primary_dark">#2190a1</color>
+  <color name="style_species_accent">#4CAF50</color>
+  <color name="style_species_resource">#39C2D7</color>
+  <color name="style_species_title">@color/text_light</color>
+  <color name="style_species_text">@color/text_primary_dark</color>
+
+  <color name="style_planets_primary">#fab741</color>
+  <color name="style_planets_primary_dark">#e79606</color>
+  <color name="style_planets_accent">#795548</color>
+  <color name="style_planets_resource">#F9F18A</color>
+  <color name="style_planets_title">@color/text_black</color>
+  <color name="style_planets_text">@color/text_primary_dark</color>
+
+</resources>

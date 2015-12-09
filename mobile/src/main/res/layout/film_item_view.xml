@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mounacheikhna.starwars.ui.film.FilmItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/Widget.StarWars.Item">
+
+  <ImageView
+      android:id="@+id/film_image"
+      android:layout_width="@dimen/film_item_image"
+      android:layout_height="@dimen/film_item_image"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      style="@style/Widget.StarWars.ItemImage"
+      android:transitionName="@string/transition_film_image"
+      tools:src="@drawable/people"
+      tools:background="@color/primary"
+      tools:ignore="NewApi, RtlSymmetry"/>
+
+    <TextView
+        android:id="@+id/film_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/film_image"
+        android:layout_toRightOf="@id/film_image"
+        style="@style/Widget.StarWars.ItemTitle"
+        tools:text="StarWars: Episode III - Revenge of the Sith"/>
+
+    <TextView
+        android:id="@+id/film_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/film_title"
+        android:layout_toEndOf="@id/film_image"
+        android:layout_toRightOf="@id/film_image"
+        style="@style/Widget.StarWars.ItemDescription"
+        android:maxLines="3"
+        tools:text="Years after the onset of the Clone Wars, the noble Jedi..."/>
+
+
+</com.mounacheikhna.starwars.ui.film.FilmItemView>

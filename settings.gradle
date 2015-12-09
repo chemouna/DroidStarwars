@@ -1,0 +1,3 @@
+rootProject.name = 'StarWars'
+
+include ':lib', ':mobile', ':wear'

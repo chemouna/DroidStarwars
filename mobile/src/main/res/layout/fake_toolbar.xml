@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- to have correct animations we need to fake our toolbar -->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize"
+    style="@style/Widget.StarWars.Toolbar" tools:showIn="@layout/resource_activity">
+  <TextView android:id="@+id/resource_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:paddingStart="@dimen/spacing_very_large"
+      android:paddingLeft="@dimen/spacing_very_large"
+      android:paddingEnd="0dp"
+      android:paddingRight="0dp"
+      android:paddingTop="@dimen/spacing_small"
+      android:paddingBottom="@dimen/spacing_small"
+      android:minHeight="?actionBarSize"
+      android:background="?colorPrimary"
+      android:textAppearance="@style/StarWars.TextAppearance.Title"
+      android:gravity="center_vertical"
+      android:transitionName="@string/transition_with_toolbar"
+      tools:ignore="UnusedAttribute,NewApi"/>
+  <ImageButton android:id="@+id/back"
+      android:layout_height="wrap_content"
+      android:layout_width="wrap_content"
+      android:padding="@dimen/spacing_double"
+      android:contentDescription="@string/back_button"
+      android:src="@drawable/ic_arrow_back"
+      android:tint="?titleColorPrimary"
+      android:layout_gravity="start|center_vertical"
+      android:background="@drawable/light_selector"/>
+</FrameLayout>

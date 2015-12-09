@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- standard metrics -->
+  <dimen name="spacing_normal">16dp</dimen>
+  <dimen name="spacing_double">24dp</dimen>
+  <dimen name="padding_normal">24dp</dimen>
+
+  <dimen name="film_item_image">88dp</dimen>
+  <dimen name="film_divider_padding_start">120dp</dimen>
+
+  <dimen name="resource_item_image">72dp</dimen>
+  <dimen name="resource_divider_padding_start">106dp</dimen>
+
+</resources>

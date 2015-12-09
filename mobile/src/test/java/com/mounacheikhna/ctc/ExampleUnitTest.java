@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc;
+package com.mounacheikhna.starwars;
 
 import org.junit.Test;
 

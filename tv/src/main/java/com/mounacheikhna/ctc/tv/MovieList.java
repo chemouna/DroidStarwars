@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.tv;
+package com.mounacheikhna.starwars.tv;
 
 import java.util.ArrayList;
 import java.util.List;

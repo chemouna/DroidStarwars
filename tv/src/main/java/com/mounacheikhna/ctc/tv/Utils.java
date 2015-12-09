@@ -12,7 +12,7 @@
  * the License.
  */
 
-package com.mounacheikhna.ctc.tv;
+package com.mounacheikhna.starwars.tv;
 
 import android.app.AlertDialog;
 import android.content.Context;

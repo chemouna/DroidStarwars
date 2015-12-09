@@ -6,7 +6,7 @@ android {
   buildToolsVersion rootProject.ext.buildToolsVersion
 
   defaultConfig {
-    applicationId "com.mounacheikhna.ctc"
+    applicationId "com.mounacheikhna.droidstarwars"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode rootProject.ext.versionCode
@@ -36,6 +36,7 @@ dependencies {
   compile rootProject.ext.supportPercent
   compile rootProject.ext.supportDesign
   compile rootProject.ext.supportPalette
+  compile rootProject.ext.supportV4
 
   compile rootProject.ext.timber
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mounacheikhna.ctc.ui.film.FilmItemView
+<com.mounacheikhna.starwars.ui.film.FilmItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -40,4 +40,4 @@
         tools:text="Years after the onset of the Clone Wars, the noble Jedi..."/>
 
 
-</com.mounacheikhna.ctc.ui.film.FilmItemView>
+</com.mounacheikhna.starwars.ui.film.FilmItemView>

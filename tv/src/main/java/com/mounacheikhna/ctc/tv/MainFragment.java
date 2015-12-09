@@ -12,7 +12,7 @@
  * the License.
  */
 
-package com.mounacheikhna.ctc.tv;
+package com.mounacheikhna.starwars.tv;
 
 import android.support.v4.app.ActivityOptionsCompat;
 import java.net.URI;

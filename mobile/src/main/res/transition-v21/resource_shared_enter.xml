@@ -5,7 +5,7 @@
 
   <changeBounds/>
   <arcMotion android:maximumAngle="50"/>
-  <transition class="com.mounacheikhna.ctc.transition.TextSizePaddingTransition">
+  <transition class="com.mounacheikhna.starwars.transition.TextSizePaddingTransition">
     <targets>
       <target android:targetId="@id/resource_title"/>
     </targets>

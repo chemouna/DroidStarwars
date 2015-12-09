@@ -12,6 +12,7 @@ ext {
   versionName = "1.0"
 
   supportVersion = '23.1.1'
+  supportV4 = "com.android.support:support-v4:$supportVersion"
   supportAppCompat = "com.android.support:appcompat-v7:$supportVersion"
   supportRecyclerView = "com.android.support:recyclerview-v7:$supportVersion"
   supportPercent = "com.android.support:percent:$supportVersion"

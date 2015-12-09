@@ -1,4 +1,4 @@
-package com.mounacheikhna.ctc.tv;
+package com.mounacheikhna.starwars.tv;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -14,6 +14,6 @@ public class TvMainActivity extends Activity {
   @Override
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(com.mounacheikhna.ctc.R.layout.activity_main);
+    setContentView(com.mounacheikhna.starwars.R.layout.activity_main);
   }
 }

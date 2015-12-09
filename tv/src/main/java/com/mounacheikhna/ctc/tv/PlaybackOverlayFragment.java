@@ -12,7 +12,7 @@
  * the License.
  */
 
-package com.mounacheikhna.ctc.tv;
+package com.mounacheikhna.starwars.tv;
 
 import android.app.Activity;
 import android.content.Context;
@@ -53,7 +53,7 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 
-import com.mounacheikhna.ctc.R;
+import com.mounacheikhna.starwars.R;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

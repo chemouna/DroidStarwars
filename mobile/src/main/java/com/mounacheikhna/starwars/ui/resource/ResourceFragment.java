@@ -147,6 +147,7 @@ public class ResourceFragment extends Fragment {
         .subscribe(mResourceItemAdapter));
   }
 
+
   private boolean isConnected() {
     ConnectivityManager connectivityManager =
         (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);

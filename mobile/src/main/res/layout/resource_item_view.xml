@@ -14,7 +14,8 @@
       android:layout_alignParentLeft="true"
       android:layout_alignParentStart="true"
       style="@style/Widget.StarWars.ItemImage"
-      tools:src="@drawable/people"/>
+      tools:src="@drawable/people"
+      android:contentDescription=""/>
 
   <TextView
       android:id="@+id/name"
